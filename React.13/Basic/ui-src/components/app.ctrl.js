@@ -9,7 +9,7 @@ class AppCtrlRender extends Component {
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				Es6 BasicBabel
+				React 1.3 Basic with browserify and babel
 			</div>
 		);
 	}

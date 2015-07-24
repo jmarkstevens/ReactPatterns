@@ -35,6 +35,6 @@ React.14
 
 # The basics
 
-The very first time open React.13/Common in a terminal. npm install then gulp. This sets up some common files.
+The very first time open React.13/Common/gulpfile.js and edit the rootPath. Then open React.13/Common in a terminal. npm install then gulp. This sets up some common files.
 
 Open two terminals at the desired project root. I use iTerm on Mac, ConEmu on Windows 10. First time do npm install. In one terminal gulp. In the other terminal npm start. In your browser localhost:3500. All projects use the same port.
