@@ -1,0 +1,34 @@
+{
+  "name": "ReactPatterns",
+  "version": "1.0.0",
+  "description": "A collection of simple react projects providing reusable components, startup and test examples.",
+  "license": "MIT",
+  "author": {
+    "name": "Janaka Stevens",
+    "email": "jmstevens@kykas.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calitek/ReactPatterns.git"
+  },
+  "bugs": {
+    "url": "https://github.com/calitek/ReactPatterns/issues"
+  },
+  "keywords": [
+    "react",
+    "patterns",
+    "treeview",
+    "dropdown",
+    "buttons",
+    "form",
+    "list",
+    "progressbar",
+    "range",
+    "tooltip",
+    "fluxreact",
+    "reflux",
+    "websocket",
+    "electron",
+    "keycapture"
+  ]
+}

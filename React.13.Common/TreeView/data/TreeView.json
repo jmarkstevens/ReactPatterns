@@ -1,0 +1,226 @@
+[
+  {
+    "nodeid": "1",
+    "title": "Dev",
+    "type": "dev",
+    "selected": false,
+    "closed": false,
+    "children": [
+      {
+        "nodeid": "1.4",
+        "title": "Css",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "1.6",
+        "title": "Gulp",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "1.3",
+        "title": "Html",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "1.2",
+        "title": "Javascript",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "1.5",
+        "title": "Sass",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "1.17",
+        "title": "npm bower",
+        "type": "dev",
+        "selected": true,
+        "children": []
+      },
+      {
+        "nodeid": "1.28",
+        "title": "ConEmu",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "nodeid": "22",
+    "title": "Dev project todo's",
+    "type": "dev",
+    "selected": false,
+    "closed": false,
+    "children": [
+      {
+        "nodeid": "22.24",
+        "title": "Clippets",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "22.23",
+        "title": "PalmInfo",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "22.25",
+        "title": "SpamProtester",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "nodeid": "7",
+    "title": "Internet",
+    "type": "sys",
+    "selected": false,
+    "closed": false,
+    "children": [
+      {
+        "nodeid": "7.8",
+        "title": "Setup server",
+        "type": "sys",
+        "selected": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "nodeid": "12",
+    "title": "Deployment",
+    "type": "dev",
+    "selected": false,
+    "closed": false,
+    "children": [
+      {
+        "nodeid": "12.29",
+        "title": "DigitalOcean new droplet",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "12.30",
+        "title": "DigitalOcean update remote",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "12.16",
+        "title": "DigitalOcean PalmInfo",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "12.13",
+        "title": "node on server",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "12.14",
+        "title": "github",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "12.15",
+        "title": "ufw",
+        "type": "dev",
+        "selected": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "nodeid": "19",
+    "title": "Mac",
+    "type": "sys",
+    "selected": false,
+    "closed": false,
+    "children": [
+      {
+        "nodeid": "19.31",
+        "title": "Keyboard shortcuts",
+        "type": "sys",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "19.20",
+        "title": "Programs to install",
+        "type": "sys",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "19.21",
+        "title": "Sublime Text 3",
+        "type": "sys",
+        "selected": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "nodeid": "10",
+    "title": "Matadham",
+    "type": "home",
+    "selected": false,
+    "closed": false,
+    "children": [
+      {
+        "nodeid": "10.11",
+        "title": "Pending returns",
+        "type": "home",
+        "selected": false,
+        "children": []
+      },
+      {
+        "nodeid": "10.18",
+        "title": "Projects and todo",
+        "type": "home",
+        "selected": false,
+        "children": []
+      }
+    ]
+  },
+  {
+    "nodeid": "26",
+    "title": "Windows 8.1",
+    "type": "sys",
+    "selected": false,
+    "closed": false,
+    "children": [
+      {
+        "nodeid": "26.27",
+        "title": "Setup",
+        "type": "sys",
+        "selected": false,
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+.bodyStyle {
+	background-color: #1A3212;
+	color: #afac87;
+	display: block;
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+}
+
+.header {
+	height: 30px;
+	margin: 0; 
+	padding: 10px 0;
+	text-align: center;
+}
+
+.Title {font-size: 1.3em;}
+
+.content {
+	height: calc(100% - 52px);
+	padding: 0px 5px;
+}
+
+* { outline: none; }
+
+.a{display:block}
+
+.FlexBox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex
+}
+
+.FlexJustify {
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+
+.HighZ {z-index: 200;}

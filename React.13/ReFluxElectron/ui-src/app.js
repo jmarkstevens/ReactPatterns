@@ -1,0 +1,13 @@
+'use strict';
+
+import React  from 'react';
+
+import AppCtrl from './components/app.ctrl.js';
+import ApiFct from './utils/ipc.api.js';
+
+window.React = React;
+
+ApiFct.init();
+ApiFct.getData();
+
+React.render( <AppCtrl />, document.getElementById('react') );

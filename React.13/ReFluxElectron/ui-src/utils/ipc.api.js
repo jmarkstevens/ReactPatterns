@@ -1,0 +1,11 @@
+import Actions from '../flux/Actions';
+
+module.exports = {
+	init: function() { 
+		ipc.on('server:GotData', this.gotData);
+		return true; 
+	},
+	getData: function() { ipc.send('client:GetData', {}); },
+	gotData: function(data) { Actions.gotData(data); },
+	setData: function(data) { ipc.send('client:SetData', data); },
+};

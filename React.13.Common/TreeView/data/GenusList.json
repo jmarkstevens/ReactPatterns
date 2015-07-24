@@ -1,0 +1,5075 @@
+[
+  {
+    "nodeid": "Ac-",
+    "title": "Acrocomia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "AcA",
+        "title": "aculeata",
+        "genus": "Acrocomia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AcC",
+        "title": "crispa",
+        "genus": "Acrocomia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AcG",
+        "title": "glaucescens",
+        "genus": "Acrocomia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AcH",
+        "title": "hassleri¹",
+        "genus": "Acrocomia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AcT",
+        "title": "totai",
+        "genus": "Acrocomia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Al-",
+    "title": "Allagoptera",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "AlA",
+        "title": "arenaria",
+        "genus": "Allagoptera",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AlCm",
+        "title": "campestris",
+        "genus": "Allagoptera",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AlCd",
+        "title": "caudescens",
+        "genus": "Allagoptera",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AlL",
+        "title": "leucocalyx¹",
+        "genus": "Allagoptera",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AlP",
+        "title": "pectinata*",
+        "genus": "Allagoptera",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ap-",
+    "title": "Archontophoenix",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "ApA",
+        "title": "alexandrae",
+        "genus": "Archontophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ApB",
+        "title": "alexandrae 'beatricae'",
+        "genus": "Archontophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ApC",
+        "title": "cunninghamiana",
+        "genus": "Archontophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ApC-I",
+        "title": "cunninghamiana 'Illawarra'",
+        "genus": "Archontophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ApMa",
+        "title": "maxima",
+        "genus": "Archontophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ApMy",
+        "title": "myolaensis",
+        "genus": "Archontophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ApP",
+        "title": "purpurea",
+        "genus": "Archontophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ApT",
+        "title": "tuckerii",
+        "genus": "Archontophoenix",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ar-",
+    "title": "Areca",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "ArB",
+        "title": "catechu¹",
+        "genus": "Areca",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ArC",
+        "title": "concinna¹",
+        "genus": "Areca",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ArM",
+        "title": "macrocalyx",
+        "genus": "Areca",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ArT",
+        "title": "triandra",
+        "genus": "Areca",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ArV",
+        "title": "vestiaria¹",
+        "genus": "Areca",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ag-",
+    "title": "Arenga",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "AgA",
+        "title": "australasica",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgB",
+        "title": "brevipes",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgC",
+        "title": "caudata",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgE",
+        "title": "engleri",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgH",
+        "title": "hookeriana",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgM",
+        "title": "micrantha",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgP",
+        "title": "pinnata",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgR",
+        "title": "ryukyuensis¹",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgT",
+        "title": "tremula",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgU",
+        "title": "undulatifolia¹",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AgW",
+        "title": "wightii",
+        "genus": "Arenga",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "At-",
+    "title": "Attalea",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "AtBr",
+        "title": "brejinhoensis¹",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtBu",
+        "title": "butryacea",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtC",
+        "title": "cohune",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtD",
+        "title": "dubia",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtF",
+        "title": "funifera",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtGe",
+        "title": "geraensis¹",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtGu",
+        "title": "guacuyule",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtH",
+        "title": "humilis",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtM",
+        "title": "maripa",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtP",
+        "title": "phalerata",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtR",
+        "title": "rostrata¹",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtS",
+        "title": "speciosa¹",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "AtSt",
+        "title": "spectabilis",
+        "genus": "Attalea",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Be-",
+    "title": "Beccariophoenix",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "BeA",
+        "title": "alfredii¹",
+        "genus": "Beccariophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BeM",
+        "title": "madagascariensis",
+        "genus": "Beccariophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BeF",
+        "title": "fenestralis",
+        "genus": "Beccariophoenix",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Br-",
+    "title": "Brahea",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "BrAc",
+        "title": "aculeata",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrAr",
+        "title": "armata",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrBl",
+        "title": "bella*",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrBe",
+        "title": "berlandieri*",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrBr",
+        "title": "brandegeei",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrBrxEd",
+        "title": "brandegeei x edulis",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrBrT",
+        "title": "brandegeei 'Tilaco'",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrCc",
+        "title": "calcarea (nitida)",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrCl",
+        "title": "clara*",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrDe",
+        "title": "decumbens",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrDexAc",
+        "title": "decumbens x aculeata",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrDu",
+        "title": "dulcis",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrEd",
+        "title": "edulis",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrEl",
+        "title": "elegans*",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrM",
+        "title": "moorei",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrNr",
+        "title": "sp. 'Nuri'¹",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrP",
+        "title": "pimo",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrSv",
+        "title": "salvadorensis",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrSr",
+        "title": "sarukhanii",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BrSs",
+        "title": "sp. 'Super Silver'",
+        "genus": "Brahea",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Bk-",
+    "title": "Burretiokentia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "BkD",
+        "title": "dumasii",
+        "genus": "Burretiokentia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BkG",
+        "title": "grandifolia",
+        "genus": "Burretiokentia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BkH",
+        "title": "hapala",
+        "genus": "Burretiokentia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BkK",
+        "title": "koghiensis",
+        "genus": "Burretiokentia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BkV",
+        "title": "vieillardii",
+        "genus": "Burretiokentia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Bu-",
+    "title": "Butia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "BuA",
+        "title": "archeri",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuPA",
+        "title": "aronicola*",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuCB",
+        "title": "bonnetii*",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuCm",
+        "title": "campicola",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuCp",
+        "title": "capitata — the rarely cultivated newly defined species",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuCS",
+        "title": "capitata var. strictior*",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuCr",
+        "title": "catarinensis",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuE",
+        "title": "eriospatha",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuExM",
+        "title": "eriospatha x microspadix",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuEs",
+        "title": "exospadix¹",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuL",
+        "title": "lallemantii¹",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuMa",
+        "title": "marmorii¹",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuMi",
+        "title": "microspadix¹",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuO",
+        "title": "odorata (was capitata)",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuPa",
+        "title": "paraguayensis",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuPu",
+        "title": "purpurascens",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BuY",
+        "title": "yatay",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BxJ",
+        "title": "capitata x Jubaea chilensis ",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "BxP",
+        "title": "x Parajubaea¹",
+        "genus": "Butia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Cw-",
+    "title": "Calyptrocalyx",
+    "type": "genus",
+    "selected": false,
+    "closed": false,
+    "children": [
+      {
+        "nodeid": "CwEB",
+        "title": "elegans",
+        "genus": "Calyptrocalyx",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CwP",
+        "title": "polyphyllus",
+        "genus": "Calyptrocalyx",
+        "type": "specie",
+        "selected": true
+      }
+    ]
+  },
+  {
+    "nodeid": "Cg-",
+    "title": "Calyptrogyne",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "CgG",
+        "title": "ghiesbreghtiana¹",
+        "genus": "Calyptrogyne",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ca-",
+    "title": "Caryota",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "CaAl",
+        "title": "albertii",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaB",
+        "title": "basconensis*",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaC",
+        "title": "cumingii",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaG",
+        "title": "gigas*",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaH",
+        "title": "himalaya*",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaK",
+        "title": "kiriwongensis¹",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaMa",
+        "title": "maxima (urens)",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaMi",
+        "title": "mitis",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaMo",
+        "title": "monostachya¹",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaN",
+        "title": "no",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaOb",
+        "title": "obtusa",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaOc",
+        "title": "ochlandra*",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaOp",
+        "title": "ophiopellis¹",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaR",
+        "title": "rumphiana",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaS",
+        "title": "sympetala",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaU",
+        "title": "urens (the uncultivated real one)",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CaZ",
+        "title": "zebrina¹",
+        "genus": "Caryota",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ce-",
+    "title": "Ceroxylon",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "CeAl",
+        "title": "alpinum",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CeAm",
+        "title": "amazonicum¹",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CeC",
+        "title": "ceriferum",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CeE",
+        "title": "echinulatum",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CePf",
+        "title": "parvifrons¹",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CePu",
+        "title": "parvum",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CeQ",
+        "title": "quindiuense",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CeV",
+        "title": "ventricosum",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CeVo",
+        "title": "vogelianum",
+        "genus": "Ceroxylon",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ch-",
+    "title": "Chamaedorea",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "ChAd",
+        "title": "adscendens",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChAl",
+        "title": "allenii¹",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChAt",
+        "title": "alternans",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChAm",
+        "title": "amabilis",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChAn",
+        "title": "anemophila¹",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChAr",
+        "title": "arenbergiana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChBe",
+        "title": "benziei",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChBr",
+        "title": "brachypoda",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChCa",
+        "title": "carchensis",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChCt",
+        "title": "cataractarum",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChCr",
+        "title": "correae",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChCo",
+        "title": "costaricana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChDa",
+        "title": "dammeriana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChDe",
+        "title": "deckeriana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChDv",
+        "title": "deneversiana¹",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChEl",
+        "title": "elatior",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChEg",
+        "title": "elegans",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChEa",
+        "title": "ernesti-augusti",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChEr",
+        "title": "erumpens*",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChFa",
+        "title": "falcifera¹",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChFr",
+        "title": "fragrans",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChFd",
+        "title": "frondosa",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChGe",
+        "title": "geonomiformis",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChGl",
+        "title": "glaucifolia",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChGr",
+        "title": "graminifolia",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChH",
+        "title": "hooperiana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChK",
+        "title": "klotzschiana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChLe",
+        "title": "liebmanii",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChLi",
+        "title": "linearis",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChMe",
+        "title": "metallica",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChMi",
+        "title": "microspadix",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChMn",
+        "title": "minima",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChNa",
+        "title": "nationsiana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChNe",
+        "title": "neurochlamys",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChNu",
+        "title": "nubium",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChOb",
+        "title": "oblangata",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChOr",
+        "title": "oreophilla",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChPa",
+        "title": "palmeriana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChPi",
+        "title": "pinnatifrons",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChPl",
+        "title": "plumosa",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChPo",
+        "title": "pochutlensis",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChPm",
+        "title": "pumila",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChQu",
+        "title": "quezalteca*",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChRaT",
+        "title": "radicalis",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChRaN",
+        "title": "radicalis",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChRxS",
+        "title": "radicalis x schippii",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChRh",
+        "title": "rhizomatosa",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChRi",
+        "title": "rigida",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChRo",
+        "title": "robertii",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChRs",
+        "title": "rossteniorum",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChSa",
+        "title": "sartorii",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChSc",
+        "title": "schiedeana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChSp",
+        "title": "schippii",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChSe",
+        "title": "seifrizii",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChSn",
+        "title": "stenocarpa¹",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChSt",
+        "title": "stolonifera",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChSu",
+        "title": "sullivaniorum",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChTn",
+        "title": "tenella",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChTp",
+        "title": "tepejilote",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChTu",
+        "title": "tuerckheimii",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "Chx?",
+        "title": "unknown cross",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChV",
+        "title": "volcanensis",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChWa",
+        "title": "warscewiczii",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChWh",
+        "title": "whitelockiana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChWo",
+        "title": "woodsoniana",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ChIC",
+        "title": "x 'Irving Cantor'",
+        "genus": "Chamaedorea",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Cu-",
+    "title": "Chuniophoenix",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "CuHn",
+        "title": "hainanensis",
+        "genus": "Chuniophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CuHu",
+        "title": "humilis",
+        "genus": "Chuniophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CuN",
+        "title": "nana",
+        "genus": "Chuniophoenix",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Cc-",
+    "title": "Coccothrinax",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "CcAl",
+        "title": "alta",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcAt",
+        "title": "argentata",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcAe",
+        "title": "argentea",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcBa",
+        "title": "barbadensis",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcBh",
+        "title": "borhidiana¹",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcBs",
+        "title": "boschiana¹",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcC",
+        "title": "crinita",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcCB",
+        "title": "crinita subsp. Brevicrinis",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcE",
+        "title": "ekmanii",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcF",
+        "title": "fragrans",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcG",
+        "title": "gracilis¹",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcH",
+        "title": "hioramii¹",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcL",
+        "title": "litoralis¹",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcAz",
+        "title": "macroglossa",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcMi",
+        "title": "miraguama",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcMiR",
+        "title": "miraguama subsp. roseocarpa",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcMo",
+        "title": "montana",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcPa",
+        "title": "pauciramosa¹",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcPr",
+        "title": "proctorii¹",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcSa",
+        "title": "salvatoris¹",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcSc",
+        "title": "scoparia",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcSp",
+        "title": "spissa",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CcY",
+        "title": "yunquensis",
+        "genus": "Coccothrinax",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Co-",
+    "title": "Copernicia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "CoA",
+        "title": "alba",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoB",
+        "title": "baileyana",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoBr",
+        "title": "berteroana¹",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoC",
+        "title": "cowellii",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoE",
+        "title": "ekmanii",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoF",
+        "title": "fallaensis",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoG",
+        "title": "glabrescens",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoH",
+        "title": "hospita",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoM",
+        "title": "macroglossa",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoP",
+        "title": "prunifera",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoR",
+        "title": "rigida¹",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoS",
+        "title": "x Sueroana",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CoY",
+        "title": "yarey¹",
+        "genus": "Copernicia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Cj-",
+    "title": "Corypha",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "CjL",
+        "title": "lecomtei¹",
+        "genus": "Corypha",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CjT",
+        "title": "taliera¹",
+        "genus": "Corypha",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CjUm",
+        "title": "umbraculifera¹",
+        "genus": "Corypha",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "CjUt",
+        "title": "utan¹",
+        "genus": "Corypha",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Dy-",
+    "title": "Dypsis",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "DyAl",
+        "title": "albafarinosa",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpAb",
+        "title": "sp. 'Ambanja'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyAi",
+        "title": "ambilaensis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyAm ",
+        "title": "ambositrae¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpAv",
+        "title": "sp. 'Andavakaka'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyAd",
+        "title": "andrianatonga¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyAn",
+        "title": "ankaizinensis¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyAk",
+        "title": "ankirindro",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyAr",
+        "title": "arenarum¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyBa",
+        "title": "baronii",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyBs",
+        "title": "basilonga",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpBe",
+        "title": "sp. 'Betafaca'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyBp",
+        "title": "betamponensis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyBe",
+        "title": "bejofo",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpBF",
+        "title": "sp. 'Big Fishtail'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyBo",
+        "title": "bosseri",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyBc",
+        "title": "brevicaulis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCa",
+        "title": "cabadae",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCl",
+        "title": "canaliculata¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCs",
+        "title": "carlsmithii",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCt",
+        "title": "catatiana¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCe",
+        "title": "cerecea¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCm",
+        "title": "commersoniana¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCo",
+        "title": "compactus*¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCn",
+        "title": "confusa",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCc",
+        "title": "coriacea¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyCr",
+        "title": "crinita",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpCL",
+        "title": "sp. 'Cuesta Linda'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpDM",
+        "title": "sp. 'Dark Mealybug'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyDr",
+        "title": "decaryi",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyDp",
+        "title": "decipiens",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyDpS",
+        "title": "decipiens 'super'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyDf",
+        "title": "dransfieldii",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "Dyfn",
+        "title": "faneva",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyFa",
+        "title": "fasciculata¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyFi",
+        "title": "fibrosa",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpFL",
+        "title": "sp. 'Fine Leaf'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyFo",
+        "title": "forficifolia",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpGF",
+        "title": "sp. 'Giant Fishtail'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpGB",
+        "title": "sp. 'Green Boresy'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyHm",
+        "title": "heteromorpha",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyHp",
+        "title": "heterophylla",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyHk",
+        "title": "hiarakae",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyHi",
+        "title": "hildebrandtii¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpHo",
+        "title": "sp. 'Honkona'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyHo",
+        "title": "hovomantsina¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyHu",
+        "title": "humbertii ",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyIf",
+        "title": "ifanadianae",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyJu",
+        "title": "jumelleana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpJP",
+        "title": "sp. 'Jurassic Park'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpKi",
+        "title": "sp. 'Kindreo'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpKg",
+        "title": "sp. 'Kingali'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpL",
+        "title": "sp. 'Laffa' or 'Lafa'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpLz",
+        "title": "sp. 'Lafazamanga'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLa",
+        "title": "lanceolata",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLt",
+        "title": "lantzeana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLg",
+        "title": "lanuginosa",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLs",
+        "title": "lastelliana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLsBR",
+        "title": "lastelliana 'Big Red'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLsHM",
+        "title": "lastelliana 'highland mealybug'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLe",
+        "title": "leptocheilos",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLeT",
+        "title": "leptocheilos 'Triangular Crownshaft'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLxT",
+        "title": "leptocheilos x decaryi¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLi",
+        "title": "linearis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLo",
+        "title": "louvelii¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLc",
+        "title": "lucubensis*¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyLu(G)",
+        "title": "lutescens",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMd",
+        "title": "madagascariensis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMh",
+        "title": "madagascariensis 'mahajanga'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMk",
+        "title": "makirae",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpMg",
+        "title": "sp. 'Malagasy'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMl",
+        "title": "malcomberi¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpMm",
+        "title": "sp. 'Manambato'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMn",
+        "title": "mananjarensis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMa",
+        "title": "marojejyi¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpMy",
+        "title": "sp. 'Mayotte'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpMB",
+        "title": "sp. 'Mealy bug'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMc",
+        "title": "mcdonaldiana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMi",
+        "title": "minuta",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMq",
+        "title": "mocquerysiana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMo",
+        "title": "montana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyMr",
+        "title": "moorei",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpMo",
+        "title": "sp. 'Moroansetta'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyNa",
+        "title": "nauseosa¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyNo",
+        "title": "nodifera",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyOCWS",
+        "title": "sp. 'OCWS'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyOn",
+        "title": "onilahensis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpOr",
+        "title": "sp. 'Orange'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpOC",
+        "title": "sp. 'Orange Crush'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyOe",
+        "title": "oreophila",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyOr",
+        "title": "oropedionis¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyOv",
+        "title": "ovobontsira¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPy",
+        "title": "pachyramea",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPa",
+        "title": "paludosa",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPb",
+        "title": "pembana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPe",
+        "title": "perrieri",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPv",
+        "title": "pervillei",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPf",
+        "title": "pilulifera",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpPC",
+        "title": "sp. 'Pink Crown'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpNPC",
+        "title": "sp. 'Pink Crownshaft'¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPi",
+        "title": "pinnatifrons",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPl",
+        "title": "plumosa",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPo",
+        "title": "poivreana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPr",
+        "title": "prestoniana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPc",
+        "title": "procera¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPs",
+        "title": "psammophila",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPj",
+        "title": "pulchella",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyPu",
+        "title": "pusilla¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyRv",
+        "title": "rivularis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyRo",
+        "title": "robusta¹",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySf",
+        "title": "sahanofensis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySl",
+        "title": "saintelucei",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySm",
+        "title": "sanctaemariae",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySc",
+        "title": "scottiana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySi",
+        "title": "simianensis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpSW",
+        "title": "sp. 'Slick Willy'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySo",
+        "title": "soanieranae",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyTy",
+        "title": "thiryana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyTh",
+        "title": "thouarsiana",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyTo",
+        "title": "tokoravina",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpTv",
+        "title": "sp. 'Trorovana'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyTs",
+        "title": "tsaratananensis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyTr",
+        "title": "tsaravoasira",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DyU",
+        "title": "utilis",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "DySpW",
+        "title": "sp. 'White'",
+        "genus": "Dypsis",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ge-",
+    "title": "Geonoma",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "GeC",
+        "title": "congesta",
+        "genus": "Geonoma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "GeD",
+        "title": "densa¹",
+        "genus": "Geonoma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "GeI",
+        "title": "interrupta",
+        "genus": "Geonoma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "GeS",
+        "title": "schottiana",
+        "genus": "Geonoma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "GeU",
+        "title": "undata",
+        "genus": "Geonoma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "GeW",
+        "title": "weberbaueri",
+        "genus": "Geonoma",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Hd-",
+    "title": "Hydriastele",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "HdR",
+        "title": "ramsayi¹",
+        "genus": "Hydriastele",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Hp-",
+    "title": "Hyphaene",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "HpC",
+        "title": "coriacea",
+        "genus": "Hyphaene",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "HpD",
+        "title": "sp. 'Dauba'",
+        "genus": "Hyphaene",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "HpI",
+        "title": "dichotaoma",
+        "genus": "Hyphaene",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "HpP",
+        "title": "petersiana",
+        "genus": "Hyphaene",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "HpTh",
+        "title": "thebaica",
+        "genus": "Hyphaene",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "HpTu",
+        "title": "turbinata*",
+        "genus": "Hyphaene",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ke-",
+    "title": "Kentiopsis",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "KeM",
+        "title": "magnifica¹",
+        "genus": "Kentiopsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "KeO",
+        "title": "oliviformis",
+        "genus": "Kentiopsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "KePi",
+        "title": "piersoniorum¹",
+        "genus": "Kentiopsis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "KeP",
+        "title": "pyriformis",
+        "genus": "Kentiopsis",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Lt-",
+    "title": "Latania",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "LtLd",
+        "title": "loddigesii",
+        "genus": "Latania",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LtLn",
+        "title": "lontaroides",
+        "genus": "Latania",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LtV",
+        "title": "verschaffeltii",
+        "genus": "Latania",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Li-",
+    "title": "Licuala",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "LiG",
+        "title": "glabra var. selangorensis",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LiLa",
+        "title": "lauterbachii",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LiLo",
+        "title": "longipes",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LiPa",
+        "title": "paludosa",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LiPE",
+        "title": "peltata var. sumawongii",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LiRd",
+        "title": "radula",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LiR",
+        "title": "ramsayi",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LiSr",
+        "title": "sarawakensis¹",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LiSp",
+        "title": "spinosa",
+        "genus": "Licuala",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ln-",
+    "title": "Linospadix",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "LnA",
+        "title": "apetiolata",
+        "genus": "Linospadix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LnMi",
+        "title": "minor",
+        "genus": "Linospadix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LnMo",
+        "title": "monostachya",
+        "genus": "Linospadix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LnP",
+        "title": "palmeriana",
+        "genus": "Linospadix",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Lv-",
+    "title": "Livistona",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "LvAl",
+        "title": "alfredii",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvAu",
+        "title": "australis",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvBe",
+        "title": "benthamii",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvBo",
+        "title": "boninensis¹",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvCa",
+        "title": "carinensis",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvCh",
+        "title": "chinensis",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvChS",
+        "title": "chinensis var. subglobosa*",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvCo",
+        "title": "concinnas",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvDe",
+        "title": "decora (decipiens*) ",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvDr",
+        "title": "drudei",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvE",
+        "title": "eastonii¹",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvEn",
+        "title": "endauensis¹",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvF",
+        "title": "fulva",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvH",
+        "title": "humilis",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvI",
+        "title": "inermis",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvJ",
+        "title": "jenkinsiana",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvK",
+        "title": "kimberleyana*",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvLa",
+        "title": "lanuginosa",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvLo",
+        "title": "lorophylla¹",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvMa",
+        "title": "mariae",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvMe",
+        "title": "merrillii",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvMu",
+        "title": "muelleri",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvO",
+        "title": "nasmophila",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvN",
+        "title": "nitida",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvRi",
+        "title": "rigida¹",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvSRo",
+        "title": "rotundifolia",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvSa",
+        "title": "saribus",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvSxR",
+        "title": "saribus x rotundifolia",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvPR",
+        "title": "sp. 'Paluma Range'",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvSe",
+        "title": "speciosa",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvV",
+        "title": "victoriae",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "LvW",
+        "title": "woodfordii¹",
+        "genus": "Livistona",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Nn-",
+    "title": "Nannorrhops",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "NnA",
+        "title": "arabiaca*",
+        "genus": "Nannorrhops",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "NnR",
+        "title": "ritchiana",
+        "genus": "Nannorrhops",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "NnRK",
+        "title": "ritchiana 'Kashmir'",
+        "genus": "Nannorrhops",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "NnSpS",
+        "title": "sp. 'Silver'",
+        "genus": "Nannorrhops",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "NnSpIS",
+        "title": "sp. 'Iran Silver'",
+        "genus": "Nannorrhops",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "NnS",
+        "title": "stocksiana*",
+        "genus": "Nannorrhops",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Pa-",
+    "title": "Parajubaea",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "PaC",
+        "title": "cocoides",
+        "genus": "Parajubaea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PaS",
+        "title": "sunkha",
+        "genus": "Parajubaea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PaT",
+        "title": "torallyi var. torallyi",
+        "genus": "Parajubaea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PaM",
+        "title": "torallyi var. microcarpa",
+        "genus": "Parajubaea",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ph-",
+    "title": "Phoenix",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "PhA",
+        "title": "acaulis",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhCt",
+        "title": "caespitosa¹",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhC",
+        "title": "canariensis",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhCxRe",
+        "title": "canariensis x reclinata",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhCXRo",
+        "title": "canariensis x roebelenii",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhCXS",
+        "title": "canariensis x sylvestris",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhD",
+        "title": "dactylifera",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhF",
+        "title": "farinifera*",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhI",
+        "title": "iberica*",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhHa",
+        "title": "hanceana*",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhHaF",
+        "title": "hanceana var. formosana*",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhLH",
+        "title": "humilis* or P. loureiroi var. humilis",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhHP",
+        "title": "humilis var. pedunculata*",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhL",
+        "title": "loureiroi ",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhLL",
+        "title": "loureiroi var. loureiroi",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhLP",
+        "title": "loureiroi var. pedunculata",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhLT",
+        "title": "loureiroi 'Thailand'",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhPa",
+        "title": "paludosa",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhPu",
+        "title": "pusilla",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhPuxRo",
+        "title": "pusilla x roebelenii",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhRe",
+        "title": "reclinata",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhRexC",
+        "title": "reclinata x canariensis",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhHxRe",
+        "title": "reclinata x hanceana*",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhRo xRe",
+        "title": "reclinata x roebelenii",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhRo",
+        "title": "roebelenii, cultivated",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhRoRa",
+        "title": "roebelenii 'Reasoneri'",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhRu",
+        "title": "rupicola",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhRuxRe",
+        "title": "rupicola x reclinata",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhS",
+        "title": "sylvestris",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhSR",
+        "title": "sylvestris 'Robusta'",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhT",
+        "title": "theophrasti",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhTG",
+        "title": "theophrasti 'Goelkry-Bodrum'",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PhZ",
+        "title": "zeylanica*",
+        "genus": "Phoenix",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Pi-",
+    "title": "Pinanga",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "PiC",
+        "title": "coronata",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiDc",
+        "title": "dicksonii",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiE",
+        "title": "elmeri*",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiG",
+        "title": "gracilis",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiJ",
+        "title": "javana",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiK",
+        "title": "kuhlii*",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiM",
+        "title": "maculata¹",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiPh",
+        "title": "philippinensis",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiPo",
+        "title": "polymorpha",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiSp",
+        "title": "speciosa¹",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PiV",
+        "title": "veitchii",
+        "genus": "Pinanga",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Pr-",
+    "title": "Pritchardia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "PrAf",
+        "title": "affinis*",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrAr",
+        "title": "arecina",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrAy",
+        "title": "aylmer-robinsonii*",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrB",
+        "title": "beccariana",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrFl",
+        "title": "flynnii",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrFo",
+        "title": "forbesiana",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrGl",
+        "title": "glabrata¹",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrGo",
+        "title": "gordonii",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrHa",
+        "title": "hardyi",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrH",
+        "title": "hillebrandii",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrH-DB",
+        "title": "hillebrandii",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrBM",
+        "title": "hillebrandii 'Blue Moon'",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrKa",
+        "title": "kaalae",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrKaM",
+        "title": "kaalae var. minima*",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrKk",
+        "title": "kahukuensis",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrLs",
+        "title": "lanaiensis*",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrLg",
+        "title": "lanigera",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrLo",
+        "title": "lowreyana",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrMd",
+        "title": "maideniana",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrMa",
+        "title": "martii",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrMi",
+        "title": "minor",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrMu",
+        "title": "munroi",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrN",
+        "title": "napaliensis",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrPr",
+        "title": "perlmanii",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrR",
+        "title": "remota",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrS",
+        "title": "schattaueri",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrV",
+        "title": "viscosa",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrWa",
+        "title": "waialealeana",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PrWe",
+        "title": "weissidiana*¹",
+        "genus": "Pritchardia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ps-",
+    "title": "Pseudophoenix",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "PsE",
+        "title": "ekmanii¹",
+        "genus": "Pseudophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PsL",
+        "title": "lindeniana",
+        "genus": "Pseudophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PsS",
+        "title": "sargentii",
+        "genus": "Pseudophoenix",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PsV",
+        "title": "vinifera",
+        "genus": "Pseudophoenix",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Pt-",
+    "title": "Ptychosperma",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "PtB",
+        "title": "burretianum",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtCa",
+        "title": "caryotoides",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtCu",
+        "title": "cuneatum¹",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtE",
+        "title": "elegans",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtL",
+        "title": "lineare",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtM",
+        "title": "macarthurii",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtMi",
+        "title": "microcarpum",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtPr",
+        "title": "propinquum¹",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtSa",
+        "title": "sanderianum",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtSl",
+        "title": "salomonense",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtSc",
+        "title": "schefferi",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "PtW",
+        "title": "waitianum¹",
+        "genus": "Ptychosperma",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ra-",
+    "title": "Raphia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "RaA",
+        "title": "australis",
+        "genus": "Raphia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RaF",
+        "title": "farinifera",
+        "genus": "Raphia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RaH",
+        "title": "hookeri",
+        "genus": "Raphia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RaR",
+        "title": "ruwenzorica",
+        "genus": "Raphia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RaT",
+        "title": "taidigera",
+        "genus": "Raphia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Rv-",
+    "title": "Ravenea",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "RvD",
+        "title": "dransfieldii¹",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvG",
+        "title": "glauca",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvH",
+        "title": "hildebrandtii",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvJ",
+        "title": "julietiae¹",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvK",
+        "title": "krociana¹",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvLa",
+        "title": "lakatra¹",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvLo",
+        "title": "louvellii¹",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvM",
+        "title": "madagascariensis",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvMA",
+        "title": "madagascariensis 'Asokefana'",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvM-M",
+        "title": "madagascariensis var. monticola*",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvMo",
+        "title": "moorei¹",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvRv",
+        "title": "rivularis",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvRo",
+        "title": "robustior",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvSa",
+        "title": "sambiranensis",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvSpAj",
+        "title": "sp. 'Anjouan'¹",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvSpMp",
+        "title": "sp. 'Manompana'¹",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvSpMa",
+        "title": "sp. 'Marinjo'",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RvXe",
+        "title": "xerophylla",
+        "genus": "Ravenea",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Rp-",
+    "title": "Rhapis",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "RpE",
+        "title": "excelsa",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpEv",
+        "title": "excelsa",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpG",
+        "title": "gracilis",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpH",
+        "title": "humilis",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpHxL",
+        "title": "humilis x laosensis",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpL",
+        "title": "laosensis",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpLxM",
+        "title": "laosensis x multifida",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpMi",
+        "title": "micrantha¹",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpMu",
+        "title": "multifida",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpP",
+        "title": "puhuongensis¹",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpR",
+        "title": "robusta¹",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpS",
+        "title": "subtilis",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RpV",
+        "title": "vidalii¹",
+        "genus": "Rhapis",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Rh-",
+    "title": "Rhopalostylis",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "RhB",
+        "title": "baueri",
+        "genus": "Rhopalostylis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RhC",
+        "title": "cheesemanii*",
+        "genus": "Rhopalostylis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RhO",
+        "title": "Oceana'*",
+        "genus": "Rhopalostylis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RhS",
+        "title": "sapida",
+        "genus": "Rhopalostylis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RhSG",
+        "title": "sapida 'Great Barrier Island'",
+        "genus": "Rhopalostylis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RhSC",
+        "title": "sapida 'Chatan Island'",
+        "genus": "Rhopalostylis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RhSS",
+        "title": "sapida 'South Island'",
+        "genus": "Rhopalostylis",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RhSxB",
+        "title": "sapida x baueri",
+        "genus": "Rhopalostylis",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ro-",
+    "title": "Roystonea",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "RoA",
+        "title": "altissima",
+        "genus": "Roystonea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RoB",
+        "title": "borinqueana",
+        "genus": "Roystonea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RoO",
+        "title": "oleracea",
+        "genus": "Roystonea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RoP",
+        "title": "princeps",
+        "genus": "Roystonea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RoR",
+        "title": "regia",
+        "genus": "Roystonea",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "RoV",
+        "title": "violacea",
+        "genus": "Roystonea",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Sa-",
+    "title": "Sabal",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "SaBe",
+        "title": "bermudana",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaBm",
+        "title": "sp. ‘Birmingham’¹",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaBl",
+        "title": "blackburniana*",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaC",
+        "title": "causiarum",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaD",
+        "title": "domingensis",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaE",
+        "title": "etonia",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaG",
+        "title": "guatemalensis",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaMiL",
+        "title": "louisiana*",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaMr",
+        "title": "maritima",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaMa",
+        "title": "mauritiiformis",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaMx",
+        "title": "mexicana",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaMm",
+        "title": "miamiensis",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaMi",
+        "title": "minor",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaPa",
+        "title": "palmetto",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaPv",
+        "title": "parviflora*",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaPr",
+        "title": "princeps*¹",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaPu",
+        "title": "pumos",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaRv",
+        "title": "sp. 'Riverside'",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaRo",
+        "title": "roseii",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaTa",
+        "title": "sp. 'Tamaulipas'¹",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaTe",
+        "title": "texana*",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaU",
+        "title": "uresana",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaXB",
+        "title": "× brazoriensis (S. xTexensis or S. 'Texensis')",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SaY",
+        "title": "yapa",
+        "genus": "Sabal",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Sy-",
+    "title": "Syagrus",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "SyA",
+        "title": "amara",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyB",
+        "title": "botryophora",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCa",
+        "title": "campylospatha¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCd",
+        "title": "cardenasii¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCe",
+        "title": "cearensis¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCm",
+        "title": "comosa",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCr",
+        "title": "coronata",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCrQ",
+        "title": "coronata 'quinquefaria'",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyF",
+        "title": "flexuosa",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyG",
+        "title": "glaucescens",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyH",
+        "title": "harleyi¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyMA",
+        "title": "macrocarpa",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyOl",
+        "title": "oleracea",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyOr",
+        "title": "orinocensis",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyPi",
+        "title": "picrophylla",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyPl",
+        "title": "pleioclada¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyPs",
+        "title": "pseudococos",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyQ",
+        "title": "romanzoffiana",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyQL",
+        "title": "romanzoffiana 'Litoralis'",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyQA",
+        "title": "romanzoffiana 'Abre ojos'",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyRu",
+        "title": "ruschiana¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyS",
+        "title": "sancona",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyZ",
+        "title": "schizophylla",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SySm",
+        "title": "smithii",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SySt",
+        "title": "stenopetala",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyVa",
+        "title": "vagans",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyVe",
+        "title": "vermicularis¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCxR",
+        "title": "× campos-portoana",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCxO",
+        "title": "x costae",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyCxV",
+        "title": "x matafome¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyRxS",
+        "title": "x montgomeriana",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyOxR",
+        "title": "× teixeiriana",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "SyY",
+        "title": "yungasensis¹",
+        "genus": "Syagrus",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Th-",
+    "title": "Thrinax",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "ThE",
+        "title": "excelsa",
+        "genus": "Thrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ThP",
+        "title": "parviflora",
+        "genus": "Thrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "ThR",
+        "title": "radiata",
+        "genus": "Thrinax",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Tr-",
+    "title": "Trachycarpus",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "TrF",
+        "title": "fortunei",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrG",
+        "title": "geminisectus",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrL",
+        "title": "latisectus",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrMM",
+        "title": "martianus",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrMK",
+        "title": "martianus subsp. khasyana",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrNa",
+        "title": "nanus",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrO",
+        "title": "oreophilus",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrP",
+        "title": "princeps",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrNT",
+        "title": "fortunei 'Naini Tal'",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrNv",
+        "title": "sp. 'Nova'",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrTg",
+        "title": "sp. 'Takaghii'",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrTk",
+        "title": "takil",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrU",
+        "title": "ukhrulensis",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrW",
+        "title": "wagnerianus*",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TrTx",
+        "title": "wagnerianus x maleT. fortunei ",
+        "genus": "Trachycarpus",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Tt-",
+    "title": "Trithrinax",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "TtB",
+        "title": "brasiliensis",
+        "genus": "Trithrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TtBi",
+        "title": "biflabellata*",
+        "genus": "Trithrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TtC",
+        "title": "campestris",
+        "genus": "Trithrinax",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "TtS",
+        "title": "schizophylla",
+        "genus": "Trithrinax",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Ve-",
+    "title": "Veitchia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "VeA",
+        "title": "arecina",
+        "genus": "Veitchia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "VeF",
+        "title": "filifera",
+        "genus": "Veitchia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "VeJ",
+        "title": "joannis",
+        "genus": "Veitchia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "VeV",
+        "title": "vitiensis¹",
+        "genus": "Veitchia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "VeW",
+        "title": "winin",
+        "genus": "Veitchia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Wl-",
+    "title": "Wallichia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "WlC",
+        "title": "caryotoides",
+        "genus": "Wallichia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "WlN",
+        "title": "densiflora*",
+        "genus": "Wallichia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "WlD",
+        "title": "disticha",
+        "genus": "Wallichia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "WlO",
+        "title": "oblongifolia",
+        "genus": "Wallichia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "WlS",
+        "title": "siamensis¹",
+        "genus": "Wallichia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "nodeid": "Wa-",
+    "title": "Washingtonia",
+    "type": "genus",
+    "selected": false,
+    "closed": true,
+    "children": [
+      {
+        "nodeid": "WaF",
+        "title": "filifera",
+        "genus": "Washingtonia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "WaR",
+        "title": "robusta",
+        "genus": "Washingtonia",
+        "type": "specie",
+        "selected": false
+      },
+      {
+        "nodeid": "WaX",
+        "title": "x 'filibusta'",
+        "genus": "Washingtonia",
+        "type": "specie",
+        "selected": false
+      }
+    ]
+  }
+]

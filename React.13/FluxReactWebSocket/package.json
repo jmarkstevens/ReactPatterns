@@ -1,0 +1,33 @@
+{
+	"name": "ReactPatterns-1.3-FluxReactWebSocket",
+	"version": "1.0.0",
+	"description": "A collection of simple react projects providing reusable components, startup and test examples.",
+  "license": "MIT",
+  "author": {
+    "name": "Janaka Stevens",
+    "email": "jmstevens@kykas.com"
+  },
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/calitek/ReactPatterns.git"
+  },
+	"scripts": { "start": "node js/server.js" },
+	"dependencies": {
+		"express": "latest",
+    "flux-react": "latest",
+		"primus": "latest",
+		"primus-emitter": "latest",
+		"react": "latest",
+    "serve-favicon": "latest",
+		"ws": "latest"
+	},
+	"devDependencies": {
+		"babelify": "latest",
+		"browserify": "latest",
+		"gulp": "latest",
+		"gulp-concat": "latest",
+		"gulp-minify-css": "latest",
+		"gulp-react": "latest",
+		"vinyl-source-stream": "latest"
+	}
+}
