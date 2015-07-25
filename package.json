@@ -30,5 +30,13 @@
     "websocket",
     "electron",
     "keycapture"
-  ]
+  ],
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-run": "latest",
+    "gulp-shell": "latest"
+  },
+  "scripts": {
+    "basic13": "cd React.13/Basic"
+  }
 }
