@@ -2,11 +2,11 @@
 
 A collection of simple react projects providing reusable components, startup and test examples. Its my react playground.
 
-React.12
+**React.12**
 	Basic
 	ReFluxWebSocket
 
-React.13
+**React.13**
 	Basic
 	BasicWebpack
 	Common
@@ -21,7 +21,7 @@ React.13
 	WindowEvents
 	WindowObject
 
-React.13.Common
+**React.13.Common**
 	Buttons
 	DropDown
 	FormInputs
@@ -30,7 +30,7 @@ React.13.Common
 	RangeAndTooltip
 	TreeView
 
-React.14
+**React.14**
 	Basic
 
 # The basics
