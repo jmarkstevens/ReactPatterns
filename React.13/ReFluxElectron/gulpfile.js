@@ -5,8 +5,11 @@ var browserify = require('browserify');
 var vsource = require("vinyl-source-stream");
 var babel = require('babelify');
 var shell = require('gulp-shell');
+var config = require('./config.json');
 
-var shellTaskArgument = './node_modules/electron-prebuilt/dist/Electron.app/Contents/MacOS/Electron ./../ReFluxElectron';
+var shellTaskArgument;
+if (process.platform == 'win32') shellTaskArgument = config.winProjectRoot + '/node_modules/electron-prebuilt/dist/electron.exe ' + config.winProjectRoot;
+else shellTaskArgument = './node_modules/electron-prebuilt/dist/Electron.app/Contents/MacOS/Electron ./../ReFluxElectron';
 
 var source = {
 	appjs: './ui-src/app.js',

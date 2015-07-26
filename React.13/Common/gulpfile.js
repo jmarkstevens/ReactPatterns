@@ -1,15 +1,16 @@
 var gulp = require('gulp');
+var config = require('./config.json');
 
-var rootPath = '/Users/janaka/Kykas/Projects/';
-if (process.platform == 'win32') { rootPath = 'K:/Projects/'	}
+var rootPath = config.macProjectRoot;
+if (process.platform == 'win32') { rootPath = config.winProjectRoot }
 
-var patternsPath13 = rootPath + 'ReactPatterns/React.13/';
-var patternsPath13c = rootPath + 'ReactPatterns/React.13.Common/';
+var patternsPath13 = rootPath + 'React.13/';
+var patternsPath13c = rootPath + 'React.13.Common/';
 var commonPath = '/ui-src/components/common/';
 
-var destPath12 = rootPath + 'ReactPatterns/React.12/';
-var destPath13 = rootPath + 'ReactPatterns/React.13/';
-var destPath13c = rootPath + 'ReactPatterns/React.13.Common/';
+var destPath12 = rootPath + 'React.12/';
+var destPath13 = rootPath + 'React.13/';
+var destPath13c = rootPath + 'React.13.Common/';
 var destPathDist = '/ui-dist';
 var destPathCss = '/ui-src/css';
 
