@@ -9,7 +9,7 @@ class AppCtrlRender extends Component {
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				Es6 Basic .14 beta
+				React 1.4 beta Basic
 			</div>
 		);
 	}

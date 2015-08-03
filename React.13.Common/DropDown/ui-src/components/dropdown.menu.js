@@ -26,18 +26,25 @@ class DropDownMenuRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
 	render() {
+		var optionLabel = this.state.option.label;
+		var optionValue = this.state.option.value;
 		return (
-			<div id='DropDownMenuSty' style={DropDownMenuSty}>
-				<JDropMenu options={options} onChange={this.onSelect} />
+			<div>
+				<div id='DropDownMenuSty' style={DropDownMenuSty}>
+					<JDropMenu options={options} onChange={this.onSelect} />
+				</div>
+				Label: {optionLabel}<br />
+				Value: {optionValue}
 			</div>
 		)
 	}
 }
 
 export default class DropDownMenu extends DropDownMenuRender {
-	constructor() { 
+	constructor() {
 	  super();
+		this.state = {option: {}};
 	  this.binder('onSelect');
 	}
-	onSelect(option) { window.alert('Label: ' + option.label + ' Value: ' + option.value); }
+	onSelect(option) { this.setState({option: option}); }
 }

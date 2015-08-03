@@ -24,6 +24,6 @@
 		"gulp": "latest",
 		"gulp-concat": "latest",
 		"gulp-minify-css": "latest",
-    "gulp-webpack": "latest"
+    "webpack-stream": "latest"
 	}
 }

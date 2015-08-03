@@ -13,7 +13,7 @@ class AboutPageRender extends Component {
 	render() {
 		return (
 			<div style={AboutPageSty}>
-				AboutPage render class
+				React 1.3 ReFlux used for app state. This is the About Page.
 				<NavMenu />
 			</div>
 		);

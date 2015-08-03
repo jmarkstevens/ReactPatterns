@@ -29,6 +29,7 @@ class AppCtrlRender extends Component {
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
+				React 1.3 List<br/><br/>
 				<JList data={list} />
 				<JList data={list} listStyle={listSty} />
 				<JList data={list} lineStyle={lineSty} />

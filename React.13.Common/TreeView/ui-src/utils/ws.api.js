@@ -2,8 +2,8 @@ import Actions from '../flux/Actions';
 
 module.exports = {
 	socket: {},
-	init: function() { 
-		this.socket = new Primus('http://192.168.0.100:3500') 
+	init: function() {
+		this.socket = new Primus();
 		this.socket.on('server:GotAppStore', this.gotAppStore);
 		this.socket.on('server:GotGenusList', this.gotGenusList);
 		this.socket.on('server:GotImageList', this.gotImageList);

@@ -50,19 +50,20 @@ class AppCtrlRender extends Component {
 		var radioGroupName1 = 'key1'; //must be distinct for each use of JRadioGroup
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
+				React 1.3 Form input<br/><br/>
 				<JInput input={textInput1} handleChange={this.handleValueChange} /><br/>
-				<JInput input={textInput2} handleChange={this.handleValueChange} /><br/>
+				<JInput input={textInput2} handleChange={this.handleValueChange} /><br/><br/>
 				<JInput input={checkInput1} handleChange={this.handleValueChange} /> {selected}<br/><br/>
 	      <JRadioGroup name={radioGroupName1} value={inputData.type} ref="keyGroup" onChange={this.handleRadioChange}>
 	        <div>
 	          <label id='inputLabel1' style={inputLabel}>
-	            <input type="radio" value="set" style={input3Sty} /> Set 
+	            <input type="radio" value="set" style={input3Sty} /> Set
 	          </label>
 	          <label id='inputLabel2' style={inputLabel}>
-	            <input type="radio" value="setkey"/> Set/Key 
+	            <input type="radio" value="setkey"/> Set/Key
 	          </label>
 	          <label id='inputLabel3' style={inputLabel}>
-	            <input type="radio" value="key"/> Key 
+	            <input type="radio" value="key"/> Key
 	          </label>
 	        </div>
 	      </JRadioGroup><br/><br/>
@@ -79,17 +80,17 @@ class AppCtrlRender extends Component {
 function getState() { return {data: BasicStore.getData()}; };
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { 
+	constructor() {
 	  super();
 		this.state = {
-			data: [{title: 'title', type: 'type', selected: 'selected'}], 
+			data: [{title: 'title', type: 'type', selected: 'selected'}],
 			color: '#1A3212', number: 10, range: 20
-		}; 
+		};
 	  this.binder('storeDidChange', 'handleValueChange', 'handleRadioChange', 'handleColorChange', 'handleNumberChange', 'handleRangeChange');
 	}
 
-	componentDidMount() { 
-		this.unsubscribe = BasicStore.listen(this.storeDidChange); 
+	componentDidMount() {
+		this.unsubscribe = BasicStore.listen(this.storeDidChange);
 	}
 	componentWillUnmount() { this.unsubscribe(); }
 	storeDidChange() { this.setState(getState()); }
@@ -99,4 +100,3 @@ export default class AppCtrl extends AppCtrlRender {
 	handleNumberChange(name, value) { this.setState({number: value}); }
 	handleRangeChange(name, value) { this.setState({range: value}); }
 }
-

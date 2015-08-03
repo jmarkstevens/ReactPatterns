@@ -64,25 +64,28 @@ class AppCtrlRender extends Component {
 		var currentGenusNode = this.state.currentGenusNode.title;
 		var currentImageItem = this.state.currentImageItem.title;
 		return (
-			<div id='AppCtrlSty' className='FlexBox' style={AppCtrlSty}>
-				<div id='TreeCtrlSty' style={TreeCtrlSty}>
-					current node: {currentTreeNode}
-					<br/>
-					<TreeCtrl 
-						treeData={this.state.treeData} 
-						currentTreeNode={this.state.currentTreeNode} 
-						showTreeEdit={this.state.showTreeEdit} 
-						showTreeNew={this.state.showTreeNew} />
-				</div>
-				<div id='GenusCtrlSty' style={TreeCtrlSty}>
-					current node: {currentGenusNode}
-					<br/>
-					<GenusCtrl genusList={this.state.genusList} />
-				</div>
-				<div id='JumpListSty' style={TreeCtrlSty}>
-					current node: {currentImageItem}
-					<br/>
-					<JumpCtrl imageList={this.state.imageList} clickHandler={this.jumpclick}  />
+			<div id='AppCtrlSty' style={AppCtrlSty}>
+				React 1.3 TreeView<br/><br/>
+				<div id='treeColumns' className='FlexBox' style={{height: '100%'}}>
+					<div id='TreeCtrlSty' style={TreeCtrlSty}>
+						current node: {currentTreeNode}
+						<br/>
+						<TreeCtrl
+							treeData={this.state.treeData}
+							currentTreeNode={this.state.currentTreeNode}
+							showTreeEdit={this.state.showTreeEdit}
+							showTreeNew={this.state.showTreeNew} />
+					</div>
+					<div id='GenusCtrlSty' style={TreeCtrlSty}>
+						current node: {currentGenusNode}
+						<br/>
+						<GenusCtrl genusList={this.state.genusList} />
+					</div>
+					<div id='JumpListSty' style={TreeCtrlSty}>
+						current node: {currentImageItem}
+						<br/>
+						<JumpCtrl imageList={this.state.imageList} clickHandler={this.jumpclick}  />
+					</div>
 				</div>
 			</div>
 		);
@@ -90,9 +93,9 @@ class AppCtrlRender extends Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { 
+	constructor() {
 	  super();
-		this.state = getAllState(); 
+		this.state = getAllState();
 	  this.binder('imStoreDidChange', 'gsStoreDidChange', 'tvStoreDidChange', 'jumpclick');
 	}
 	componentDidMount() {
@@ -106,5 +109,3 @@ export default class AppCtrl extends AppCtrlRender {
 	gsStoreDidChange() { this.setState(getGenusState()); }
 	tvStoreDidChange() { this.setState(getTreeState()); }
 }
-
-

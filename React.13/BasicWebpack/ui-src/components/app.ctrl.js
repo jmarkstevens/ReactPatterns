@@ -10,7 +10,7 @@ class AppCtrlRender extends Component {
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				AppCtrlRender Es6 BasicWebpack
+				React 1.3 BasicWebpack
 			</div>
 		);
 	}
@@ -18,4 +18,3 @@ class AppCtrlRender extends Component {
 
 export default class AppCtrl extends AppCtrlRender {}
 // module.exports = AppCtrl;
-

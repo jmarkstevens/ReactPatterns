@@ -48,3 +48,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['appjs', 'libjs', 'appcss', 'apphtml', 'watch']);
+
+gulp.task('nw', ['appjs', 'libjs', 'appcss', 'apphtml']);

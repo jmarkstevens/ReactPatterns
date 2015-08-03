@@ -25,19 +25,28 @@ class DropDownSelectRender extends Component {
 
 	render() {
 		var name = 'growthspeed';
-		var defaultOption = lodash.findWhere(options, {value: 'Any'});
+		var defaultOption = this.state.option.value ? this.state.option : lodash.findWhere(options, {value: 'Any'});
+		var selectedName = this.state.name;
+		var selectedLabel = this.state.option.label;
+		var selectedValue = this.state.option.value;
 		return (
-			<div id='DropDownSelectSty' style={DropDownSelectSty}>
-					<JDropSelect options={options} itemName={name} onChange={this.onDropSelect} defaultSelected={defaultOption} />
+			<div>
+				<div id='DropDownSelectSty' style={DropDownSelectSty}>
+						<JDropSelect options={options} itemName={name} onChange={this.onDropSelect} defaultSelected={defaultOption} />
+				</div>
+				Item name: {selectedName}<br/>
+				Selected label: {selectedLabel}<br/>
+				Selected value: {selectedValue}
 			</div>
 		)
 	}
 }
 
 export default class DropDownSelect extends DropDownSelectRender {
-	constructor() { 
+	constructor() {
 	  super();
+		this.state = {name: '', option: {}};
 	  this.binder('onDropSelect');
 	}
-	onDropSelect(name, option) { window.alert('Item Name: ' + name + ' -  Label: ' + option.label + ' - Value: ' + option.value); }
+	onDropSelect(name, option) { this.setState({name: name, option: option}); }
 }

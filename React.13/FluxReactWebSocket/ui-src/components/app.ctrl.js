@@ -17,7 +17,7 @@ class AppCtrlRender extends Component {
 		data2 = JSON.stringify(data2, null, 2);
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				AppCtrl<br/><br/>
+				React 1.3 FluxReact with WebSocket<br/><br/>
 				{data}<br/><br/>
 				Data2: {data2}
 			</div>
@@ -28,9 +28,9 @@ class AppCtrlRender extends Component {
 function getState() { return {Data: BasicStore.getData(), Data2: BasicStore.getData2()}; };
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { 
+	constructor() {
 	  super();
-		this.state = getState(); 
+		this.state = getState();
 	  this.binder('storeDidChange');
 	}
 
@@ -38,5 +38,3 @@ export default class AppCtrl extends AppCtrlRender {
 	componentWillUnmount() { BasicStore.offAny(this.storeDidChange); }
 	storeDidChange() { this.setState(getState()); }
 }
-
-

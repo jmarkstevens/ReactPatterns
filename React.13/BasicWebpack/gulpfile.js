@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
-var webpack = require('gulp-webpack');
+var webpack = require('webpack-stream');
 
 var source = {
 	appjs: './ui-src/app.js',
@@ -38,3 +38,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['appjs', 'appcss', 'apphtml', 'watch']);
+
+gulp.task('nw', ['appjs', 'appcss', 'apphtml']);

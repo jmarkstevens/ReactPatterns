@@ -2,8 +2,8 @@ var Actions = require('../flux/Actions');
 
 module.exports = {
 	socket: {},
-	init: function() { 
-		this.socket = new Primus('http://192.168.0.100:3500') 
+	init: function() {
+		this.socket = new Primus();
 		this.socket.on('server:GotData', this.gotData);
 	},
 	getData: function() { this.socket.send('client:GetData', {}); },

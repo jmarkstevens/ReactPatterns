@@ -15,7 +15,7 @@ class AppCtrlRender extends Component {
 		data = JSON.stringify(data, null, 2);
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				AppCtrl<br/><br/>
+				React 1.3 ReFlux and Electron<br/><br/>
 				{data}
 			</div>
 		);
@@ -25,9 +25,9 @@ class AppCtrlRender extends Component {
 function getState() { return {treeData: BasicStore.getData()}; };
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { 
+	constructor() {
 	  super();
-		this.state = getState(); 
+		this.state = getState();
 	  this.binder('storeDidChange');
 	}
 
@@ -35,5 +35,3 @@ export default class AppCtrl extends AppCtrlRender {
 	componentWillUnmount() { this.unsubscribe(); }
 	storeDidChange() { this.setState(getState()); }
 }
-
-

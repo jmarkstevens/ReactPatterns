@@ -11,7 +11,7 @@ function AppCtrlRender() {
 	data = JSON.stringify(data, null, 2);
 	return (
 		<div id='AppCtrlSty' style={AppCtrlSty}>
-			AppCtrl<br/><br/>
+			React 1.2 ReFlux with WebSocket<br/><br/>
 			{data}
 		</div>
 	);
@@ -19,14 +19,13 @@ function AppCtrlRender() {
 
 var getState = function() { return {Data: BasicStore.getData(),}; };
 
-var AppCtrl = React.createClass({ 
+var AppCtrl = React.createClass({
 	getInitialState: function() { return getState(); },
 
 	componentDidMount: function () { this.unsubscribe = BasicStore.listen(this.storeDidChange); },
 	componentWillUnmount: function () { this.unsubscribe(); },
 	storeDidChange: function() { this.setState(getState()); },
 
-	render: AppCtrlRender 
+	render: AppCtrlRender
 });
 module.exports = AppCtrl;
-

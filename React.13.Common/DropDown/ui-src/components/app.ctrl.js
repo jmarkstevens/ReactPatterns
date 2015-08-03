@@ -21,12 +21,15 @@ class AppCtrlRender extends Component {
 
  	render() {
 		return (
-			<div id='AppCtrlSty' className='FlexBox' style={AppCtrlSty}>
-				<div id='DropDownMenu' style={DropDownSty}>
-					<DropDownMenu />
-				</div>
-				<div id='DropDownSelect' style={DropDownSty}>
-					<DropDownSelect />
+			<div id='AppCtrlSty' style={AppCtrlSty}>
+				React 1.3 DropDown<br/><br/>
+				<div id='menuColumns' className='FlexBox' style={{height: '100%'}}>
+					<div id='DropDownMenu' style={DropDownSty}>
+						<DropDownMenu />
+					</div>
+					<div id='DropDownSelect' style={DropDownSty}>
+						<DropDownSelect />
+					</div>
 				</div>
 			</div>
 		);
@@ -34,4 +37,3 @@ class AppCtrlRender extends Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {}
-

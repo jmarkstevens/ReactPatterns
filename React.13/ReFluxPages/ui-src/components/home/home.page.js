@@ -22,7 +22,7 @@ class HomePageRender extends Component {
 		var navigatoruserAgent = window.navigator.userAgent;
 		return (
 			<div style={HomePageSty}>
-				Home Page<br/><br/>
+				React 1.3 ReFlux used for app state. This is the Home Page.<br /><br />
 				<NavMenu />
 				Platform: {platform}<br/>
 				Inner Width: {innerWidth}<br/>

@@ -8,11 +8,10 @@ var AppCtrlSty = {
 function AppCtrlRender() {
 	return (
 		<div id='AppCtrlSty' style={AppCtrlSty}>
-			AppCtrl Basic
+			React 1.2 Basic
 		</div>
 	);
 }
 
 var AppCtrl = React.createClass({ render: AppCtrlRender });
 module.exports = AppCtrl;
-

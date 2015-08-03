@@ -24,6 +24,7 @@ class AppCtrlRender extends Component {
  	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
+				React 1.3 Range slider and Tooltip<br/><br/>
 				<div id='columnSty' style={columnSty}>
 					<FilterCtrl filterList={this.state.filterList} hoverValues={this.state.hoverValues} />
 				</div>
@@ -33,17 +34,16 @@ class AppCtrlRender extends Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { 
+	constructor() {
 	  super();
-		this.state = getState(); 
+		this.state = getState();
 	  this.binder('storeDidChange');
 	}
 
-	componentDidMount() { 
-		this.unsubscribe = AppStore.listen(this.storeDidChange); 
+	componentDidMount() {
+		this.unsubscribe = AppStore.listen(this.storeDidChange);
 		Actions.setFilterOptions();
 	}
 	componentWillUnmount() { this.unsubscribe(); }
 	storeDidChange() { this.setState(getState()); }
 }
-

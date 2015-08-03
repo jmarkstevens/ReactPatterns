@@ -12,6 +12,7 @@ class AppCtrlRender extends Component {
 		var keycode = this.state.keyCode;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
+				React 1.3 Window events<br /><br />
 				Key code: {keycode}
 			</div>
 		);
@@ -24,17 +25,16 @@ function keyDownListener(event) {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { 
+	constructor() {
 		super();
 		this.state = {keyCode: 0};
 		this.keyDownListener = keyDownListener;
 	  this.binder('keyDownListener');
 	}
-	componentDidMount() { 
+	componentDidMount() {
 		React.findDOMNode(this).offsetParent.addEventListener('keydown', this.keyDownListener);
 	}
 	componentWillUnmount() {
 		React.findDOMNode(this).offsetParent.removeEventListener('keydown', this.keyDownListener);
 	}
 }
-

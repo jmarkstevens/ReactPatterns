@@ -44,9 +44,10 @@ class AppCtrlRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
 	render() {
+		var clickResponse = this.state.clicked;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				AppCtrl<br/><br/>
+				React 1.3 Buttons<br/><br/>
 				<div id='btnDivSty' style={btnDivSty}>
 					<JButton btn={basicBtn} parentClickHandler={this.clickHandler} />
 					<JButton btn={basicBtn18} parentClickHandler={this.clickHandler} />
@@ -63,13 +64,14 @@ class AppCtrlRender extends Component {
 					</span>
 					<JButton btn={basicBtn40} parentClickHandler={this.clickHandler} />
 				</div>
+				<br/><br/>
+				{clickResponse}
 			</div>
 		);
 	}
 }
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { super(); this.binder('clickHandler'); }
-	clickHandler(buttonid) { console.log('clickHandler buttonid: ', buttonid); }
+	constructor() { super(); this.state = {clicked: ''}; this.binder('clickHandler'); }
+	clickHandler(buttonid) { this.setState({clicked: 'clickHandler buttonid: ' + buttonid}); }
 }
-

@@ -41,6 +41,7 @@ class AppCtrlRender extends Component {
 		progressData.index = this.state.progressIndex;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
+				React 1.3 ProgressBar<br/><br/>
 				<br/>default<br/><br/>
 				<JProgressBar data={progressData} />
 				<br/>center<br/><br/>
@@ -74,12 +75,12 @@ class AppCtrlRender extends Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { 
-		super(); 
+	constructor() {
+		super();
 		this.binder('clickHandler');
-		this.state = {progressIndex: 0}; 
+		this.state = {progressIndex: 0};
 	}
-	clickHandler(buttonid) { 
+	clickHandler(buttonid) {
 		let newIndex = this.state.progressIndex;
 		switch (buttonid) {
 			case 'first': newIndex = 0; break;
@@ -87,7 +88,6 @@ export default class AppCtrl extends AppCtrlRender {
 			case 'next': newIndex += newIndex < 99 ? 1 : 0; break;
 			case 'last': newIndex = 99; break;
 		}
-		this.setState({progressIndex: newIndex}) 
+		this.setState({progressIndex: newIndex})
 	}
 }
-

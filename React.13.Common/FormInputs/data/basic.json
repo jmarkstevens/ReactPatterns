@@ -1,7 +1,7 @@
 {
   "nodeid": "10016",
   "title": "Dev and the title",
-  "type": "set",
+  "type": "setkey",
   "selected": true,
   "closed": true,
   "radio2": true
