@@ -10,6 +10,7 @@ A collection of simple react projects providing reusable components, startup and
 	Basic
 	BasicWebpack
 	Common
+	DragAndDrop
 	FluxReactWebsocket
 	ReFluxElectron
 	ReFluxPages

@@ -29,6 +29,7 @@
     "reflux",
     "websocket",
     "electron",
-    "keycapture"
+    "keycapture",
+    "drag and drop"
   ]
 }
