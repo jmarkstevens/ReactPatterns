@@ -47,6 +47,9 @@ gulp.task('refluxpages', function() {
 
 gulp.task('treeview', function() {
 	gulp.src(source.jbutton).pipe(gulp.dest(dest.treeview));
+	gulp.src(source.jdropmenu).pipe(gulp.dest(dest.treeview));
+	gulp.src(source.jinput).pipe(gulp.dest(dest.treeview));
+	gulp.src(source.jradiogroup).pipe(gulp.dest(dest.treeview));
 });
 
 gulp.task('favicon', function() {

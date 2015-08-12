@@ -6,7 +6,7 @@ class JInputRender extends Component {
 
  	render() {
 		var inputSty = {color: 'red'};
-		if (lodash.has(this.props.input, 'style')) inputSty = this.props.input.style;
+		if (this.props.input.style) inputSty = this.props.input.style;
 		var textValue = this.state.textValue;
 		var colorValue = this.state.colorValue
 		var booleanValue = this.state.booleanValue;
@@ -14,7 +14,7 @@ class JInputRender extends Component {
 		var max = this.state.max;
 		var step = this.state.step;
 		var numberValue = this.state.numberValue;
-		var inputType = lodash.has(this.props.input, 'type') ? this.props.input.type : 'text';
+		var inputType = this.props.input.type ? this.props.input.type : 'text';
 
 		var returnChecked = (
 				<input
@@ -56,7 +56,7 @@ class JInputRender extends Component {
 		switch (inputType) {
 			case 'checkbox': returnIt = returnChecked; break;
 			case 'color': returnIt = returnColor; break;
-			case 'number': 
+			case 'number':
 			case 'range': returnIt = returnNumber; break;
 			default: returnIt = returnText; break;
 		}
@@ -66,54 +66,60 @@ class JInputRender extends Component {
 }
 
 export default class JInput extends JInputRender {
-	constructor() { 
+	constructor() {
 	  super();
 		this.state = {
-			textValue: '#1A3212', 
-			colorValue: '#1A3212', 
-			booleanValue: false, 
+			textValue: '',
+			colorValue: '#1A3212',
+			booleanValue: false,
 			min: 0, max: 100, step: 1,
 			numberValue: 0
-		}; 
+		};
 	  this.binder('handleCheckedChange', 'handleColorValueChange', 'handleNumberValueChange', 'handleTextValueChange');
 	}
 
+	componentDidMount() {
+		if (this.props.input.textValue) this.setState({textValue: this.props.input.textValue});
+		if (this.props.input.focus) React.findDOMNode(this.refs.inputRef).focus();
+		if (this.props.input.booleanValue) this.setState({booleanValue: this.props.input.booleanValue});
+		if (this.props.input.min) this.setState({min: this.props.input.min});
+		if (this.props.input.max) this.setState({max: this.props.input.max});
+		if (this.props.input.step) this.setState({step: this.props.input.step});
+		if (this.props.input.numberValue) this.setState({numberValue: this.props.input.numberValue});
+	}
 	componentWillReceiveProps(nextProps) {
-		if (lodash.has(nextProps.input, 'textValue') && (this.state.textValue != nextProps.input.textValue)) 
-			this.setState({textValue: nextProps.input.textValue});
-		if (lodash.has(nextProps.input, 'focus') && nextProps.input.focus) React.findDOMNode(this.refs.inputRef).focus();
-		if (lodash.has(nextProps.input, 'booleanValue') && (this.state.booleanValue != nextProps.input.booleanValue)) 
+		if (nextProps.input.textValue && (this.state.textValue != nextProps.input.textValue))
+			{this.setState({textValue: nextProps.input.textValue});}
+		if (nextProps.input.focus) React.findDOMNode(this.refs.dataRef).focus();
+		if (nextProps.input.booleanValue && (this.state.booleanValue != nextProps.input.booleanValue))
 			this.setState({booleanValue: nextProps.input.booleanValue});
-		if (lodash.has(nextProps.input, 'min') && (this.state.min != nextProps.input.min)) 
+		if (nextProps.input.min && (this.state.min != nextProps.input.min))
 			this.setState({min: nextProps.input.min});
-		if (lodash.has(nextProps.input, 'max') && (this.state.max != nextProps.input.max)) 
+		if (nextProps.input.max && (this.state.max != nextProps.input.max))
 			this.setState({max: nextProps.input.max});
-		if (lodash.has(nextProps.input, 'step') && (this.state.step != nextProps.input.step)) 
+		if (nextProps.input.step && (this.state.step != nextProps.input.step))
 			this.setState({step: nextProps.input.step});
-		if (lodash.has(nextProps.input, 'numberValue') && (this.state.numberValue != nextProps.input.numberValue)) 
+		if (nextProps.input.numberValue && (this.state.numberValue != nextProps.input.numberValue))
 			this.setState({numberValue: nextProps.input.numberValue});
 	}
-	handleCheckedChange(event) { 
+	handleCheckedChange(event) {
 		var newValue = event.target.checked;
 		this.setState({booleanValue: newValue});
-		this.props.handleChange(this.props.input.name, newValue); 
+		this.props.handleChange(this.props.input.name, newValue);
 	}
-	handleColorValueChange(event) { 
+	handleColorValueChange(event) {
 		var newValue = event.target.value;
 		this.setState({colorValue: newValue});
-		this.props.handleChange(this.props.input.name, newValue); 
+		this.props.handleChange(this.props.input.name, newValue);
 	}
-	handleNumberValueChange(event) { 
+	handleNumberValueChange(event) {
 		var newValue = event.target.value;
 		this.setState({numberValue: newValue});
-		this.props.handleChange(this.props.input.name, newValue); 
+		this.props.handleChange(this.props.input.name, newValue);
 	}
-	handleTextValueChange(event) { 
+	handleTextValueChange(event) {
 		var newValue = event.target.value;
 		this.setState({textValue: newValue});
-		this.props.handleChange(this.props.input.name, newValue); 
+		this.props.handleChange(this.props.input.name, newValue);
 	}
 }
-
-
-

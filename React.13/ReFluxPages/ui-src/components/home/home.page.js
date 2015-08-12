@@ -12,6 +12,7 @@ var HomePageSty = {
 
 class HomePageRender extends Component {
 	render() {
+		if (this.props.hide) return null;
 		var platform = window.navigator.platform;
 		var innerWidth = Math.floor(window.innerWidth);
 		var innerHeight = Math.floor(window.innerHeight);

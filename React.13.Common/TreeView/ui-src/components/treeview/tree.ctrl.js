@@ -9,12 +9,14 @@ var TreeCtrlRenderSty = { height: 'calc(100% - 2px)'};
 
 class TreeCtrlRender extends Component {
  	render() {
+    var hideTreeEdit = !this.props.showTreeEdit;
+    var hideTreeNew = !this.props.showTreeNew;
 		return (
 			<div id='TreeCtrlRenderSty' style={TreeCtrlRenderSty}>
 				<TreeMenu />
 				<TreeList data={this.props.treeData} />
-				<TreeEdit treeNode={this.props.currentTreeNode} visable={this.props.showTreeEdit} />
-				<TreeNew visable={this.props.showTreeNew} />
+				<TreeEdit treeNode={this.props.currentTreeNode} hide={hideTreeEdit} />
+				<TreeNew hide={hideTreeNew} />
 			</div>
 		);
 	}

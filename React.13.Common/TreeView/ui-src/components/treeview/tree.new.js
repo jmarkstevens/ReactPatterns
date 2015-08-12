@@ -4,41 +4,40 @@ import TreeDetail from './tree.detail';
 import Actions from '../../flux/Actions';
 import JButton from '../common/jButton';
 
-var newBeforeBtn = { buttonid: "before", text: "New Before" };
-var newAfterBtn = { buttonid: "after", text: "New After" };
-var newChildBtn = { buttonid: "child", text: "New Child" };
-var cancelNewBtn = { buttonid: "cancel", text: "Cancel" };
+var newBeforeBtn = { buttonid: "before", text: "New Before", assignStyle: {width: '92px'} };
+var newAfterBtn = { buttonid: "after", text: "New After", assignStyle: {width: '92px'} };
+var newChildBtn = { buttonid: "child", text: "New Child", assignStyle: {width: '92px'} };
+var cancelNewBtn = { buttonid: "cancel", text: "Cancel", assignStyle: {width: '92px'} };
 
 class TreeNewRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
  	render() {
-		var newStyle = {};
-		if (!this.props.visable) { newStyle.display = "none"; }
+		if (this.props.hide) return null;
 		return (
-			<div className="treeNewEdit" style={newStyle}>
-				<div className="buttonArea">
-					<div className="halfNewButtonArea">
-						<div className="topButtonArea">
+			<div id="treeNewEdit">
+				<div id="buttonArea">
+					<div id="halfNewButtonArea">
+						<div id="topButtonArea">
 							<JButton btn={newBeforeBtn} parentClickHandler={this.clickHandler} />
 							<JButton btn={newAfterBtn} parentClickHandler={this.clickHandler} />
 						</div>
-						<div className="bottomButtonArea">
+						<div id="bottomButtonArea">
 							<JButton btn={newChildBtn} parentClickHandler={this.clickHandler} />
 							<JButton btn={cancelNewBtn} parentClickHandler={this.clickHandler} />
 						</div>
 					</div>
 				</div>
-				<TreeDetail treeNode={this.state.treeNode} handleChange={this.handleChange} />
+				<TreeDetail treeNode={this.state.treeNode} name='newNode' handleChange={this.handleChange} />
 			</div>
 		);
 	}
 }
 
 export default class TreeNew extends TreeNewRender {
-	constructor() { 
+	constructor() {
 	  super();
-		this.state = { treeNode: { nodeid: '', title: '', type: 'dev', selected: false, children: [] }}; 
+		this.state = { treeNode: { nodeid: '', title: '', type: 'dev', selected: false, children: [] }};
 	  this.binder('clickHandler', 'handleChange');
 	}
 	clickHandler(buttonid) {
@@ -49,10 +48,10 @@ export default class TreeNew extends TreeNewRender {
 			case 'cancel': Actions.treeActions('cancelNew'); break;
 		}
 	}
-	handleChange(event, field) {
+	handleChange(field, value) {
 		var node = this.state.treeNode;
-		if (field == 'title') node.title = event.target.value;
+		if (field == 'title') node.title = value;
+		if (field == 'type') node.type = value;
 		this.setState({ treeNode: node });
 	}
 }
-

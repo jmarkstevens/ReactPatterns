@@ -11,24 +11,23 @@ class TreeEditRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
  	render() {
-		var editStyle = {};
-		if (!this.props.visable) { editStyle.display = "none"; }
+		if (this.props.hide) return null;
 		return (
-			<div className="treeNewEdit" style={editStyle}>
-				<div className="buttonArea">
+			<div id="treeNewEdit">
+				<div id="buttonArea">
 					<JButton btn={saveEditBtn} parentClickHandler={this.clickHandler} />
 					<JButton btn={cancelEditBtn} parentClickHandler={this.clickHandler} />
 				</div>
-				<TreeDetail treeNode={this.state.treeNode} handleChange={this.handleChange} />
+				<TreeDetail treeNode={this.state.treeNode} name='editNode' handleChange={this.handleChange} />
 			</div>
 		);
 	}
 }
 
 export default class TreeEdit extends TreeEditRender {
-	constructor() { 
+	constructor() {
 	  super();
-		this.state = { treeNode: { nodeid: '', children: [], title: '', type: '' }}; 
+		this.state = { treeNode: { nodeid: '', children: [], title: '', type: '' }};
 	  this.binder('clickHandler', 'handleChange');
 	}
 
@@ -39,9 +38,10 @@ export default class TreeEdit extends TreeEditRender {
 		}
 	}
 	componentWillReceiveProps(nextProps) { this.setState({treeNode: nextProps.treeNode}); }
-	handleChange(event, field) {
+	handleChange(field, value) {
 		var node = this.state.treeNode;
-		if (field == 'title') node.title = event.target.value;
+		if (field == 'title') node.title = value;
+		if (field == 'type') node.type = value;
 		this.setState({ treeNode: node });
 	}
 }

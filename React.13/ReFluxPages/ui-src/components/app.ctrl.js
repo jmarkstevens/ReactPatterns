@@ -23,13 +23,13 @@ class AppCtrlRender extends Component {
 
  	render() {
 		var page = this.state.appState.currentPage;
-		var aboutSty = page == 'about' ? {} : {display: 'none'};
-		var homeSty = page == 'home' ? {} : {display: 'none'};
+		var hideAbout = (page != 'about');
+		var hideHome = (page != 'home');
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
 				<div id='allPageSty' style={allPageSty}>
-					<span id='aboutSty' style={aboutSty}><AboutPage /></span>
-					<span id='homeSty' style={homeSty}><HomePage /></span>
+					<AboutPage hide={hideAbout} />
+					<HomePage hide={hideHome} />
 				</div>
 			</div>
 		);
@@ -39,9 +39,9 @@ class AppCtrlRender extends Component {
 var getState = function() { return {appState: AppStore.getAppState(),}; };
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() { 
+	constructor() {
 	  super();
-		this.state = getState(); 
+		this.state = getState();
 	  this.binder('storeDidChange');
 	}
 
@@ -50,4 +50,6 @@ export default class AppCtrl extends AppCtrlRender {
 	storeDidChange() { this.setState(getState()); }
 }
 
-
+// <span id='aboutSty' style={aboutSty}>
+// 	<AboutPage show={showAbout} />
+// </span>

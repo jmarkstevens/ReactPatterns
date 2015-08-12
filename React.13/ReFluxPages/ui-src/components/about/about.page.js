@@ -11,6 +11,7 @@ var AboutPageSty = {
 
 class AboutPageRender extends Component {
 	render() {
+		if (this.props.hide) return null;
 		return (
 			<div style={AboutPageSty}>
 				React 1.3 ReFlux used for app state. This is the About Page.
