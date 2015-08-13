@@ -18,19 +18,19 @@ gulp.task('appjs', function(){
 		.require(source.appjs, { entry: true })
 		.bundle()
 		.pipe(vsource('app.min.js'))
-		.pipe(gulp.dest('./ui-dist'));
+		.pipe(gulp.dest('./uidist'));
 });
 
 gulp.task('appcss', function () {
 	gulp.src(source.appcss)
 		.pipe(concat('app.min.css'))
 		.pipe(minifyCSS())
-		.pipe(gulp.dest('./ui-dist'))
+		.pipe(gulp.dest('./uidist'))
 });
 
 gulp.task('apphtml', function() {
 	gulp.src(source.apphtml)
-		.pipe(gulp.dest('./ui-dist'));
+		.pipe(gulp.dest('./uidist'));
 });
 
 gulp.task('watch', function() {

@@ -8,6 +8,6 @@ var port = Number(process.env.PORT || 3500);
 var app = express();
 var server = app.listen(port);
 
-app.use('/', express.static('ui-dist'));
-app.use(favicon(path.join(__dirname, '..', 'ui-dist', 'favicon.ico')));
+app.use('/', express.static('uidist'));
+app.use(favicon(path.join(__dirname, '..', 'uidist', 'favicon.ico')));
 app.get('/', function(req, res){ res.sendfile(__dirname + '/index.html', [], null); });
