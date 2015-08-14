@@ -2,13 +2,27 @@ import React, {Component} from 'react';
 import _ld from 'lodash';
 
 import DList from './dnd.list';
+import JList from './common/jList';
 
 var DndCtrlSty = {
+	height: '100%',
 	padding: '0 10px 0 30px'
+}
+var startLineStyle = {
+	color: '#1F1',
+	marginLeft: '7px'
+}
+var overLineStyle = {
+	color: '#F11',
+	marginLeft: '7px'
+}
+var endLineStyle = {
+	color: '#11F',
+	marginLeft: '7px'
 }
 
 var list = [
-	{id: 'l1', label: 'first line of list'},
+	{id: 'l1', label: 'first of list'},
 	{id: 'l2', label: 'second line of list'},
 	{id: 'l3', label: 'third line of list'},
 	{id: 'l4', label: 'fourth line of list'},
@@ -20,10 +34,18 @@ class DndCtrlRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
 	render() {
+		var isMobile = this.props.isMobile;
+		var messages = this.props.messages;
 		return (
 			<div id='DndCtrlSty' className='FlexBox' style={DndCtrlSty}>
-				<DList data={list} />
+				<DList data={list} isMobile={isMobile} />
 				<DList data={this.state.list} dndDone={this.dndDone} />
+				<div style={{marginLeft: '10px'}}>
+					<span style={startLineStyle}>drag start</span><br/>
+					<span style={overLineStyle}>drag over</span><br/>
+					<span style={endLineStyle}>drag end</span><br/>
+					<JList data={messages} />
+				</div>
 			</div>
 		);
 	}

@@ -14,6 +14,7 @@
 	"scripts": { "start": "node js/server.js" },
 	"dependencies": {
 		"express": "latest",
+		"flux-react": "latest",
 		"lodash": "latest",
 		"react": "latest",
     "serve-favicon": "latest"

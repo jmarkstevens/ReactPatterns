@@ -31,6 +31,7 @@ var source = {
 };
 
 var dest = {
+	draganddrop: destPath13 + 'DragAndDrop' + commonPath,
 	rangeandtooltip: destPath13c + 'RangeAndTooltip' + commonPath,
 	refluxpages: destPath13 + 'ReFluxPages' + commonPath,
 	treeview: destPath13c + 'TreeView' + commonPath
@@ -39,6 +40,10 @@ var dest = {
 gulp.task('rangeandtooltip', function() {
 	gulp.src(source.jdropselect).pipe(gulp.dest(dest.rangeandtooltip));
 	gulp.src(source.jinput).pipe(gulp.dest(dest.rangeandtooltip));
+});
+
+gulp.task('draganddrop', function() {
+	gulp.src(source.jlist).pipe(gulp.dest(dest.draganddrop));
 });
 
 gulp.task('refluxpages', function() {
@@ -56,6 +61,7 @@ gulp.task('favicon', function() {
 	gulp.src(source.leaficon).pipe(gulp.dest(destPath12 + 'Basic' + destPathDist));
 	gulp.src(source.leaficon).pipe(gulp.dest(destPath12 + 'ReFluxWebSocket' + destPathDist));
 	gulp.src(source.leaficon).pipe(gulp.dest(destPath13 + 'Basic' + destPathDist));
+	gulp.src(source.leaficon).pipe(gulp.dest(destPath13 + 'DragAndDrop' + destPathDist));
 	gulp.src(source.leaficon).pipe(gulp.dest(destPath13 + 'FluxReactWebSocket' + destPathDist));
 	gulp.src(source.leaficon).pipe(gulp.dest(destPath13 + 'ReFluxPages' + destPathDist));
 	gulp.src(source.leaficon).pipe(gulp.dest(destPath13 + 'ReFluxWebSocket' + destPathDist));
@@ -74,6 +80,7 @@ gulp.task('indexcss', function() {
 	gulp.src(source.indexcss).pipe(gulp.dest(destPath12 + 'Basic' + destPathCss));
 	gulp.src(source.indexcss).pipe(gulp.dest(destPath12 + 'ReFluxWebSocket' + destPathCss));
 	gulp.src(source.indexcss).pipe(gulp.dest(destPath13 + 'BasicWebpack' + destPathCss));
+	gulp.src(source.indexcss).pipe(gulp.dest(destPath13 + 'DragAndDrop' + destPathCss));
 	gulp.src(source.indexcss).pipe(gulp.dest(destPath13 + 'FluxReactWebSocket' + destPathCss));
 	gulp.src(source.indexcss).pipe(gulp.dest(destPath13 + 'ReFluxElectron' + destPathCss));
 	gulp.src(source.indexcss).pipe(gulp.dest(destPath13 + 'ReFluxPages' + destPathCss));
@@ -89,4 +96,4 @@ gulp.task('indexcss', function() {
 	gulp.src(source.indexcss).pipe(gulp.dest(destPath13c + 'TreeView' + destPathCss));
 });
 
-gulp.task('default', ['rangeandtooltip', 'refluxpages', 'treeview', 'favicon', 'indexcss']);
+gulp.task('default', ['draganddrop', 'rangeandtooltip', 'refluxpages', 'treeview', 'favicon', 'indexcss']);

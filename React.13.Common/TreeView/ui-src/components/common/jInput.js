@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import lodash from 'lodash';
 
 class JInputRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }

@@ -13,10 +13,10 @@ class JRadioGroupRender extends Component {
 }
 
 export default class JRadioGroup extends JRadioGroupRender {
-  constructor() { 
+  constructor() {
     super();
-    this.state = {defaultValue: ''}; 
-    this.binder('setRadioNames', 'getRadios', 'setCheckedRadio', 'getCheckedValue');
+    this.state = {defaultValue: ''};
+    this.binder('getCheckedValue', 'getRadios', 'setCheckedRadio', 'setRadioNames');
   }
 
   componentDidMount() { this.setRadioNames(); this.setCheckedRadio(); }
@@ -35,7 +35,7 @@ export default class JRadioGroup extends JRadioGroupRender {
 
   setCheckedRadio() {
     var $radios = this.getRadios();
-    var destinationValue = this.props.value != null ? this.props.value : this.state.defaultValue;
+    var destinationValue = this.props.value ? this.props.value : this.state.defaultValue;
 
     for (var i = 0, length = $radios.length; i < length; i++) {
       var $radio = $radios[i];
@@ -45,7 +45,7 @@ export default class JRadioGroup extends JRadioGroupRender {
 
   setRadioNames() {
     var $radios = this.getRadios();
-    
+
     for (var i = 0, length = $radios.length; i < length; i++) {
       $radios[i].setAttribute('name', this.props.name);
     }

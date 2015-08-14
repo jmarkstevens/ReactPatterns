@@ -14,7 +14,7 @@
 	"scripts": { "start": "node js/server.js" },
 	"dependencies": {
 		"express": "latest",
-    "lodash": "latest",
+		"lodash": "latest",
 		"primus": "latest",
 		"primus-emitter": "latest",
 		"react": "latest",
