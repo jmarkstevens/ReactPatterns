@@ -39,7 +39,10 @@ export default class AppCtrl extends AppCtrlRender {
 	  this.binder('appStoreDidChange');
 	}
 
-	componentDidMount() { Actions.setWindowDefaults(window); }
+	componentDidMount() {
+		var navPlatform = window.navigator.platform;
+		Actions.setWindowDefaults(navPlatform); 
+	}
 	componentWillMount() { AppStore.onAny(this.appStoreDidChange); }
 	componentWillUnmount() { AppStore.offAny(this.appStoreDidChange); }
 	appStoreDidChange() { this.setState(getAppState()); }

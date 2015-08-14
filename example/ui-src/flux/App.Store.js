@@ -13,10 +13,10 @@ var _appStoreExports = {
 	getAppData: function() { return this.appData; }
 };
 
-function _setWindowDefaults(window) {
+function _setWindowDefaults(navPlatform) {
 	var deviceTyped = 'mobile';
-	var navPlatform = window.navigator.platform;
-	// this._newMessage('navPlatform: ' + navPlatform);
+
+	this.newMessage('navPlatform: ' + navPlatform);
 	switch (navPlatform) {
 		case 'MacIntel':
 		case 'Linux x86_64':
