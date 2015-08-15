@@ -81,6 +81,7 @@ function divMap(item) {
 			key={item.id}
 			draggable="true"
 			onDragStart={this.onThisDragStart}
+			onDragEnter={this.onThisDragOver}
 			onDragOver={this.onThisDragOver}
 			onDrop={this.onThisDragEnd}
 			onTouchStart={this.onThisTouchStart}
@@ -127,6 +128,9 @@ export default class DndList extends DndListRender {
 		this.binder('onThisDragStart', 'onThisDragOver', 'onThisDragEnd', 'onThisTouchStart', 'onThisTouchMove', 'onThisTouchEnd');
 	}
 	onThisDragStart(event) {
+		event.preventDefault();
+		event.dataTransfer.setData('text/plain', 'This text may be dragged');
+		event.dataTransfer.effectAllowed = "all";
 		var itemID = event.target.id;
 		if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 		Actions.newMessage('DragStart itemID: ' + itemID);
@@ -139,6 +143,7 @@ export default class DndList extends DndListRender {
 		Actions.newMessage('DragOver itemID: ' + itemID);
 	}
 	onThisDragEnd(event) {
+		event.preventDefault();
 		var itemID = event.target.id;
 		if (itemID) { this.setState({endID: itemID, overID: ''}) };
 		if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);

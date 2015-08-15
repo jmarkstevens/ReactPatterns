@@ -9,7 +9,8 @@ var source = {
 	appjs: './ui-src/app.js',
 	js: ['./ui-src/**/*.js'],
 	appcss: ['./ui-src/css/*.css'],
-	apphtml: ['./ui-src/**/*.html']
+	apphtml: ['./ui-src/**/*.html'],
+	appgif: ['./ui-src/**/*.gif']
 };
 
 gulp.task('appjs', function(){
@@ -30,6 +31,8 @@ gulp.task('appcss', function () {
 
 gulp.task('apphtml', function() {
 	gulp.src(source.apphtml)
+		.pipe(gulp.dest('./ui-dist'));
+	gulp.src(source.appgif)
 		.pipe(gulp.dest('./ui-dist'));
 });
 

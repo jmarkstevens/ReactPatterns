@@ -13,15 +13,16 @@ var _appStoreExports = {
 	getAppData: function() { return this.appData; }
 };
 
-function _setWindowDefaults(window) {
+function _setWindowDefaults(navPlatform) {
 	var deviceTyped = 'mobile';
-	var navPlatform = window.navigator.platform;
+
+	this.newMessage('navPlatform: ' + navPlatform);
 	switch (navPlatform) {
 		case 'MacIntel':
 		case 'Linux x86_64':
 		case 'Win32': deviceTyped = 'desktop'; break;
 	}
-	deviceTyped = 'mobile';
+	// deviceTyped = 'mobile';
 	this.appData.isMobile = (deviceTyped == 'mobile');
 	this.emit('setWindowDefaults');
 }

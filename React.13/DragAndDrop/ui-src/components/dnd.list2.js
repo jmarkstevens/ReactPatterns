@@ -3,51 +3,72 @@ import React, {Component} from 'react';
 import Actions from './../flux/Actions';
 
 var listSty = {}
-var listStyle = {marginLeft: '50px'}
+var listStyle = {
+	marginLeft: '50px'
+}
 
 var lineSty = {}
 var lineStyle = {
 	color: '#FBF7C3',
-	marginLeft: '7px'
+	height: '1.2em',
+	marginLeft: '7px',
+	marginTop: '3px'
 }
 var startLineStyle = {
 	color: '#1F1',
-	marginLeft: '7px'
+	marginLeft: '7px',
+	marginTop: '3px'
 }
 var overLineStyle = {
 	color: '#F11',
-	marginLeft: '7px'
+	marginLeft: '7px',
+	marginTop: '3px'
 }
 var endLineStyle = {
 	color: '#11F',
-	marginLeft: '7px'
+	marginLeft: '7px',
+	marginTop: '3px'
 }
 
 var mobileLineStyle = {
+	// border: '1px solid blue',
 	color: '#FBF7C3',
 	height: '2em',
 	marginLeft: '7px',
-	marginTop: '5px'
+	marginTop: '5px',
+	verticalAlign: 'middle'
 }
 var startMobileLineStyle = {
 	color: '#1F1',
 	height: '2em',
 	marginLeft: '7px',
-	marginTop: '5px'
+	marginTop: '5px',
+	verticalAlign: 'middle'
 }
 var overMobileLineStyle = {
 	color: '#F11',
 	height: '2em',
 	marginLeft: '7px',
-	marginTop: '5px'
+	marginTop: '5px',
+	verticalAlign: 'middle'
 }
 var endMobileLineStyle = {
 	color: '#11F',
 	height: '2em',
 	marginLeft: '7px',
-	marginTop: '5px'
+	marginTop: '5px',
+	verticalAlign: 'middle'
 }
-
+var imageStyle = {height: '100%', width: '100%'}
+var imageDivStyle = {
+	border: 'thin dotted green',
+	height: '1.2em',
+	left: '0',
+	marginTop: '-1.2em',
+	position: 'relative',
+	top: '0',
+	width: '100%'
+}
 function divColorMap(item) {
 	if (this.state.startID === item.id) lineSty = startLineStyle;
 	else if (this.state.overID === item.id) lineSty = overLineStyle;
@@ -56,7 +77,6 @@ function divColorMap(item) {
 	return (
 		<div
 			style={lineSty}
-			id={item.id}
 			key={item.id}
 			draggable="true"
 			onDragStart={this.onThisDragStart}
@@ -68,6 +88,7 @@ function divColorMap(item) {
 			onTouchCancel={this.onThisTouchEnd}
 			>
 			{item.label}
+			<div style={imageDivStyle}><img id={item.id} src='./img/1x1TransShim.gif' style={imageStyle} /></div>
 		</div>
 	)
 }
@@ -94,7 +115,7 @@ function divMap(item) {
 	)
 }
 
-class DndListRender extends Component {
+class DndList2Render extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
 	render() {
@@ -104,6 +125,8 @@ class DndListRender extends Component {
 			startLineStyle = startMobileLineStyle;
 			overLineStyle = overMobileLineStyle;
 			endLineStyle = endMobileLineStyle;
+			imageDivStyle.height = '2em';
+			imageDivStyle.marginTop = '-1.6em';
 		}
 		var vm = this;
 		var list;
@@ -117,7 +140,7 @@ class DndListRender extends Component {
 	}
 }
 
-export default class DndList extends DndListRender {
+export default class DndList2 extends DndList2Render {
 	constructor() {
 	  super();
 		this.state = {
@@ -137,7 +160,7 @@ export default class DndList extends DndListRender {
 	onThisDragOver(event) {
 		event.preventDefault();
 		var itemID = event.target.id;
-		if (this.state.overID == itemID) return;
+		if (!itemID || this.state.overID == itemID) return;
 		if (itemID) { this.setState({overID: itemID}) };
 		Actions.newMessage('DragOver itemID: ' + itemID);
 	}
@@ -160,7 +183,7 @@ export default class DndList extends DndListRender {
 		var x = event.touches[lastTouch].pageX;
 		var y = event.touches[lastTouch].pageY;
 		var element = document.elementFromPoint(x, y);
-		if (this.state.overID == element.id) return;
+		if (!element.id || this.state.overID == element.id) return;
 		Actions.newMessage('TouchMove element.id: ' + element.id);
 		if (element.id) { this.setState({overID: element.id}) };
 	}

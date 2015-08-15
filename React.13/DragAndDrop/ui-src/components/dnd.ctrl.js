@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import _ld from 'lodash';
 
 import DList from './dnd.list';
+import DList2 from './dnd.list2';
 import JList from './common/jList';
 
 var DndCtrlSty = {
@@ -38,6 +39,7 @@ class DndCtrlRender extends Component {
 		var messages = this.props.messages;
 		return (
 			<div id='DndCtrlSty' className='FlexBox' style={DndCtrlSty}>
+				<DList2 data={list} isMobile={isMobile} />
 				<DList data={list} isMobile={isMobile} />
 				<DList data={this.state.list} dndDone={this.dndDone} />
 				<div style={{marginLeft: '10px'}}>
