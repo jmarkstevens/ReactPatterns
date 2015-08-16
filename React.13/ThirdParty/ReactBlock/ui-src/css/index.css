@@ -1,74 +1,40 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+.bodyStyle {
+	background-color: #1A3212;
+	color: #afac87;
+	display: block;
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 14px;
+.header {
+	height: 30px;
+	margin: 0; 
+	padding: 10px 0;
+	text-align: center;
 }
 
-#container {
-  margin: 0;
-  padding: 0;
+.Title {font-size: 1.3em;}
+
+.content {
+	height: calc(100% - 52px);
+	padding: 0px 5px;
 }
 
-.demo {
-  margin: 20px 0;
-  padding: 4px;
-  background: peachpuff;
+* { outline: none; }
+
+.a{display:block}
+
+.FlexBox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex
 }
 
-.demo > div {
-  margin: 4px;
-  padding: 12px;
-  background: white;
+.FlexJustify {
+	-webkit-box-pack: justify;
+	justify-content: space-between;
 }
 
-
-header, footer {
-  text-align: center;
-}
-header{
-  margin-bottom: 40px;
-}
-footer{
-  margin: 40px 0;
-}
-footer > p{
-  margin: 0;
-  font-size: 12px;
-}
-a{
-  color: blue;
-}
-h1{
-  font-size: 32px;
-}
-h1 > small{
-  font-weight: 200;
-}
-h4{
-  margin: 20px 0 0 0;
-  font-weight: 500;
-  font-size: 18px;
-}
-pre{
-  margin: 0;
-  padding: 8px 12px;
-  background: whitesmoke;
-  overflow: scroll;
-}
-pre > code{
-  font-family: "Source Code Pro";
-}
-
-@media only screen and (min-device-width: 375px) {
-  body{
-    padding: 0 20px;
-  }
-}
+.HighZ {z-index: 200;}

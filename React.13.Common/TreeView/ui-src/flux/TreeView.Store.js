@@ -90,7 +90,7 @@ function _saveTreeNew(treeNode, location) {
 }
 
 function _saveTreeEdit(treeNode) {
-	var nodeIndex = _getNodeIndex();
+	var nodeIndex = _getNodeIndex(treeNode);
 	traverse(_treeData).set(nodeIndex, lodash.clone(treeNode));
 	_showTreeEdit = false;
 	TreeViewStore.trigger();

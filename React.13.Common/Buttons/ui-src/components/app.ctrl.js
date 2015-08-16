@@ -55,14 +55,15 @@ class AppCtrlRender extends Component {
 					<JButton btn={basicBtn30} parentClickHandler={this.clickHandler} />
 					<JButton btn={basicBtnAssign} parentClickHandler={this.clickHandler} />
 					<JButton btn={basicBtnCst} parentClickHandler={this.clickHandler} />
-					<JButton btn={basicIconBtn} parentClickHandler={this.clickHandler} />
+					<JButton btn={basicBtn40} parentClickHandler={this.clickHandler} />
+					<br/><br/>
 					<span id='imgSpanSty' style={imgSpanSty}>
 						<JButton btn={basicImgBtn} parentClickHandler={this.clickHandler} />
 					</span>
 					<span id='imgSpanSty4' style={imgSpanSty4}>
 						<JButton btn={basicImg2Btn} parentClickHandler={this.clickHandler} />
 					</span>
-					<JButton btn={basicBtn40} parentClickHandler={this.clickHandler} />
+					<JButton btn={basicIconBtn} parentClickHandler={this.clickHandler} />
 				</div>
 				<br/><br/>
 				{clickResponse}

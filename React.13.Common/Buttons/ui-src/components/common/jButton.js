@@ -18,6 +18,7 @@ var standardBtnSty = {
 
 var standardBtnImg = {
 	backgroundColor: 'transparent',
+	backgroundImg: 'none',
 	backgroundSize: 'contain',
 	border: '0',
 	color: '#afac87',
@@ -33,9 +34,8 @@ var standardBtnImg = {
 function getStyle(btnProp) {
 		var buttonSty = lodash.clone(standardBtnSty);
 		var btnStyle = 'Btn30';
-		var isDesktop = true;
+		var isDesktop = btnProp.isDesktop ? btnProp.isDesktop : true;
 		if (lodash.has(btnProp.btn, 'style')) btnStyle = btnProp.btn.style;
-		if (lodash.has(btnProp, 'isDesktop')) isDesktop = btnProp.isDesktop;
 		if (isDesktop) {
 			switch (btnStyle) {
 				case 'Btn18':
@@ -63,7 +63,7 @@ function getStyle(btnProp) {
 					buttonSty.margin = '0 5px';
 					buttonSty.padding = '0.45em .8em';
 					break;
-				case 'BackImg': buttonSty = standardBtnImg; buttonSty.background = btnProp.btn.backimg; break;
+				case 'BackImg': buttonSty = lodash.clone(standardBtnImg); buttonSty.background = btnProp.btn.backimg; break;
 				case 'BtnImg': buttonSty = standardBtnImg; break;
 			}
 		} else {

@@ -32,8 +32,9 @@ export default class TreeEdit extends TreeEditRender {
 	}
 
 	clickHandler(buttonid) {
+		var node = this.state.treeNode;
 		switch (buttonid) {
-			case 'save': Actions.saveTreeEdit(this.state.treeNode); break;
+			case 'save': Actions.saveTreeEdit(node); break;
 			case 'cancel': Actions.treeActions('cancelEdit'); break;
 		}
 	}

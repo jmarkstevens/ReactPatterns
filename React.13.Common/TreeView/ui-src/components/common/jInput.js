@@ -89,7 +89,7 @@ export default class JInput extends JInputRender {
 	componentWillReceiveProps(nextProps) {
 		if (nextProps.input.textValue && (this.state.textValue != nextProps.input.textValue))
 			{this.setState({textValue: nextProps.input.textValue});}
-		if (nextProps.input.focus) React.findDOMNode(this.refs.dataRef).focus();
+		if (nextProps.input.focus) React.findDOMNode(this.refs.inputRef).focus();
 		if (nextProps.input.booleanValue && (this.state.booleanValue != nextProps.input.booleanValue))
 			this.setState({booleanValue: nextProps.input.booleanValue});
 		if (nextProps.input.min && (this.state.min != nextProps.input.min))

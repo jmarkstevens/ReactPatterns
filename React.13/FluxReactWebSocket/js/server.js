@@ -25,5 +25,5 @@ if (newPrimusOptions) {
 sio.on('connection', socketCallBack);
 
 app.use('/', express.static('ui-dist'));
-app.use(favicon(path.join(__dirname, '..', 'ui-dist', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, '..', 'ui-dist', 'img', 'favicon.ico')));
 app.get('/', function(req, res){ res.sendfile(__dirname + '/index.html', [], null); });

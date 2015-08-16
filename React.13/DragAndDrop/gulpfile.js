@@ -10,7 +10,7 @@ var source = {
 	js: ['./ui-src/**/*.js'],
 	appcss: ['./ui-src/css/*.css'],
 	apphtml: ['./ui-src/**/*.html'],
-	appgif: ['./ui-src/**/*.gif']
+	appimg: ['./ui-src/img/*']
 };
 
 gulp.task('appjs', function(){
@@ -32,7 +32,7 @@ gulp.task('appcss', function () {
 gulp.task('apphtml', function() {
 	gulp.src(source.apphtml)
 		.pipe(gulp.dest('./ui-dist'));
-	gulp.src(source.appgif)
+	gulp.src(source.appimg, {base: 'ui-src'})
 		.pipe(gulp.dest('./ui-dist'));
 });
 
