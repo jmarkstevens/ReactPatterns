@@ -111,6 +111,7 @@ function divMap(item) {
 			onTouchCancel={this.onThisTouchEnd}
 			>
 			{item.label}
+			<div style={imageDivStyle}><img id={item.id} src='./img/1x1TransShim.gif' style={imageStyle} /></div>
 		</div>
 	)
 }

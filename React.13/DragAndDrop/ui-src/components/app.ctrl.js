@@ -7,7 +7,6 @@ import DCtrl from './dnd.ctrl';
 import JList from './common/jList';
 
 var AppCtrlSty = {
-	height: '100%',
 	padding: '0 10px 0 0'
 }
 var startLineStyle = {
