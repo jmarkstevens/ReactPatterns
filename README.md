@@ -4,31 +4,31 @@ A collection of simple react projects providing reusable components, startup and
 
 **React.12**
 *	Basic
-*	ReFluxWebSocket
+*	ReFlux WebSocket
 
 **React.13**
 *	Basic
-*	BasicWebpack
+*	Basic Webpack
 *	Common
-*	DragAndDrop
-*	FluxReactWebsocket
-*	ReFluxElectron
-*	ReFluxPages
-*	ReFluxWebSocket
+*	Drag and Drop
+*	FluxReact Websocket
+*	ReFlux Electron
+*	ReFlux Pages
+*	ReFlux WebSocket
 *	ThirdParty
 	*	GoogleMaps
 	*	Radium
 	*	ReactBlock
-*	WindowEvents
-*	WindowObject
+*	Window Events
+*	Window Object
 
 **React.13.Common**
 *	Buttons
 *	DropDown
-*	FormInputs
+*	Form Inputs
 *	List
 *	ProgressBar
-*	RangeAndTooltip
+*	Range slider and Tooltip
 *	TreeView
 
 **React.14**
