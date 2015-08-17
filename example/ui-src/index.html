@@ -18,163 +18,451 @@
 
 		<section id="react" class="content"></section>
 
-		<p>This code is the dnd.ctrl.js which sets up the dnd.list.js that follows.</p>
+		<p>This code is dndi.list.js and is an optional html pattern for drag and drop. The left two columns above use this component. This patterns uses an overlaying image for the element. This pattern is supported by more browsers than the basic pattern that follows.</p>
 		<div class="codeSty">
-		<pre><code>
-			import React, {Component} from 'react';
-			import _ld from 'lodash';
+			<pre class='preSty'><code>
+				import React, {Component} from 'react';
 
-			import DList from './dnd.list';
+				import Actions from './../flux/Actions';
 
-			var DndCtrlSty = {
-				padding: '0 10px 0 30px'
-			}
+				var listSty = {}
+				var listStyle = {
+					marginLeft: '50px'
+				}
 
-			var list = [
-				{id: 'l1', label: 'first line of list'},
-				{id: 'l2', label: 'second line of list'},
-				{id: 'l3', label: 'third line of list'},
-				{id: 'l4', label: 'fourth line of list'},
-				{id: 'l5', label: 'fifth line of list'},
-				{id: 'l6', label: 'sixth line of list'}
-			]
+				var lineSty = {}
+				var lineStyle = {
+					color: '#FBF7C3',
+					height: '1.2em',
+					marginLeft: '7px',
+					marginTop: '3px'
+				}
+				var startLineStyle = {
+					color: '#1F1',
+					marginLeft: '7px',
+					marginTop: '3px'
+				}
+				var overLineStyle = {
+					color: '#F11',
+					marginLeft: '7px',
+					marginTop: '3px'
+				}
+				var endLineStyle = {
+					color: '#11F',
+					marginLeft: '7px',
+					marginTop: '3px'
+				}
 
-			class DndCtrlRender extends Component {
-				binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
-
-				render() {
+				var mobileLineStyle = {
+					// border: '1px solid blue',
+					color: '#FBF7C3',
+					height: '2em',
+					marginLeft: '7px',
+					marginTop: '5px',
+					verticalAlign: 'middle'
+				}
+				var startMobileLineStyle = {
+					color: '#1F1',
+					height: '2em',
+					marginLeft: '7px',
+					marginTop: '5px',
+					verticalAlign: 'middle'
+				}
+				var overMobileLineStyle = {
+					color: '#F11',
+					height: '2em',
+					marginLeft: '7px',
+					marginTop: '5px',
+					verticalAlign: 'middle'
+				}
+				var endMobileLineStyle = {
+					color: '#11F',
+					height: '2em',
+					marginLeft: '7px',
+					marginTop: '5px',
+					verticalAlign: 'middle'
+				}
+				var imageStyle = {height: '100%', width: '100%'}
+				var imageDivStyle = {
+					border: 'thin dotted green',
+					height: '1.2em',
+					left: '0',
+					marginTop: '-1.2em',
+					position: 'relative',
+					top: '0',
+					width: '100%'
+				}
+				function divColorMap(item) {
+					if (this.state.startID === item.id) lineSty = startLineStyle;
+					else if (this.state.overID === item.id) lineSty = overLineStyle;
+					else if (this.state.endID === item.id) lineSty = endLineStyle;
+					else lineSty = lineStyle;
 					return (
-						&lt;div id='DndCtrlSty' className='FlexBox' style={DndCtrlSty}>
-							&lt;DList data={list} />
-							&lt;DList data={this.state.list} dndDone={this.dndDone} />
+						&lt;div
+							style={lineSty}
+							key={item.id}
+							draggable="true"
+							onDragStart={this.onThisDragStart}
+							onDragOver={this.onThisDragOver}
+							onDrop={this.onThisDragEnd}
+							onTouchStart={this.onThisTouchStart}
+							onTouchMove={this.onThisTouchMove}
+							onTouchEnd={this.onThisTouchEnd}
+							onTouchCancel={this.onThisTouchEnd}
+							>
+							{item.label}
+							&lt;div style={imageDivStyle}>
+								&lt;img id={item.id} src='./img/1x1TransShim.gif' style={imageStyle} />
+							&lt;/div>
 						&lt;/div>
-					);
+					)
 				}
-			}
 
-			export default class DndCtrl extends DndCtrlRender {
-				constructor() {
-				  super();
-					this.state = {list: _ld.cloneDeep(list)};
-					this.binder('dndDone');
+				function divMap(item) {
+					lineSty = lineStyle;
+					return (
+						&lt;div
+							style={lineSty}
+							id={item.id}
+							key={item.id}
+							draggable="true"
+							onDragStart={this.onThisDragStart}
+							onDragEnter={this.onThisDragOver}
+							onDragOver={this.onThisDragOver}
+							onDrop={this.onThisDragEnd}
+							onTouchStart={this.onThisTouchStart}
+							onTouchMove={this.onThisTouchMove}
+							onTouchEnd={this.onThisTouchEnd}
+							onTouchCancel={this.onThisTouchEnd}
+							>
+							{item.label}
+						&lt;/div>
+					)
 				}
-				dndDone(startID, endID) {
-					var newList = this.state.list;
-					var startObj = _ld.findWhere(newList, {id: startID});
-					var startIndex = _ld.indexOf(newList, startObj);
-					newList.splice(startIndex, 1);
-					var endObj = _ld.findWhere(newList, {id: endID});
-					var endIndex = _ld.indexOf(newList, endObj) + 1;
-					newList.splice(endIndex, 0, startObj);
-					this.setState.list = newList;
+
+				class DndImageListRender extends Component {
+					binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
+
+					render() {
+						listSty = listStyle;
+						if (this.props.isMobile) {
+							lineStyle = mobileLineStyle;
+							startLineStyle = startMobileLineStyle;
+							overLineStyle = overMobileLineStyle;
+							endLineStyle = endMobileLineStyle;
+							imageDivStyle.height = '2em';
+							imageDivStyle.marginTop = '-1.6em';
+						}
+						var vm = this;
+						var list;
+						if (this.props.dndDone) list = this.props.data.map(divMap, vm);
+						else list = this.props.data.map(divColorMap, vm);
+						return (
+							&lt;div id='DndImageListSty' style={listSty}>
+								{list}
+							&lt;/div>
+						);
+					}
 				}
-			}
-		</code></pre>
+
+				export default class DndImageList extends DndImageListRender {
+					constructor() {
+					  super();
+						this.state = {
+							startID: '',
+							overID: '',
+							endID: ''
+						};
+						this.binder('onThisDragStart', 'onThisDragOver', 'onThisDragEnd', 'onThisTouchStart', 'onThisTouchMove', 'onThisTouchEnd');
+					}
+					onThisDragStart(event) {
+						// event.dataTransfer.setData('text/plain', 'This text may be dragged');
+						event.dataTransfer.effectAllowed = "all";
+						var itemID = event.target.id;
+						if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
+						Actions.newMessage('DragStart itemID: ' + itemID);
+					}
+					onThisDragOver(event) {
+						event.preventDefault();
+						var itemID = event.target.id;
+						if (!itemID || this.state.overID == itemID) return;
+						if (itemID) { this.setState({overID: itemID}) };
+						Actions.newMessage('DragOver itemID: ' + itemID);
+					}
+					onThisDragEnd(event) {
+						event.preventDefault();
+						var itemID = event.target.id;
+						if (itemID) { this.setState({endID: itemID, overID: ''}) };
+						if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
+						Actions.newMessage('DragEnd itemID: ' + itemID);
+					}
+					onThisTouchStart(event) {
+						event.preventDefault();
+						var itemID = event.target.id;
+						if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
+						Actions.newMessage('TouchStart itemID: ' + itemID);
+					}
+					onThisTouchMove(event) {
+						event.preventDefault();
+						var lastTouch = event.touches.length - 1;
+						var x = event.touches[lastTouch].pageX;
+						var y = event.touches[lastTouch].pageY;
+						var element = document.elementFromPoint(x, y);
+						if (!element.id || this.state.overID == element.id) return;
+						Actions.newMessage('TouchMove element.id: ' + element.id);
+						if (element.id) { this.setState({overID: element.id}) };
+					}
+					onThisTouchEnd(event) {
+						event.preventDefault();
+						var lastTouch = event.changedTouches.length - 1;
+						var x = event.changedTouches[lastTouch].pageX;
+						var y = event.changedTouches[lastTouch].pageY;
+						var element = document.elementFromPoint(x, y);
+						Actions.newMessage('TouchEnd element.id: ' + element.id);
+						var itemID = element.id;
+						if (itemID) { this.setState({endID: itemID, overID: ''}) };
+						if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
+					}
+				}
+			</code></pre>
 		</div>
-		<p>This code is from dnd.list.js.</p>
+		<p>This code is dnd.list.js and is the basic html pattern for drag and drop. The third and fourth columns above use this component.</p>
 		<div class="codeSty">
-		<pre><code class="codeSty">
-			import React, {Component} from 'react';
+			<pre class='preSty'><code>
+				import React, {Component} from 'react';
 
-			var listSty = {}
-			var listStyle = {marginLeft: '50px'}
+				import Actions from './../flux/Actions';
 
-			var lineSty = {}
-			var lineStyle = {
-				color: '#FBF7C3',
-				marginLeft: '7px'
-			}
-			var startLineStyle = {
-				color: '#1F1',
-				marginLeft: '7px'
-			}
-			var overLineStyle = {
-				color: '#F11',
-				marginLeft: '7px'
-			}
-			var endLineStyle = {
-				color: '#11F',
-				marginLeft: '7px'
-			}
+				var listSty = {}
+				var listStyle = {marginLeft: '50px'}
 
-			function divColorMap(item) {
-				if (this.state.startID === item.id) lineSty = startLineStyle;
-				else if (this.state.overID === item.id) lineSty = overLineStyle;
-				else if (this.state.endID === item.id) lineSty = endLineStyle;
-				else lineSty = lineStyle;
-				return (
-					&lt;div
-						style={lineSty}
-						id={item.id}
-						key={item.id}
-						draggable="true"
-						onDragStart={this.onThisDragStart}
-						onDragOver={this.onThisDragOver}
-						onDrop={this.onThisDragEnd}>
-						{item.label}
-					&lt;/div>
-				)
-			}
+				var lineSty = {}
+				var lineStyle = {
+					color: '#FBF7C3',
+					marginLeft: '7px'
+				}
+				var startLineStyle = {
+					color: '#1F1',
+					marginLeft: '7px'
+				}
+				var overLineStyle = {
+					color: '#F11',
+					marginLeft: '7px'
+				}
+				var endLineStyle = {
+					color: '#11F',
+					marginLeft: '7px'
+				}
 
-			function divMap(item) {
-				lineSty = lineStyle;
-				return (
-					&lt;div
-						style={lineSty}
-						id={item.id}
-						key={item.id}
-						draggable="true"
-						onDragStart={this.onThisDragStart}
-						onDragOver={this.onThisDragOver}
-						onDrop={this.onThisDragEnd}>
-						{item.label}
-					&lt;/div>
-				)
-			}
+				var mobileLineStyle = {
+					color: '#FBF7C3',
+					height: '2em',
+					marginLeft: '7px',
+					marginTop: '5px'
+				}
+				var startMobileLineStyle = {
+					color: '#1F1',
+					height: '2em',
+					marginLeft: '7px',
+					marginTop: '5px'
+				}
+				var overMobileLineStyle = {
+					color: '#F11',
+					height: '2em',
+					marginLeft: '7px',
+					marginTop: '5px'
+				}
+				var endMobileLineStyle = {
+					color: '#11F',
+					height: '2em',
+					marginLeft: '7px',
+					marginTop: '5px'
+				}
 
-			class DndListRender extends Component {
-				binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
-
-				render() {
-					listSty = listStyle;
-					var vm = this;
-					var list;
-					if (this.props.dndDone) list = this.props.data.map(divMap, vm);
-					else list = this.props.data.map(divColorMap, vm);
+				function divColorMap(item) {
+					if (this.state.startID === item.id) lineSty = startLineStyle;
+					else if (this.state.overID === item.id) lineSty = overLineStyle;
+					else if (this.state.endID === item.id) lineSty = endLineStyle;
+					else lineSty = lineStyle;
 					return (
-						&lt;div id='DndListSty' style={listSty}>
-							{list}
+						&lt;div
+							style={lineSty}
+							id={item.id}
+							key={item.id}
+							draggable="true"
+							onDragStart={this.onThisDragStart}
+							onDragOver={this.onThisDragOver}
+							onDrop={this.onThisDragEnd}
+							onTouchStart={this.onThisTouchStart}
+							onTouchMove={this.onThisTouchMove}
+							onTouchEnd={this.onThisTouchEnd}
+							onTouchCancel={this.onThisTouchEnd}
+							>
+							{item.label}
 						&lt;/div>
-					);
+					)
 				}
-			}
 
-			export default class DndList extends DndListRender {
-				constructor() {
-				  super();
-					this.state = {
-						startID: '',
-						overID: '',
-						endID: ''
-					};
-					this.binder('onThisDragStart', 'onThisDragOver', 'onThisDragEnd');
+				function divMap(item) {
+					lineSty = lineStyle;
+					return (
+						&lt;div
+							style={lineSty}
+							id={item.id}
+							key={item.id}
+							draggable="true"
+							onDragStart={this.onThisDragStart}
+							onDragEnter={this.onThisDragOver}
+							onDragOver={this.onThisDragOver}
+							onDrop={this.onThisDragEnd}
+							onTouchStart={this.onThisTouchStart}
+							onTouchMove={this.onThisTouchMove}
+							onTouchEnd={this.onThisTouchEnd}
+							onTouchCancel={this.onThisTouchEnd}
+							>
+							{item.label}
+						&lt;/div>
+					)
 				}
-				onThisDragStart(event) {
-					var itemID = event.target.id;
-					if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
+
+				class DndListRender extends Component {
+					binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
+
+					render() {
+						listSty = listStyle;
+						if (this.props.isMobile) {
+							lineStyle = mobileLineStyle;
+							startLineStyle = startMobileLineStyle;
+							overLineStyle = overMobileLineStyle;
+							endLineStyle = endMobileLineStyle;
+						}
+						var vm = this;
+						var list;
+						if (this.props.dndDone) list = this.props.data.map(divMap, vm);
+						else list = this.props.data.map(divColorMap, vm);
+						return (
+							&lt;div id='DndListSty' style={listSty}>
+								{list}
+							&lt;/div>
+						);
+					}
 				}
-				onThisDragOver(event) {
-					var itemID = event.target.id;
-					if (itemID) { this.setState({overID: itemID}) };
-					event.preventDefault();
+
+				export default class DndList extends DndListRender {
+					constructor() {
+					  super();
+						this.state = {
+							startID: '',
+							overID: '',
+							endID: ''
+						};
+						this.binder('onThisDragStart', 'onThisDragOver', 'onThisDragEnd', 'onThisTouchStart', 'onThisTouchMove', 'onThisTouchEnd');
+					}
+					onThisDragStart(event) {
+						var itemID = event.target.id;
+						if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
+						Actions.newMessage('DragStart itemID: ' + itemID);
+					}
+					onThisDragOver(event) {
+						event.preventDefault();
+						var itemID = event.target.id;
+						if (this.state.overID == itemID) return;
+						if (itemID) { this.setState({overID: itemID}) };
+						Actions.newMessage('DragOver itemID: ' + itemID);
+					}
+					onThisDragEnd(event) {
+						event.preventDefault();
+						var itemID = event.target.id;
+						if (itemID) { this.setState({endID: itemID, overID: ''}) };
+						if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
+						Actions.newMessage('DragEnd itemID: ' + itemID);
+					}
+					onThisTouchStart(event) {
+						event.preventDefault();
+						var itemID = event.target.id;
+						if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
+						Actions.newMessage('TouchStart itemID: ' + itemID);
+					}
+					onThisTouchMove(event) {
+						event.preventDefault();
+						var lastTouch = event.touches.length - 1;
+						var x = event.touches[lastTouch].pageX;
+						var y = event.touches[lastTouch].pageY;
+						var element = document.elementFromPoint(x, y);
+						if (this.state.overID == element.id) return;
+						Actions.newMessage('TouchMove element.id: ' + element.id);
+						if (element.id) { this.setState({overID: element.id}) };
+					}
+					onThisTouchEnd(event) {
+						event.preventDefault();
+						var lastTouch = event.changedTouches.length - 1;
+						var x = event.changedTouches[lastTouch].pageX;
+						var y = event.changedTouches[lastTouch].pageY;
+						var element = document.elementFromPoint(x, y);
+						Actions.newMessage('TouchEnd element.id: ' + element.id);
+						var itemID = element.id;
+						if (itemID) { this.setState({endID: itemID, overID: ''}) };
+						if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
+					}
 				}
-				onThisDragEnd(event) {
-					var itemID = event.target.id;
-					if (itemID) { this.setState({endID: itemID, overID: ''}) };
-					if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
+			</code></pre>
+		</div>
+		<p>This code is from dnd.ctrl.js which sets up the data for the lists. It also contains the code to reorder the list.</p>
+		<div class="codeSty">
+			<pre class='preSty'><code>
+				import React, {Component} from 'react';
+				import _ld from 'lodash';
+
+				import DList from './dnd.list';
+				import DiList from './dndi.list';
+
+				var DndCtrlSty = {
+					padding: '0 10px 0 30px'
 				}
-			}
-		</code></pre>
+
+				var list = [
+					{id: 'l1', label: 'first of list'},
+					{id: 'l2', label: 'second line of list'},
+					{id: 'l3', label: 'third line of list'},
+					{id: 'l4', label: 'fourth line of list'},
+					{id: 'l5', label: 'fifth line of list'},
+					{id: 'l6', label: 'sixth line of list'}
+				]
+
+				class DndCtrlRender extends Component {
+					binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
+
+					render() {
+						var isMobile = this.props.isMobile;
+						return (
+							&lt;div id='DndCtrlSty' className='FlexBox' style={DndCtrlSty}>
+								&lt;DiList data={list} isMobile={isMobile} />
+								&lt;DiList data={this.state.list} dndDone={this.dndDone} />
+								&lt;DList data={list} isMobile={isMobile} />
+								&lt;DList data={this.state.list} dndDone={this.dndDone} />
+							&lt;/div>
+						);
+					}
+				}
+
+				export default class DndCtrl extends DndCtrlRender {
+					constructor() {
+						super();
+						this.state = {list: _ld.cloneDeep(list)};
+						this.binder('dndDone');
+					}
+					dndDone(startID, endID) {
+						var newList = this.state.list;
+						var startObj = _ld.findWhere(newList, {id: startID});
+						var startIndex = _ld.indexOf(newList, startObj);
+						newList.splice(startIndex, 1);
+						var endObj = _ld.findWhere(newList, {id: endID});
+						var endIndex = _ld.indexOf(newList, endObj) + 1;
+						newList.splice(endIndex, 0, startObj);
+						this.setState.list = newList;
+					}
+				}
+			</code></pre>
 		</div>
 
 		<script src="app.min.js"></script>

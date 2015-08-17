@@ -9,7 +9,7 @@
 
 .header {
 	height: 30px;
-	margin: 0; 
+	margin: 0;
 	padding: 10px 0;
 	text-align: center;
 }
@@ -29,7 +29,15 @@
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
-	display: flex
+	display: flex;
+}
+
+.FlexBoxWrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .FlexJustify {

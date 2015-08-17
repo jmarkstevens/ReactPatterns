@@ -115,7 +115,7 @@ function divMap(item) {
 	)
 }
 
-class DndList2Render extends Component {
+class DndImageListRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
 	render() {
@@ -133,14 +133,14 @@ class DndList2Render extends Component {
 		if (this.props.dndDone) list = this.props.data.map(divMap, vm);
 		else list = this.props.data.map(divColorMap, vm);
 		return (
-			<div id='DndListSty' style={listSty}>
+			<div id='DndImageListSty' style={listSty}>
 				{list}
 			</div>
 		);
 	}
 }
 
-export default class DndList2 extends DndList2Render {
+export default class DndImageList extends DndImageListRender {
 	constructor() {
 	  super();
 		this.state = {

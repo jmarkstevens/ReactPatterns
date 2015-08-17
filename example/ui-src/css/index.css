@@ -2,13 +2,11 @@
 	background-color: #1A3212;
 	color: #afac87;
 	display: block;
-	height: 100vh;
 	overflow: auto;
 	width: 100%;
 }
 
 .header {
-	height: 50px;
 	margin: 0;
 	padding: 10px 0;
 	text-align: center;
@@ -28,7 +26,15 @@
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
-	display: flex
+	display: flex;
+}
+
+.FlexBoxWrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .FlexJustify {
@@ -42,4 +48,10 @@
 	background-color: #102808;
 	color: #DEDBB6;
 	margin: 0 80px;
+	overflow: auto;
+}
+.preSty {
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
 }

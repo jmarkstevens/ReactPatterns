@@ -128,8 +128,6 @@ export default class DndList extends DndListRender {
 		this.binder('onThisDragStart', 'onThisDragOver', 'onThisDragEnd', 'onThisTouchStart', 'onThisTouchMove', 'onThisTouchEnd');
 	}
 	onThisDragStart(event) {
-		// event.dataTransfer.setData('text/plain', 'This text may be dragged');
-		event.dataTransfer.effectAllowed = "all";
 		var itemID = event.target.id;
 		if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 		Actions.newMessage('DragStart itemID: ' + itemID);

@@ -2,23 +2,10 @@ import React, {Component} from 'react';
 import _ld from 'lodash';
 
 import DList from './dnd.list';
-import JList from './common/jList';
+import DiList from './dndi.list';
 
 var DndCtrlSty = {
-	height: '100%',
 	padding: '0 10px 0 30px'
-}
-var startLineStyle = {
-	color: '#1F1',
-	marginLeft: '7px'
-}
-var overLineStyle = {
-	color: '#F11',
-	marginLeft: '7px'
-}
-var endLineStyle = {
-	color: '#11F',
-	marginLeft: '7px'
 }
 
 var list = [
@@ -35,17 +22,12 @@ class DndCtrlRender extends Component {
 
 	render() {
 		var isMobile = this.props.isMobile;
-		var messages = this.props.messages;
 		return (
 			<div id='DndCtrlSty' className='FlexBox' style={DndCtrlSty}>
+				<DiList data={list} isMobile={isMobile} />
+				<DiList data={this.state.list} dndDone={this.dndDone} />
 				<DList data={list} isMobile={isMobile} />
 				<DList data={this.state.list} dndDone={this.dndDone} />
-				<div style={{marginLeft: '10px'}}>
-					<span style={startLineStyle}>drag start</span><br/>
-					<span style={overLineStyle}>drag over</span><br/>
-					<span style={endLineStyle}>drag end</span><br/>
-					<JList data={messages} />
-				</div>
 			</div>
 		);
 	}

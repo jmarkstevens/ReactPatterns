@@ -9,5 +9,5 @@ var app = express();
 var server = app.listen(port);
 
 app.use('/', express.static('uidist'));
-app.use(favicon(path.join(__dirname, '..', 'uidist', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, '..', 'uidist', 'img', 'favicon.ico')));
 app.get('/', function(req, res){ res.sendfile(__dirname + '/index.html', [], null); });

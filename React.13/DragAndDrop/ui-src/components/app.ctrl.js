@@ -4,10 +4,23 @@ import Actions from '../flux/Actions';
 import AppStore from '../flux/App.Store';
 
 import DCtrl from './dnd.ctrl';
+import JList from './common/jList';
 
 var AppCtrlSty = {
 	height: '100%',
 	padding: '0 10px 0 0'
+}
+var startLineStyle = {
+	color: '#1F1',
+	marginLeft: '7px'
+}
+var overLineStyle = {
+	color: '#F11',
+	marginLeft: '7px'
+}
+var endLineStyle = {
+	color: '#11F',
+	marginLeft: '7px'
 }
 
 class AppCtrlRender extends Component {
@@ -18,8 +31,17 @@ class AppCtrlRender extends Component {
 		var messages = this.state.appData.messages;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.3 Drag and Drop<br/><br/>
-				<DCtrl isMobile={isMobile} messages={messages} />
+				React 1.3 Drag and Drop
+				<br/><br/>
+				<div className='FlexBoxWrap'>
+					<DCtrl isMobile={isMobile} />
+					<div style={{marginLeft: '10px'}}>
+						<span style={startLineStyle}>drag start</span><br/>
+						<span style={overLineStyle}>drag over</span><br/>
+						<span style={endLineStyle}>drag end</span><br/>
+					</div>
+					<JList data={messages} />
+				</div>
 			</div>
 		);
 	}
@@ -41,7 +63,7 @@ export default class AppCtrl extends AppCtrlRender {
 
 	componentDidMount() {
 		var navPlatform = window.navigator.platform;
-		Actions.setWindowDefaults(navPlatform); 
+		Actions.setWindowDefaults(navPlatform);
 	}
 	componentWillMount() { AppStore.onAny(this.appStoreDidChange); }
 	componentWillUnmount() { AppStore.offAny(this.appStoreDidChange); }
