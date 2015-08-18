@@ -1,22 +1,25 @@
 import Reflux from 'reflux';
 
 import Actions from './Actions';
-import ApiFct from '../utils/ws.api.js';
+import AddonStore from './Addon.Store';
+import MixinStoreObject from './Mixin.Store';
 
 var _data = {};
 
 function _gotData(data) { _data = data; BasicStore.trigger(); }
-function _setData() { ApiFct.setData(_data); }
+function _addonTrigger() { BasicStore.trigger(); }
 
-function _basicStoreInit() {
-	this.listenTo(Actions.gotData, this.onGotData);
-}
+function BasicStoreInit() { this.listenTo(AddonStore, this.onAddonTrigger); }
 
 var BasicStoreObject = {
-	init: _basicStoreInit,
+	init: BasicStoreInit,
+	listenables: Actions,
+	mixins: [MixinStoreObject],
 	onGotData: _gotData,
-
-	getData: function() { return _data; }
+	onAddonTrigger: _addonTrigger,
+	getData: function() { return _data; },
+	getData2: function() { return AddonStore.data2; },
+	getData3: function() { return this.data3; }
 }
 const BasicStore = Reflux.createStore(BasicStoreObject);
 export default BasicStore;
