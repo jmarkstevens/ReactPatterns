@@ -3,11 +3,11 @@
 import React  from 'react';
 
 import AppCtrl from './components/app.ctrl.js';
-import ApiFct from './utils/ipc.api.js';
+import Actions from './flux/Actions';
+import ApiStore from './flux/Api.Store';
 
 window.React = React;
 
-ApiFct.init();
-ApiFct.getData();
+Actions.apiInit();
 
 React.render( <AppCtrl />, document.getElementById('react') );

@@ -1,12 +1,11 @@
 import Reflux from 'reflux';
 
 import Actions from './Actions';
-import ApiFct from '../utils/ipc.api.js';
 
 var _data = [];
 
 function _gotData(data) { _data = data; BasicStore.trigger(); }
-function _setData() { ApiFct.setData(_data); }
+function _setData() { Actions.apiSetData(_data); }
 
 function _basicStoreInit() { this.listenTo(Actions.gotData, this.onGotData); }
 
