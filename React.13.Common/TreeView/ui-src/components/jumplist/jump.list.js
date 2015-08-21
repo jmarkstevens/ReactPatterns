@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-import Actions from '../../flux/Actions';
 import JTreeViewB from './../common/jTreeViewB';
 
 class JumpListRender extends Component {

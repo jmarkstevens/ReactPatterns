@@ -1,6 +1,16 @@
 import Reflux from 'reflux';
 
-var Actions = exports;
+var apiActions = [
+	'apiInit',
+	'apiInitDone',
+	'apiSetData'
+]
 
-Actions.gotData = Reflux.createAction();
-Actions.editRecord = Reflux.createAction();
+var wsActions = [
+	'gotData'
+]
+
+var inputActions = ['editRecord']
+
+var actionArray = wsActions.concat(apiActions, inputActions);
+module.exports = Reflux.createActions(actionArray);

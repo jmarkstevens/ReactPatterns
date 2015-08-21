@@ -751,7 +751,7 @@
     "nodeid": "Cw-",
     "title": "Calyptrocalyx",
     "type": "genus",
-    "selected": true,
+    "selected": false,
     "closed": false,
     "children": [
       {
@@ -791,7 +791,7 @@
     "title": "Caryota",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "CaAl",
@@ -805,7 +805,7 @@
         "title": "basconensis*",
         "genus": "Caryota",
         "type": "specie",
-        "selected": false
+        "selected": true
       },
       {
         "nodeid": "CaC",

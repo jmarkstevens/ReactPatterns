@@ -1,23 +1,32 @@
 import Reflux from 'reflux';
 
-var Actions = exports;
+var apiActions = [
+	'apiInit',
+	'apiInitDone',
+	'apiSetAppStoreData',
+	'apiSetGenusList',
+	'apiTreeView'
+]
 
-Actions.gotAppStore = Reflux.createAction();
-Actions.gotGenusList = Reflux.createAction();
-Actions.gotImageList = Reflux.createAction();
-Actions.gotTreeView = Reflux.createAction();
+var wsActions = [
+	'gotAppStore',
+	'gotGenusList',
+	'gotImageList',
+	'gotTreeView'
+]
 
-Actions.selectTreeNode = Reflux.createAction();
-Actions.setTreeNodeClosed = Reflux.createAction();
-Actions.treeActions = Reflux.createAction();
-Actions.saveTreeEdit = Reflux.createAction();
-Actions.saveTreeNew = Reflux.createAction();
+var treeActions = [
+	'selectTreeNode',
+	'setTreeNodeClosed',
+	'treeActions',
+	'saveTreeEdit',
+	'saveTreeNew'
+]
 
-Actions.selectGenusNode = Reflux.createAction();
-Actions.setGenusNodeClosed = Reflux.createAction();
+var genusActions = [
+	'selectGenusNode',
+	'setGenusNodeClosed'
+]
 
-Actions.selectGenus = Reflux.createAction();
-Actions.selectSpecie = Reflux.createAction();
-Actions.selectPart = Reflux.createAction();
-
-Actions.selectJumpNode = Reflux.createAction();
+var actionArray = wsActions.concat(apiActions, treeActions, genusActions);
+module.exports = Reflux.createActions(actionArray);

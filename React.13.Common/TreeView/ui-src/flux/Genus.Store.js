@@ -2,7 +2,6 @@ import lodash from 'lodash';
 import Reflux from 'reflux';
 
 import Actions from './Actions';
-import ApiFct from '../utils/ws.api.js';
 
 var _genusList = [];
 var _currentGenusNode = {};
@@ -13,7 +12,7 @@ function _gotGenusList(data) {
 	if (_currentGenusNode == null) _currentGenusNode = _genusList[0];
 	GenusStore.trigger();
 }
-function _setGenusList() { ApiFct.setGenusList(_genusList); }
+function _setGenusList() { Actions.apiSetGenusList(_genusList); }
 
 function _selectGenusNode(node) {
 	if (_currentGenusNode.type == 'specie') {

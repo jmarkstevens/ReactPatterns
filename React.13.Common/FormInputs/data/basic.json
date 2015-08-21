@@ -1,8 +1,8 @@
 {
-  "nodeid": "10016",
-  "title": "Dev and the title",
-  "type": "setkey",
-  "selected": true,
-  "closed": true,
-  "radio2": true
+  "text": "Developer text",
+  "checkbox": false,
+  "radioGroup": "setkey",
+  "color": "#004040",
+  "number": "28",
+  "range": "37"
 }

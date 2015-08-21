@@ -26,37 +26,45 @@ var input3Sty = {color: 'green'};
 
 var inputLabel = {margin: '0 5px'};
 
-var textInput1 = {name: 'title', type: 'text', textValue: '', focus: true};
-var textInput2 = {name: 'nodeid', type: 'text', textValue: 'textInput2', focus: false};
-var checkInput1 = {name: 'selected', type: 'checkbox', booleanValue: true, style: checkBoxSty};
+var textInput1 = {name: 'text', type: 'text', textValue: '', focus: true};
+var checkInput1 = {name: 'checkbox', type: 'checkbox', style: checkBoxSty};
 var colorInput = {name: 'color', type: 'color'};
 var numberInput = {name: 'number', type: 'number', min: 0, max: 100};
 var rangeInput = {name: 'range', type: 'range', min: 0, max: 100};
+
+var radioInput1 = {name: 'radioGroup', type: 'radio', radioValue: 'set'};
+var radioInput2 = {name: 'radioGroup', type: 'radio', radioValue: 'setkey'};
+var radioInput3 = {name: 'radioGroup', type: 'radio', radioValue: 'key'};
 
 class AppCtrlRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
  	render() {
  		var inputData = this.state.data;
-		textInput1.textValue = inputData.title;
-		textInput2.textValue = inputData.nodeid;
 
-		checkInput1.booleanValue = inputData.selected;
-		var selected = inputData.selected ? 'selected=true' : 'selected=false';
+		textInput1.textValue = inputData.text;
+		checkInput1.checkedValue = inputData.checkbox;
+		colorInput.colorValue = inputData.color;
+		numberInput.numberValue = inputData.number;
+		rangeInput.numberValue = inputData.range;
 
-		colorInput.colorValue = this.state.color;
-		numberInput.numberValue = this.state.number;
-		rangeInput.numberValue = this.state.range;
+		radioInput1.radioChecked = inputData.radioGroup == 'set';
+		radioInput2.radioChecked = inputData.radioGroup == 'setkey';
+		radioInput3.radioChecked = inputData.radioGroup == 'key';
+
+		var selected = inputData.checkbox ? 'true' : 'false';
 		var radioGroupName1 = 'key1'; //must be distinct for each use of JRadioGroup
-		var radioValue = this.state.data.type;
+		var radioValue = inputData.radioGroup;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
 				React 1.3 Form input<br/><br/>
-				<JInput input={textInput1} handleChange={this.handleValueChange} /><br/>
-				<JInput input={textInput2} handleChange={this.handleValueChange} /><br/><br/>
-				<JInput input={checkInput1} handleChange={this.handleValueChange} /> {selected}<br/><br/>
+				Text: <JInput input={textInput1} handleChange={this.handleValueChange} /><br/><br/>
+				Checkbox: <JInput input={checkInput1} handleChange={this.handleValueChange} /> Value: {selected}<br/><br/>
+				Color: <JInput input={colorInput} handleChange={this.handleValueChange} /> Value: {colorInput.colorValue}<br/><br/>
+				Number: <JInput input={numberInput} handleChange={this.handleValueChange} /> Value: {numberInput.numberValue}<br/><br/>
+				Range: <JInput input={rangeInput} handleChange={this.handleValueChange} /> Value: {rangeInput.numberValue}<br/><br/>
 	      <JRadioGroup name={radioGroupName1} value={radioValue} ref="keyGroup" onChange={this.handleRadioChange}>
-	        <div>
+	        <div>Radio Group:
 	          <label id='inputLabel1' style={inputLabel}>
 	            <input type="radio" value="set" /> Set
 	          </label>
@@ -69,10 +77,11 @@ class AppCtrlRender extends Component {
 	        </div>
 	      </JRadioGroup><br/><br/>
 
-				<JInput input={colorInput} handleChange={this.handleColorChange} /> color picker value: {colorInput.colorValue}<br/><br/>
-				<JInput input={numberInput} handleChange={this.handleNumberChange} /> number value: {numberInput.numberValue}<br/><br/>
-				<JInput input={rangeInput} handleChange={this.handleRangeChange} /> range value: {rangeInput.numberValue}<br/><br/>
-
+				Radio Input: &nbsp;
+				<JInput input={radioInput1} handleChange={this.handleValueChange} /> Set &nbsp;
+				<JInput input={radioInput2} handleChange={this.handleValueChange} /> Set/Key &nbsp;
+				<JInput input={radioInput3} handleChange={this.handleValueChange} /> Key &nbsp;
+				Value: {radioValue}
 			</div>
 		);
 	}
@@ -83,11 +92,8 @@ function getState() { return {data: BasicStore.getData()}; };
 export default class AppCtrl extends AppCtrlRender {
 	constructor() {
 	  super();
-		this.state = {
-			data: [{title: 'title', type: 'type', selected: 'selected'}],
-			color: '#1A3212', number: 10, range: 20
-		};
-	  this.binder('storeDidChange', 'handleValueChange', 'handleRadioChange', 'handleColorChange', 'handleNumberChange', 'handleRangeChange');
+		this.state = getState();
+	  this.binder('storeDidChange', 'handleValueChange', 'handleRadioChange');
 	}
 
 	componentDidMount() {
@@ -97,7 +103,4 @@ export default class AppCtrl extends AppCtrlRender {
 	storeDidChange() { this.setState(getState()); }
   handleRadioChange(event) { Actions.editRecord('type', event.target.value); }
 	handleValueChange(name, value) { Actions.editRecord(name, value); }
-	handleColorChange(name, value) { this.setState({color: value}); }
-	handleNumberChange(name, value) { this.setState({number: value}); }
-	handleRangeChange(name, value) { this.setState({range: value}); }
 }

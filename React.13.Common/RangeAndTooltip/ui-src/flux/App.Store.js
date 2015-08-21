@@ -134,15 +134,10 @@ function _changeFilterValue(itemName, value) {
 	AppStore.trigger();
 }
 
-function _appStoreInit() {
-	this.listenTo(Actions.setFilterOptions, this.onSetFilterOptions);
-	this.listenTo(Actions.changeFilterValue, this.onChangeFilterValue);
-}
-
 var AppStoreObject = {
-	init: _appStoreInit,
-	onSetFilterOptions: _setFilterOptions,
-	onChangeFilterValue: _changeFilterValue,
+	listenables: Actions,
+	setFilterOptions: _setFilterOptions,
+	changeFilterValue: _changeFilterValue,
 
 	getHoverValues: function() { return _hoverValues; },
 	getFilterList: function() { return _filterList; }

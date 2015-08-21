@@ -3,7 +3,6 @@ import Reflux from 'reflux';
 import traverse from 'traverse';
 
 import Actions from './Actions';
-import ApiFct from '../utils/ws.api.js';
 
 import AppStore from './App.Store';
 
@@ -19,7 +18,7 @@ function _gotTreeView(treedata) {
 	TreeViewStore.trigger();
 }
 
-function _setTreeData() { ApiFct.setTreeView(_treeData); }
+function _setTreeData() { Actions.apiTreeView(_treeData); }
 
 function _getSelected(tree) {
 	var result = null;
