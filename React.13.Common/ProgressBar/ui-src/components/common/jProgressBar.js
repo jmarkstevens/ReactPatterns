@@ -19,11 +19,11 @@ class JProgressBarRender extends Component {
 		var index = this.props.data.index + 1;
 		var percentage = Math.floor(index/count * 100);
 
-		let countSty = lodash.has(this.props, 'countSty') ? this.props.countSty : defaultCountSty;
-		let indexSty = lodash.has(this.props, 'indexSty') ? this.props.indexSty : defaultIndexSty;
+		let countSty = this.props.countSty ? this.props.countSty : defaultCountSty;
+		let indexSty = this.props.indexSty ? this.props.indexSty : defaultIndexSty;
 		indexSty.width = percentage + '%';
-		countSty.backgroundColor = lodash.has(this.props, 'countColor') ? this.props.countColor : '#33045B';
-		indexSty.backgroundColor = lodash.has(this.props, 'indexColor') ? this.props.indexColor : '#874C08';
+		countSty.backgroundColor = this.props.countColor ? this.props.countColor : '#33045B';
+		indexSty.backgroundColor = this.props.indexColor ? this.props.indexColor : '#874C08';
 		indexSty.borderTopColor = countSty.backgroundColor;
 
 		let barRender = (

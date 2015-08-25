@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Actions from '../flux/Actions';
 import AppStore from '../flux/App.Store';
 
-import DCtrl from './dnd.ctrl';
+import Slider from './slider.ctrl';
 import JList from './common/jList';
 
 var AppCtrlSty = {
@@ -30,15 +30,10 @@ class AppCtrlRender extends Component {
 		var messages = this.state.appData.messages;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.3 Drag and Drop
+				React 1.3 Slider
 				<br/><br/>
 				<div className='FlexBoxWrap'>
-					<DCtrl isMobile={isMobile}/>
-					<div style={{marginLeft: '10px'}}>
-						<span style={startLineStyle}>drag start</span><br/>
-						<span style={overLineStyle}>drag over</span><br/>
-						<span style={endLineStyle}>drag end</span><br/>
-					</div>
+					<Slider isMobile={isMobile}/>
 					<JList data={messages}/>
 				</div>
 			</div>

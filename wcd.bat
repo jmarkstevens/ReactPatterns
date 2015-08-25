@@ -10,6 +10,7 @@ ECHO  4 - React 1.3 FluxReactWebsocket
 ECHO  5 - React 1.3 ReFluxElectron
 ECHO  6 - React 1.3 ReFluxPages
 ECHO  7 - React 1.3 ReFluxWebSocket
+ECHO 24 - React 1.3 Slider
 ECHO  8 - React 1.3 GoogleMaps
 ECHO  9 - React 1.3 Radium
 ECHO 10 - React 1.3 ReactBlock
@@ -55,6 +56,7 @@ IF %M%==20 GOTO Basic12
 IF %M%==21 GOTO ReFluxWebSocket12
 IF %M%==22 GOTO Basic14
 IF %M%==23 GOTO DragAndDrop
+IF %M%==24 GOTO Slider
 IF %M%==33 GOTO EOF
 GOTO MENU
 :Basic12
@@ -89,6 +91,9 @@ cd React.12/ReFluxWebSocket
 GOTO EOF
 :ReFluxWebSocket13
 cd React.13/ReFluxWebSocket
+GOTO EOF
+:Slider
+cd React.13/Slider
 GOTO EOF
 :GoogleMaps
 cd React.13/ThirdParty/GoogleMaps

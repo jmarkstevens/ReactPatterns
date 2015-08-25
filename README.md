@@ -15,6 +15,7 @@ A collection of simple react projects providing reusable components, startup and
 *	ReFlux Electron
 *	ReFlux Pages
 *	ReFlux WebSocket
+*	Slider
 *	ThirdParty
 	*	GoogleMaps
 	*	Radium
