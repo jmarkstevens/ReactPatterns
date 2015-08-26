@@ -12,6 +12,7 @@ A collection of simple react projects providing reusable components, startup and
 *	Common
 *	Drag and Drop
 *	FluxReact Websocket
+*	Range Slider
 *	ReFlux Electron
 *	ReFlux Pages
 *	ReFlux WebSocket
