@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>ReactPatterns-example</title>
 
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 		<link rel="stylesheet" href="app.min.css"/>
 
 	</head>
@@ -18,7 +18,13 @@
 
 		<section id="react" class="content"></section>
 
-		<p>This code is dndi.list.js and is an optional html pattern for drag and drop. The left two columns above use this component. This patterns uses an overlaying image for the element. This pattern is supported by more browsers than the basic pattern that follows.</p>
+		<p>
+			The first and third columns show different colors for each event.
+			The second and fourth columns pass the end event to the parent element to reorder the list.<br/><br/>
+			The left two columns above use the following code from dndi.list.js which is an optional html pattern for drag and drop.
+			This pattern uses an overlaying image for the drag and drop element and is supported by more browsers than the basic pattern that follows after.
+			The border is just a visual clue from testing.
+		</p>
 		<div class="codeSty">
 			<pre class='preSty'><code>
 				import React, {Component} from 'react';

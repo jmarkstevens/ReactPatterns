@@ -17,7 +17,8 @@ var getAppStore = function(doneCallBack) {
 };
 
 var getGenusList = function(doneCallBack) {
-	var filePath = rootDataPath + '/GenusList.json';
+	// var filePath = rootDataPath + '/GenusList.json';
+	var filePath = rootDataPath + '/palmlistC.json';
 	var jsonReadCallBack = function(err, data){
 		if (err) doneCallBack('GenusList readFile error ' + filePath);
 		else {
@@ -83,4 +84,3 @@ module.exports.getTreeView = getTreeView;
 module.exports.setAppStore = setAppStore;
 module.exports.setGenusList = setGenusList;
 module.exports.setTreeView = setTreeView;
-

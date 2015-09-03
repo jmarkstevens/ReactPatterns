@@ -5,7 +5,7 @@ import TreeMenu from './tree.menu';
 import TreeEdit from './tree.edit';
 import TreeNew from './tree.new';
 
-var TreeCtrlRenderSty = { height: 'calc(100% - 2px)'};
+var TreeCtrlRenderSty = { height: 'calc(100% - 19px)'};
 
 class TreeCtrlRender extends Component {
  	render() {

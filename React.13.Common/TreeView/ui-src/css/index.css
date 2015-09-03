@@ -17,7 +17,7 @@
 .Title {font-size: 1.3em;}
 
 .content {
-	height: calc(100% - 52px);
+	height: calc(100% - 50px);
 	padding: 0px 5px;
 }
 

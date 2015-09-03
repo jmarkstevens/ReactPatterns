@@ -66,7 +66,7 @@ class AppCtrlRender extends Component {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
 				React 1.3 TreeView<br/><br/>
-				<div id='treeColumns' className='FlexBox' style={{height: '100%'}}>
+				<div id='treeColumns' className='FlexBox' style={{height: 'calc(100% - 34px)'}}>
 					<div id='TreeCtrlSty' style={TreeCtrlSty}>
 						current node: {currentTreeNode}
 						<br/>
