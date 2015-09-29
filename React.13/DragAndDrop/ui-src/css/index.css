@@ -32,6 +32,22 @@
 	display: flex;
 }
 
+.FlexBoxJustAround {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-around;
+}
+
+.FlexBoxJustBetween {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+}
+
 .FlexBoxWrap {
 	display: -webkit-box;
 	display: -moz-box;
@@ -45,7 +61,7 @@
 	justify-content: space-between;
 }
 
-.FlexStretch {
+.FlexBoxStretch {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;

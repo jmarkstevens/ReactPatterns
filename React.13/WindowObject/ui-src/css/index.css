@@ -32,6 +32,22 @@
 	display: flex;
 }
 
+.FlexBoxJustAround {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-around;
+}
+
+.FlexBoxJustBetween {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+}
+
 .FlexBoxWrap {
 	display: -webkit-box;
 	display: -moz-box;
@@ -43,6 +59,18 @@
 .FlexJustify {
 	-webkit-box-pack: justify;
 	justify-content: space-between;
+}
+
+.FlexBoxStretch {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-content: stretch;
+}
+
+.FlexItem {
+	flex-grow: 1;
 }
 
 .HighZ {z-index: 200;}

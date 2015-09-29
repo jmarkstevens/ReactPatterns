@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-var AppCtrlSty = {
+let AppCtrlSty = {
 	height: '100%',
 	padding: '0 10px 0 0'
 }
 
-class AppCtrlRender extends Component {
+export default class AppCtrl extends Component {
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
@@ -14,5 +14,3 @@ class AppCtrlRender extends Component {
 		);
 	}
 }
-
-export default class AppCtrl extends AppCtrlRender {}

@@ -9,23 +9,17 @@ var SliderCtrlSty = {
 	width: '500px'
 }
 
-var sliderObj = {
-	min: 0,
-	max: 100,
-	step: 1
-}
-
 class SliderCtrlRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
 	render() {
-		var lowValue = this.state.lowValue;
-		var highValue = this.state.highValue;
+		var lowValue = this.props.sliderObj.low;
+		var highValue = this.props.sliderObj.high;
 		return (
 			<div id='SliderCtrlSty' style={SliderCtrlSty}>
-				<SliderValue sliderObj={sliderObj} lowValue={lowValue} highValue={highValue} />
+				<SliderValue sliderObj={this.props.sliderObj} lowValue={lowValue} highValue={highValue} />
 				<SliderDnd
-					sliderObj={sliderObj}
+					sliderObj={this.props.sliderObj}
 					sliderChange={this.sliderChange}
 					sliderStartChange={this.sliderStartChange}
 					heightAdjust={SliderCtrlSty.height}
@@ -40,17 +34,16 @@ export default class SliderCtrl extends SliderCtrlRender {
 	  super();
 		this.index = 0;
 		this.isLowValue = true;
-		this.state = {highValue: 100, lowValue: 1};
 		this.binder('sliderChange', 'sliderStartChange');
 	}
 	sliderStartChange(index) {
-		this.isLowValue = (Math.abs(this.state.lowValue - index) < 5);
-		var value = this.isLowValue ? this.state.lowValue : this.state.highValue;
+		this.isLowValue = (Math.abs(this.props.sliderObj.low - index) < 5);
+		var value = this.isLowValue ? this.props.sliderObj.low : this.props.sliderObj.high;
 		this.index = value - index;
 	}
 	sliderChange(value) {
-		var index = this.index;
-		if (this.isLowValue) this.setState({lowValue: value - index});
-		else this.setState({highValue: value - index});
+		var newValue = value - this.index;
+		if (this.isLowValue) this.props.handleChange(this.props.sliderObj.name, 'low', newValue);
+		else this.props.handleChange(this.props.sliderObj.name, 'high', newValue);
 	}
 }

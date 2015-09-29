@@ -7,11 +7,9 @@ ECHO  2 - React 1.3 BasicWebpack
 ECHO  3 - React 1.3 Common
 ECHO 23 - React 1.3 Drag and Drop
 ECHO  4 - React 1.3 FluxReactWebsocket
-ECHO 25 - React 1.3 RangeSlider
 ECHO  5 - React 1.3 ReFluxElectron
 ECHO  6 - React 1.3 ReFluxPages
 ECHO  7 - React 1.3 ReFluxWebSocket
-ECHO 24 - React 1.3 Slider
 ECHO  8 - React 1.3 GoogleMaps
 ECHO  9 - React 1.3 Radium
 ECHO 10 - React 1.3 ReactBlock
@@ -24,6 +22,8 @@ ECHO 15 - React 1.3 Common FormInputs
 ECHO 16 - React 1.3 Common List
 ECHO 17 - React 1.3 Common ProgressBar
 ECHO 18 - React 1.3 Common RangeAndTooltip
+ECHO 25 - React 1.3 Common RangeSlider
+ECHO 24 - React 1.3 Common Slider
 ECHO 19 - React 1.3 Common TreeView
 ECHO.
 ECHO 20 - React 1.2 Basic
@@ -94,12 +94,6 @@ GOTO EOF
 :ReFluxWebSocket13
 cd React.13/ReFluxWebSocket
 GOTO EOF
-:Slider
-cd React.13/Slider
-GOTO EOF
-:RangeSlider
-cd React.13/RangeSlider
-GOTO EOF
 :GoogleMaps
 cd React.13/ThirdParty/GoogleMaps
 GOTO EOF
@@ -132,6 +126,12 @@ cd React.13.Common/ProgressBar
 GOTO EOF
 :RangeAndTooltip
 cd React.13.Common/RangeAndTooltip
+GOTO EOF
+:Slider
+cd React.13.Common/Slider
+GOTO EOF
+:RangeSlider
+cd React.13.Common/RangeSlider
 GOTO EOF
 :TreeView
 cd React.13.Common/TreeView

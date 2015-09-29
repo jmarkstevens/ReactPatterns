@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Actions from '../flux/Actions';
 import AppStore from '../flux/App.Store';
 
-import Slider from './slider.ctrl';
+import JRangeSlider from './common/JRangeSlider';
 import JList from './common/jList';
 
 var AppCtrlSty = {
@@ -22,24 +22,39 @@ var endLineStyle = {
 	marginLeft: '7px'
 }
 
+var sliderObj = {
+	min: -5,
+	max: 105,
+	step: 1,
+	low: -5,
+	high: 105,
+	name: 'sliderName'
+}
+
 class AppCtrlRender extends Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
 	render() {
-		var isMobile = this.state.appData.isMobile;
 		var messages = this.state.appData.messages;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
 				React 1.3 RangeSlider
 				<br/><br/>
 				<div className='FlexBoxWrap'>
-					<Slider isMobile={isMobile}/>
+					<JRangeSlider sliderObj={this.state.sliderObj} handleChange={this.handleSliderChange}/>
 					<JList data={messages}/>
 				</div>
 			</div>
 		);
 	}
 }
+
+var getInitialAppState = function() {
+	return {
+		appData: AppStore.getAppData(),
+		sliderObj: sliderObj
+	};
+};
 
 var getAppState = function() {
 	// console.log('AppCtrl getAppState');
@@ -51,15 +66,17 @@ var getAppState = function() {
 export default class AppCtrl extends AppCtrlRender {
 	constructor() {
 	  super();
-		this.state = getAppState();
-	  this.binder('appStoreDidChange');
+		this.state = getInitialAppState();
+	  this.binder('appStoreDidChange', 'handleSliderChange');
 	}
 
-	componentDidMount() {
-		var navPlatform = window.navigator.platform;
-		Actions.setWindowDefaults(navPlatform);
-	}
 	componentWillMount() { AppStore.onAny(this.appStoreDidChange); }
 	componentWillUnmount() { AppStore.offAny(this.appStoreDidChange); }
 	appStoreDidChange() { this.setState(getAppState()); }
+	handleSliderChange(name, field, value) {
+		var newSliderObj = this.state.sliderObj;
+		if (name == 'sliderName' && field == 'low') newSliderObj.low = Math.max(value, this.state.sliderObj.min);
+		else if (name == 'sliderName' && field == 'high') newSliderObj.high = Math.min(value, this.state.sliderObj.max);
+		this.setState({sliderObj: newSliderObj});
+	}
 }
