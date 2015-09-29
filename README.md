@@ -31,10 +31,13 @@ A collection of simple react projects providing reusable components, startup and
 *	List
 *	ProgressBar
 *	Range slider and Tooltip
+*	Range slider
+*	Tooltip
 *	TreeView
 
 **React.14**
 *	Basic
+*	ReFlux WebSocket
 
 # The basics
 
