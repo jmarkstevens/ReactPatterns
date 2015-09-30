@@ -9,5 +9,5 @@ var apiActions = [
 
 var ipcActions = ['gotData']
 
-var actionArray = apiActions.concat(ipcActions);
+var actionArray = [...apiActions, ...ipcActions];
 module.exports = Reflux.createActions(actionArray);

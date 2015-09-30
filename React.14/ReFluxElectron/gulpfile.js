@@ -20,7 +20,7 @@ var source = {
 
 gulp.task('appjs', function(){
 	browserify({ debug: true })
-		.transform(babel)
+		.transform(babel.configure({stage: 0}))
 		.require(source.appjs, { entry: true })
 		.bundle()
 		.pipe(vsource('app.min.js'))

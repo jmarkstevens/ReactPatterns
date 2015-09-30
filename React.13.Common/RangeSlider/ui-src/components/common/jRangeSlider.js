@@ -90,6 +90,7 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 			return;
 		}
 		this.isLow = (Math.abs(this.props.sliderObj.low - itemID) < 5);
+		if (this.isLow && this.props.sliderObj.isSingle) this.isLow = false;
 		this.isHigh = (Math.abs(this.props.sliderObj.high - itemID) < 5);
 		if (this.isLow || this.isHigh) {
 			this.props.sliderStartChange(itemID);
@@ -118,6 +119,7 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 		var itemID = event.target.id;
 		if (isNaN(itemID)) return;
 		this.isLow = (Math.abs(this.props.sliderObj.low - itemID) < 5);
+		if (this.isLow && this.props.sliderObj.isSingle) this.isLow = false;
 		this.isHigh = (Math.abs(this.props.sliderObj.high - itemID) < 5);
 		if (this.isLow || this.isHigh) {
 			this.props.sliderStartChange(itemID);
