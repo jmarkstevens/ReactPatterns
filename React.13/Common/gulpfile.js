@@ -21,7 +21,6 @@ var source = {
 	jdropmenu: patternsPath13c + 'DropDown' + commonPath + 'jDropMenu.js',
 	jdropselect: patternsPath13c + 'DropDown' + commonPath + 'jDropSelect.js',
 	jinput: patternsPath13c + 'FormInputs' + commonPath + 'jInput.js',
-	jradiogroup: patternsPath13c + 'FormInputs' + commonPath + 'jRadioGroup.js',
 	jlist: patternsPath13c + 'List' + commonPath + 'jList.js',
 	jprogressbar: patternsPath13c + 'ProgressBar' + commonPath + 'jProgressBar.js',
 	jrangeslider: patternsPath13c + 'RangeSlider' + commonPath + 'jRangeSlider.js',
@@ -70,7 +69,6 @@ gulp.task('treeview', function() {
 	gulp.src(source.jbutton).pipe(gulp.dest(dest.treeview));
 	gulp.src(source.jdropmenu).pipe(gulp.dest(dest.treeview));
 	gulp.src(source.jinput).pipe(gulp.dest(dest.treeview));
-	gulp.src(source.jradiogroup).pipe(gulp.dest(dest.treeview));
 });
 
 gulp.task('favicon', function() {

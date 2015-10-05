@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import Actions from './../flux/Actions';
 import JInput from './common/jInput';
-import JRadioGroup from './common/jRadioGroup';
 
 import BasicStore from './../flux/Basic.Store';
 
@@ -48,9 +47,10 @@ class AppCtrlRender extends Component {
 		numberInput.numberValue = inputData.number;
 		rangeInput.numberValue = inputData.range;
 
-		radioInput1.radioChecked = inputData.radioGroup == 'set';
-		radioInput2.radioChecked = inputData.radioGroup == 'setkey';
-		radioInput3.radioChecked = inputData.radioGroup == 'key';
+		let currentRadioGroupValue = inputData.radioGroup;
+		radioInput1.radioChecked = (currentRadioGroupValue == radioInput1.radioValue);
+		radioInput2.radioChecked = (currentRadioGroupValue == radioInput2.radioValue);
+		radioInput3.radioChecked = (currentRadioGroupValue == radioInput3.radioValue);
 
 		var selected = inputData.checkbox ? 'true' : 'false';
 		var radioGroupName1 = 'key1'; //must be distinct for each use of JRadioGroup
@@ -63,19 +63,6 @@ class AppCtrlRender extends Component {
 				Color: <JInput input={colorInput} handleChange={this.handleValueChange} /> Value: {colorInput.colorValue}<br/><br/>
 				Number: <JInput input={numberInput} handleChange={this.handleValueChange} /> Value: {numberInput.numberValue}<br/><br/>
 				Range: <JInput input={rangeInput} handleChange={this.handleValueChange} /> Value: {rangeInput.numberValue}<br/><br/>
-	      <JRadioGroup name={radioGroupName1} value={radioValue} ref="keyGroup" onChange={this.handleRadioChange}>
-	        <div>Radio Group:
-	          <label id='inputLabel1' style={inputLabel}>
-	            <input type="radio" value="set" /> Set
-	          </label>
-	          <label id='inputLabel2' style={inputLabel}>
-	            <input type="radio" value="setkey"/> Set/Key
-	          </label>
-	          <label id='inputLabel3' style={inputLabel}>
-	            <input type="radio" value="key"/> Key
-	          </label>
-	        </div>
-	      </JRadioGroup><br/><br/>
 
 				Radio Input: &nbsp;
 				<JInput input={radioInput1} handleChange={this.handleValueChange} /> Set &nbsp;

@@ -12,5 +12,5 @@ var wsActions = [
 
 var inputActions = ['editRecord']
 
-var actionArray = wsActions.concat(apiActions, inputActions);
+var actionArray = [...wsActions, ...apiActions, ...inputActions];
 module.exports = Reflux.createActions(actionArray);

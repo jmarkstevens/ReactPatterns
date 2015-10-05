@@ -59,14 +59,14 @@
     "title": "Archontophoenix",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "ApC",
         "title": "cunninghamiana",
         "genus": "Archontophoenix",
         "type": "specie",
-        "selected": false
+        "selected": true
       }
     ]
   },
@@ -98,7 +98,7 @@
     "title": "Bismarckia",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "BiN",
@@ -114,7 +114,7 @@
     "title": "Brahea",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "BrAc",
@@ -325,7 +325,7 @@
     "title": "Ceroxylon",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "CeQ",
@@ -406,7 +406,7 @@
     "title": "Chamaerops",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "CmH",
@@ -452,7 +452,7 @@
     "title": "Guihaia",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "GuA",
@@ -484,7 +484,7 @@
     "title": "Livistona",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "LvAu",
@@ -530,7 +530,7 @@
     "title": "Phoenix",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "PhRexC",

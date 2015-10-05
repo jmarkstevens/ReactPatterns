@@ -1,7 +1,7 @@
 {
   "text": "Developer text",
   "checkbox": false,
-  "radioGroup": "setkey",
+  "radioGroup": "set",
   "color": "#004040",
   "number": "28",
   "range": "37"
