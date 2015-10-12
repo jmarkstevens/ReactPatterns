@@ -17,7 +17,7 @@
     "flux-react": "latest",
 		"primus": "latest",
 		"primus-emitter": "latest",
-		"react": "latest",
+		"react": "^0.13",
     "serve-favicon": "latest",
 		"ws": "latest"
 	},

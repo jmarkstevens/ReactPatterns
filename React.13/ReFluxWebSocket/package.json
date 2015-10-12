@@ -16,7 +16,7 @@
 		"express": "latest",
 		"primus": "latest",
 		"primus-emitter": "latest",
-		"react": "latest",
+		"react": "^0.13",
     "reflux": "latest",
     "serve-favicon": "latest",
 		"ws": "latest"

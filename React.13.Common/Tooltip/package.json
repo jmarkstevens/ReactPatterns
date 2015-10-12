@@ -17,7 +17,7 @@
   "dependencies": {
     "express": "latest",
     "lodash": "latest",
-    "react": "latest",
+    "react": "^0.13",
     "react-mixin": "^1.2.2",
     "reflux": "latest",
     "serve-favicon": "latest"

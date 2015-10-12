@@ -16,7 +16,7 @@
 		"express": "latest",
 		"flux-react": "latest",
 		"lodash": "latest",
-		"react": "latest",
+		"react": "^0.13",
     "serve-favicon": "latest"
 	},
 	"devDependencies": {

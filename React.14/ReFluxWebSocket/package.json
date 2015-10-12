@@ -16,8 +16,8 @@
 		"express": "latest",
 		"primus": "latest",
 		"primus-emitter": "latest",
-		"react": "^0.14.0-rc1",
-		"react-dom": "^0.14.0-rc1",
+		"react": "^0.14",
+		"react-dom": "^0.14",
     "reflux": "latest",
     "serve-favicon": "latest",
 		"ws": "latest"

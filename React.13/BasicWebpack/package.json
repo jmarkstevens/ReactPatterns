@@ -14,7 +14,7 @@
 	"scripts": { "start": "node js/server.js" },
 	"dependencies": {
 		"express": "latest",
-		"react": "latest",
+		"react": "^0.13",
     "serve-favicon": "latest"
 	},
 	"devDependencies": {

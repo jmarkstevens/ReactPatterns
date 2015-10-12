@@ -16,7 +16,7 @@
     "eventemitter3": "latest",
 		"express": "latest",
     "point-geometry": "latest",
-		"react": "latest",
+		"react": "^0.13",
     "react-pure-render": "latest",
     "scriptjs": "latest",
     "serve-favicon": "latest"
