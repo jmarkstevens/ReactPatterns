@@ -17,7 +17,7 @@
         "nodeid": "1.6",
         "title": "Gulp",
         "type": "dev",
-        "selected": true,
+        "selected": false,
         "children": []
       },
       {
@@ -68,7 +68,7 @@
         "nodeid": "22.24",
         "title": "Clippets",
         "type": "home",
-        "selected": false,
+        "selected": true,
         "children": []
       },
       {

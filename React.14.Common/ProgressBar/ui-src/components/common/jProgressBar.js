@@ -16,7 +16,7 @@ export default class JProgressBar extends Component {
 	render() {
 		if (!this.props.data) return null;
 		let count = this.props.data.count;
-		let index = this.props.data.index + 1;
+		let index = this.props.data.index;
 		let percentage = Math.floor(index/count * 100);
 
 		let countSty = this.props.countSty ? this.props.countSty : defaultCountSty;
@@ -28,7 +28,15 @@ export default class JProgressBar extends Component {
 
 		let barRender = (
 			<div id='countSty' style={countSty}>
-				<div id='indexSty' style={indexSty}></div>
+				<div
+					id='indexSty'
+					style={{
+						backgroundColor: indexSty.backgroundColor,
+						height: indexSty.height,
+						borderTop: indexSty.borderTop,
+						width: indexSty.width
+					}}
+				></div>
 			</div>
 		);
 

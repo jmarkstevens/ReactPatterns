@@ -36,7 +36,7 @@
     "title": "Allagoptera",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "AlA",
@@ -59,14 +59,14 @@
     "title": "Archontophoenix",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "ApC",
         "title": "cunninghamiana",
         "genus": "Archontophoenix",
         "type": "specie",
-        "selected": true
+        "selected": false
       }
     ]
   },
@@ -75,7 +75,7 @@
     "title": "Arenga",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "AgE",
@@ -89,7 +89,7 @@
         "title": "micrantha",
         "genus": "Arenga",
         "type": "specie",
-        "selected": false
+        "selected": true
       }
     ]
   },

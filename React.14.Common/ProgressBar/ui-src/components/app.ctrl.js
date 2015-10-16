@@ -32,7 +32,7 @@ let ButtonAreaSty = {
 	verticalAlign: 'middle'
 };
 
-let progressData = {count: 100, index: 0};
+let progressData = {count: 120};
 
 class AppCtrlRender extends Component {
 	render() {
@@ -53,7 +53,7 @@ class AppCtrlRender extends Component {
 				<br/>none<br/><br/>
 				<JProgressBar data={progressData} position='none' />
 				<br/>indexColor<br/><br/>
-				<JProgressBar data={progressData} indexColor='#fff' />
+				<JProgressBar data={progressData} indexColor='#304030' />
 				<br/>countColor<br/><br/>
 				<JProgressBar data={progressData} countColor='#000' />
 				<br/>customStyle<br/><br/>
@@ -75,15 +75,16 @@ class AppCtrlRender extends Component {
 export default class AppCtrl extends AppCtrlRender {
 	constructor() {
 		super();
-		this.state = {progressIndex: 0};
+		this.state = {progressIndex: 10};
 	}
 	clickHandler = (buttonid) => {
-		let newIndex = this.state.progressIndex;
+		let oldIndex = this.state.progressIndex;
+		let newIndex = oldIndex;
 		switch (buttonid) {
-			case 'first': newIndex = 0; break;
-			case 'previous': newIndex -= newIndex > 0 ? 1 : 0; break;
-			case 'next': newIndex += newIndex < 99 ? 1 : 0; break;
-			case 'last': newIndex = 99; break;
+			case 'first': newIndex = 1; break;
+			case 'previous': newIndex -= oldIndex > 1 ? 1 : 0; break;
+			case 'next': newIndex += oldIndex < progressData.count ? 1 : 0; break;
+			case 'last': newIndex = progressData.count; break;
 		}
 		this.setState({progressIndex: newIndex})
 	}

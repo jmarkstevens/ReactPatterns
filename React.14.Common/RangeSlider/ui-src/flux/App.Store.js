@@ -1,20 +1,9 @@
-import flux from 'flux-react';
+import Reflux from 'reflux';
 
 import Actions from './Actions';
 
-var _appStoreActions = [
-	Actions.setWindowDefaults,
-	Actions.newMessage
-];
-
-var _appStoreData = {appData: {isMobile: false, messages: []}};
-
-var _appStoreExports = {
-	getAppData: function() { return this.appData; }
-};
-
 function _setWindowDefaults(navPlatform) {
-	var deviceTyped = 'mobile';
+	let deviceTyped = 'mobile';
 
 	this.newMessage('navPlatform: ' + navPlatform);
 	switch (navPlatform) {
@@ -24,21 +13,22 @@ function _setWindowDefaults(navPlatform) {
 	}
 	// deviceTyped = 'mobile';
 	this.appData.isMobile = (deviceTyped == 'mobile');
-	this.emit('setWindowDefaults');
+	this.trigger('setWindowDefaults');
 }
 
 function _newMessage(message) {
 	this.appData.messages.push(message);
 	if (this.appData.messages.length > 35) this.appData.messages.shift();
-	this.emit('newMessage');
+	this.trigger('newMessage');
 }
 
-const AppStoreObject = {
-	actions: _appStoreActions,
-	exports: _appStoreExports,
-	mixins: [_appStoreData],
+let AppStoreObject = {
+	appData: {isMobile: false, messages: []},
+	listenables: Actions,
 	setWindowDefaults: _setWindowDefaults,
-	newMessage: _newMessage
+	newMessage: _newMessage,
+
+	getAppData() { return this.appData; }
 }
-const AppStore = flux.createStore(AppStoreObject);
+const AppStore = Reflux.createStore(AppStoreObject);
 export default AppStore;

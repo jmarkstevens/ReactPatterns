@@ -131,7 +131,7 @@ function filterMap(item, index) {
 		);
 	}
 	else if (item.type == 'check') {
-		let checkInput = {name: item.name, type: 'checkbox', booleanValue: item.item.value, style: checkBoxSty};
+		let checkInput = {name: item.name, type: 'checkbox', checkedValue: item.item.value, style: checkBoxSty};
 		dataline = (
 			<div id='titleLineSty' className='FlexBox'>
 				{tooltip}

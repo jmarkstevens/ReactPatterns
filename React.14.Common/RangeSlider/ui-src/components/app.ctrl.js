@@ -97,7 +97,7 @@ let getInitialAppState = function() {
 	};
 };
 
-var getAppState = function() { return { appData: AppStore.getAppData() }; };
+function getAppState() { return { appData: AppStore.getAppData() }; };
 
 export default class AppCtrl extends AppCtrlRender {
 	constructor() {
@@ -108,9 +108,9 @@ export default class AppCtrl extends AppCtrlRender {
 	componentDidMount() {
 		let navPlatform = window.navigator.platform;
 		Actions.setWindowDefaults(navPlatform);
+		this.unsubscribe = AppStore.listen(this.appStoreDidChange);
 	}
-	componentWillMount() { AppStore.onAny(this.appStoreDidChange); }
-	componentWillUnmount() { AppStore.offAny(this.appStoreDidChange); }
+	componentWillUnmount() { this.unsubscribe(); }
 	appStoreDidChange = () => { this.setState(getAppState()); }
 	handleSliderChange1 = (name, field, value) => {
 		let newSliderObj = this.state.sliderObj1;

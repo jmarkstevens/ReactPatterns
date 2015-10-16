@@ -42,6 +42,16 @@ There are not any React-Router examples yet because I have been building applica
 *	ReFlux Electron
 *	ReFlux WebSocket
 
+**React.14.Common**
+*	Buttons
+*	DropDown
+*	Form Inputs
+*	List
+*	ProgressBar
+*	Range slider
+*	Tooltip
+*	TreeView
+
 # The basics
 
 From the ReactPatterns folder you can run wcd on Windows to change to one of the project folders.

@@ -239,11 +239,51 @@ export default class JRangeSliderValue extends Component {
 		return (
 			<div id='sliderValueSty' style={sliderValueSty}>
 				<div id='buttonDiv' className='FlexBox' style={buttonDivSty}>
-					<button id='lowButtonSty' style={lowButtonSty}>{lowValue}</button>
-					<button id='highButtonSty' style={highButtonSty}>{highValue}</button>
+					<button
+						id='lowButtonSty'
+						style={{
+							backgroundColor: lowButtonSty.backgroundColor,
+							border: lowButtonSty.border,
+							borderRadius: lowButtonSty.borderRadius,
+							color: lowButtonSty.color,
+							display: lowButtonSty.display,
+							fontSize: lowButtonSty.fontSize,
+							height: lowButtonSty.height,
+							lineHeight: lowButtonSty.lineHeight,
+							marginLeft: lowButtonSty.marginLeft,
+							marginTop: lowButtonSty.marginTop,
+							padding: lowButtonSty.padding,
+							width: lowButtonSty.width
+						}}
+					>{lowValue}</button>
+					<button
+						id='highButtonSty'
+						style={{
+							backgroundColor: highButtonSty.backgroundColor,
+							border: highButtonSty.border,
+							borderRadius: highButtonSty.borderRadius,
+							color: highButtonSty.color,
+							fontSize: highButtonSty.fontSize,
+							height: highButtonSty.height,
+							lineHeight: highButtonSty.lineHeight,
+							marginLeft: highButtonSty.marginLeft,
+							marginTop: highButtonSty.marginTop,
+							padding: highButtonSty.padding,
+							width: highButtonSty.width
+						}}
+					>{highValue}</button>
 				</div>
 				<div id='countSty' style={countSty}>
-					<div id='indexSty' style={indexSty}></div>
+					<div
+						id='indexSty'
+						style={{
+							backgroundColor: indexSty.backgroundColor,
+							borderTop: indexSty.borderTop,
+							height: indexSty.height,
+							marginLeft: indexSty.marginLeft,
+							width: indexSty.width
+						}}
+					></div>
 				</div>
 			</div>
 		);
@@ -279,7 +319,10 @@ class JRangeSliderRender extends Component {
 		defaultIndexSty.height = size6 + 'px';
 		defaultIndexSty.borderTop = size3 + 'px solid #33045B';
 		return (
-			<div id='SliderCtrlSty' style={SliderCtrlSty}>
+			<div
+				id='SliderCtrlSty'
+				style={SliderCtrlSty}
+			>
 				<JRangeSliderValue sliderObj={this.props.sliderObj} />
 				<JRangeSliderDnd
 					sliderObj={this.props.sliderObj}

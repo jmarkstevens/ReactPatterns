@@ -7,7 +7,7 @@ import AppCtrl from './components/app.ctrl.js';
 import Actions from './flux/Actions';
 import ApiStore from './flux/Api.Store';
 
-window.React = React;
+window.ReactDom = ReactDom;
 
 Actions.apiInit();
 
