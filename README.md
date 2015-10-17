@@ -12,13 +12,10 @@ There are not any React-Router examples yet because I have been building applica
 **React.13**
 *	Basic
 *	Basic Webpack
-*	Common
 *	Drag and Drop
 *	FluxReact Websocket
-*	Range Slider
 *	ReFlux Pages
 *	ReFlux WebSocket
-*	Slider
 *	ThirdParty
 	*	GoogleMaps
 	*	Radium
