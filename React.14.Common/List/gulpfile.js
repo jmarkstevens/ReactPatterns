@@ -1,11 +1,13 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var minifyCSS = require('gulp-minify-css');
-var browserify = require('browserify');
-var vsource = require("vinyl-source-stream");
-var babel = require('babelify');
+'use strict';
 
-var source = {
+let gulp = require('gulp');
+let concat = require('gulp-concat');
+let minifyCSS = require('gulp-minify-css');
+let browserify = require('browserify');
+let vsource = require("vinyl-source-stream");
+let babel = require('babelify');
+
+let source = {
 	appjs: './ui-src/app.js',
 	js: ['./ui-src/**/*.js'],
 	appcss: ['./ui-src/css/*.css'],

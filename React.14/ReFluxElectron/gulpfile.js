@@ -1,17 +1,19 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var minifyCSS = require('gulp-minify-css');
-var browserify = require('browserify');
-var vsource = require("vinyl-source-stream");
-var babel = require('babelify');
-var shell = require('gulp-shell');
-var config = require('./config.json');
+'use strict';
 
-var shellTaskArgument;
+let gulp = require('gulp');
+let concat = require('gulp-concat');
+let minifyCSS = require('gulp-minify-css');
+let browserify = require('browserify');
+let vsource = require("vinyl-source-stream");
+let babel = require('babelify');
+let shell = require('gulp-shell');
+let config = require('./config.json');
+
+let shellTaskArgument;
 if (process.platform == 'win32') shellTaskArgument = config.winProjectRoot + '/node_modules/electron-prebuilt/dist/electron.exe ' + config.winProjectRoot;
 else shellTaskArgument = './node_modules/electron-prebuilt/dist/Electron.app/Contents/MacOS/Electron ./../ReFluxElectron';
 
-var source = {
+let source = {
 	appjs: './ui-src/app.js',
 	js: ['./ui-src/**/*.js'],
 	appcss: ['./ui-src/css/*.css'],

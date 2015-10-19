@@ -12,32 +12,19 @@ There are not any React-Router examples yet because I have been building applica
 **React.13**
 *	Basic
 *	Basic Webpack
+*	ReFlux WebSocket
+
+**React.14**
+*	Basic
 *	Drag and Drop
-*	FluxReact Websocket
+*	ReFlux Electron
 *	ReFlux Pages
 *	ReFlux WebSocket
 *	ThirdParty
 	*	GoogleMaps
 	*	Radium
-	*	ReactBlock
 *	Window Events
 *	Window Object
-
-**React.13.Common**
-*	Buttons
-*	DropDown
-*	Form Inputs
-*	List
-*	ProgressBar
-*	Range slider and Tooltip
-*	Range slider
-*	Tooltip
-*	TreeView
-
-**React.14**
-*	Basic
-*	ReFlux Electron
-*	ReFlux WebSocket
 
 **React.14.Common**
 *	Buttons

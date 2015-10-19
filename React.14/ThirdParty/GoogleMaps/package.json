@@ -1,0 +1,35 @@
+{
+	"name": "ReactPatterns-1.4-ThirdParty-GoogleMaps",
+	"version": "1.0.0",
+	"description": "A collection of simple react projects providing reusable components, startup and test examples.",
+  "license": "MIT",
+  "author": {
+    "name": "Janaka Stevens",
+    "email": "jmstevens@calitek.com"
+  },
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/calitek/ReactPatterns.git"
+  },
+	"scripts": { "start": "node js/server.js" },
+	"dependencies": {
+    "eventemitter3": "latest",
+		"express": "latest",
+		"google-map-react": "latest",
+    "point-geometry": "latest",
+		"react": "^0.14",
+		"react-dom": "^0.14",
+    "react-pure-render": "latest",
+    "scriptjs": "latest",
+    "serve-favicon": "latest"
+	},
+	"devDependencies": {
+		"babelify": "latest",
+		"babel-runtime": "latest",
+		"browserify": "latest",
+		"gulp": "latest",
+		"gulp-concat": "latest",
+		"gulp-minify-css": "latest",
+		"vinyl-source-stream": "latest"
+	}
+}

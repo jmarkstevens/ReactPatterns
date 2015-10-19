@@ -1,9 +1,11 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var minifyCSS = require('gulp-minify-css');
-var webpack = require('webpack-stream');
+'use strict';
 
-var source = {
+let gulp = require('gulp');
+let concat = require('gulp-concat');
+let minifyCSS = require('gulp-minify-css');
+let webpack = require('webpack-stream');
+
+let source = {
 	appjs: './ui-src/app.js',
 	js: ['./ui-src/**/*.js'],
 	appcss: ['./ui-src/css/*.css'],
