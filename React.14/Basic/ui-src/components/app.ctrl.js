@@ -10,6 +10,7 @@ export default class AppCtrl extends Component {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
 				React 1.4 beta Basic
+				<br/><br/>
 			</div>
 		);
 	}

@@ -159,7 +159,7 @@ let sliderValueSty = {
 let lowButtonSty = {
 	backgroundColor: '#4C1F00',
 	border: 'none',
-	borderRadius: '24px',
+	borderRadius: '50%',
 	color: 'gold',
 	height: '24px',
 	lineHeight: 'normal',
@@ -171,7 +171,7 @@ let lowButtonSty = {
 let highButtonSty = {
 	backgroundColor: '#4C1F00',
 	border: 'none',
-	borderRadius: '24px',
+	borderRadius: '50%',
 	color: 'gold',
 	height: '24px',
 	lineHeight: 'normal',
@@ -182,7 +182,7 @@ let highButtonSty = {
 
 let defaultCountSty = {
 	backgroundColor: '#33045B',
-	borderRadius: '6px',
+	borderRadius: '50%',
 	height: '12px',
 	margin: '-18px 0 0 0px',
 	width: '100%'

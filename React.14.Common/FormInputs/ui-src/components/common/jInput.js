@@ -17,6 +17,7 @@ class JInputRender extends Component {
 
 		let returnRadio = (
 				<input
+					ref="inputRef"
 					type={inputType}
 					style={inputSty}
 					checked={radioChecked}
@@ -26,6 +27,7 @@ class JInputRender extends Component {
 
 		let returnChecked = (
 				<input
+					ref="inputRef"
 					type={inputType}
 					style={inputSty}
 					checked={checkedValue}
@@ -35,6 +37,7 @@ class JInputRender extends Component {
 		let returnColor = (
 				<input
 					type={inputType}
+					ref="inputRef"
 					style={inputSty}
 					value={colorValue}
 					onChange={this.handleValueChange} />
@@ -43,6 +46,7 @@ class JInputRender extends Component {
 		let returnNumber = (
 				<input
 					type={inputType}
+					ref="inputRef"
 					style={inputSty}
 					value={numberValue}
 					min={min} max={max} step={step}
@@ -52,6 +56,7 @@ class JInputRender extends Component {
 		let returnText = (
 				<input
 					type={inputType}
+					ref="inputRef"
 					style={inputSty}
 					value={textValue}
 					onChange={this.handleTextValueChange} />
@@ -78,6 +83,7 @@ export default class JInput extends JInputRender {
 
 	componentDidMount() {
 		if (this.props.input.textValue) this.setState({textValue: this.props.input.textValue});
+		if (this.props.input.focus) this.refs.inputRef.focus();
 	}
 	componentWillReceiveProps(nextProps) {
 		if (nextProps.input.textValue && (this.state.textValue != nextProps.input.textValue))
@@ -92,5 +98,3 @@ export default class JInput extends JInputRender {
 	}
 	handleValueChange = (event) => { this.props.handleChange(this.props.input.name, event.target.value); }
 }
-
-// if (this.props.input.focus) ReactDom.findDOMNode(this.refs.inputRef).focus();
