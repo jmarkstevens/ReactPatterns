@@ -1,4 +1,4 @@
-# ReactPatterns 1.3 ThirdParty Radium
+# ReactPatterns .14 ThirdParty Radium
 
 Implement the radium example page.
 

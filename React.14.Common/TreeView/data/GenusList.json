@@ -89,7 +89,7 @@
         "title": "micrantha",
         "genus": "Arenga",
         "type": "specie",
-        "selected": true
+        "selected": false
       }
     ]
   },
@@ -98,14 +98,14 @@
     "title": "Bismarckia",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "BiN",
         "title": "nobilis",
         "genus": "Bismarckia",
         "type": "specie",
-        "selected": false
+        "selected": true
       }
     ]
   },

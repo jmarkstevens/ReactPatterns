@@ -1,3 +1,3 @@
-# ReactPatterns 1.3 Common Buttons
+# ReactPatterns .14 Common Buttons
 
 A button component.

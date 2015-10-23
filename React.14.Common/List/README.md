@@ -1,3 +1,3 @@
-# ReactPatterns 1.3 Common List
+# ReactPatterns .14 Common List
 
 A list component.

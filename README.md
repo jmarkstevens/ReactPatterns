@@ -19,6 +19,7 @@ There are not any React-Router examples yet because I have been building applica
 *	Drag and Drop
 *	ReFlux Electron
 *	ReFlux Pages
+*	ReFlux SuperAgent ajax
 *	ReFlux WebSocket
 *	ThirdParty
 	*	GoogleMaps
