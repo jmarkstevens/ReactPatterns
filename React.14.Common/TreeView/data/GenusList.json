@@ -75,7 +75,7 @@
     "title": "Arenga",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "AgE",
@@ -98,14 +98,14 @@
     "title": "Bismarckia",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "BiN",
         "title": "nobilis",
         "genus": "Bismarckia",
         "type": "specie",
-        "selected": true
+        "selected": false
       }
     ]
   },
@@ -325,7 +325,7 @@
     "title": "Ceroxylon",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "CeQ",

@@ -1,9 +1,10 @@
 'use strict';
 
 import React  from 'react';
+import ReactDom  from 'react-dom';
+
 import AppCtrl from './components/app.ctrl.js';
 
-window.React = React;
-React.initializeTouchEvents(true);
+window.ReactDom = ReactDom;
 
-React.render( <AppCtrl />, document.getElementById('react') );
+ReactDom.render( <AppCtrl />, document.getElementById('react') );

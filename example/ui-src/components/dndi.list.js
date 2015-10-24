@@ -2,35 +2,35 @@ import React, {Component} from 'react';
 
 import Actions from './../flux/Actions';
 
-var listSty = {}
-var listStyle = {
+let listSty = {}
+let listStyle = {
 	marginLeft: '50px'
 }
 
-var lineSty = {}
-var lineStyle = {
+let lineSty = {}
+let lineStyle = {
 	color: '#FBF7C3',
 	height: '1.2em',
 	marginLeft: '7px',
 	marginTop: '3px'
 }
-var startLineStyle = {
+let startLineStyle = {
 	color: '#1F1',
 	marginLeft: '7px',
 	marginTop: '3px'
 }
-var overLineStyle = {
+let overLineStyle = {
 	color: '#F11',
 	marginLeft: '7px',
 	marginTop: '3px'
 }
-var endLineStyle = {
+let endLineStyle = {
 	color: '#11F',
 	marginLeft: '7px',
 	marginTop: '3px'
 }
 
-var mobileLineStyle = {
+let mobileLineStyle = {
 	// border: '1px solid blue',
 	color: '#FBF7C3',
 	height: '2em',
@@ -38,29 +38,29 @@ var mobileLineStyle = {
 	marginTop: '5px',
 	verticalAlign: 'middle'
 }
-var startMobileLineStyle = {
+let startMobileLineStyle = {
 	color: '#1F1',
 	height: '2em',
 	marginLeft: '7px',
 	marginTop: '5px',
 	verticalAlign: 'middle'
 }
-var overMobileLineStyle = {
+let overMobileLineStyle = {
 	color: '#F11',
 	height: '2em',
 	marginLeft: '7px',
 	marginTop: '5px',
 	verticalAlign: 'middle'
 }
-var endMobileLineStyle = {
+let endMobileLineStyle = {
 	color: '#11F',
 	height: '2em',
 	marginLeft: '7px',
 	marginTop: '5px',
 	verticalAlign: 'middle'
 }
-var imageStyle = {height: '100%', width: '100%'}
-var imageDivStyle = {
+let imageStyle = {height: '100%', width: '100%'}
+let imageDivStyle = {
 	border: 'thin dotted green',
 	height: '1.2em',
 	left: '0',
@@ -117,8 +117,6 @@ function divMap(item) {
 }
 
 class DndImageListRender extends Component {
-	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
-
 	render() {
 		listSty = listStyle;
 		if (this.props.isMobile) {
@@ -129,8 +127,8 @@ class DndImageListRender extends Component {
 			imageDivStyle.height = '2em';
 			imageDivStyle.marginTop = '-1.6em';
 		}
-		var vm = this;
-		var list;
+		let vm = this;
+		let list;
 		if (this.props.dndDone) list = this.props.data.map(divMap, vm);
 		else list = this.props.data.map(divColorMap, vm);
 		return (
@@ -149,53 +147,52 @@ export default class DndImageList extends DndImageListRender {
 			overID: '',
 			endID: ''
 		};
-		this.binder('onThisDragStart', 'onThisDragOver', 'onThisDragEnd', 'onThisTouchStart', 'onThisTouchMove', 'onThisTouchEnd');
 	}
-	onThisDragStart(event) {
+	onThisDragStart = (event) => {
 		// event.dataTransfer.setData('text/plain', 'This text may be dragged');
 		event.dataTransfer.effectAllowed = "all";
-		var itemID = event.target.id;
+		let itemID = event.target.id;
 		if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 		Actions.newMessage('DragStart itemID: ' + itemID);
 	}
-	onThisDragOver(event) {
+	onThisDragOver = (event) => {
 		event.preventDefault();
-		var itemID = event.target.id;
+		let itemID = event.target.id;
 		if (!itemID || this.state.overID == itemID) return;
 		if (itemID) { this.setState({overID: itemID}) };
 		Actions.newMessage('DragOver itemID: ' + itemID);
 	}
-	onThisDragEnd(event) {
+	onThisDragEnd = (event) => {
 		event.preventDefault();
-		var itemID = event.target.id;
+		let itemID = event.target.id;
 		if (itemID) { this.setState({endID: itemID, overID: ''}) };
 		if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
 		Actions.newMessage('DragEnd itemID: ' + itemID);
 	}
-	onThisTouchStart(event) {
+	onThisTouchStart = (event) => {
 		event.preventDefault();
-		var itemID = event.target.id;
+		let itemID = event.target.id;
 		if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 		Actions.newMessage('TouchStart itemID: ' + itemID);
 	}
-	onThisTouchMove(event) {
+	onThisTouchMove = (event) => {
 		event.preventDefault();
-		var lastTouch = event.touches.length - 1;
-		var x = event.touches[lastTouch].pageX;
-		var y = event.touches[lastTouch].pageY;
-		var element = document.elementFromPoint(x, y);
+		let lastTouch = event.touches.length - 1;
+		let x = event.touches[lastTouch].pageX;
+		let y = event.touches[lastTouch].pageY;
+		let element = document.elementFromPoint(x, y);
 		if (!element.id || this.state.overID == element.id) return;
 		Actions.newMessage('TouchMove element.id: ' + element.id);
 		if (element.id) { this.setState({overID: element.id}) };
 	}
-	onThisTouchEnd(event) {
+	onThisTouchEnd = (event) => {
 		event.preventDefault();
-		var lastTouch = event.changedTouches.length - 1;
-		var x = event.changedTouches[lastTouch].pageX;
-		var y = event.changedTouches[lastTouch].pageY;
-		var element = document.elementFromPoint(x, y);
+		let lastTouch = event.changedTouches.length - 1;
+		let x = event.changedTouches[lastTouch].pageX;
+		let y = event.changedTouches[lastTouch].pageY;
+		let element = document.elementFromPoint(x, y);
 		Actions.newMessage('TouchEnd element.id: ' + element.id);
-		var itemID = element.id;
+		let itemID = element.id;
 		if (itemID) { this.setState({endID: itemID, overID: ''}) };
 		if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
 	}

@@ -31,35 +31,35 @@
 
 				import Actions from './../flux/Actions';
 
-				var listSty = {}
-				var listStyle = {
+				let listSty = {}
+				let listStyle = {
 					marginLeft: '50px'
 				}
 
-				var lineSty = {}
-				var lineStyle = {
+				let lineSty = {}
+				let lineStyle = {
 					color: '#FBF7C3',
 					height: '1.2em',
 					marginLeft: '7px',
 					marginTop: '3px'
 				}
-				var startLineStyle = {
+				let startLineStyle = {
 					color: '#1F1',
 					marginLeft: '7px',
 					marginTop: '3px'
 				}
-				var overLineStyle = {
+				let overLineStyle = {
 					color: '#F11',
 					marginLeft: '7px',
 					marginTop: '3px'
 				}
-				var endLineStyle = {
+				let endLineStyle = {
 					color: '#11F',
 					marginLeft: '7px',
 					marginTop: '3px'
 				}
 
-				var mobileLineStyle = {
+				let mobileLineStyle = {
 					// border: '1px solid blue',
 					color: '#FBF7C3',
 					height: '2em',
@@ -67,29 +67,29 @@
 					marginTop: '5px',
 					verticalAlign: 'middle'
 				}
-				var startMobileLineStyle = {
+				let startMobileLineStyle = {
 					color: '#1F1',
 					height: '2em',
 					marginLeft: '7px',
 					marginTop: '5px',
 					verticalAlign: 'middle'
 				}
-				var overMobileLineStyle = {
+				let overMobileLineStyle = {
 					color: '#F11',
 					height: '2em',
 					marginLeft: '7px',
 					marginTop: '5px',
 					verticalAlign: 'middle'
 				}
-				var endMobileLineStyle = {
+				let endMobileLineStyle = {
 					color: '#11F',
 					height: '2em',
 					marginLeft: '7px',
 					marginTop: '5px',
 					verticalAlign: 'middle'
 				}
-				var imageStyle = {height: '100%', width: '100%'}
-				var imageDivStyle = {
+				let imageStyle = {height: '100%', width: '100%'}
+				let imageDivStyle = {
 					border: 'thin dotted green',
 					height: '1.2em',
 					left: '0',
@@ -117,9 +117,7 @@
 							onTouchCancel={this.onThisTouchEnd}
 							>
 							{item.label}
-							&lt;div style={imageDivStyle}>
-								&lt;img id={item.id} src='./img/1x1TransShim.gif' style={imageStyle} />
-							&lt;/div>
+							&lt;div style={imageDivStyle}><img id={item.id} src='./img/1x1TransShim.gif' style={imageStyle} />&lt;/div>
 						&lt;/div>
 					)
 				}
@@ -142,13 +140,12 @@
 							onTouchCancel={this.onThisTouchEnd}
 							>
 							{item.label}
+							&lt;div style={imageDivStyle}><img id={item.id} src='./img/1x1TransShim.gif' style={imageStyle} />&lt;/div>
 						&lt;/div>
 					)
 				}
 
 				class DndImageListRender extends Component {
-					binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
-
 					render() {
 						listSty = listStyle;
 						if (this.props.isMobile) {
@@ -159,14 +156,14 @@
 							imageDivStyle.height = '2em';
 							imageDivStyle.marginTop = '-1.6em';
 						}
-						var vm = this;
-						var list;
+						let vm = this;
+						let list;
 						if (this.props.dndDone) list = this.props.data.map(divMap, vm);
 						else list = this.props.data.map(divColorMap, vm);
 						return (
-							&lt;div id='DndImageListSty' style={listSty}>
+							<div id='DndImageListSty' style={listSty}>
 								{list}
-							&lt;/div>
+							</div>
 						);
 					}
 				}
@@ -179,53 +176,52 @@
 							overID: '',
 							endID: ''
 						};
-						this.binder('onThisDragStart', 'onThisDragOver', 'onThisDragEnd', 'onThisTouchStart', 'onThisTouchMove', 'onThisTouchEnd');
 					}
-					onThisDragStart(event) {
+					onThisDragStart = (event) => {
 						// event.dataTransfer.setData('text/plain', 'This text may be dragged');
 						event.dataTransfer.effectAllowed = "all";
-						var itemID = event.target.id;
+						let itemID = event.target.id;
 						if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 						Actions.newMessage('DragStart itemID: ' + itemID);
 					}
-					onThisDragOver(event) {
+					onThisDragOver = (event) => {
 						event.preventDefault();
-						var itemID = event.target.id;
+						let itemID = event.target.id;
 						if (!itemID || this.state.overID == itemID) return;
 						if (itemID) { this.setState({overID: itemID}) };
 						Actions.newMessage('DragOver itemID: ' + itemID);
 					}
-					onThisDragEnd(event) {
+					onThisDragEnd = (event) => {
 						event.preventDefault();
-						var itemID = event.target.id;
+						let itemID = event.target.id;
 						if (itemID) { this.setState({endID: itemID, overID: ''}) };
 						if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
 						Actions.newMessage('DragEnd itemID: ' + itemID);
 					}
-					onThisTouchStart(event) {
+					onThisTouchStart = (event) => {
 						event.preventDefault();
-						var itemID = event.target.id;
+						let itemID = event.target.id;
 						if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 						Actions.newMessage('TouchStart itemID: ' + itemID);
 					}
-					onThisTouchMove(event) {
+					onThisTouchMove = (event) => {
 						event.preventDefault();
-						var lastTouch = event.touches.length - 1;
-						var x = event.touches[lastTouch].pageX;
-						var y = event.touches[lastTouch].pageY;
-						var element = document.elementFromPoint(x, y);
+						let lastTouch = event.touches.length - 1;
+						let x = event.touches[lastTouch].pageX;
+						let y = event.touches[lastTouch].pageY;
+						let element = document.elementFromPoint(x, y);
 						if (!element.id || this.state.overID == element.id) return;
 						Actions.newMessage('TouchMove element.id: ' + element.id);
 						if (element.id) { this.setState({overID: element.id}) };
 					}
-					onThisTouchEnd(event) {
+					onThisTouchEnd = (event) => {
 						event.preventDefault();
-						var lastTouch = event.changedTouches.length - 1;
-						var x = event.changedTouches[lastTouch].pageX;
-						var y = event.changedTouches[lastTouch].pageY;
-						var element = document.elementFromPoint(x, y);
+						let lastTouch = event.changedTouches.length - 1;
+						let x = event.changedTouches[lastTouch].pageX;
+						let y = event.changedTouches[lastTouch].pageY;
+						let element = document.elementFromPoint(x, y);
 						Actions.newMessage('TouchEnd element.id: ' + element.id);
-						var itemID = element.id;
+						let itemID = element.id;
 						if (itemID) { this.setState({endID: itemID, overID: ''}) };
 						if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
 					}
@@ -239,46 +235,46 @@
 
 				import Actions from './../flux/Actions';
 
-				var listSty = {}
-				var listStyle = {marginLeft: '50px'}
+				let listSty = {}
+				let listStyle = {marginLeft: '50px'}
 
-				var lineSty = {}
-				var lineStyle = {
+				let lineSty = {}
+				let lineStyle = {
 					color: '#FBF7C3',
 					marginLeft: '7px'
 				}
-				var startLineStyle = {
+				let startLineStyle = {
 					color: '#1F1',
 					marginLeft: '7px'
 				}
-				var overLineStyle = {
+				let overLineStyle = {
 					color: '#F11',
 					marginLeft: '7px'
 				}
-				var endLineStyle = {
+				let endLineStyle = {
 					color: '#11F',
 					marginLeft: '7px'
 				}
 
-				var mobileLineStyle = {
+				let mobileLineStyle = {
 					color: '#FBF7C3',
 					height: '2em',
 					marginLeft: '7px',
 					marginTop: '5px'
 				}
-				var startMobileLineStyle = {
+				let startMobileLineStyle = {
 					color: '#1F1',
 					height: '2em',
 					marginLeft: '7px',
 					marginTop: '5px'
 				}
-				var overMobileLineStyle = {
+				let overMobileLineStyle = {
 					color: '#F11',
 					height: '2em',
 					marginLeft: '7px',
 					marginTop: '5px'
 				}
-				var endMobileLineStyle = {
+				let endMobileLineStyle = {
 					color: '#11F',
 					height: '2em',
 					marginLeft: '7px',
@@ -332,8 +328,6 @@
 				}
 
 				class DndListRender extends Component {
-					binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
-
 					render() {
 						listSty = listStyle;
 						if (this.props.isMobile) {
@@ -342,8 +336,8 @@
 							overLineStyle = overMobileLineStyle;
 							endLineStyle = endMobileLineStyle;
 						}
-						var vm = this;
-						var list;
+						let vm = this;
+						let list;
 						if (this.props.dndDone) list = this.props.data.map(divMap, vm);
 						else list = this.props.data.map(divColorMap, vm);
 						return (
@@ -362,51 +356,50 @@
 							overID: '',
 							endID: ''
 						};
-						this.binder('onThisDragStart', 'onThisDragOver', 'onThisDragEnd', 'onThisTouchStart', 'onThisTouchMove', 'onThisTouchEnd');
 					}
-					onThisDragStart(event) {
-						var itemID = event.target.id;
+					onThisDragStart = (event) => {
+						let itemID = event.target.id;
 						if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 						Actions.newMessage('DragStart itemID: ' + itemID);
 					}
-					onThisDragOver(event) {
+					onThisDragOver = (event) => {
 						event.preventDefault();
-						var itemID = event.target.id;
+						let itemID = event.target.id;
 						if (this.state.overID == itemID) return;
 						if (itemID) { this.setState({overID: itemID}) };
 						Actions.newMessage('DragOver itemID: ' + itemID);
 					}
-					onThisDragEnd(event) {
+					onThisDragEnd = (event) => {
 						event.preventDefault();
-						var itemID = event.target.id;
+						let itemID = event.target.id;
 						if (itemID) { this.setState({endID: itemID, overID: ''}) };
 						if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
 						Actions.newMessage('DragEnd itemID: ' + itemID);
 					}
-					onThisTouchStart(event) {
+					onThisTouchStart = (event) => {
 						event.preventDefault();
-						var itemID = event.target.id;
+						let itemID = event.target.id;
 						if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 						Actions.newMessage('TouchStart itemID: ' + itemID);
 					}
-					onThisTouchMove(event) {
+					onThisTouchMove = (event) => {
 						event.preventDefault();
-						var lastTouch = event.touches.length - 1;
-						var x = event.touches[lastTouch].pageX;
-						var y = event.touches[lastTouch].pageY;
-						var element = document.elementFromPoint(x, y);
+						let lastTouch = event.touches.length - 1;
+						let x = event.touches[lastTouch].pageX;
+						let y = event.touches[lastTouch].pageY;
+						let element = document.elementFromPoint(x, y);
 						if (this.state.overID == element.id) return;
 						Actions.newMessage('TouchMove element.id: ' + element.id);
 						if (element.id) { this.setState({overID: element.id}) };
 					}
-					onThisTouchEnd(event) {
+					onThisTouchEnd = (event) => {
 						event.preventDefault();
-						var lastTouch = event.changedTouches.length - 1;
-						var x = event.changedTouches[lastTouch].pageX;
-						var y = event.changedTouches[lastTouch].pageY;
-						var element = document.elementFromPoint(x, y);
+						let lastTouch = event.changedTouches.length - 1;
+						let x = event.changedTouches[lastTouch].pageX;
+						let y = event.changedTouches[lastTouch].pageY;
+						let element = document.elementFromPoint(x, y);
 						Actions.newMessage('TouchEnd element.id: ' + element.id);
-						var itemID = element.id;
+						let itemID = element.id;
 						if (itemID) { this.setState({endID: itemID, overID: ''}) };
 						if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
 					}
@@ -422,11 +415,11 @@
 				import DList from './dnd.list';
 				import DiList from './dndi.list';
 
-				var DndCtrlSty = {
+				let DndCtrlSty = {
 					padding: '0 10px 0 30px'
 				}
 
-				var list = [
+				let list = [
 					{id: 'l1', label: 'first of list'},
 					{id: 'l2', label: 'second line of list'},
 					{id: 'l3', label: 'third line of list'},
@@ -436,10 +429,8 @@
 				]
 
 				class DndCtrlRender extends Component {
-					binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
-
 					render() {
-						var isMobile = this.props.isMobile;
+						let isMobile = this.props.isMobile;
 						return (
 							&lt;div id='DndCtrlSty' className='FlexBox' style={DndCtrlSty}>
 								&lt;DiList data={list} isMobile={isMobile} />
@@ -453,17 +444,16 @@
 
 				export default class DndCtrl extends DndCtrlRender {
 					constructor() {
-						super();
+					  super();
 						this.state = {list: _ld.cloneDeep(list)};
-						this.binder('dndDone');
 					}
-					dndDone(startID, endID) {
-						var newList = this.state.list;
-						var startObj = _ld.findWhere(newList, {id: startID});
-						var startIndex = _ld.indexOf(newList, startObj);
+					dndDone = (startID, endID) => {
+						let newList = this.state.list;
+						let startObj = _ld.findWhere(newList, {id: startID});
+						let startIndex = _ld.indexOf(newList, startObj);
 						newList.splice(startIndex, 1);
-						var endObj = _ld.findWhere(newList, {id: endID});
-						var endIndex = _ld.indexOf(newList, endObj) + 1;
+						let endObj = _ld.findWhere(newList, {id: endID});
+						let endIndex = _ld.indexOf(newList, endObj) + 1;
 						newList.splice(endIndex, 0, startObj);
 						this.setState.list = newList;
 					}

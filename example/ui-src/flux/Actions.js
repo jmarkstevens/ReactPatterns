@@ -1,4 +1,4 @@
-import flux from 'flux-react';
+import Reflux from 'reflux';
 
-var actionArray = ['setWindowDefaults', 'newMessage'];
-module.exports = flux.createActions(actionArray);
+let actionArray = ['setWindowDefaults', 'newMessage'];
+module.exports = Reflux.createActions(actionArray);

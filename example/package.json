@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": {
     "name": "Janaka Stevens",
-    "email": "jmstevens@kykas.com"
+    "email": "jmstevens@calitek.com"
   },
 	"repository": {
     "type": "git",
@@ -14,9 +14,10 @@
 	"scripts": { "start": "node js/server.js" },
 	"dependencies": {
 		"express": "latest",
-		"flux-react": "latest",
 		"lodash": "latest",
-		"react": "latest",
+		"react": "^0.14",
+		"react-dom": "^0.14",
+		"reflux": "latest",
     "serve-favicon": "latest"
 	},
 	"devDependencies": {

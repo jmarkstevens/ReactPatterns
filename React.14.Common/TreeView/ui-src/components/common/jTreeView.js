@@ -55,12 +55,22 @@ class JTreeViewNodeRender extends Component {
 		else if (iconType == options.icon.snow) iconSty.background = "url('./img/snow.ico') 0/16px no-repeat !important";
 		else iconSty.background = "url('./img/sun.ico') 0/16px no-repeat !important";
 
+		let titleElementBase = (<span>{this.props.node.title}</span>);
+		let titleElement;
+
+		switch (titleColor) {
+			case '#7BB53B': titleElement = React.cloneElement(titleElementBase, {style: {color: '#7BB53B'}}); break;
+			case '#AF90A5': titleElement = React.cloneElement(titleElementBase, {style: {color: '#AF90A5'}}); break;
+			case '#b58900': titleElement = React.cloneElement(titleElementBase, {style: {color: '#b58900'}}); break;
+			case '#afac87': titleElement = React.cloneElement(titleElementBase, {style: {color: '#afac87'}}); break;
+		}
+
 		return (
 			<div id='TreeNode'>
 				<div id='pSty' style={pSty} className='FlexBox'>
 					<div id='iconSty' onClick={this.iconHandler} style={iconSty}>&nbsp;</div>
 					<div id='titleSty' onClick={this.clickHandler} style={titleSty} >
-						<span style={{color: titleColor}}>{this.props.node.title}</span>
+						{titleElement}
 					</div>
 				</div>
 				{branch}

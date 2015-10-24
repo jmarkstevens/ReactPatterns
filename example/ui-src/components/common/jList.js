@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
-var listSty = {}
-var listStyle = {}
+let listSty = {}
+let listStyle = {}
 
-var lineSty = {}
-var lineStyle = {
+let lineSty = {}
+let lineStyle = {
 	color: '#FBF7C3',
 	marginLeft: '7px'
 }
@@ -17,7 +17,7 @@ function spanMap(item, index) {
 	return (<span style={lineSty} key={index}>{item}</span>)
 }
 
-class JListRender extends Component {
+export default class JList extends Component {
 	render() {
 		listSty = this.props.listStyle ? this.props.listStyle : listStyle;
 		lineSty = this.props.lineStyle ? this.props.lineStyle : lineStyle;
@@ -31,5 +31,3 @@ class JListRender extends Component {
 		);
 	}
 }
-
-export default class JList extends JListRender {}
