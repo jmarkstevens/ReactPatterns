@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from './../flux/Actions';
 import JInput from './common/jInput';
@@ -35,7 +35,7 @@ let radioInput1 = {name: 'radioGroup', type: 'radio', radioValue: 'set'};
 let radioInput2 = {name: 'radioGroup', type: 'radio', radioValue: 'setkey'};
 let radioInput3 = {name: 'radioGroup', type: 'radio', radioValue: 'key'};
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
  	render() {
  		let inputData = this.state.data;
 

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from '../../flux/Actions';
 import JDropMenu from './jDropMenu';
@@ -11,7 +11,7 @@ let NavMenuSty = {
 	top: '0'
 };
 
-export default class NavMenu extends Component {
+export default class NavMenu extends React.Component {
 	onSelect = (option) => { Actions.appActions(option.value); }
 	render() {
 		let options = [

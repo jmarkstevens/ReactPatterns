@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import BasicStore from './../flux/Basic.Store';
 
@@ -7,7 +7,7 @@ var AppCtrlSty = {
 	padding: '0 10px 0 0'
 }
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
  	render() {

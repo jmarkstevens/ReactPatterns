@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import TreeList from './tree.list';
 import TreeMenu from './tree.menu';
@@ -7,7 +7,7 @@ import TreeNew from './tree.new';
 
 let TreeCtrlRenderSty = { height: 'calc(100% - 19px)'};
 
-export default class TreeCtrl extends Component {
+export default class TreeCtrl extends React.Component {
  	render() {
     let hideTreeEdit = !this.props.showTreeEdit;
     let hideTreeNew = !this.props.showTreeNew;

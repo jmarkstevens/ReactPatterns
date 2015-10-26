@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import lodash from 'lodash';
 
 let defaultCountSty = {
@@ -12,7 +12,7 @@ let defaultCountSty = {
 let defaultIndexSty = {backgroundColor: '#874C08', height: '6px', borderTop: '3px solid #33045B', width: '1%'}
 let centerSty = {marginLeft: 'auto', marginRight: 'auto', marginTop: '-33px'}
 
-export default class JProgressBar extends Component {
+export default class JProgressBar extends React.Component {
 	render() {
 		if (!this.props.data) return null;
 		let count = this.props.data.count;

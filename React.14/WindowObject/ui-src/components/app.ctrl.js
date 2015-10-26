@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import lodash from 'lodash';
 
 let AppCtrlSty = {
@@ -33,7 +33,7 @@ function screenPropsMap(prop) {
 	return (<div key={prop}>{prop}: {propValue}<br/></div>);
 }
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
 	render() {
 		let winnavgeolocation = this.state.location;
 		let winNav = window.navigator;

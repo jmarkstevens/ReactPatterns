@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import GenusList from './genus.list';
 
-export default class GenusCtrl extends Component {
+export default class GenusCtrl extends React.Component {
  	render() {
 		return (
 			<div>

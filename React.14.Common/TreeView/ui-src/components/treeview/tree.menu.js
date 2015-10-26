@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from '../../flux/Actions';
 import JDropMenu from './../common/jDropMenu';
@@ -23,7 +23,7 @@ let options = [
 	{ value: 'remove', label: 'Remove' }
 ];
 
-class TreeMenuRender extends Component {
+class TreeMenuRender extends React.Component {
 	render() {
 		return (
 			<div id='TreeMenuSty' style={TreeMenuSty}>

@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Radium from 'radium';
 
 import Button from './button';
 import ComputedWell from './computed-well';
 
-class HoverMessage extends Component {
+class HoverMessage extends React.Component {
   render() {
   	let buttonHover = Radium.getState(this.state, 'button', ':hover') ? (<span>{' '}Hovering yes!</span>) : null;
     return (
@@ -17,7 +17,7 @@ class HoverMessage extends Component {
 }
 HoverMessage = Radium(HoverMessage);
 
-class TwoSquares extends Component {
+class TwoSquares extends React.Component {
   render() {
     return (
       <div>
@@ -30,7 +30,7 @@ class TwoSquares extends Component {
 }
 TwoSquares = Radium(TwoSquares);
 
-class Spinner extends Component {
+class Spinner extends React.Component {
   render() {
     return (
       <div>
@@ -41,7 +41,7 @@ class Spinner extends Component {
 }
 Spinner = Radium(Spinner);
 
-class Tiles extends Component {
+class Tiles extends React.Component {
   render() {
     let tileArray = Array.apply(null, Array(100)).map(function(_, i) {
             return <div style={tileStyle} key={'tile' + i}/>
@@ -111,7 +111,7 @@ let AppCtrlSty = {
 	padding: '0 10px 0 0'
 }
 
-export default class AppCtrl extends Component {
+export default class AppCtrl extends React.Component {
   _remount = () => {
     this.setState({shouldRenderNull: true});
 

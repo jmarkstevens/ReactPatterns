@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 // import ReactDom  from 'react-dom';
 
-class JInputRender extends Component {
+class JInputRender extends React.Component {
  	render() {
 		let inputSty = this.props.input.style ? this.props.input.style : {color: 'red'};
 		let textValue = this.state.textValue;

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from '../flux/Actions';
 import AppStore from '../flux/App.Store';
@@ -54,7 +54,7 @@ let innerSty = {
 	width: '100%'
 }
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
 	render() {
 		let messages = this.state.appData.messages;
 		return (

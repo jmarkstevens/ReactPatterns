@@ -3,7 +3,7 @@ import GoogleMap from 'google-map-react';
 
 import MapLegend from './map.legend';
 
-export default class SimpleMapPage extends Component {
+export default class SimpleMapPage extends React.Component {
   render() {
     return (
        <GoogleMap

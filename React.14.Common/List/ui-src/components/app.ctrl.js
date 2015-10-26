@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import JList from './common/jList';
 
@@ -26,7 +26,7 @@ let listSty = {
 	margin: '10px 10px'
 }
 
-export default class AppCtrl extends Component {
+export default class AppCtrl extends React.Component {
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>

@@ -13,7 +13,7 @@ const style = {
   // opacity: 0.3
 };
 
-export default class GoogleMapMarkersPrerender extends Component {
+export default class GoogleMapMarkersPrerender extends React.Component {
   constructor(props) {
     super(props);
   }

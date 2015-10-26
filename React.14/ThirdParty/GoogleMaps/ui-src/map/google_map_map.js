@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 const style = {
   width: '100%',
@@ -10,7 +10,7 @@ const style = {
   position: 'absolute'
 };
 
-export default class GoogleMapMap extends Component {
+export default class GoogleMapMap extends React.Component {
   constructor(props) {
     super(props);
   }

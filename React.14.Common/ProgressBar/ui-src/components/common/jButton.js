@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import lodash from 'lodash';
 
 var standardBtnSty = {
@@ -98,7 +98,7 @@ function getStyle(btnProp) {
 		return buttonSty;
 }
 
-class JButtonRender extends Component {
+class JButtonRender extends React.Component {
 	binder(...methods) { methods.forEach( (method) => this[method] = this[method].bind(this) ); }
 
 	render() {

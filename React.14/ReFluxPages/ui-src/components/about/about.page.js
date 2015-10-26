@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import NavMenu from '../common/nav.menu';
 
 let AboutPageSty = {
@@ -9,7 +9,7 @@ let AboutPageSty = {
 	width: 'calc(100% - 32px)'
 };
 
-export default class AboutPage extends Component {
+export default class AboutPage extends React.Component {
 	render() {
 		if (this.props.hide) return null;
 		return (

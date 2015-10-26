@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import BasicStore from './../flux/Basic.Store';
 
@@ -15,7 +15,7 @@ const getState = () => {
 	};
 };
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
  	render() {
 		let data1 = JSON.stringify(this.state.Data1, null, 2);
 		let data2 = JSON.stringify(this.state.Data2, null, 2);

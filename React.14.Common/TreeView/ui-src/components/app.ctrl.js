@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import GenusCtrl from './genus/genus.ctrl';
 import JumpCtrl from './jumplist/jump.ctrl';
@@ -56,7 +56,7 @@ let getTreeState = function() {
 	};
 };
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
 	render() {
 		let currentTreeNode = this.state.currentTreeNode.title;
 		let currentGenusNode = this.state.currentGenusNode.title;

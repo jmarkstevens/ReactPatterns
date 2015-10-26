@@ -1,8 +1,8 @@
-import React, {Component} from 'react/addons';
+import React from 'react/addons';
 
 import {mapStyle} from './map.styles';
 
-export default class MapLegend extends Component {
+export default class MapLegend extends React.Component {
   render() {
     return (
        <div style={mapStyle}>

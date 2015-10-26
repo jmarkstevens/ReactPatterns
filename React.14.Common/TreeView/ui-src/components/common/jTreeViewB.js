@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import lodashGet from 'lodash/object/get';
 
 let TreeRootSty = {lineHeight: '21px'}
@@ -26,7 +26,7 @@ let getTreeNode = function(child, index) {
 	return <li key={index} style={liSty}><JTreeViewBNode node={child} titleClick={this.props.titleClick} /></li>;
 };
 
-class JTreeViewBNodeRender extends Component {
+class JTreeViewBNodeRender extends React.Component {
 	render() {
 		let childNodes;
 		let pSty = nottogglable;
@@ -78,7 +78,7 @@ class JTreeViewBNode extends JTreeViewBNodeRender {
 	clickHandler = () => { this.props.titleClick(this.props.node); }
 }
 
-export default class JTreeViewB extends Component {
+export default class JTreeViewB extends React.Component {
 	render() {
 		options = this.props.options;
 		let childNodes = this.props.data.map(getTreeNode, this);

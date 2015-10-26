@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import NavMenu from '../common/nav.menu';
 
@@ -10,7 +10,7 @@ let HomePageSty = {
 	width: 'calc(100% - 32px)'
 };
 
-export default class HomePage extends Component {
+export default class HomePage extends React.Component {
 	render() {
 		if (this.props.hide) return null;
 		let platform = window.navigator.platform;

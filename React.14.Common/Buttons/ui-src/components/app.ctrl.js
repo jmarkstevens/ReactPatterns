@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import JButton from './common/jButton';
 
@@ -42,7 +42,7 @@ let imgSpanSty = {height: '30px', width: '30px'};
 let imgSpanSty4 = {height: '40px', width: '40px'};
 let btnDivSty = {height: '40px'};
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
 	render() {
 		let clickResponse = this.state.clicked;
 		return (

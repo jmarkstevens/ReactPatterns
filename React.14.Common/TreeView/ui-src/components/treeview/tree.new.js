@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import TreeDetail from './tree.detail';
 import Actions from '../../flux/Actions';
@@ -9,7 +9,7 @@ let newAfterBtn = { buttonid: "after", text: "New After", assignStyle: {width: '
 let newChildBtn = { buttonid: "child", text: "New Child", assignStyle: {width: '92px'} };
 let cancelNewBtn = { buttonid: "cancel", text: "Cancel", assignStyle: {width: '92px'} };
 
-class TreeNewRender extends Component {
+class TreeNewRender extends React.Component {
  	render() {
 		if (this.props.hide) return null;
 		return (

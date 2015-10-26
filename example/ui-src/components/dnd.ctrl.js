@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import _ld from 'lodash';
 
 import DList from './dnd.list';
@@ -17,7 +17,7 @@ let list = [
 	{id: 'l6', label: 'sixth line of list'}
 ]
 
-class DndCtrlRender extends Component {
+class DndCtrlRender extends React.Component {
 	render() {
 		let isMobile = this.props.isMobile;
 		return (

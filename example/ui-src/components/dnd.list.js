@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from './../flux/Actions';
 
@@ -94,7 +94,7 @@ function divMap(item) {
 	)
 }
 
-class DndListRender extends Component {
+class DndListRender extends React.Component {
 	render() {
 		listSty = listStyle;
 		if (this.props.isMobile) {

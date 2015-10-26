@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 let DropdownSty = { display: 'inline-block', lineHeight: '18px', position: 'relative' };
 
@@ -88,7 +88,7 @@ function OptionsMap(option) {
 	}
 }
 
-class JDropSelectRender extends Component {
+class JDropSelectRender extends React.Component {
 	render() {
 		let items = this.props.options.map(OptionsMap, this);
 

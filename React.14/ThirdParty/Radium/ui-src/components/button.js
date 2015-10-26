@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Radium from 'radium';
 
 let styles = {
@@ -49,7 +49,7 @@ let styles = {
   }
 };
 
-export default class Button extends Component {
+export default class Button extends React.Component {
   render() {
     return (
       <button

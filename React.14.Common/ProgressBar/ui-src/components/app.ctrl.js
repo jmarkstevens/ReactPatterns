@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import JButton from './common/jButton';
 import JProgressBar from './common/jProgressBar';
@@ -34,7 +34,7 @@ let ButtonAreaSty = {
 
 let progressData = {count: 120};
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
 	render() {
 		progressData.index = this.state.progressIndex;
 		return (

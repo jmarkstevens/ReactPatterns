@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import TreeDetail from './tree.detail';
 import Actions from '../../flux/Actions';
@@ -7,7 +7,7 @@ import JButton from '../common/jButton';
 let saveEditBtn = { buttonid: "save", text: "Save" };
 let cancelEditBtn = { buttonid: "cancel", text: "Cancel" };
 
-class TreeEditRender extends Component {
+class TreeEditRender extends React.Component {
  	render() {
 		if (this.props.hide) return null;
 		return (

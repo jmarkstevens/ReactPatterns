@@ -40,7 +40,7 @@ function isNumber(n) {
 }
 
 
-export default class GoogleMap extends Component {
+export default class GoogleMap extends React.Component {
 
   static propTypes = {
     apiKey: PropTypes.string,

@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import JTreeViewB from './../common/jTreeViewB';
 
-export default class JumpList extends Component {
+export default class JumpList extends React.Component {
 	render() {
 		let options = {
 			icon: {sun: 1, leaf: 2, snow: 3},

@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 var AppCtrlSty = {
 	height: '100%',
 	padding: '0 10px 0 0'
 }
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>

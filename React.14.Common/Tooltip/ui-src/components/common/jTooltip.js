@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 let TooltipSty = {
 	display: 'inline-block',
@@ -41,7 +41,7 @@ let contentSty = {
 
 let contentOuterSty = {height: '100%', width: '100%'}
 
-class ContentsRender extends Component {
+class ContentsRender extends React.Component {
 	render() {
 		let contentHtml = this.props.data ? this.props.data : '';
 		let active = this.props.tooltipActive;
@@ -70,7 +70,7 @@ class ContentsRender extends Component {
 
 class Contents extends ContentsRender {}
 
-class JTooltipRender extends Component {
+class JTooltipRender extends React.Component {
  	render() {
 		let help = '?';
 		return(

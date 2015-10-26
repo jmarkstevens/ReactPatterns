@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import DropDownMenu from './dropdown.menu';
 import DropDownSelect from './dropdown.select';
@@ -16,7 +16,7 @@ let DropDownSty = {
 	width: '33%'
 }
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
  	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import lodash from 'lodash';
 
 import Actions from '../flux/Actions';
@@ -162,7 +162,7 @@ function filterMap(item, index) {
 	return <div id='FilterMapSty' key={index} style={FilterMapSty}>{dataline}</div>;
 }
 
-class FilterCtrlRender extends Component {
+class FilterCtrlRender extends React.Component {
 	render() {
 		isDesktop = true;
 		let vr = this;

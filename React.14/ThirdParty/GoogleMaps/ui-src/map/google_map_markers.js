@@ -21,7 +21,7 @@ const style = {
   position: 'absolute'
 };
 
-export default class GoogleMapMarkers extends Component {
+export default class GoogleMapMarkers extends React.Component {
 
   static propTypes = {
     geoService: PropTypes.any,

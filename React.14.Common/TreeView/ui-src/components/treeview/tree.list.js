@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from '../../flux/Actions';
 import TreeView from './../common/jTreeView';
 
-class TreeListRender extends Component {
+class TreeListRender extends React.Component {
 	render() {
 		let options = {
 			icon: {sun: 'dev', leaf: 'home', snow: 'sys'},

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Radium from 'radium';
 
-class ComputedWellRender extends Component {
+class ComputedWellRender extends React.Component {
   render() {
     return (
       <form style={this.getStyles()} onSubmit={this.handleSubmit}>

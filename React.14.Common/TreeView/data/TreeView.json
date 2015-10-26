@@ -61,14 +61,14 @@
     "nodeid": "22",
     "title": "Dev project todo's",
     "type": "dev",
-    "selected": true,
+    "selected": false,
     "closed": false,
     "children": [
       {
         "nodeid": "22.24",
         "title": "Clippets",
         "type": "home",
-        "selected": false,
+        "selected": true,
         "children": []
       },
       {

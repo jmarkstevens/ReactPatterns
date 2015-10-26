@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from '../../flux/Actions';
 import TreeView from './../common/jTreeView';
 
-class GenusListRender extends Component {
+class GenusListRender extends React.Component {
 	render() {
 		let options = {
 			icon: {sun: 'genus', leaf: 'specie', snow: 'sys'},

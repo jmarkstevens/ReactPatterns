@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import lodash from 'lodash';
 
 import JDropSelect from './common/jDropSelect';
@@ -20,7 +20,7 @@ let options = [
 	{label: 'Extremely fast', value: 'fast3'}
 ];
 
-class DropDownSelectRender extends Component {
+class DropDownSelectRender extends React.Component {
 	render() {
 		let name = 'growthspeed';
 		let defaultOption = this.state.option.value ? this.state.option : lodash.findWhere(options, {value: 'Any'});

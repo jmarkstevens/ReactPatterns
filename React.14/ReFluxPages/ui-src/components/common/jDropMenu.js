@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 let DropdownSty = { position: 'relative' };
 
@@ -63,7 +63,7 @@ function OptionsMap(option) {
 	}
 }
 
-class JDropMenuRender extends Component {
+class JDropMenuRender extends React.Component {
 	render() {
 		let items = this.props.options.map(OptionsMap, this);
 

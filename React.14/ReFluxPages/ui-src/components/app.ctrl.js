@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import AboutPage from './about/about.page';
 import HomePage from './home/home.page';
@@ -18,7 +18,7 @@ let allPageSty = {
 	width: '100%'
 };
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
  	render() {
 		let page = this.state.appState.currentPage;
 		let hideAbout = (page != 'about');

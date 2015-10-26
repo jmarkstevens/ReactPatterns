@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from '../flux/Actions';
 import AppStore from '../flux/App.Store';
@@ -18,7 +18,7 @@ let columnSty = {
 
 let getState = function() { return {hoverValues: AppStore.getHoverValues(), filterList: AppStore.getFilterList()}; };
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
  	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>

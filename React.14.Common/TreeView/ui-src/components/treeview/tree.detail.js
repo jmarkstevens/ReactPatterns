@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import JInput from '../common/jInput';
 
@@ -12,7 +12,7 @@ let radioInput1 = {name: 'radioGroup', type: 'radio', radioValue: 'dev'};
 let radioInput2 = {name: 'radioGroup', type: 'radio', radioValue: 'home'};
 let radioInput3 = {name: 'radioGroup', type: 'radio', radioValue: 'sys'};
 
-class TreeDetailRender extends Component {
+class TreeDetailRender extends React.Component {
  	render() {
 		titleInput.textValue = this.props.treeNode.title;
 

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 let listSty = {}
 let listStyle = {}
@@ -17,7 +17,7 @@ function spanMap(item, index) {
 	return (<span style={lineSty} key={index}>{item}</span>)
 }
 
-export default class JList extends Component {
+export default class JList extends React.Component {
 	render() {
 		listSty = this.props.listStyle ? this.props.listStyle : listStyle;
 		lineSty = this.props.lineStyle ? this.props.lineStyle : lineStyle;

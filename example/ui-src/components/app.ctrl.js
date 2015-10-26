@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Actions from '../flux/Actions';
 import AppStore from '../flux/App.Store';
@@ -22,7 +22,7 @@ let endLineStyle = {
 	marginLeft: '7px'
 }
 
-class AppCtrlRender extends Component {
+class AppCtrlRender extends React.Component {
 	render() {
 		let isMobile = this.state.appData.isMobile;
 		let messages = this.state.appData.messages;

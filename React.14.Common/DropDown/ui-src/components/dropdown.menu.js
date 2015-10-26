@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import JDropMenu from './common/jDropMenu';
 
@@ -22,7 +22,7 @@ let options = [
 	{ value: 'remove', label: 'Remove' }
 ];
 
-class DropDownMenuRender extends Component {
+class DropDownMenuRender extends React.Component {
 	render() {
 		let optionLabel = this.state.option.label;
 		let optionValue = this.state.option.value;

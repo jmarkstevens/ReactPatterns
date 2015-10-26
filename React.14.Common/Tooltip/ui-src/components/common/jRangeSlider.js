@@ -1,5 +1,5 @@
 import _ld from 'lodash';
-import React, {Component} from 'react';
+import React from 'react';
 
 let listSty = {}
 let listStyle = {
@@ -51,7 +51,7 @@ function divColorMap(item, index) {
 	)
 }
 
-class JRangeSliderDndRender extends Component {
+class JRangeSliderDndRender extends React.Component {
 	render() {
 		listSty = listStyle;
 		indexAdjust = this.props.sliderObj.min;
@@ -190,7 +190,7 @@ let defaultCountSty = {
 
 let defaultIndexSty = {backgroundColor: '#874C08', height: '6px', borderTop: '3px solid #33045B', width: '1%'}
 
-export default class JRangeSliderValue extends Component {
+export default class JRangeSliderValue extends React.Component {
 	render() {
 		let sizeFactor = this.props.sliderObj.size ? this.props.sliderObj.size : 1;
 		let font1 = Math.round(1 * sizeFactor);
@@ -296,7 +296,7 @@ let SliderCtrlSty = {
 	width: 'calc(100% - 20px)'
 }
 
-class JRangeSliderRender extends Component {
+class JRangeSliderRender extends React.Component {
 	render() {
 		let sizeFactor = this.props.sliderObj.size ? this.props.sliderObj.size : 1;
 		let size24 = Math.round(24 * sizeFactor);
