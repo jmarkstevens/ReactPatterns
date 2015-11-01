@@ -1,5 +1,4 @@
 import React from 'react';
-import lodash from 'lodash';
 
 let defaultCountSty = {
 	backgroundColor: '#33045B',
@@ -41,7 +40,7 @@ export default class JProgressBar extends React.Component {
 		);
 
 		let progressRender = '';
-		let position = lodash.has(this.props, 'position') ? this.props.position : 'center';
+		let position = this.props.position ? this.props.position : 'center';
 		switch (position) {
 			case 'center': progressRender = (
 				<div id='JProgressBar' style={{width: '100%'}}>

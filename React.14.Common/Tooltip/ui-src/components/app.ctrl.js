@@ -37,10 +37,10 @@ export default class AppCtrl extends AppCtrlRender {
 		this.state = getState();
 	}
 
-	componentDidMount() {
+	componentDidMount = () => {
 		this.unsubscribe = AppStore.listen(this.storeDidChange);
 		Actions.setFilterOptions();
 	}
-	componentWillUnmount() { this.unsubscribe(); }
+	componentWillUnmount = () => { this.unsubscribe(); }
 	storeDidChange = () => { this.setState(getState()); }
 }

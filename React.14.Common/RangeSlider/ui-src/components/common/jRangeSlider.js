@@ -1,4 +1,3 @@
-import _ld from 'lodash';
 import React from 'react';
 
 let listSty = {}
@@ -62,7 +61,7 @@ class JRangeSliderDndRender extends React.Component {
 
 		let imgCnt = (this.props.sliderObj.max - this.props.sliderObj.min) / this.props.sliderObj.step;
 		let imgArray = new Array(imgCnt + 1);
-		_ld.fill(imgArray, '0');
+		imgArray.fill('0');
 		let vm = this;
 		let list = imgArray.map(divColorMap, vm);
 		return (

@@ -73,33 +73,42 @@ let placeSty = {
 	paddingRight: '20px'
 };
 
-function OptionsMap(option) {
-	if (option.type == 'seperator') {
-		return (<div style={DropdownSeperatorSty} key={option.key}></div>)
-	} else {
-		let selected = Boolean(option.label == this.state.selected.label);
-		let labelSpanSty = {cursor: 'pointer'};
-		labelSpanSty.color = selected ? 'green' : 'black';
-		return (
-			<div id='DropdownOptionSty' key={option.value} style={DropdownOptionSty} onMouseDown={this.setValue.bind(this, option)} onClick={this.setValue.bind(this, option)}>
-				<span style={labelSpanSty}>{option.label}</span>
-			</div>
-		)
-	}
-}
-
 class JDropSelectRender extends React.Component {
 	render() {
-		let items = this.props.options.map(OptionsMap, this);
+		let items = this.props.options.map((option) => {
+			if (option.type == 'seperator') {
+				return (<div style={DropdownSeperatorSty} key={option.key}></div>)
+			} else {
+				let selected = Boolean(option.label == this.state.selected.label);
+				let labelSpanSty = {cursor: 'pointer'};
+				labelSpanSty.color = selected ? 'green' : 'black';
+				return (
+					<div
+						id='DropdownOptionSty'
+						key={option.value}
+						style={DropdownOptionSty}
+						onMouseDown={this.setValue.bind(this, option)}
+						onClick={this.setValue.bind(this, option)}
+					>
+						<span style={labelSpanSty}>{option.label}</span>
+					</div>
+				)
+			}
+		});
 
 		let value = (<div style={placeSty}>{this.state.selected.label}</div>);
 		let menu = this.state.isOpen ? <div style={DropdownMenuSty}>{items}</div> : null;
 
 		return (
 			<div id='DropdownSty' style={DropdownSty}>
-				<div id='DropdownControlSty' style={DropdownControlSty} onMouseDown={this.handleMouseDown} onTouchEnd={this.handleMouseDown}>
-	          {value}
-						<span id='DropdownArrowSty' style={DropdownArrowSty} />
+				<div
+					id='DropdownControlSty'
+					style={DropdownControlSty}
+					onMouseDown={this.handleMouseDown}
+					onTouchEnd={this.handleMouseDown}
+				>
+	        {value}
+					<span id='DropdownArrowSty' style={DropdownArrowSty} />
 				</div>
 	      {menu}
 			</div>
@@ -116,7 +125,7 @@ export default class JDropSelect extends JDropSelectRender {
 		this.setState({selected: this.props.defaultSelected || { label: 'Select...', value: '' }})
 	}
 	componentWillReceiveProps(newProps) {
-		if (newProps.defaultSelected && newProps.defaultSelected !== this.state.selected) {
+		if (newProps.defaultSelected && !this.state.selected.label) {
 			this.setState({selected: newProps.defaultSelected});
 		}
 	}
@@ -127,7 +136,7 @@ export default class JDropSelect extends JDropSelectRender {
 		this.setState({ isOpen: !this.state.isOpen })
 	}
 	setValue = (option) => {
-		if (option !== this.state.selected && this.props.onChange) this.props.onChange(this.props.itemName, option);
+		if ((option !== this.state.selected) && this.props.onChange) this.props.onChange(this.props.itemName, option);
 		this.setState({ selected: option, isOpen: false });
 	}
 }

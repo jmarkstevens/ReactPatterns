@@ -68,14 +68,14 @@
         "nodeid": "22.24",
         "title": "Clippets",
         "type": "home",
-        "selected": true,
+        "selected": false,
         "children": []
       },
       {
         "nodeid": "22.23",
         "title": "PalmInfo",
         "type": "home",
-        "selected": false,
+        "selected": true,
         "children": []
       },
       {

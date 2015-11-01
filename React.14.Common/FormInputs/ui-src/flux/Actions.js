@@ -6,10 +6,7 @@ var apiActions = [
 	'apiSetData'
 ]
 
-var wsActions = [
-	'gotData'
-]
-
+var wsActions = ['gotData']
 var inputActions = ['editRecord']
 
 var actionArray = [...wsActions, ...apiActions, ...inputActions];

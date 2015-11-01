@@ -1,9 +1,8 @@
 import Reflux from 'reflux';
-import lodash from 'lodash';
 
 import Actions from './Actions';
 
-var BasicStoreObject = {
+let BasicStoreObject = {
 	listenables: Actions,
 	data: {
 		"text": "Dev and the title",
@@ -15,7 +14,7 @@ var BasicStoreObject = {
 	},
 	onGotData(data) { this.data = data; BasicStore.trigger(); },
 	onEditRecord(field, value) {
-		var record = lodash.clone(this.data);
+		let record = Object.assign({}, this.data);
 		switch (field) {
 			case 'text': record.text = value; break;
 			case 'checkbox': record.checkbox = value; break;

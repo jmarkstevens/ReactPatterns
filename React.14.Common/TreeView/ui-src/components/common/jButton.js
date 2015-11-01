@@ -1,5 +1,4 @@
 import React from 'react';
-import lodash from 'lodash';
 
 let standardBtnSty = {
 	backgroundColor: '#9a6',
@@ -32,10 +31,10 @@ let standardBtnImg = {
 };
 
 function getStyle(btnProp) {
-		let buttonSty = lodash.clone(standardBtnSty);
+		let buttonSty = Object.assign({}, standardBtnSty);
 		let btnStyle = 'Btn30';
 		let isDesktop = btnProp.isDesktop ? btnProp.isDesktop : true;
-		if (lodash.has(btnProp.btn, 'style')) btnStyle = btnProp.btn.style;
+		if (btnProp.btn.style) btnStyle = btnProp.btn.style;
 		if (isDesktop) {
 			switch (btnStyle) {
 				case 'Btn18':
@@ -63,7 +62,7 @@ function getStyle(btnProp) {
 					buttonSty.margin = '0 5px';
 					buttonSty.padding = '0.45em .8em';
 					break;
-				case 'BackImg': buttonSty = lodash.clone(standardBtnImg); buttonSty.background = btnProp.btn.backimg; break;
+				case 'BackImg': buttonSty = Object.assign({}, standardBtnImg); buttonSty.background = btnProp.btn.backimg; break;
 				case 'BtnImg': buttonSty = standardBtnImg; break;
 			}
 		} else {
@@ -87,8 +86,8 @@ function getStyle(btnProp) {
 				case 'BtnImg': buttonSty = standardBtnImg; break;
 			}
 		}
-		if (lodash.has(btnProp.btn, 'reStyle')) buttonSty = btnProp.btn.reStyle;
-		if (lodash.has(btnProp.btn, 'assignStyle')) buttonSty = lodash.assign(buttonSty, btnProp.btn.assignStyle);
+		if (btnProp.btn.reStyle) buttonSty = btnProp.btn.reStyle;
+		if (btnProp.btn.assignStyle) buttonSty = Object.assign(buttonSty, btnProp.btn.assignStyle);
 		// if (lodash.has(btnProp, 'selectedId')) {
 		// 	var btnID = btnProp.btn.buttonid;
 		// 	var selectedId = btnProp.selectedId;
@@ -102,13 +101,13 @@ class JButtonRender extends React.Component {
 	render() {
 		let buttonSty = getStyle(this.props);
 		let renderIt;
-		if (lodash.has(this.props.btn, 'img')) {
+		if (this.props.btn.img) {
 			renderIt = (
 				<button className='HighZ' style={buttonSty} onClick={this.clickHandler}>
 					<img src={this.props.btn.img} />
 				</button>
 			);
-		} else if (lodash.has(this.props.btn, 'icon')) {
+		} else if (this.props.btn.icon) {
 			renderIt = (
 				<button className='HighZ' style={buttonSty} onClick={this.clickHandler}>
 					<i className={this.props.btn.icon}></i>

@@ -3,15 +3,11 @@ import Reflux from 'reflux';
 import Actions from './Actions';
 import ApiFct from './../utils/ws.api.js';
 
-function _apiInit() { ApiFct.init(); }
-function _apiInitDone() { ApiFct.getData(); }
-function _apiSetData(data) { ApiFct.setData(data); }
-
-var ApiStoreObject = {
+let ApiStoreObject = {
 	listenables: Actions,
-	apiInit: _apiInit,
-	apiInitDone: _apiInitDone,
-	apiSetData: _apiSetData
+	apiInit() { ApiFct.init(); },
+	apiInitDone() { ApiFct.getData(); },
+	apiSetData(data) { ApiFct.setData(data); }
 }
 const ApiStore = Reflux.createStore(ApiStoreObject);
 export default ApiStore;

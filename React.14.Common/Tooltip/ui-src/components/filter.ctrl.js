@@ -1,5 +1,4 @@
 import React from 'react';
-import lodash from 'lodash';
 
 import Actions from '../flux/Actions';
 import JTooltip from './common/jTooltip';
@@ -146,7 +145,7 @@ function filterMap(item, index) {
 	}
 	else if (item.type == 'drop') {
 		let options = item.item.options;
-		let defaultOption = lodash.findWhere(options, {value: item.item.value});
+		let defaultOption = options[0];
 		dataline = (
 			<div id='titleLineSty' className='FlexBox'>
 				{tooltip}
@@ -180,12 +179,12 @@ class FilterCtrlRender extends React.Component {
 
 export default class FilterCtrl extends FilterCtrlRender {
 	onCheckSelect(itemName, value) {
-		window.alert('onCheckSelect name: ' + itemName + ' - value: ' + value);
+		// window.alert('onCheckSelect name: ' + itemName + ' - value: ' + value);
 		Actions.changeFilterValue(itemName, value);
 	}
-	onDropSelect(itemName, value) {
-		window.alert('onDropSelect name: ' + itemName + ' - value: ' + value.value);
-		Actions.changeFilterValue(itemName, value.value);
+	onDropSelect(itemName, option) {
+		// window.alert('onDropSelect name: ' + itemName + ' - value: ' + option.value);
+		Actions.changeFilterValue(itemName, option.value);
 	}
 	onRangeSelect(name, field, value) {
 		let nameField = name + field;

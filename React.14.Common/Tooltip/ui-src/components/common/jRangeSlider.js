@@ -1,4 +1,3 @@
-import _ld from 'lodash';
 import React from 'react';
 
 let listSty = {}
@@ -53,12 +52,16 @@ function divColorMap(item, index) {
 
 class JRangeSliderDndRender extends React.Component {
 	render() {
+		let sizeFactor = this.props.sliderObj.size ? this.props.sliderObj.size : 1;
+		let size24 = Math.round(24 * sizeFactor);
+		listStyle.margin = '-' + size24 + 'px 0 0 4px';
+		imageDivStyle.height = size24 + 'px';
 		listSty = listStyle;
 		indexAdjust = this.props.sliderObj.min;
 
 		let imgCnt = (this.props.sliderObj.max - this.props.sliderObj.min) / this.props.sliderObj.step;
 		let imgArray = new Array(imgCnt + 1);
-		_ld.fill(imgArray, '0');
+		imgArray.fill('0');
 		let vm = this;
 		let list = imgArray.map(divColorMap, vm);
 		return (
@@ -82,7 +85,7 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
     img.src = "./img/1x1TransShim.gif";
     event.dataTransfer.setDragImage = (img, 1, 1);
 		let itemID = event.target.id;
-		if (isNaN(itemID)) {
+		if (isNaN(itemID) || itemID.length == 0) {
 			event.preventDefault();
 			return;
 		}
@@ -101,20 +104,20 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 	onThisDragOver = (event) => {
 		event.preventDefault();
 		let itemID = event.target.id;
-		if (isNaN(itemID) || (this.overID == itemID)) return;
+		if (isNaN(itemID) || itemID.length == 0 || (this.overID == itemID)) return;
 		this.overID = itemID;
 		this.props.sliderChange(itemID);
 	}
 	onThisDragEnd = (event) => {
 		event.preventDefault();
 		let itemID = event.target.id;
-		if (isNaN(itemID) || this.overID == itemID) return;
+		if (isNaN(itemID) || itemID.length == 0 || this.overID == itemID) return;
 		else this.props.sliderChange(itemID);
 	}
 	onThisTouchStart = (event) => {
 		event.preventDefault();
 		let itemID = event.target.id;
-		if (isNaN(itemID)) return;
+		if (isNaN(itemID) || itemID.length == 0) return;
 		this.isLow = (Math.abs(this.props.sliderObj.low - itemID) < 5);
 		if (this.isLow && this.props.sliderObj.isSingle) this.isLow = false;
 		this.isHigh = (Math.abs(this.props.sliderObj.high - itemID) < 5);
@@ -131,7 +134,7 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 		let y = event.touches[lastTouch].pageY;
 		let element = document.elementFromPoint(x, y);
 		let itemID = element.id;
-		if (isNaN(itemID) || (this.overID == itemID) || !(this.isLow || this.isHigh)) return;
+		if (isNaN(itemID) || itemID.length == 0 || (this.overID == itemID) || !(this.isLow || this.isHigh)) return;
 		else {
 			this.overID = itemID;
 			this.props.sliderChange(itemID);
@@ -144,7 +147,7 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 		let y = event.changedTouches[lastTouch].pageY;
 		let element = document.elementFromPoint(x, y);
 		let itemID = element.id;
-		if (isNaN(itemID) || (this.overID == itemID) || !(this.isLow || this.isHigh)) return;
+		if (isNaN(itemID) || itemID.length == 0 || (this.overID == itemID) || !(this.isLow || this.isHigh)) return;
 		else {
 			this.props.sliderChange(itemID);
 		}
@@ -193,6 +196,22 @@ let defaultIndexSty = {backgroundColor: '#874C08', height: '6px', borderTop: '3p
 export default class JRangeSliderValue extends React.Component {
 	render() {
 		let sizeFactor = this.props.sliderObj.size ? this.props.sliderObj.size : 1;
+		let size24 = Math.round(24 * sizeFactor);
+		let size18 = Math.round(size24 * .75);
+		let size12 = Math.round(size24 * .5);
+		let size6 = Math.round(size12 * .5);
+		let size3 = Math.round(size6 * .5);
+		lowButtonSty.borderRadius = size24 + 'px';
+		lowButtonSty.height = size24 + 'px';
+		lowButtonSty.width = size24 + 'px';
+		highButtonSty.borderRadius = size24 + 'px';
+		highButtonSty.height = size24 + 'px';
+		highButtonSty.width = size24 + 'px';
+		defaultCountSty.borderRadius = size6 + 'px';
+		defaultCountSty.height = size12 + 'px';
+		defaultCountSty.margin = '-' + size18 + 'px 0 0 0px';
+		defaultIndexSty.height = size6 + 'px';
+		defaultIndexSty.borderTop = size3 + 'px solid #33045B';
 		let font1 = Math.round(1 * sizeFactor);
 		let font7 = Math.round(.7 * sizeFactor);
 		let count = this.props.sliderObj.max - this.props.sliderObj.min;
@@ -300,24 +319,7 @@ class JRangeSliderRender extends React.Component {
 	render() {
 		let sizeFactor = this.props.sliderObj.size ? this.props.sliderObj.size : 1;
 		let size24 = Math.round(24 * sizeFactor);
-		let size18 = Math.round(size24 * .75);
-		let size12 = Math.round(size24 * .5);
-		let size6 = Math.round(size12 * .5);
-		let size3 = Math.round(size6 * .5);
-		listStyle.margin = '-' + size24 + 'px 0 0 4px';
 		SliderCtrlSty.height = size24 + 'px';
-		imageDivStyle.height = size24 + 'px';
-		lowButtonSty.borderRadius = size24 + 'px';
-		lowButtonSty.height = size24 + 'px';
-		lowButtonSty.width = size24 + 'px';
-		highButtonSty.borderRadius = size24 + 'px';
-		highButtonSty.height = size24 + 'px';
-		highButtonSty.width = size24 + 'px';
-		defaultCountSty.borderRadius = size6 + 'px';
-		defaultCountSty.height = size12 + 'px';
-		defaultCountSty.margin = '-' + size18 + 'px 0 0 0px';
-		defaultIndexSty.height = size6 + 'px';
-		defaultIndexSty.borderTop = size3 + 'px solid #33045B';
 		return (
 			<div
 				id='SliderCtrlSty'

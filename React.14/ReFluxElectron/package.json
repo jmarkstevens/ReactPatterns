@@ -19,7 +19,7 @@
     "reflux": "latest"
 	},
 	"devDependencies": {
-		"babelify": "latest",
+		"babelify": "^6.4.0",
 		"browserify": "latest",
     "electron-prebuilt": "latest",
 		"gulp": "latest",

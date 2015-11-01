@@ -53,19 +53,22 @@ let DropdownOptionSty = {
 	display: 'block'
 };
 
-function OptionsMap(option) {
-	if (option.type == 'seperator') {
-		return (<div style={DropdownSeperatorSty} key={option.key}></div>)
-	} else {
-		return (
-			<div key={option.value} style={DropdownOptionSty} onMouseDown={this.setValue.bind(this, option)} onClick={this.setValue.bind(this, option)}>{option.label}</div>
-		)
-	}
-}
-
 class JDropMenuRender extends React.Component {
 	render() {
-		let items = this.props.options.map(OptionsMap, this);
+		let items = this.props.options.map((option) => {
+			if (option.type == 'seperator') {
+				return (<div style={DropdownSeperatorSty} key={option.key}></div>)
+			} else {
+				return (
+					<div
+						key={option.value}
+						style={DropdownOptionSty}
+						onMouseDown={this.setValue.bind(this, option)}
+						onClick={this.setValue.bind(this, option)}
+					>{option.label}</div>
+				)
+			}
+		});
 
 		let value = (<i className="fa fa-bars fa-lg"></i>);
 		let menu = this.state.isOpen ? <div style={DropdownMenuSty}>{items}</div> : null;
@@ -73,7 +76,7 @@ class JDropMenuRender extends React.Component {
 		return (
 			<div style={DropdownSty}>
 				<div style={DropdownControlSty} onMouseDown={this.handleMouseDown} onTouchEnd={this.handleMouseDown}>
-	          {value}
+					{value}
 				</div>
 	      {menu}
 			</div>

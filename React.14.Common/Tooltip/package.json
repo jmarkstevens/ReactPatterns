@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "express": "latest",
-    "lodash": "latest",
 		"react": "^0.14",
 		"react-dom": "^0.14",
     "react-mixin": "^1.2.2",
@@ -24,7 +23,7 @@
     "serve-favicon": "latest"
   },
   "devDependencies": {
-    "babelify": "latest",
+    "babelify": "^6.4.0",
     "browserify": "latest",
     "gulp": "latest",
     "gulp-concat": "latest",

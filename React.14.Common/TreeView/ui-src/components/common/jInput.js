@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactDom  from 'react-dom';
 
 class JInputRender extends React.Component {
  	render() {
@@ -81,11 +80,11 @@ export default class JInput extends JInputRender {
 		this.state = {textValue: ''};
 	}
 
-	componentDidMount() {
+	componentDidMount = () => {
 		if (this.props.input.textValue) this.setState({textValue: this.props.input.textValue});
 		if (this.props.input.focus) this.refs.inputRef.focus();
 	}
-	componentWillReceiveProps(nextProps) {
+	componentWillReceiveProps = (nextProps) => {
 		if (nextProps.input.textValue && (this.state.textValue != nextProps.input.textValue))
 			{this.setState({textValue: nextProps.input.textValue});}
 	}

@@ -3,7 +3,7 @@
 let express = require('express');
 let router = express.Router();
 
-let getSetData = require('./socket/getsetdata');
+let getSetData = require('./routes/getsetdata');
 
 router.get('/getData', function(req, res) {
 	let getDataDone = function(data){ res.send(data); };

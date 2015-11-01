@@ -2,10 +2,10 @@ import Reflux from 'reflux';
 
 import Actions from './Actions';
 
-var _appState = {currentPage: 'home'};
-var _hoverValues = {};
+let _appState = {currentPage: 'home'};
+let _hoverValues = {};
 
-var _filterList = {
+let _filterList = {
 	lowtemp: { value: 34, options: {}},
 	leaftype: { value: '', options: [{label: 'Any', value: 'Any'}]},
 	height: { value: {low: 1, high: 85}, options: {}},
@@ -134,13 +134,13 @@ function _changeFilterValue(itemName, value) {
 	AppStore.trigger();
 }
 
-var AppStoreObject = {
+let AppStoreObject = {
 	listenables: Actions,
 	setFilterOptions: _setFilterOptions,
 	changeFilterValue: _changeFilterValue,
 
-	getHoverValues: function() { return _hoverValues; },
-	getFilterList: function() { return _filterList; }
+	getHoverValues() { return _hoverValues; },
+	getFilterList() { return _filterList; }
 }
 const AppStore = Reflux.createStore(AppStoreObject);
 export default AppStore;
