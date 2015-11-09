@@ -1,7 +1,7 @@
 import Reflux from 'reflux';
 
-import Actions from './Actions';
-import ApiFct from './../utils/api.js';
+import Actions from '../actions/api.Actions';
+import ApiFct from '../utils/sa.api';
 
 let ApiStoreObject = {
 	newData: {

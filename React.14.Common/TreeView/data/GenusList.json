@@ -221,7 +221,7 @@
     "title": "Butia",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "BuA",
@@ -325,7 +325,7 @@
     "title": "Ceroxylon",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "CeQ",

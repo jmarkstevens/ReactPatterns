@@ -6,10 +6,10 @@ import Actions from './Actions';
 
 import AppStore from './App.Store';
 
-var _treeData = [];
-var _currentTreeNode = {};
-var _showTreeEdit = false;
-var _showTreeNew = false;
+let _treeData = [];
+let _currentTreeNode = {};
+let _showTreeEdit = false;
+let _showTreeNew = false;
 
 function _gotTreeView(treedata) {
 	_treeData = treedata;
@@ -21,7 +21,7 @@ function _gotTreeView(treedata) {
 function _setTreeData() { Actions.apiTreeView(_treeData); }
 
 function _getSelected(tree) {
-	var result = null;
+	let result = null;
 	lodash.each(tree, function(node) {
 		if (node.selected) result = node;
 		if(result == null && node.children.length > 0) result = _getSelected(node.children);
@@ -42,25 +42,25 @@ function _treeActions(action) {
 }
 
 function _saveTreeNew(treeNode, location) {
-	var newNode = treeNode;
-	var nodeIndex = _getNodeIndex(_currentTreeNode);
-	var nextNodeID = SnipsStore.getSetNextNodeID();
-	var newNodeID;
+	let newNode = treeNode;
+	let nodeIndex = _getNodeIndex(_currentTreeNode);
+	let nextNodeID = SnipsStore.getSetNextNodeID();
+	let newNodeID;
 	if (location == 'child') {
 		newNodeID = _currentTreeNode.nodeid + '.' + nextNodeID;
 	} else {
-		var nodeIdArray = _currentTreeNode.nodeid.split(".");
+		let nodeIdArray = _currentTreeNode.nodeid.split(".");
 		nodeIdArray.pop();
 		newNodeID = nodeIdArray.join('.') + '.' + nextNodeID;
 	}
 	newNode.nodeid = newNodeID;
 	SnipsStore.newTreeNode(newNodeID);
 
-	var tIndex;
-	var children;
-	var isNotRoot = (nodeIndex.length > 1);
+	let tIndex;
+	let children;
+	let isNotRoot = (nodeIndex.length > 1);
 	if (location == 'child') {
-		var nodeIndex2 = _getNodeIndex(_currentTreeNode);
+		let nodeIndex2 = _getNodeIndex(_currentTreeNode);
 		nodeIndex2.push('closed');
 		traverse(_treeData).set(nodeIndex2, false);
 		nodeIndex.push('children');
@@ -75,7 +75,7 @@ function _saveTreeNew(treeNode, location) {
 	}
 	switch (location) {
 		case 'before': break;
-		case 'after': var cLength = children.length;
+		case 'after': let cLength = children.length;
 			tIndex = tIndex < cLength ? tIndex + 1 : cLength;
 			break;
 		case 'child': tIndex = 0; break;
@@ -89,7 +89,7 @@ function _saveTreeNew(treeNode, location) {
 }
 
 function _saveTreeEdit(treeNode) {
-	var nodeIndex = _getNodeIndex(treeNode);
+	let nodeIndex = _getNodeIndex(treeNode);
 	traverse(_treeData).set(nodeIndex, lodash.clone(treeNode));
 	_showTreeEdit = false;
 	TreeViewStore.trigger();
@@ -97,10 +97,10 @@ function _saveTreeEdit(treeNode) {
 }
 
 function _moveTreeItem(action) {
-	var nodeIndex = _getNodeIndex(_currentTreeNode);
-	var tIndex;
-	var children;
-	var isNotRoot = (nodeIndex.length > 1);
+	let nodeIndex = _getNodeIndex(_currentTreeNode);
+	let tIndex;
+	let children;
+	let isNotRoot = (nodeIndex.length > 1);
 	if (isNotRoot) {
 		tIndex = nodeIndex.pop();
 		children = traverse(_treeData).get(nodeIndex);
@@ -109,18 +109,18 @@ function _moveTreeItem(action) {
 		tIndex = nodeIndex[0];
 		children = _treeData;
 	}
-	var currentIndex = tIndex;
+	let currentIndex = tIndex;
 	switch (action) {
 		case 'moveUp': tIndex = tIndex > 0 ? tIndex - 1 : 0; break;
-		case 'moveDown': var cLength = children.length;
+		case 'moveDown': let cLength = children.length;
 			tIndex = tIndex < cLength ? tIndex + 1 : cLength;
 			break;
 		case 'remove': tIndex = tIndex > 0 ? tIndex - 1 : 0; break;
 	}
 	if (tIndex != currentIndex || action == 'remove') {
-		var data = children.splice(currentIndex, 1);
+		let data = children.splice(currentIndex, 1);
 		if (action == 'remove') {
-			var newNode = children[tIndex];
+			let newNode = children[tIndex];
 			if (newNode != null) _setCurrentTreeNode(newNode);
 			SnipsStore.removeTreeNode(_currentTreeNode.nodeid);
 		}
@@ -133,11 +133,11 @@ function _moveTreeItem(action) {
 }
 
 function _getNodeIndex(treeNode) {
-	var treeData = _treeData;
-	var nodeID = treeNode.nodeid;
+	let treeData = _treeData;
+	let nodeID = treeNode.nodeid;
 	if (lodash.isEmpty(nodeID)) { return []; }
 
-	var nodeIdArray = nodeID.split("."),
+	let nodeIdArray = nodeID.split("."),
 		searchID = nodeIdArray.shift(),
 		nodeIndex = [],
 		index,
@@ -145,7 +145,7 @@ function _getNodeIndex(treeNode) {
 
 	while (searchID) {
 		if (!treeData) { return []; }
-		var treeItem = lodash.findWhere(treeData, {nodeid: searchID});
+		let treeItem = lodash.findWhere(treeData, {nodeid: searchID});
 		index = lodash.indexOf(treeData, treeItem);
 		if (index < 0) { return []; }
 		nodeIndex.push(index);
@@ -162,11 +162,11 @@ function _getNodeIndex(treeNode) {
 }
 
 function _selectTreeNode(treeNode) {
-	var nodeIndex1 = _getNodeIndex(_currentTreeNode);
+	let nodeIndex1 = _getNodeIndex(_currentTreeNode);
 	nodeIndex1.push('selected');
 	traverse(_treeData).set(nodeIndex1, false);
 	_currentTreeNode = treeNode;
-	var nodeIndex2 = _getNodeIndex(_currentTreeNode);
+	let nodeIndex2 = _getNodeIndex(_currentTreeNode);
 	nodeIndex2.push('selected');
 	traverse(_treeData).set(nodeIndex2, true);
 
@@ -175,9 +175,9 @@ function _selectTreeNode(treeNode) {
 }
 
 function _setTreeNodeClosed(treeNode) {
-	var nodeIndex = _getNodeIndex(treeNode);
+	let nodeIndex = _getNodeIndex(treeNode);
 	nodeIndex.push('closed');
-	var visible = traverse(_treeData).get(nodeIndex);
+	let visible = traverse(_treeData).get(nodeIndex);
 	if (typeof visible === 'undefined') visible = false;
 	else visible = !visible;
 	if (visible) traverse(_treeData).set(nodeIndex, true);
@@ -197,7 +197,7 @@ function _treeViewStoreInit() {
 	this.listenTo(Actions.saveTreeNew, this.onSaveTreeNew);
 }
 
-var TreeViewStoreObject = {
+let TreeViewStoreObject = {
 	init: _treeViewStoreInit,
 	onGotTreeView: _gotTreeView,
 	onSelectTreeNode: _selectTreeNode,
@@ -206,10 +206,10 @@ var TreeViewStoreObject = {
 	onSaveTreeEdit: _saveTreeEdit,
 	onSaveTreeNew: _saveTreeNew,
 
-	getTreeData: function() { return _treeData; },
-	getCurrentTreeNode: function() { return _currentTreeNode; },
-	getShowTreeEdit: function() { return _showTreeEdit; },
-	getShowTreeNew: function() { return _showTreeNew; }
+	getTreeData() { return _treeData; },
+	getCurrentTreeNode() { return _currentTreeNode; },
+	getShowTreeEdit() { return _showTreeEdit; },
+	getShowTreeNew() { return _showTreeNew; }
 }
 const TreeViewStore = Reflux.createStore(TreeViewStoreObject);
 export default TreeViewStore;

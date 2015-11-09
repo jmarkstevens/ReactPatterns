@@ -1,6 +1,6 @@
 import Reflux from 'reflux';
 
-import Actions from './Actions';
+import Actions from '../actions/sa.Actions';
 import AddonStore from './Addon.Store';
 import MixinStoreObject from './Mixin.Store';
 

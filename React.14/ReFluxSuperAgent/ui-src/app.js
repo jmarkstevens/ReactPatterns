@@ -4,8 +4,8 @@ import React  from 'react';
 import ReactDom  from 'react-dom';
 
 import AppCtrl from './components/app.ctrl.js';
-import Actions from './flux/Actions';
-import ApiStore from './flux/Api.Store';
+import Actions from './actions/api.Actions';
+import ApiStore from './stores/Api.Store';
 
 window.ReactDom = ReactDom;
 

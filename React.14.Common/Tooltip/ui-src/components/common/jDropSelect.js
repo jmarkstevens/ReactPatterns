@@ -125,7 +125,7 @@ export default class JDropSelect extends JDropSelectRender {
 		this.setState({selected: this.props.defaultSelected || { label: 'Select...', value: '' }})
 	}
 	componentWillReceiveProps(newProps) {
-		if (newProps.defaultSelected && !this.state.selected.label) {
+		if (newProps.defaultSelected && newProps.defaultSelected !== this.state.selected) {
 			this.setState({selected: newProps.defaultSelected});
 		}
 	}
@@ -136,7 +136,7 @@ export default class JDropSelect extends JDropSelectRender {
 		this.setState({ isOpen: !this.state.isOpen })
 	}
 	setValue = (option) => {
-		if ((option !== this.state.selected) && this.props.onChange) this.props.onChange(this.props.itemName, option);
+		if (option !== this.state.selected && this.props.onChange) this.props.onChange(this.props.itemName, option);
 		this.setState({ selected: option, isOpen: false });
 	}
 }

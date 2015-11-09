@@ -2,7 +2,7 @@ import Reflux from 'reflux';
 
 import Actions from './Actions';
 
-var ImageStoreObject = {
+let ImageStoreObject = {
 	imageList: [],
 	init() { this.listenTo(Actions.gotImageList, this.onGotImageList); },
 	onGotImageList(data) {

@@ -10,7 +10,6 @@ let babel = require('babelify');
 let source = {
 	appjs: './ui-src/app.js',
 	js: ['./ui-src/**/*.js'],
-	libjs: ['./ui-src/lib/primus/primus.js'],
 	appcss: ['./ui-src/css/*.css'],
 	apphtml: ['./ui-src/**/*.html'],
 	appimg: ['./ui-src/img/*']
@@ -18,17 +17,14 @@ let source = {
 
 gulp.task('appjs', function(){
 	browserify({ debug: true })
-		.transform(babel)
+		.transform(babel, {
+        presets:["stage-0", "es2015", "react"],
+        plugins: ["syntax-class-properties", "transform-class-properties"]
+    })
 		.require(source.appjs, { entry: true })
 		.bundle()
 		.pipe(vsource('app.min.js'))
 		.pipe(gulp.dest('./ui-dist'));
-});
-
-gulp.task('libjs', function () {
-	gulp.src(source.libjs)
-		.pipe(concat('lib.min.js'))
-		.pipe(gulp.dest('./ui-dist'))
 });
 
 gulp.task('appcss', function () {
@@ -53,6 +49,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['appjs', 'appcss', 'apphtml', 'watch']);
 
-gulp.task('nw', ['appjs', 'libjs', 'appcss', 'apphtml']);
+gulp.task('nw', ['appjs', 'appcss', 'apphtml']);
 
 // .configure({stage: 0})
