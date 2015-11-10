@@ -58,9 +58,9 @@ function divColorMap(item) {
 			style={lineSty}
 			id={item.id}
 			key={item.id}
+			dataValue={item.id}
 			draggable="true"
 			onDragStart={this.onThisDragStart}
-			onDragOver={this.onThisDragOver}
 			onDrop={this.onThisDragEnd}
 			onTouchStart={this.onThisTouchStart}
 			onTouchMove={this.onThisTouchMove}
@@ -125,17 +125,21 @@ export default class DndList extends DndListRender {
 		};
 	}
 	onThisDragStart = (event) => {
-		event.dataTransfer.setData('text/plain', 'This makes Firefox happy!');
+		event.dataTransfer.setData('text/plain', 'This text may be dragged');
 		let itemID = event.target.id;
 		if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 		Actions.newMessage('DragStart itemID: ' + itemID);
 	}
 	onThisDragOver = (event) => {
 		event.preventDefault();
-		let itemID = event.target.id;
-		if (this.state.overID == itemID) return;
-		if (itemID) { this.setState({overID: itemID}) };
-		Actions.newMessage('DragOver itemID: ' + itemID);
+		let x = event.clientX;
+	  let y = event.clientY;
+	  let element = document.elementFromPoint(x, y);
+	  let itemID = element.id;
+		if (this.savedItemID != itemID) {
+			this.savedItemID = itemID;
+			Actions.newMessage('DragOver itemID: ' + itemID);
+		}
 	}
 	onThisDragEnd = (event) => {
 		event.preventDefault();

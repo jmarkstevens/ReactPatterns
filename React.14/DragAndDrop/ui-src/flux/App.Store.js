@@ -18,7 +18,7 @@ function _setWindowDefaults(navPlatform) {
 
 function _newMessage(message) {
 	this.appData.messages.push(message);
-	if (this.appData.messages.length > 35) this.appData.messages.shift();
+	if (this.appData.messages.length > 15) this.appData.messages.shift();
 	this.trigger('newMessage');
 }
 

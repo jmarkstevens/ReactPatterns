@@ -2,19 +2,27 @@ import React from 'react';
 import _ld from 'lodash';
 
 import DList from './dnd.list';
-import DiList from './dndi.list';
 
 let DndCtrlSty = {
 	padding: '0 10px 0 30px'
 }
 
 let list = [
-	{id: 'l1', label: 'first of list'},
+	{id: 'l1', label: 'first line of list'},
 	{id: 'l2', label: 'second line of list'},
 	{id: 'l3', label: 'third line of list'},
 	{id: 'l4', label: 'fourth line of list'},
 	{id: 'l5', label: 'fifth line of list'},
-	{id: 'l6', label: 'sixth line of list'}
+	{id: 'l6', label: 'sixth line of list'},
+	{id: 'l7', label: 'seventh of list'},
+	{id: 'l8', label: 'eighth line of list'},
+	{id: 'l9', label: 'nineth line of list'},
+	{id: 'l10', label: 'tenth line of list'},
+	{id: 'l11', label: 'eleventh line of list'},
+	{id: 'l12', label: 'twelth of list'},
+	{id: 'l13', label: 'thirteenth line of list'},
+	{id: 'l14', label: 'fourteenth line of list'},
+	{id: 'l15', label: 'fifteenth line of list'}
 ]
 
 class DndCtrlRender extends React.Component {
@@ -22,8 +30,6 @@ class DndCtrlRender extends React.Component {
 		let isMobile = this.props.isMobile;
 		return (
 			<div id='DndCtrlSty' className='FlexBox' style={DndCtrlSty}>
-				<DiList data={list} isMobile={isMobile} />
-				<DiList data={this.state.list} dndDone={this.dndDone} />
 				<DList data={list} isMobile={isMobile} />
 				<DList data={this.state.list} dndDone={this.dndDone} />
 			</div>
@@ -35,6 +41,7 @@ export default class DndCtrl extends DndCtrlRender {
 	constructor() {
 	  super();
 		this.state = {list: _ld.cloneDeep(list)};
+		this.savedItemID = '';
 	}
 	dndDone = (startID, endID) => {
 		let newList = this.state.list;
