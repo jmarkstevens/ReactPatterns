@@ -17,7 +17,7 @@ There are not any React-Router examples yet because I have been building applica
 *	ReFlux WebSocket
 
 **React.14**
-*	BasicStarter
+*	Basic
 *	D3
 *	Drag and Drop
 *	ReFlux Electron
@@ -41,7 +41,7 @@ There are not any React-Router examples yet because I have been building applica
 *	TreeView
 
 **React.14.Webpack
-*	BasicStarter
+*	Basic
 *	ReFlux Electron
 *	ReFlux SuperAgent ajax
 *	ReFlux WebSocket
