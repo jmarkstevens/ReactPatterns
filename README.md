@@ -1,9 +1,11 @@
 # ReactPatterns
 
 A collection of simple react projects providing reusable components, startup and test examples. Its my react playground.
-I use gulp, browserify and babel for the build tool chain. With React.12 I used React.createClass. In React.13 I started using extends React.Component. Now with React.14 I am using babel stage 0 with arrow functions and let instead of var.
+Except for the React.14.Webpack projects, I use gulp, browserify and babelify for the build tool chain. With React.12 I used React.createClass.
+In React.13 I started using extends React.Component.
+Now with React.14 I am using babel stage 0 with arrow functions and let instead of var.
 
-There are not any React-Router examples yet because I have been building applications instead of websites so far.
+There are not any React-Router examples yet because I have been building applications instead of static websites so far.
 
 **React.12**
 *	Basic
@@ -11,11 +13,12 @@ There are not any React-Router examples yet because I have been building applica
 
 **React.13**
 *	Basic
-*	Basic Webpack
+*	Basic Gulp Webpack
 *	ReFlux WebSocket
 
 **React.14**
-*	Basic
+*	BasicStarter
+*	D3
 *	Drag and Drop
 *	ReFlux Electron
 *	ReFlux Pages
@@ -36,6 +39,12 @@ There are not any React-Router examples yet because I have been building applica
 *	Range slider
 *	Tooltip
 *	TreeView
+
+**React.14.Webpack
+*	BasicStarter
+*	ReFlux Electron
+*	ReFlux SuperAgent ajax
+*	ReFlux WebSocket
 
 # The basics
 

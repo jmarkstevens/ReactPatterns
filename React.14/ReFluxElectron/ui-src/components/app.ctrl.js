@@ -12,7 +12,7 @@ class AppCtrlRender extends React.Component {
 		let data = JSON.stringify(this.state.treeData, null, 2);
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.4 ReFlux and Electron<br/><br/>
+				React 0.14 ReFlux and Electron<br/><br/>
 				Data: {data}
 			</div>
 		);

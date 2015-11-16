@@ -1,0 +1,108 @@
+.bodyStyle {
+	background-color: #1A3212;
+	color: #afac87;
+	display: block;
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+}
+
+.header {
+	height: 30px;
+	margin: 0;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.Title {font-size: 1.3em;}
+
+.content {
+	height: calc(100% - 52px);
+	padding: 0px 5px;
+}
+
+* { outline: none; }
+
+.a{display:block}
+
+.FlexBox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.FlexBoxJustAround {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-around;
+}
+
+.FlexBoxJustBetween {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+}
+
+.FlexBoxWrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.FlexJustify {
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+
+.FlexBoxStretch {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-content: stretch;
+}
+
+.FlexItem {
+	flex-grow: 1;
+}
+
+.HighZ {z-index: 200;}
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.chart.csstrans rect {
+  fill: steelblue;
+  transition: width 1s;
+}
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.chart .addBar-enter {
+	opacity: 0.01;
+}
+.chart .addBar-enter.addBar-enter-active {
+	opacity: 1;
+	transition: opacity .5s ease-in;
+}
