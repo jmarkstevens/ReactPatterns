@@ -21,7 +21,10 @@
     "serve-favicon": "latest"
 	},
 	"devDependencies": {
-		"babelify": "^6.4.0",
+    "babelify": "latest",
+		"babel-preset-es2015": "latest",
+		"babel-preset-react": "latest",
+		"babel-preset-stage-0": "latest",
 		"browserify": "latest",
 		"gulp": "latest",
 		"gulp-concat": "latest",

@@ -17,13 +17,11 @@ let source = {
 
 gulp.task('appjs', function(){
 	browserify({ debug: true })
-	.transform(babel, {
-			presets:["es2015", "react", "stage-0"]
-	})
-	.require(source.appjs, { entry: true })
-	.bundle()
-	.pipe(vsource('app.min.js'))
-	.pipe(gulp.dest('./ui-dist'));
+  	.transform(babel, {presets:["es2015", "react", "stage-0"]})
+  	.require(source.appjs, { entry: true })
+  	.bundle()
+  	.pipe(vsource('app.min.js'))
+  	.pipe(gulp.dest('./ui-dist'));
 });
 
 gulp.task('appcss', function () {

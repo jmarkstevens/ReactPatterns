@@ -22,7 +22,7 @@ class AppCtrlRender extends React.Component {
 		let data3 = JSON.stringify(this.state.Data3, null, 2);
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.4 ReFlux with WebSocket<br/><br/>
+				React 0.14 ReFlux with WebSocket<br/><br/>
 				Data1: {data1}<br/><br/>
 				Data2: {data2}<br/><br/>
 				Data3: {data3}<br/><br/>

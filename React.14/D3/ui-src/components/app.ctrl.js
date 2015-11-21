@@ -13,7 +13,7 @@ export default class AppCtrl extends React.Component {
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.4 D3<br/><br/>
+				React 0.14 D3<br/><br/>
 				<Simple />
 				<br/><br/>
 				<BarChart data={[1, 3, 5, 2]} />

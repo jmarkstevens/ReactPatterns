@@ -7,16 +7,15 @@ let AppCtrlSty = {
 
 export default class AppCtrl extends React.Component {
 	constructor() { super(); this.state = {world: ''}; }
-	componentDidMount() { this.sayHello(); }
+	componentDidMount = () => { this.sayHello(); }
 	sayHello = () => { this.setState({world: 'Hello World'}); }
 	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.4 Basic
+				React 0.14 Basic
 				<br/><br/>
 				{this.state.world}
 			</div>
 		);
 	}
 }
-// sayHello = () => { this.setState({world: 'Hello World'}); }

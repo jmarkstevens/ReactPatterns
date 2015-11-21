@@ -26,8 +26,6 @@
 		"babel-preset-es2015": "latest",
 		"babel-preset-stage-0": "latest",
 		"babel-preset-react": "latest",
-		"babel-plugin-syntax-class-properties": "latest",
-		"babel-plugin-transform-class-properties": "latest",
 		"browserify": "latest",
 		"gulp": "latest",
 		"gulp-concat": "latest",
