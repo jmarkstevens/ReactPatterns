@@ -42,7 +42,12 @@ let imgSpanSty = {height: '30px', width: '30px'};
 let imgSpanSty4 = {height: '40px', width: '40px'};
 let btnDivSty = {height: '40px'};
 
-class AppCtrlRender extends React.Component {
+export default class AppCtrl extends React.Component {
+  constructor() {
+		super();
+		this.state = {clicked: ''};
+	}
+	clickHandler = (buttonid) => { this.setState({clicked: 'clickHandler buttonid: ' + buttonid}); }
 	render() {
 		let clickResponse = this.state.clicked;
 		return (
@@ -71,13 +76,4 @@ class AppCtrlRender extends React.Component {
 			</div>
 		);
 	}
-}
-
-export default class AppCtrl extends AppCtrlRender {
-	constructor() {
-		super();
-		this.state = {clicked: ''};
-	}
-
-	clickHandler = (buttonid) => { this.setState({clicked: 'clickHandler buttonid: ' + buttonid}); }
 }

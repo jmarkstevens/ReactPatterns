@@ -25,7 +25,16 @@ let getTreeNode = function(child, index) {
 	return <li key={index} style={liSty}><JTreeViewNode node={child} iconClick={this.props.iconClick} titleClick={this.props.titleClick} /></li>;
 };
 
-class JTreeViewNodeRender extends React.Component {
+class JTreeViewNode extends React.Component {
+  constructor(props) { super(); }
+	iconHandler = () => {
+		if (this.props.node.children && this.props.node.children.length > 0) {
+			this.props.iconClick(this.props.node);
+		} else {
+			this.clickHandler();
+		}
+	}
+	clickHandler = () => { this.props.titleClick(this.props.node); }
 	render() {
 		let titleSty = {color: '#afac87', marginTop: '2px'};
 		let childNodes;
@@ -67,17 +76,6 @@ class JTreeViewNodeRender extends React.Component {
 			</div>
 		);
 	}
-}
-
-class JTreeViewNode extends JTreeViewNodeRender {
-	iconHandler = () => {
-		if (this.props.node.children && this.props.node.children.length > 0) {
-			this.props.iconClick(this.props.node);
-		} else {
-			this.clickHandler();
-		}
-	}
-	clickHandler = () => { this.props.titleClick(this.props.node); }
 }
 
 export default class JTreeView extends React.Component {

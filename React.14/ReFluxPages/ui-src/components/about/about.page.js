@@ -14,7 +14,7 @@ export default class AboutPage extends React.Component {
 		if (this.props.hide) return null;
 		return (
 			<div style={AboutPageSty}>
-				React 1.4 ReFlux used for app state. This is the About Page.
+				React 0.14 ReFlux used for app state. This is the About Page.
 				<NavMenu />
 			</div>
 		);

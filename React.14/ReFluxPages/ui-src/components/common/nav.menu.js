@@ -12,6 +12,7 @@ let NavMenuSty = {
 };
 
 export default class NavMenu extends React.Component {
+  constructor(props) { super(); }
 	onSelect = (option) => { Actions.appActions(option.value); }
 	render() {
 		let options = [

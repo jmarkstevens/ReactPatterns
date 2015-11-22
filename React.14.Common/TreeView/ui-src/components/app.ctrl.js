@@ -91,7 +91,7 @@ class AppCtrlRender extends React.Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-	constructor() {
+  constructor() {
 	  super();
 		this.state = getAllState();
 	}

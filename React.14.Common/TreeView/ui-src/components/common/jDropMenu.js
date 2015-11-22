@@ -85,7 +85,7 @@ class JDropMenuRender extends React.Component {
 }
 
 export default class JDropMenu extends JDropMenuRender {
-	constructor() {
+	constructor(props) {
 	  super();
 		this.state = { isOpen: false, selected: {} };
 	}

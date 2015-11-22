@@ -22,7 +22,12 @@ let options = [
 	{ value: 'remove', label: 'Remove' }
 ];
 
-class DropDownMenuRender extends React.Component {
+export default class DropDownMenu extends React.Component {
+  constructor() {
+	  super();
+		this.state = {option: {}};
+	}
+	onSelect = (option) => { this.setState({option: option}); }
 	render() {
 		let optionLabel = this.state.option.label;
 		let optionValue = this.state.option.value;
@@ -36,12 +41,4 @@ class DropDownMenuRender extends React.Component {
 			</div>
 		)
 	}
-}
-
-export default class DropDownMenu extends DropDownMenuRender {
-	constructor() {
-	  super();
-		this.state = {option: {}};
-	}
-	onSelect = (option) => { this.setState({option: option}); }
 }

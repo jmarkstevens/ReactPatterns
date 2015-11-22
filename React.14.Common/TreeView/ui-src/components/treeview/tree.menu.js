@@ -23,7 +23,9 @@ let options = [
 	{ value: 'remove', label: 'Remove' }
 ];
 
-class TreeMenuRender extends React.Component {
+export default class TreeMenu extends React.Component {
+  constructor(props) { super(); }
+  onSelect = (option) => { Actions.treeActions(option.value); }
 	render() {
 		return (
 			<div id='TreeMenuSty' style={TreeMenuSty}>
@@ -31,8 +33,4 @@ class TreeMenuRender extends React.Component {
 			</div>
 		)
 	}
-}
-
-export default class TreeMenu extends TreeMenuRender {
-	onSelect = (option) => { Actions.treeActions(option.value); }
 }

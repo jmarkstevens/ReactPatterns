@@ -97,7 +97,9 @@ function getStyle(btnProp) {
 		return buttonSty;
 }
 
-class JButtonRender extends React.Component {
+export default class JButton extends React.Component {
+  constructor(props) { super(); }
+  clickHandler = () => { if (this.props.parentClickHandler) this.props.parentClickHandler(this.props.btn.buttonid); }
 	render() {
 		let buttonSty = getStyle(this.props);
 		let renderIt;
@@ -122,8 +124,4 @@ class JButtonRender extends React.Component {
 		}
 		return (renderIt);
 	}
-}
-
-export default class JButton extends JButtonRender {
-	clickHandler = () => { if (this.props.parentClickHandler) this.props.parentClickHandler(this.props.btn.buttonid); }
 }

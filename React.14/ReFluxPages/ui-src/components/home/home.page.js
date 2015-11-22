@@ -23,7 +23,7 @@ export default class HomePage extends React.Component {
 		let navigatoruserAgent = window.navigator.userAgent;
 		return (
 			<div style={HomePageSty}>
-				React 1.4 ReFlux used for app state. This is the Home Page.<br /><br />
+				React 0.14 ReFlux used for app state. This is the Home Page.<br /><br />
 				<NavMenu />
 				Platform: {platform}<br/>
 				Inner Width: {innerWidth}<br/>

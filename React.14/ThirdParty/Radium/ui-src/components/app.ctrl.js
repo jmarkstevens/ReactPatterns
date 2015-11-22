@@ -112,6 +112,7 @@ let AppCtrlSty = {
 }
 
 export default class AppCtrl extends React.Component {
+  constructor(props) { super(); }
   _remount = () => {
     this.setState({shouldRenderNull: true});
 

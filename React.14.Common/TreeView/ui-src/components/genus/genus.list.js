@@ -23,6 +23,7 @@ class GenusListRender extends React.Component {
 }
 
 export default class GenusList extends GenusListRender {
+  constructor(props) { super(); }
 	iconHandler = (node) => { Actions.setGenusNodeClosed(node); }
 	clickHandler = (node) => { Actions.selectGenusNode(node); }
 }

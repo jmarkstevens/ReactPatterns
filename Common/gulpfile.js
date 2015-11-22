@@ -133,7 +133,6 @@ gulp.task('indexcss', function() {
 });
 
 let defaultList = [
-	'chromecast',
 	'draganddrop',
 	'rangeslider',
 	'refluxpages',

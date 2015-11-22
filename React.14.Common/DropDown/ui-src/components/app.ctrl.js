@@ -16,7 +16,7 @@ let DropDownSty = {
 	width: '33%'
 }
 
-class AppCtrlRender extends React.Component {
+export default class AppCtrl extends React.Component {
  	render() {
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
@@ -33,5 +33,3 @@ class AppCtrlRender extends React.Component {
 		);
 	}
 }
-
-export default class AppCtrl extends AppCtrlRender {}

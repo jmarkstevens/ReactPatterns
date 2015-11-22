@@ -19,7 +19,10 @@ let source = {
 
 gulp.task('appjs', function(){
 	browserify({ debug: true })
-    .transform(babel, {presets:["es2015", "react", "stage-0"]})
+    .transform(babel, {
+        presets:["stage-0", "es2015", "react"],
+        plugins: ["syntax-class-properties", "transform-class-properties"]
+    })
 		.require(source.appjs, { entry: true })
 		.bundle()
 		.pipe(vsource('app.min.js'))
