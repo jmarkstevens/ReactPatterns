@@ -1,6 +1,7 @@
 import React from 'react';
 
 import NavMenu from '../common/nav.menu';
+import Cache from '../../lib/cache';
 
 let HomePageSty = {
 	border: 'solid 1px darkslategrey',
@@ -13,6 +14,7 @@ let HomePageSty = {
 export default class HomePage extends React.Component {
 	render() {
 		if (this.props.hide) return null;
+    let aTime = (new Cache()).time.toString();
 		let platform = window.navigator.platform;
 		let innerWidth = Math.floor(window.innerWidth);
 		let innerHeight = Math.floor(window.innerHeight);
@@ -32,7 +34,8 @@ export default class HomePage extends React.Component {
 				Screen Height: {screenheight}<br/>
 				Device Pixel Ratio: {devicePixelRatio}<br/>
 				Navigator Product: {navigatorproduct}<br/>
-				Navigator User Agent: {navigatoruserAgent}<br/>
+				Navigator User Agent: {navigatoruserAgent}<br/><br/>
+        {aTime}
 			</div>
 		);
 	}
