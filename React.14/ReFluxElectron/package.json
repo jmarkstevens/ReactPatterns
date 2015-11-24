@@ -24,7 +24,7 @@
 		"babel-preset-react": "latest",
 		"babel-preset-stage-0": "latest",
 		"browserify": "latest",
-    "electron-prebuilt": "latest",
+    "electron-prebuilt": "*",
 		"gulp": "latest",
 		"gulp-concat": "latest",
 		"gulp-minify-css": "latest",

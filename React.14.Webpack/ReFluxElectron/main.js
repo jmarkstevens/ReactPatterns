@@ -2,7 +2,7 @@ var app = require('app');
 var BrowserWindow = require('browser-window');
 var fs = require('fs');
 
-var ipc = require('ipc');
+var ipc = require('electron').ipcMain;
 require('./js/mainipc.js')(ipc);
 
 require('crash-reporter').start();
@@ -27,7 +27,7 @@ app.on('ready', function() {
 	};
 	fs.readFile(windowStatePath, jsonReadCallBack);
 
-	mainWindow.loadUrl('file://' + __dirname + '/ui-dist/index.html');
+	mainWindow.loadURL('file://' + __dirname + '/ui-dist/index.html');
 	mainWindow.on('close', function() {
 		windowState.size = mainWindow.getSize();
 		windowState.position = mainWindow.getPosition();

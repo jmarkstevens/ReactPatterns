@@ -6,6 +6,6 @@ module.exports = {
 		Actions.apiInitDone();
 	},
 	getData: function() { ipc.send('client:GetData', {}); },
-	gotData: function(data) { Actions.gotData(data); },
+	gotData: function(event, data) { Actions.gotData(data); },
 	setData: function(data) { ipc.send('client:SetData', data); },
 };

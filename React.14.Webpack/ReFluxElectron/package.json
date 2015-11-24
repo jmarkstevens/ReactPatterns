@@ -24,7 +24,7 @@
     "reflux": "latest"
 	},
 	"devDependencies": {
-    "electron-prebuilt": "latest",
+    "electron-prebuilt": "*",
 		"babel-core": "latest",
     "babel-loader": "^6.1.0",
 		"babel-preset-es2015": "latest",
