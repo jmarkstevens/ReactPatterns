@@ -13,14 +13,13 @@
   },
 	"scripts": { "start": "node js/server.js" },
 	"dependencies": {
+    "body-parser": "latest",
 		"express": "latest",
-		"primus": "latest",
-		"primus-emitter": "latest",
 		"react": "^0.14",
 		"react-dom": "^0.14",
     "reflux": "latest",
     "serve-favicon": "latest",
-		"ws": "latest"
+    "superagent": "latest"
 	},
 	"devDependencies": {
     "babelify": "latest",

@@ -68,7 +68,7 @@
         "nodeid": "22.24",
         "title": "Clippets",
         "type": "home",
-        "selected": false,
+        "selected": true,
         "children": []
       },
       {
@@ -114,7 +114,7 @@
         "nodeid": "12.29",
         "title": "DigitalOcean new droplet",
         "type": "dev",
-        "selected": true,
+        "selected": false,
         "children": []
       },
       {

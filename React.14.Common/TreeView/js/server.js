@@ -1,26 +1,22 @@
 'use strict';
 
-var Emitter = require('primus-emitter');
-var express = require('express');
-var favicon = require('serve-favicon');
-var path = require('path');
-var Primus = require('primus');
-var socketCallBack = function(socket){ require('./mainsocket.js')(socket); };
-var port = Number(3500);
+let bodyParser = require('body-parser');
+let express = require('express');
+let favicon = require('serve-favicon');
 
-var app = express();
-var server = app.listen(port);
-var sio = new Primus(server, { transformer: 'websockets', parser: 'JSON' });
-sio.use('emitter', Emitter);
+let path = require('path');
+let port = Number(3500);
 
-var newPrimusOptions = false;
-if (newPrimusOptions) {
-	sio.library();
-	sio.save('./ui-src/lib/primus/primus.js');
-}
+let routes = require('./routes');
 
-sio.on('connection', socketCallBack);
+let app = express();
+let server = app.listen(port);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', express.static('ui-dist'));
+app.use('/routes', routes);
+
 app.use(favicon(path.join(__dirname, '..', 'ui-dist', 'img', 'favicon.ico')));
 app.get('/', function(req, res){ res.sendfile(__dirname + '/index.html', [], null); });

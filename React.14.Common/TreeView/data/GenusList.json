@@ -114,7 +114,7 @@
     "title": "Brahea",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "BrAc",
@@ -128,7 +128,7 @@
         "title": "armata",
         "genus": "Brahea",
         "type": "specie",
-        "selected": true
+        "selected": false
       },
       {
         "nodeid": "BrBr",
@@ -221,7 +221,7 @@
     "title": "Butia",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "BuA",
@@ -235,7 +235,7 @@
         "title": "bonnetii*",
         "genus": "Butia",
         "type": "specie",
-        "selected": false
+        "selected": true
       },
       {
         "nodeid": "BuCC",
