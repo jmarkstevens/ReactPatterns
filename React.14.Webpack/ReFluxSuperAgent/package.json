@@ -13,7 +13,7 @@
   },
 	"scripts": {
 		"start": "node js/server.js",
-		"wp": "webpack --progress --profile --colors --watch",
+		"wp": "webpack --progress --profile --colors --no-minimize --watch",
 		"nw": "webpack --progress --profile --colors"
 	},
 	"dependencies": {
