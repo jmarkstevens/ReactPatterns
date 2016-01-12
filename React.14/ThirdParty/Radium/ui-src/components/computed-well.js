@@ -25,11 +25,9 @@ export default class ComputedWell extends ComputedWellRender {
       borderRadius: 5,
       background: this.state.dynamicBg
     };
-  }
+  };
   handleSubmit = (ev) => {
     ev.preventDefault();
     this.setState({dynamicBg: this.refs.input.value});
-  }
+  };
 }
-
-// this.refs.input.getDOMNode().value

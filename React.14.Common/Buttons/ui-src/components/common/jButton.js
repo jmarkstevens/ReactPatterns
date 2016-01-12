@@ -99,7 +99,7 @@ function getStyle(btnProp) {
 
 export default class JButton extends React.Component {
   constructor(props) { super(); }
-  clickHandler = () => { if (this.props.parentClickHandler) this.props.parentClickHandler(this.props.btn.buttonid); }
+  clickHandler = () => { if (this.props.parentClickHandler) this.props.parentClickHandler(this.props.btn.buttonid); };
   render() {
     let buttonSty = getStyle(this.props);
     let renderIt;

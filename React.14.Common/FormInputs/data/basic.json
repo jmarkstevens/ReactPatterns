@@ -1,8 +1,8 @@
 {
   "text": "this is a text input",
-  "checkbox": false,
-  "radioGroup": "key",
-  "color": "#789a9e",
+  "checkbox": true,
+  "radioGroup": "setkey",
+  "color": "#9461b6",
   "number": "24",
-  "range": "35"
+  "range": "43"
 }

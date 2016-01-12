@@ -94,9 +94,9 @@ export default class JDropMenu extends JDropMenuRender {
 		event.stopPropagation();
 		event.preventDefault();
 		this.setState({ isOpen: !this.state.isOpen })
-	}
+	};
 	setValue = (option) => {
 		this.props.onChange(option);
 		this.setState({isOpen: false});
-	}
+	};
 }

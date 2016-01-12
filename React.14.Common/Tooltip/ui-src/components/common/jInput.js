@@ -83,17 +83,17 @@ export default class JInput extends JInputRender {
   componentDidMount = () => {
     if (this.props.input.textValue) this.setState({textValue: this.props.input.textValue});
     if (this.props.input.focus) this.refs.inputRef.focus();
-  }
+  };
   componentWillReceiveProps = (nextProps) => {
     if (nextProps.input.textValue && (this.state.textValue != nextProps.input.textValue))
       {this.setState({textValue: nextProps.input.textValue});}
-  }
+  };
 
-  handleCheckedChange = (event) => { this.props.handleChange(this.props.input.name, event.target.checked); }
+  handleCheckedChange = (event) => { this.props.handleChange(this.props.input.name, event.target.checked); };
   handleTextValueChange = (event) => {
     let newValue = event.target.value;
     this.setState({textValue: newValue});
     this.props.handleChange(this.props.input.name, newValue);
-  }
-  handleValueChange = (event) => { this.props.handleChange(this.props.input.name, event.target.value); }
+  };
+  handleValueChange = (event) => { this.props.handleChange(this.props.input.name, event.target.value); };
 }

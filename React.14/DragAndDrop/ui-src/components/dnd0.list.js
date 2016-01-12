@@ -129,7 +129,7 @@ export default class DndList extends DndListRender {
 		let itemID = event.target.id;
 		if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 		Actions.newMessage('DragStart itemID: ' + itemID);
-	}
+	};
 	onThisDragOver = (event) => {
 		event.preventDefault();
 		let x = event.clientX;
@@ -140,20 +140,20 @@ export default class DndList extends DndListRender {
 			this.savedItemID = itemID;
 			Actions.newMessage('DragOver itemID: ' + itemID);
 		}
-	}
+	};
 	onThisDragEnd = (event) => {
 		event.preventDefault();
 		let itemID = event.target.id;
 		if (itemID) { this.setState({endID: itemID, overID: ''}) };
 		if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
 		Actions.newMessage('DragEnd itemID: ' + itemID);
-	}
+	};
 	onThisTouchStart = (event) => {
 		event.preventDefault();
 		let itemID = event.target.id;
 		if (itemID) { this.setState({startID: itemID, overID: '', endID: ''}) };
 		Actions.newMessage('TouchStart itemID: ' + itemID);
-	}
+	};
 	onThisTouchMove = (event) => {
 		event.preventDefault();
 		let lastTouch = event.touches.length - 1;
@@ -163,7 +163,7 @@ export default class DndList extends DndListRender {
 		if (this.state.overID == element.id) return;
 		Actions.newMessage('TouchMove element.id: ' + element.id);
 		if (element.id) { this.setState({overID: element.id}) };
-	}
+	};
 	onThisTouchEnd = (event) => {
 		event.preventDefault();
 		let lastTouch = event.changedTouches.length - 1;
@@ -174,7 +174,7 @@ export default class DndList extends DndListRender {
 		let itemID = element.id;
 		if (itemID) { this.setState({endID: itemID, overID: ''}) };
 		if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
-	}
+	};
 }
 
 // onTouchStart={this.onThisTouchStart} onTouchMove={this.onThisTouchMove}

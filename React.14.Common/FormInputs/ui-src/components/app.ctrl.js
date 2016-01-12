@@ -55,7 +55,7 @@ class AppCtrlRender extends React.Component {
 		let radioValue = inputData.radioGroup;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.4 Form input<br/><br/>
+				React 0.14 Form input<br/><br/>
 				Text: <JInput input={textInput1} handleChange={this.handleValueChange} /><br/><br/>
 				Checkbox: <JInput input={checkInput1} handleChange={this.handleValueChange} /> Value: {selected}<br/><br/>
 				Color: <JInput input={colorInput} handleChange={this.handleValueChange} /> Value: {colorInput.colorValue}<br/><br/>
@@ -80,9 +80,9 @@ export default class AppCtrl extends AppCtrlRender {
 		this.state = getState();
 	}
 
-	componentDidMount() { this.unsubscribe = BasicStore.listen(this.storeDidChange); }
-	componentWillUnmount() { this.unsubscribe(); }
+	componentDidMount() { this.unsubscribe = BasicStore.listen(this.storeDidChange); };
+	componentWillUnmount() { this.unsubscribe(); };
 
-	storeDidChange = () => { this.setState(getState()); }
-	handleValueChange = (name, value) => { Actions.editRecord(name, value); }
+	storeDidChange = () => { this.setState(getState()); };
+	handleValueChange = (name, value) => { Actions.editRecord(name, value); };
 }

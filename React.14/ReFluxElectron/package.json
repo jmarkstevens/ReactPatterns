@@ -27,7 +27,7 @@
     "electron-prebuilt": "*",
 		"gulp": "latest",
 		"gulp-concat": "latest",
-		"gulp-minify-css": "latest",
+		"gulp-cssnano": "latest",
 		"gulp-react": "latest",
     "gulp-shell": "latest",
 		"vinyl-source-stream": "latest"

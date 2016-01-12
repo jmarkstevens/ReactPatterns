@@ -97,23 +97,23 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 		} else {
 			event.preventDefault();
 		}
-	}
+	};
 	onThisDragEnter = (event) => {
 		event.preventDefault();
-	}
+	};
 	onThisDragOver = (event) => {
 		event.preventDefault();
 		let itemID = event.target.id;
 		if (isNaN(itemID) || itemID.length == 0 || (this.overID == itemID)) return;
 		this.overID = itemID;
 		this.props.sliderChange(itemID);
-	}
+	};
 	onThisDragEnd = (event) => {
 		event.preventDefault();
 		let itemID = event.target.id;
 		if (isNaN(itemID) || itemID.length == 0 || this.overID == itemID) return;
 		else this.props.sliderChange(itemID);
-	}
+	};
 	onThisTouchStart = (event) => {
 		event.preventDefault();
 		let itemID = event.target.id;
@@ -126,7 +126,7 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 		} else {
 			event.preventDefault();
 		}
-	}
+	};
 	onThisTouchMove = (event) => {
 		event.preventDefault();
 		let lastTouch = event.touches.length - 1;
@@ -139,7 +139,7 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 			this.overID = itemID;
 			this.props.sliderChange(itemID);
 		}
-	}
+	};
 	onThisTouchEnd = (event) => {
 		event.preventDefault();
 		let lastTouch = event.changedTouches.length - 1;
@@ -151,7 +151,7 @@ export default class JRangeSliderDnd extends JRangeSliderDndRender {
 		else {
 			this.props.sliderChange(itemID);
 		}
-	}
+	};
 }
 
 let sliderValueSty = {
@@ -346,7 +346,7 @@ export default class JRangeSlider extends JRangeSliderRender {
 	sliderStartChange = (index) => {
 		this.isLowValue = (Math.abs(this.props.sliderObj.low - index) < 5);
 		let value = this.isLowValue ? this.props.sliderObj.low : this.props.sliderObj.high;
-	}
+	};
 	sliderChange = (value) => {
 		let newValue = value;
 		if (this.isLowValue) newValue = Math.max(newValue, this.props.sliderObj.min);
@@ -354,5 +354,5 @@ export default class JRangeSlider extends JRangeSliderRender {
 		let sliderName = this.props.sliderObj.name;
 		if (this.isLowValue) this.props.handleChange(sliderName, 'low', newValue);
 		else this.props.handleChange(sliderName, 'high', newValue);
-	}
+	};
 }

@@ -11,7 +11,7 @@ function AppCtrlRender() {
 	data = JSON.stringify(data, null, 2);
 	return (
 		<div id='AppCtrlSty' style={AppCtrlSty}>
-			React 1.2 ReFlux with WebSocket<br/><br/>
+			React 0.12 ReFlux with WebSocket<br/><br/>
 			{data}
 		</div>
 	);

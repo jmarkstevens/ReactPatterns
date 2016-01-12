@@ -8,7 +8,7 @@ var AppCtrlSty = {
 function AppCtrlRender() {
 	return (
 		<div id='AppCtrlSty' style={AppCtrlSty}>
-			React 1.2 Basic
+			React 0.12 Basic
 		</div>
 	);
 }

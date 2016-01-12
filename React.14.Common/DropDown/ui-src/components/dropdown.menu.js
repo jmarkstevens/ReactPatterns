@@ -27,7 +27,7 @@ export default class DropDownMenu extends React.Component {
 	  super();
 		this.state = {option: {}};
 	}
-	onSelect = (option) => { this.setState({option: option}); }
+	onSelect = (option) => { this.setState({option: option}); };
 	render() {
 		let optionLabel = this.state.option.label;
 		let optionValue = this.state.option.value;

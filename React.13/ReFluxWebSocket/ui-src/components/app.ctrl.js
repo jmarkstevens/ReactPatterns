@@ -19,7 +19,7 @@ class AppCtrlRender extends React.Component {
 		data3 = JSON.stringify(data3, null, 2);
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.3 ReFlux with WebSocket<br/><br/>
+				React 0.13 ReFlux with WebSocket<br/><br/>
 				{data}<br/><br/>
 				Data2: {data2}<br/><br/>
 				Data3: {data3}<br/><br/>
@@ -43,7 +43,7 @@ export default class AppCtrl extends AppCtrlRender {
 	  this.binder('storeDidChange');
 	}
 
-	componentDidMount() { this.unsubscribe = BasicStore.listen(this.storeDidChange); }
-	componentWillUnmount() { this.unsubscribe(); }
-	storeDidChange() { this.setState(getState()); }
+	componentDidMount() { this.unsubscribe = BasicStore.listen(this.storeDidChange); };
+	componentWillUnmount() { this.unsubscribe(); };
+	storeDidChange() { this.setState(getState()); };
 }
