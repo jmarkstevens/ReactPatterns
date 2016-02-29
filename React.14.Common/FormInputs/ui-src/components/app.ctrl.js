@@ -37,6 +37,7 @@ let radioInput2 = {name: 'radioGroup', type: 'radio', radioValue: 'setkey'};
 let radioInput3 = {name: 'radioGroup', type: 'radio', radioValue: 'key'};
 
 class AppCtrlRender extends React.Component {
+<<<<<<< HEAD
    render() {
      let inputData = this.state.data;
 
@@ -73,6 +74,42 @@ class AppCtrlRender extends React.Component {
       </div>
     );
   }
+=======
+ 	render() {
+ 		let inputData = this.state.data;
+
+		textInput1.textValue = inputData.text;
+		checkInput1.checkedValue = inputData.checkbox;
+		colorInput.colorValue = inputData.color;
+		numberInput.numberValue = inputData.number;
+		rangeInput.numberValue = inputData.range;
+
+		let currentRadioGroupValue = this.state.data.radioGroup;
+		radioInput1.radioChecked = (currentRadioGroupValue == radioInput1.radioValue);
+		radioInput2.radioChecked = (currentRadioGroupValue == radioInput2.radioValue);
+		radioInput3.radioChecked = (currentRadioGroupValue == radioInput3.radioValue);
+
+		let selected = inputData.checkbox ? 'true' : 'false';
+		let radioGroupName1 = 'key1'; //must be distinct for each use of JRadioGroup
+		let radioValue = inputData.radioGroup;
+		return (
+			<div id='AppCtrlSty' style={AppCtrlSty}>
+				React 0.14 Form input<br/><br/>
+				Text: <JInput input={textInput1} handleChange={this.handleValueChange} /><br/><br/>
+				Checkbox: <JInput input={checkInput1} handleChange={this.handleValueChange} /> Value: {selected}<br/><br/>
+				Color: <JInput input={colorInput} handleChange={this.handleValueChange} /> Value: {colorInput.colorValue}<br/><br/>
+				Number: <JInput input={numberInput} handleChange={this.handleValueChange} /> Value: {numberInput.numberValue}<br/><br/>
+				Range: <JInput input={rangeInput} handleChange={this.handleValueChange} /> Value: {rangeInput.numberValue}<br/><br/>
+
+				Radio Input: &nbsp;
+				<JInput input={radioInput1} handleChange={this.handleValueChange} />&nbsp;Set &nbsp;
+				<JInput input={radioInput2} handleChange={this.handleValueChange} />&nbsp;Set/Key &nbsp;
+				<JInput input={radioInput3} handleChange={this.handleValueChange} />&nbsp;Key &nbsp;
+				Value: {radioValue}
+			</div>
+		);
+	}
+>>>>>>> origin/master
 }
 
 function getState() { return {data: BasicStore.getData()}; };
@@ -83,9 +120,17 @@ export default class AppCtrl extends AppCtrlRender {
     this.state = getState();
   }
 
+<<<<<<< HEAD
   componentDidMount() { this.unsubscribe = BasicStore.listen(this.storeDidChange); };
   componentWillUnmount() { this.unsubscribe(); };
 
   storeDidChange = () => { this.setState(getState()); };
   handleValueChange = (name, value) => { Actions.editRecord(name, value); };
+=======
+	componentDidMount() { this.unsubscribe = BasicStore.listen(this.storeDidChange); };
+	componentWillUnmount() { this.unsubscribe(); };
+
+	storeDidChange = () => { this.setState(getState()); };
+	handleValueChange = (name, value) => { Actions.editRecord(name, value); };
+>>>>>>> origin/master
 }

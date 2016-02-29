@@ -4,6 +4,10 @@
   "radioGroup": "setkey",
   "color": "#9461b6",
   "number": "24",
+<<<<<<< HEAD
   "range": "43",
   "folder": "C:\\fakepath\\main.js"
+=======
+  "range": "43"
+>>>>>>> origin/master
 }

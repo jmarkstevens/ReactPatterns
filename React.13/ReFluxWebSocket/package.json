@@ -1,5 +1,5 @@
 {
-	"name": "ReactPatterns-1.3-BasicWebpack",
+	"name": "ReactPatterns-1.3-ReFluxWebSocket",
 	"version": "1.0.0",
 	"description": "A collection of simple react projects providing reusable components, startup and test examples.",
   "license": "MIT",
@@ -14,16 +14,20 @@
 	"scripts": { "start": "node js/server.js" },
 	"dependencies": {
 		"express": "latest",
+		"primus": "latest",
+		"primus-emitter": "latest",
 		"react": "^0.13",
-    "serve-favicon": "latest"
+    "reflux": "latest",
+    "serve-favicon": "latest",
+		"ws": "latest"
 	},
 	"devDependencies": {
-    "babel-core": "latest",
-    "babel-eslint": "latest",
-    "babel-loader": "latest",
+		"babelify": "^6.4.0",
+		"browserify": "latest",
 		"gulp": "latest",
 		"gulp-concat": "latest",
-		"gulp-minify-css": "latest",
-    "webpack-stream": "latest"
+		"gulp-cssnano": "latest",
+		"gulp-react": "latest",
+		"vinyl-source-stream": "latest"
 	}
 }

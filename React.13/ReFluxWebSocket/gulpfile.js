@@ -2,24 +2,33 @@
 
 let gulp = require('gulp');
 let concat = require('gulp-concat');
-let minifyCSS = require('gulp-minify-css');
-let webpack = require('webpack-stream');
+let minifyCSS = require('gulp-cssnano');
+let browserify = require('browserify');
+let vsource = require("vinyl-source-stream");
+let babel = require('babelify');
 
 let source = {
 	appjs: './ui-src/app.js',
 	js: ['./ui-src/**/*.js'],
+	libjs: ['./ui-src/lib/primus/primus.js'],
 	appcss: ['./ui-src/css/*.css'],
 	apphtml: ['./ui-src/**/*.html'],
 	appimg: ['./ui-src/img/*']
 };
 
 gulp.task('appjs', function(){
-	gulp.src(source.appjs)
-		.pipe(webpack({
-				output: {filename: "app.min.js"},
-				module: {loaders: [{test: /\.js$/, loader: 'babel'}]}
-			}))
+	browserify({ debug: true })
+		.transform(babel)
+		.require(source.appjs, { entry: true })
+		.bundle()
+		.pipe(vsource('app.min.js'))
 		.pipe(gulp.dest('./ui-dist'));
+});
+
+gulp.task('libjs', function () {
+	gulp.src(source.libjs)
+		.pipe(concat('lib.min.js'))
+		.pipe(gulp.dest('./ui-dist'))
 });
 
 gulp.task('appcss', function () {
@@ -42,6 +51,6 @@ gulp.task('watch', function() {
 	gulp.watch(source.js, ['appjs']);
 });
 
-gulp.task('default', ['appjs', 'appcss', 'apphtml', 'watch']);
+gulp.task('default', ['appjs', 'libjs', 'appcss', 'apphtml', 'watch']);
 
-gulp.task('nw', ['appjs', 'appcss', 'apphtml']);
+gulp.task('nw', ['appjs', 'libjs', 'appcss', 'apphtml']);
