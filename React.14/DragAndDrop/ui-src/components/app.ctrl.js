@@ -28,7 +28,7 @@ class AppCtrlRender extends React.Component {
 		let messages = this.state.appData.messages;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.4 Drag and Drop
+				React 0.14 Drag and Drop
 				<br/><br/>
 				<div className='FlexBoxWrap'>
 					<DCtrl isMobile={isMobile}/>
@@ -60,8 +60,8 @@ export default class AppCtrl extends AppCtrlRender {
 	componentDidMount = () => {
 		let navPlatform = window.navigator.platform;
 		Actions.setWindowDefaults(navPlatform);
-	}
-	componentDidMount = () => { this.unsubscribe = AppStore.listen(this.storeDidChange); }
-	componentWillUnmount = () => { this.unsubscribe(); }
-	storeDidChange = () => { this.setState(getAppState()); }
+	};
+	componentDidMount = () => { this.unsubscribe = AppStore.listen(this.storeDidChange); };
+	componentWillUnmount = () => { this.unsubscribe(); };
+	storeDidChange = () => { this.setState(getAppState()); };
 }

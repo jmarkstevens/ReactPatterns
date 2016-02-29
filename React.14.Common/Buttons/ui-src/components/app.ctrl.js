@@ -47,12 +47,12 @@ export default class AppCtrl extends React.Component {
 		super();
 		this.state = {clicked: ''};
 	}
-	clickHandler = (buttonid) => { this.setState({clicked: 'clickHandler buttonid: ' + buttonid}); }
+	clickHandler = (buttonid) => { this.setState({clicked: 'clickHandler buttonid: ' + buttonid}); };
 	render() {
 		let clickResponse = this.state.clicked;
 		return (
 			<div id='AppCtrlSty' style={AppCtrlSty}>
-				React 1.4 Buttons<br/><br/>
+				React 0.14 Buttons<br/><br/>
 				<div id='btnDivSty' style={btnDivSty}>
 					<JButton btn={basicBtn} parentClickHandler={this.clickHandler} />
 					<JButton btn={basicBtn18} parentClickHandler={this.clickHandler} />

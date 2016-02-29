@@ -37,8 +37,8 @@ export default class AppCtrl extends AppCtrlRender {
     this.state = getState();
   }
 
-  componentDidMount = () => { this.unsubscribe = BasicStore.listen(this.storeDidChange); }
-  componentWillUnmount = () => { this.unsubscribe(); }
+  componentDidMount = () => { this.unsubscribe = BasicStore.listen(this.storeDidChange); };
+  componentWillUnmount = () => { this.unsubscribe(); };
   storeDidChange = (id) => {
     switch (id) {
       case 'data1': this.setState({Data1: BasicStore.getData1()}); break;
@@ -46,5 +46,5 @@ export default class AppCtrl extends AppCtrlRender {
       case 'data3': this.setState({Data3: BasicStore.getData3()}); break;
       default: this.setState(getState());
     }
-  }
+  };
 }

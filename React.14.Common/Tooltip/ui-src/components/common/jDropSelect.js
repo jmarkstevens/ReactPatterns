@@ -134,9 +134,9 @@ export default class JDropSelect extends JDropSelectRender {
 		event.stopPropagation();
 		event.preventDefault();
 		this.setState({ isOpen: !this.state.isOpen })
-	}
+	};
 	setValue = (option) => {
 		if (option !== this.state.selected && this.props.onChange) this.props.onChange(this.props.itemName, option);
 		this.setState({ selected: option, isOpen: false });
-	}
+	};
 }

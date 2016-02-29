@@ -20,7 +20,7 @@ export default class AppCtrl extends React.Component {
    render() {
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
-        React 1.4 DropDown<br/><br/>
+        React 0.14 DropDown<br/><br/>
         <div id='menuColumns' className='FlexBox' style={{height: '100%'}}>
           <div id='DropDownMenu' style={DropDownSty}>
             <DropDownMenu />

@@ -2,7 +2,7 @@
 
 let gulp = require('gulp');
 let concat = require('gulp-concat');
-let minifyCSS = require('gulp-minify-css');
+let minifyCSS = require('gulp-cssnano');
 let browserify = require('browserify');
 let vsource = require("vinyl-source-stream");
 let babel = require('babelify');

@@ -98,7 +98,7 @@
     "title": "Bismarckia",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "BiN",
@@ -221,7 +221,7 @@
     "title": "Butia",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "BuA",
@@ -235,7 +235,7 @@
         "title": "bonnetii*",
         "genus": "Butia",
         "type": "specie",
-        "selected": true
+        "selected": false
       },
       {
         "nodeid": "BuCC",
@@ -429,7 +429,7 @@
     "title": "Copernicia",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "CoA",
@@ -443,7 +443,7 @@
         "title": "prunifera",
         "genus": "Copernicia",
         "type": "specie",
-        "selected": false
+        "selected": true
       }
     ]
   },

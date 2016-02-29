@@ -7,8 +7,8 @@ let AppCtrlSty = {
 
 export default class AppCtrl extends React.Component {
   constructor() { super(); this.state = {world: ''}; }
-  componentDidMount = () => { this.sayHello(); }
-  sayHello = () => { this.setState({world: 'Hello World'}); }
+  componentDidMount = () => { this.sayHello(); };
+  sayHello = () => { this.setState({world: 'Hello World'}); };
   render() {
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>

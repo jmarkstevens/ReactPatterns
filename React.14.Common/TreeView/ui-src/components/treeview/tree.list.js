@@ -5,8 +5,8 @@ import TreeView from './../common/jTreeView';
 
 export default class TreeList extends React.Component {
   constructor(props) { super(); }
-  iconHandler = (node) => { Actions.setTreeNodeClosed(node); }
-  clickHandler = (node) => { Actions.selectTreeNode(node); }
+  iconHandler = (node) => { Actions.setTreeNodeClosed(node); };
+  clickHandler = (node) => { Actions.selectTreeNode(node); };
   render() {
     let options = {
       icon: {sun: 'dev', leaf: 'home', snow: 'sys'},

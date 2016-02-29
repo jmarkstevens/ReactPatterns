@@ -14,12 +14,10 @@ There are not any React-Router examples yet because I have been building applica
 
 **React.13**
 *	Basic
-*	Basic Gulp Webpack
 *	ReFlux WebSocket
 
 **React.14**
 *	Basic
-*	D3
 *	Drag and Drop
 *	ReFlux Electron
 *	ReFlux Pages

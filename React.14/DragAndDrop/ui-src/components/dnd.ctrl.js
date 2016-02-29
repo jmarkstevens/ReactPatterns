@@ -52,5 +52,5 @@ export default class DndCtrl extends DndCtrlRender {
     let endIndex = _ld.indexOf(newList, endObj) + 1;
     newList.splice(endIndex, 0, startObj);
     this.setState.list = newList;
-  }
+  };
 }

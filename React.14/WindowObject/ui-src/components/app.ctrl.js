@@ -114,11 +114,11 @@ export default class AppCtrl extends AppCtrlRender {
 	      let x = "Geolocation is not supported by this browser.";
 	      this.setState({location: x});
 	  }
-	}
-	showPosition = (position) => { 
+	};
+	showPosition = (position) => {
 		let lat = position.coords.latitude;
 		let lon = position.coords.longitude;
     let x = "Latitude: " + lat.toPrecision(6) + "   Longitude: " + lon.toPrecision(7);
 		this.setState({location: x});
-	}
+	};
 }

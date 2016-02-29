@@ -26,7 +26,7 @@
 		"browserify": "latest",
 		"gulp": "latest",
 		"gulp-concat": "latest",
-		"gulp-minify-css": "latest",
+		"gulp-cssnano": "latest",
 		"vinyl-source-stream": "latest"
 	}
 }

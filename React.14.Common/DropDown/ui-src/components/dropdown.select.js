@@ -24,7 +24,7 @@ export default class DropDownSelect extends React.Component {
 	  super();
 		this.state = {name: '', option: {}};
 	}
-	onDropSelect = (name, option) => { this.setState({name: name, option: option}); }
+	onDropSelect = (name, option) => { this.setState({name: name, option: option}); };
 	render() {
 		let name = 'growthspeed';
 		// let defaultOption = this.state.option.value ? this.state.option : lodash.findWhere(options, {value: 'Any'});

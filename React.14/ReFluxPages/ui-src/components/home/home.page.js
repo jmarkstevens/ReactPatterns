@@ -12,6 +12,11 @@ let HomePageSty = {
 };
 
 export default class HomePage extends React.Component {
+  constructor() {
+    super();
+    this.state = {constructorTime: new Date().toLocaleString(), componentDidMountTime:  ''};
+  }
+  componentDidMount = () => { this.setState({componentDidMountTime:  new Date().toLocaleString()}); };
   render() {
     if (this.props.notOpened) return null;
     let aTime = (new Cache()).time.toString();
@@ -36,7 +41,11 @@ export default class HomePage extends React.Component {
         Device Pixel Ratio: {devicePixelRatio}<br/>
         Navigator Product: {navigatorproduct}<br/>
         Navigator User Agent: {navigatoruserAgent}<br/><br/>
-        singleton object example: {aTime}
+        singleton object time: {aTime}
+        <br/><br/>
+        constructorTime: {this.state.constructorTime}
+        <br/><br/>
+        componentDidMountTime: {this.state.componentDidMountTime}
         <br/><br/>
         renderTime: {renderTime}
       </div>
