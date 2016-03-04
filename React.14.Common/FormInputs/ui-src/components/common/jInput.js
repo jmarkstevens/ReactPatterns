@@ -107,8 +107,5 @@ export default class JInput extends JInputRender {
     this.props.handleChange(this.props.input.name, newValue);
   };
   handleValueChange = (event) => { this.props.handleChange(this.props.input.name, event.target.value); };
-<<<<<<< HEAD
   handleFolderChange = (event) => { this.props.handleChange(this.props.input.name, event.target.value); };
-=======
->>>>>>> origin/master
 }
