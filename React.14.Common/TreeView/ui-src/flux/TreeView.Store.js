@@ -145,7 +145,7 @@ function _getNodeIndex(treeNode) {
 
 	while (searchID) {
 		if (!treeData) { return []; }
-		let treeItem = lodash.findWhere(treeData, {nodeid: searchID});
+		let treeItem = lodash.find(treeData, {nodeid: searchID});
 		index = lodash.indexOf(treeData, treeItem);
 		if (index < 0) { return []; }
 		nodeIndex.push(index);

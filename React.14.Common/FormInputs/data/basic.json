@@ -1,9 +1,9 @@
 {
   "text": "this is a text input",
-  "checkbox": true,
+  "checkbox": false,
   "radioGroup": "setkey",
-  "color": "#9461b6",
-  "number": "24",
+  "color": "#8db48a",
+  "number": "22",
   "range": "43",
-  "folder": "C:\\fakepath\\main.js"
+  "folder": "C:\\fakepath\\JanakaStevensResume4.pdf"
 }

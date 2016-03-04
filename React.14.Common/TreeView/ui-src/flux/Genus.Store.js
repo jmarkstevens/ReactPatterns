@@ -16,9 +16,9 @@ function _setGenusList() { Actions.apiSetGenusList(_genusList); }
 
 function _selectGenusNode(node) {
 	if (_currentGenusNode.type == 'specie') {
-		let genus = lodash.findWhere(_genusList, {title: _currentGenusNode.genus});
+		let genus = lodash.find(_genusList, {title: _currentGenusNode.genus});
 		let genusIndex = lodash.indexOf(_genusList, genus);
-		let child = lodash.findWhere(genus.children, {nodeid: _currentGenusNode.nodeid});
+		let child = lodash.find(genus.children, {nodeid: _currentGenusNode.nodeid});
 		let childIndex = lodash.indexOf(genus.children, child);
 		_genusList[genusIndex].children[childIndex].selected = false;
 	} else {
@@ -28,9 +28,9 @@ function _selectGenusNode(node) {
 
 	_currentGenusNode = node;
 	if (_currentGenusNode.type == 'specie') {
-		let genus = lodash.findWhere(_genusList, {title: _currentGenusNode.genus});
+		let genus = lodash.find(_genusList, {title: _currentGenusNode.genus});
 		let genusIndex = lodash.indexOf(_genusList, genus);
-		let child = lodash.findWhere(genus.children, {nodeid: _currentGenusNode.nodeid});
+		let child = lodash.find(genus.children, {nodeid: _currentGenusNode.nodeid});
 		let childIndex = lodash.indexOf(genus.children, child);
 		_genusList[genusIndex].children[childIndex].selected = true;
 	} else {
@@ -43,7 +43,7 @@ function _selectGenusNode(node) {
 }
 
 function _setGenusNodeClosed(node) {
-	let selectedNode = lodash.findWhere(_genusList, {nodeid: node.nodeid});
+	let selectedNode = lodash.find(_genusList, {nodeid: node.nodeid});
 	let selectedNodeIndex = lodash.indexOf(_genusList, selectedNode);
 	let isClosed;
 	if (lodash.has(_genusList[selectedNodeIndex], "closed")) isClosed = _genusList[selectedNodeIndex].closed;

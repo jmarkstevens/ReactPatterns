@@ -68,7 +68,7 @@
         "nodeid": "22.24",
         "title": "Clippets",
         "type": "home",
-        "selected": true,
+        "selected": false,
         "children": []
       },
       {
@@ -165,7 +165,7 @@
         "nodeid": "19.31",
         "title": "Keyboard shortcuts",
         "type": "sys",
-        "selected": false,
+        "selected": true,
         "children": []
       },
       {

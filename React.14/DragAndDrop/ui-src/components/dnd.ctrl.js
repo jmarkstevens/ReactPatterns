@@ -45,10 +45,10 @@ export default class DndCtrl extends DndCtrlRender {
   }
   dndDone = (startID, endID) => {
     let newList = this.state.list;
-    let startObj = _ld.findWhere(newList, {id: startID});
+    let startObj = _ld.find(newList, {id: startID});
     let startIndex = _ld.indexOf(newList, startObj);
     newList.splice(startIndex, 1);
-    let endObj = _ld.findWhere(newList, {id: endID});
+    let endObj = _ld.find(newList, {id: endID});
     let endIndex = _ld.indexOf(newList, endObj) + 1;
     newList.splice(endIndex, 0, startObj);
     this.setState.list = newList;

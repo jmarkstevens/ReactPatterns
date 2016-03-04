@@ -98,7 +98,7 @@
     "title": "Bismarckia",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "BiN",
@@ -302,14 +302,14 @@
     "title": "Caryota",
     "type": "genus",
     "selected": false,
-    "closed": true,
+    "closed": false,
     "children": [
       {
         "nodeid": "CaMa",
         "title": "maxima (urens)",
         "genus": "Caryota",
         "type": "specie",
-        "selected": false
+        "selected": true
       },
       {
         "nodeid": "CaU",
@@ -429,7 +429,7 @@
     "title": "Copernicia",
     "type": "genus",
     "selected": false,
-    "closed": false,
+    "closed": true,
     "children": [
       {
         "nodeid": "CoA",
@@ -443,7 +443,7 @@
         "title": "prunifera",
         "genus": "Copernicia",
         "type": "specie",
-        "selected": true
+        "selected": false
       }
     ]
   },
