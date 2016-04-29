@@ -1,0 +1,41 @@
+{
+	"name": "ReactPatterns.15-ReFluxWebSocket",
+	"version": "1.0.0",
+	"description": "A collection of simple react projects providing reusable components, startup and test examples.",
+  "license": "MIT",
+  "author": {
+    "name": "Janaka Stevens",
+    "email": "jmstevens@calitek.com"
+  },
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/calitek/ReactPatterns.git"
+  },
+	"scripts": {
+		"start": "node js/server.js",
+		"ww": "webpack --progress --profile --colors --watch",
+		"nw": "webpack --progress --profile --colors"
+	},
+	"dependencies": {
+		"express": "latest",
+		"primus": "latest",
+		"primus-emitter": "latest",
+		"react": "^15.0.0-rc.1",
+		"react-dom": "^15.0.0-rc.1",
+    "reflux": "latest",
+    "serve-favicon": "latest",
+		"ws": "latest"
+	},
+	"devDependencies": {
+		"babel-core": "latest",
+    "babel-loader": "^6.1.0",
+		"babel-preset-es2015": "latest",
+		"babel-preset-react": "latest",
+		"babel-preset-stage-0": "latest",
+		"css-loader": "latest",
+		"extract-text-webpack-plugin": "latest",
+		"file-loader": "latest",
+		"script-loader": "latest",
+    "webpack": "latest"
+	}
+}

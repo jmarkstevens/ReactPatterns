@@ -1,54 +1,55 @@
 # ReactPatterns
 
 A collection of simple react projects providing reusable components, startup and test examples. Its my react playground.
-Except for the React.14.Webpack projects, I use gulp, browserify and babelify for the build tool chain.
+I am now using webpack and babel for the build tool chain. Previous to the React.15 projects, I had used gulp, browserify and babelify. 
 With React.12 I used React.createClass.
 In React.13 I started using extends React.Component.
-Now with React.14 I am using babel stage 0 with arrow functions and let instead of var.
+Now with React.14 I am using babel stage 0 with arrow functions and let instead of var. With React.15 the build is now all webpack.
 
 There are not any React-Router examples yet because I have been building applications instead of static websites so far.
 
 **React.12**
-*	Basic
-*	ReFlux WebSocket
+*  Basic
+*  ReFlux WebSocket
 
 **React.13**
-*	Basic
-*	ReFlux WebSocket
+*  Basic
+*  ReFlux WebSocket
 
 **React.14**
-*	Basic
-*	Drag and Drop
-*	ReFlux Electron
-*	ReFlux Pages
-*	ReFlux SuperAgent ajax
-*	ReFlux WebSocket
-*	ThirdParty
-	*	GoogleMaps
-	*	Radium
-*	Window Events
-*	Window Object
+*  Basic
+*  ReFlux SuperAgent ajax
+*  ThirdParty
+  *  GoogleMaps
 
-**React.14.Common**
-*	Buttons
-*	DropDown
-*	Form Inputs
-*	List
-*	ProgressBar
-*	Range slider
-*	Tooltip
-*	TreeView
+**React.15**
+*  Basic
+*  Drag and Drop
+*  ReFlux Electron
+*  ReFlux Pages
+*  ReFlux SuperAgent ajax
+*  ReFlux WebSocket
+*  ThirdParty
+  *  Radium
+*  Window Events
+*  Window Object
 
-**React.14.Webpack
-*	Basic
-*	ReFlux Electron
-*	ReFlux SuperAgent ajax
-*	ReFlux WebSocket
+**React.15.Common**
+*  Buttons
+*  DropDown
+*  Form Inputs
+*  Gallery
+*  List
+*  ProgressBar
+*  Range slider
+*  Tooltip
+*  TreeView
 
 # The basics
 
 Open two terminals at the desired project root. I use iTerm on Mac, ConEmu on Windows 10.
-First time do "npm install". In one terminal "gulp". In the other terminal "npm start".
+First time do "npm install". On the React.15 projects in one terminal "npm run ww".
+On the older projects in one terminal "gulp". In the other terminal "npm start".
 In your browser localhost:3500. All projects use the same port.
 If you want to do it with one terminal session you can run "gulp nw" for no watch.
 
