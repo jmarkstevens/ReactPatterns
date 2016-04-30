@@ -1,7 +1,7 @@
 # ReactPatterns
 
 A collection of simple react projects providing reusable components, startup and test examples. Its my react playground.
-I am now using webpack and babel for the build tool chain. Previous to the React.15 projects, I had used gulp, browserify and babelify. 
+I am now using webpack and babel for the build tool chain. Previous to the React.15 projects, I had used gulp, browserify and babelify.
 With React.12 I used React.createClass.
 In React.13 I started using extends React.Component.
 Now with React.14 I am using babel stage 0 with arrow functions and let instead of var. With React.15 the build is now all webpack.
@@ -49,9 +49,9 @@ There are not any React-Router examples yet because I have been building applica
 
 Open two terminals at the desired project root. I use iTerm on Mac, ConEmu on Windows 10.
 First time do "npm install". On the React.15 projects in one terminal "npm run ww".
-On the older projects in one terminal "gulp". In the other terminal "npm start".
+On the older projects in one terminal "gulp". In the other terminal "npm start" or for Electron "npm run".
 In your browser localhost:3500. All projects use the same port.
 If you want to do it with one terminal session you can run "gulp nw" for no watch.
 
 
-A demo of the Drag and Drop pattern is at http://example.calitek.com/.
+CodeViewer is running at http://calitek.com/.
