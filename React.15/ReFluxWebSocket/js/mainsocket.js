@@ -1,6 +1,6 @@
 'use strict';
 
-var getSetData = require('./socket/getsetdata');
+var getSetData = require('./socket/GetSetData');
 
 module.exports = function(socket) {
 	console.log('Primus connection made.');
