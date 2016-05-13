@@ -6,7 +6,7 @@ With React.12 I used React.createClass.
 In React.13 I started using extends React.Component.
 Now with React.14 I am using babel stage 0 with arrow functions and let instead of var. With React.15 the build is now all webpack.
 
-There are not any React-Router examples yet because I have been building applications instead of static websites so far.
+There are no React-Router examples yet because I have been building applications instead of static websites so far.
 
 **React.12**
 *  Basic
@@ -24,11 +24,14 @@ There are not any React-Router examples yet because I have been building applica
 
 **React.15**
 *  Basic
+*  Basic Hot
 *  Drag and Drop
+*  MySql
 *  ReFlux Electron
 *  ReFlux Pages
 *  ReFlux SuperAgent ajax
 *  ReFlux WebSocket
+*  SQLite
 *  ThirdParty
   *  Radium
 *  Window Events
@@ -51,7 +54,7 @@ Open two terminals at the desired project root. I use iTerm on Mac, ConEmu on Wi
 First time do "npm install". On the React.15 projects in one terminal "npm run ww".
 On the older projects in one terminal "gulp". In the other terminal "npm start" or for Electron "npm run".
 In your browser localhost:3500. All projects use the same port.
-If you want to do it with one terminal session you can run "gulp nw" for no watch.
+If you want to do it with one terminal session you can run "npm run nw" for no watch.
 
 
 CodeViewer is running at http://calitek.com/.

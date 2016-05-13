@@ -111,16 +111,16 @@ export default class Gallery extends GalleryRender {
     switch (intKey) {
       case 37: this.prevIndex(); event.preventDefault(); break; //<--
       case 39: this.nextIndex(); event.preventDefault(); break; //-->
-      case 66: this.hideThumbHandlerL(); event.preventDefault(); break; //b
-      case 84: this.hideThumbHandlerP(); event.preventDefault(); break; //x
-      case 87: this.actionHandler('full'); event.preventDefault(); break; //w
-      case 88: this.actionHandler('close'); event.preventDefault(); break; //x
+      case 66: this.hideThumbHandlerL(); event.preventDefault(); break; //B
+      case 84: this.hideThumbHandlerP(); event.preventDefault(); break; //T
+      case 83: this.actionHandler('full'); event.preventDefault(); break; //S
+      case 88: this.actionHandler('close'); event.preventDefault(); break; //X
     }
   };
   actionHandler = (action) => {
     switch (action) {
       case 'close': this.props.data.close(); break;
-      case 'full': if (screenfull.enabled) screenfull.request(); break;
+      case 'full': if (screenfull.enabled) screenfull.toggle(); break;
     };
   };
   nextIndex = () => {
