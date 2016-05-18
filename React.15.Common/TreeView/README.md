@@ -1,4 +1,4 @@
-# ReactPatterns .14 Common TreeView
+# ReactPatterns Common TreeView
 
 Tree view components.
 

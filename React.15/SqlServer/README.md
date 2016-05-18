@@ -1,6 +1,6 @@
-# ReactPatterns Basic
+# ReactPatterns SqlServer
 
-Just the basics for react 15.
+A starting point for using SqlServer.
 
 # Getting started
 

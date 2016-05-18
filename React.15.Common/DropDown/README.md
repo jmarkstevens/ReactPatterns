@@ -1,4 +1,4 @@
-# ReactPatterns .14 Common DropDown
+# ReactPatterns Common DropDown
 
 Drop down menu and drop down select components.
 

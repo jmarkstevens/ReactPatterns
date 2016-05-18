@@ -1,3 +1,3 @@
-# ReactPatterns .14 Common ProgressBar
+# ReactPatterns Common ProgressBar
 
 A progress bar component.

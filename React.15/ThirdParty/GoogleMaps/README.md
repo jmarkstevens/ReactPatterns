@@ -1,4 +1,4 @@
-# ReactPatterns .14 ThirdParty GoogleMaps
+# ReactPatterns ThirdParty GoogleMaps
 
 An implimentation of google-map-react.
 

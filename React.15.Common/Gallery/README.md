@@ -1,4 +1,4 @@
-# ReactPatterns 15 Gallery
+# ReactPatterns Gallery
 
 A basic photo gallery.
 

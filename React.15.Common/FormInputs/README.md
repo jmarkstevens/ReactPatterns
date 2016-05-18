@@ -1,3 +1,3 @@
-# ReactPatterns .14 Common FormInputs
+# ReactPatterns Common FormInputs
 
 Radio group and form input components.

@@ -1,4 +1,4 @@
-# ReactPatterns .14 Common Tooltip
+# ReactPatterns Common Tooltip
 
 A tooltip component.
 

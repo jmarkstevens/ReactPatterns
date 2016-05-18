@@ -12,10 +12,6 @@ let poolConnection = mysql.createPool({
   database : 'testdb1'
 });
 
-poolConnection.getConnection(function(err) {
-  if (!err) console.log('The connection is active now');
-});
-
 process.on('SIGINT', function() {
   poolConnection.end(function(err) {
     console.log('The connection is terminated now');

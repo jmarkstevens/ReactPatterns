@@ -1,4 +1,4 @@
-# ReactPatterns .14 ReFluxPages
+# ReactPatterns ReFluxPages
 
 This demonstrates using flux to handle app state.
 

@@ -1,3 +1,3 @@
-# ReactPatterns .14 WindowObject
+# ReactPatterns WindowObject
 
 Different browsers handle window objects in their own way. This is an easy way to test what objects are available.
