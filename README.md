@@ -25,6 +25,7 @@ There are no React-Router examples yet because I have been building applications
 **React.15**
 *  Basic
 *  Basic Hot
+*  Basic Isometric/Universal
 *  Drag and Drop
 *  MySql
 *  ReFlux Electron
