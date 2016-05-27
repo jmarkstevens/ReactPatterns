@@ -43,7 +43,6 @@
     "unmockedModulePathPatterns": [
       "enzyme",
       "react",
-      "react-dom",
       "react-addons-test-utils"
     ],
     "verbose": true
