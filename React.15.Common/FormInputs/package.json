@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "node js/server.js",
+    "test": "jest",
     "ww": "webpack --progress --profile --colors --no-minimize --watch",
     "nw": "webpack --progress --profile --colors --no-minimize"
   },
@@ -27,13 +28,27 @@
   },
   "devDependencies": {
     "babel-core": "latest",
+    "babel-jest": "latest",
     "babel-loader": "^6.1.0",
     "babel-preset-es2015": "latest",
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
     "css-loader": "latest",
+    "enzyme": "latest",
     "extract-text-webpack-plugin": "latest",
     "file-loader": "latest",
+    "jest-cli": "latest",
+    "react-addons-test-utils": "^15.0.0",
     "webpack": "latest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "enzyme",
+      "react",
+      "react-addons-test-utils",
+      "reflux"
+    ],
+    "verbose": true
   }
 }

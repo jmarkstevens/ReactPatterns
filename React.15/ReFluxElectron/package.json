@@ -19,8 +19,8 @@
     "dist": "NODE_ENV=production webpack --progress --profile --colors"
 	},
 	"dependencies": {
-		"react": "^15.0.0-rc.1",
-		"react-dom": "^15.0.0-rc.1",
+		"react": "^15.0.0",
+		"react-dom": "^15.0.0",
     "reflux": "latest"
 	},
 	"devDependencies": {

@@ -19,8 +19,8 @@
   "dependencies": {
     "body-parser": "latest",
     "express": "latest",
-    "react": "^15.0.0-rc.1",
-    "react-dom": "^15.0.0-rc.1",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "reflux": "latest",
     "serve-favicon": "latest",
     "sqlite3": "latest",

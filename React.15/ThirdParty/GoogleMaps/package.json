@@ -21,8 +21,8 @@
     "express": "latest",
     "google-map-react": "latest",
     "point-geometry": "latest",
-    "react": "^15.0.0-rc.1",
-    "react-dom": "^15.0.0-rc.1",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "react-pure-render": "latest",
     "scriptjs": "latest",
     "serve-favicon": "latest"

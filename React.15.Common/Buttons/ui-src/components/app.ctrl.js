@@ -54,7 +54,7 @@ export default class AppCtrl extends React.Component {
       <div id='AppCtrlSty' style={AppCtrlSty}>
         React 15 Buttons<br/><br/>
         <div id='btnDivSty' style={btnDivSty}>
-          <JButton btn={basicBtn} parentClickHandler={this.clickHandler} />
+          <JButton id='basicBtn' btn={basicBtn} parentClickHandler={this.clickHandler} />
           <JButton btn={basicBtn18} parentClickHandler={this.clickHandler} />
           <JButton btn={basicBtn24} parentClickHandler={this.clickHandler} />
           <JButton btn={basicBtn30} parentClickHandler={this.clickHandler} />

@@ -5,13 +5,13 @@ import Actions from './Actions';
 let BasicStoreObject = {
   listenables: Actions,
   data: {
-    "text": "Dev and the title",
-    "checkbox": true,
-    "radioGroup": "setkey",
-    "color": "#1A3212",
-    "number": 25,
-    "range": 45,
-    "folder": ''
+    "text": "",
+    "checkbox": false,
+    "radioGroup": "",
+    "color": "",
+    "number": "",
+    "range": "",
+    "folder": ""
   },
   onGotData(data) { this.data = data; BasicStore.trigger(); },
   onEditRecord(field, value) {

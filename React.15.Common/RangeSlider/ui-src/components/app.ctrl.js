@@ -89,7 +89,7 @@ class AppCtrlRender extends React.Component {
 
 let getInitialAppState = function() {
   return {
-    appData: AppStore.getAppData(),
+    appData: {isMobile: false, messages: []},
     sliderObj1: sliderObj1,
     sliderObj2: sliderObj2,
     sliderObj3: sliderObj3,

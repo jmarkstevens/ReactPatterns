@@ -34,7 +34,7 @@ class AppCtrlRender extends React.Component {
 export default class AppCtrl extends AppCtrlRender {
   constructor() {
     super();
-    this.state = getState();
+    this.state = {Data1: {}, Data2: {}, Data3: {}};
   }
 
   componentDidMount = () => { this.unsubscribe = BasicStore.listen(this.storeDidChange); };

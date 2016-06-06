@@ -33,7 +33,7 @@ export default class AppCtrl extends AppCtrlRender {
   constructor() {
     super();
     this.state = {
-      PicList: AppStore.getData(),
+      PicList: [],
       hideGallery: true
     };
   }

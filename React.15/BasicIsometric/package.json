@@ -21,8 +21,8 @@
     "babel-register": "latest",
     "ejs": "^2.4.1",
     "express": "latest",
-    "react": "^15.0.0-rc.1",
-    "react-dom": "^15.0.0-rc.1",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "serve-favicon": "latest"
   },
   "devDependencies": {

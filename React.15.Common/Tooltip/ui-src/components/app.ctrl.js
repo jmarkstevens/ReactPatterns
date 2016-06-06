@@ -34,7 +34,7 @@ class AppCtrlRender extends React.Component {
 export default class AppCtrl extends AppCtrlRender {
   constructor() {
     super();
-    this.state = getState();
+    this.state = {hoverValues: {}, filterList: {}};
   }
 
   componentDidMount = () => {
