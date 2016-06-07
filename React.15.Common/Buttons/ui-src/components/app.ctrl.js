@@ -74,3 +74,8 @@ export default class AppCtrl extends React.Component {
     );
   }
 }
+
+  // constructor() {
+  //   super();
+  //   this.state = {clicked: ''};
+  // }
