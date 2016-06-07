@@ -43,10 +43,7 @@ let imgSpanSty4 = {height: '40px', width: '40px'};
 let btnDivSty = {height: '40px'};
 
 export default class AppCtrl extends React.Component {
-  constructor() {
-    super();
-    this.state = {clicked: ''};
-  }
+  state = {clicked: ''};
   clickHandler = (buttonid) => { this.setState({clicked: 'clickHandler buttonid: ' + buttonid}); };
   render() {
     let clickResponse = this.state.clicked;
