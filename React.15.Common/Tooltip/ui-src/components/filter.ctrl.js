@@ -163,6 +163,7 @@ function filterMap(item, index) {
 
 class FilterCtrlRender extends React.Component {
   render() {
+    if (Object.keys(this.props.filterList).length === 0) return null;
     isDesktop = true;
     let vr = this;
     setData(vr);

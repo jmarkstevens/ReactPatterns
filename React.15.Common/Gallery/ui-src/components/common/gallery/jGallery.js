@@ -98,10 +98,7 @@ class GalleryRender extends React.Component {
 }
 
 export default class Gallery extends GalleryRender {
-  constructor() {
-    super();
-    this.state = {index: 0, hover: false, hideThumbs: true, thumbColumn: false, hideShortcuts: true};
-  }
+  state = {index: 0, hover: false, hideThumbs: true, thumbColumn: false, hideShortcuts: true};
 
   componentDidMount = () => { window.addEventListener('keydown', this.keyDownListener); };
   componentWillUnmount = () => { window.removeEventListener('keydown', this.keyDownListener); };

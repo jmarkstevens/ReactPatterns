@@ -26,7 +26,6 @@ let getTreeNode = function(child, index) {
 };
 
 class JTreeViewNode extends React.Component {
-  constructor(props) { super(); }
   iconHandler = () => {
     if (this.props.node.children && this.props.node.children.length > 0) {
       this.props.iconClick(this.props.node);

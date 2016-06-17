@@ -4,7 +4,6 @@ import Actions from '../../flux/Actions';
 import TreeView from './../common/jTreeView';
 
 export default class TreeList extends React.Component {
-  constructor(props) { super(); }
   iconHandler = (node) => { Actions.setTreeNodeClosed(node); };
   clickHandler = (node) => { Actions.selectTreeNode(node); };
   render() {

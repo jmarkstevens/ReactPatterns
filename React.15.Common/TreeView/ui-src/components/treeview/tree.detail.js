@@ -33,10 +33,7 @@ class TreeDetailRender extends React.Component {
 }
 
 export default class TreeDetail extends TreeDetailRender {
-  constructor() {
-    super();
-    this.state = {title: 'Hello!'};
-  }
+  state = {title: 'Hello!'};
   componentWillReceiveProps = (nextProps) => {
     if (this.state.title != nextProps.treeNode.title) this.setState({title: nextProps.treeNode.title})
   };

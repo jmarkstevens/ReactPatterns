@@ -27,6 +27,7 @@ There are no React-Router examples yet because I have been building applications
 *  Basic Hot
 *  Basic Isometric/Universal
 *  Basic Jest test with Enzyme
+*  Basic unit test with Mocha, Chai and Enzyme
 *  Drag and Drop
 *  MySql
 *  ReFlux Electron

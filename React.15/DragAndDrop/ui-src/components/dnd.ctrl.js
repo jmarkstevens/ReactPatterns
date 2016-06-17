@@ -38,11 +38,9 @@ class DndCtrlRender extends React.Component {
 }
 
 export default class DndCtrl extends DndCtrlRender {
-  constructor() {
-    super();
-    this.state = {list: _ld.cloneDeep(list)};
-    this.savedItemID = '';
-  }
+  state = {list: _ld.cloneDeep(list)};
+  savedItemID = '';
+
   dndDone = (startID, endID) => {
     let newList = this.state.list;
     let startObj = _ld.find(newList, {id: startID});

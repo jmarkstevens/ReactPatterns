@@ -1,25 +1,26 @@
 "use strict";
 
-jest.unmock('../ui-src/components/app.ctrl');
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { expect } from 'chai';
+
 import AppCtrl from '../ui-src/components/app.ctrl';
 
-describe('<AppCtrl />', () => {
+describe('shallow(<AppCtrl />)', () => {
   const wrapper = shallow(<AppCtrl />);
   it('checks div count', () => {
-    expect(wrapper.find('div').length).toEqual(4);
+    expect(wrapper.find('div').length).to.equal(4);
   });
   it('checks br count', () => {
-    expect(wrapper.find('br').length).toEqual(2);
+    expect(wrapper.find('br').length).to.equal(2);
   });
   it('checks DropDownMenu count', () => {
-    expect(wrapper.find('DropDownMenu').length).toEqual(1);
+    expect(wrapper.find('DropDownMenu').length).to.equal(1);
   });
   it('checks DropDownSelect count', () => {
-    expect(wrapper.find('DropDownSelect').length).toEqual(1);
+    expect(wrapper.find('DropDownSelect').length).to.equal(1);
   });
   it('checks shallow text', () => {
-    expect(wrapper.text()).toContain('React 15 DropDown');
+    expect(wrapper.text()).to.contain('React 15 DropDown');
   });
 });

@@ -6,7 +6,7 @@ let AppCtrlSty = {
 }
 
 export default class AppCtrl extends React.Component {
-  constructor() { super(); this.state = {world: ''}; }
+  state = {world: ''};
   componentDidMount = () => { this.sayHello(); };
   sayHello = () => { this.setState({world: 'Hello World'}); };
   render() {
@@ -19,4 +19,3 @@ export default class AppCtrl extends React.Component {
     );
   }
 }
-// sayHello = () => { this.setState({world: 'Hello World'}); }

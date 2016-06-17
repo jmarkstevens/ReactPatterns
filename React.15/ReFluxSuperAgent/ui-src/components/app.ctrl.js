@@ -32,10 +32,7 @@ class AppCtrlRender extends React.Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = {Data1: {}, Data2: {}, Data3: {}};
-  }
+  state = getState();
 
   componentDidMount = () => { this.unsubscribe = BasicStore.listen(this.storeDidChange); };
   componentWillUnmount = () => { this.unsubscribe(); };

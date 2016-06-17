@@ -41,10 +41,7 @@ class AppCtrlRender extends React.Component {
 let getState = function() { return {appState: AppStore.getAppState(),}; };
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = getState();
-  }
+  state = getState();
 
   componentDidMount = () => { this.unsubscribe = AppStore.listen(this.storeDidChange); };
   componentWillUnmount = () => { this.unsubscribe(); };

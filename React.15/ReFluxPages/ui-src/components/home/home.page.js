@@ -12,10 +12,7 @@ let HomePageSty = {
 };
 
 export default class HomePage extends React.Component {
-  constructor() {
-    super();
-    this.state = {constructorTime: new Date().toLocaleString(), componentDidMountTime:  ''};
-  }
+  state = {constructorTime: new Date().toLocaleString(), componentDidMountTime:  ''};
   componentDidMount = () => { this.setState({componentDidMountTime:  new Date().toLocaleString()}); };
   render() {
     if (this.props.notOpened) return null;

@@ -73,12 +73,9 @@ class JRangeSliderDndRender extends React.Component {
 }
 
 export default class JRangeSliderDnd extends JRangeSliderDndRender {
-  constructor() {
-    super();
-    this.isLow = false;
-    this.isHigh = false;
-    this.overID = '';
-  }
+  isHigh = false;
+  overID = '';
+  isLow = false;
   onThisDragStart = (event) => {
     event.dataTransfer.effectAllowed = "all";
     let img = document.createElement("img");
@@ -338,11 +335,8 @@ class JRangeSliderRender extends React.Component {
 }
 
 export default class JRangeSlider extends JRangeSliderRender {
-  constructor() {
-    super();
-    this.valueAdjust = 0;
-    this.isLowValue = true;
-  }
+  valueAdjust = 0;
+  isLowValue = true;
   sliderStartChange = (index) => {
     this.isLowValue = (Math.abs(this.props.sliderObj.low - index) < 5);
     let value = this.isLowValue ? this.props.sliderObj.low : this.props.sliderObj.high;

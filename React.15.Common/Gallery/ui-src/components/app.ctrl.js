@@ -30,13 +30,10 @@ class AppCtrlRender extends React.Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = {
-      PicList: [],
-      hideGallery: true
-    };
-  }
+  state = {
+    PicList: AppStore.getData(),
+    hideGallery: true
+  };
 
   componentDidMount = () => { this.unsubscribe = AppStore.listen(this.storeDidChange); };
   componentWillUnmount = () => { this.unsubscribe(); };

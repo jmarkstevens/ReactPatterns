@@ -23,10 +23,7 @@ class TreeEditRender extends React.Component {
 }
 
 export default class TreeEdit extends TreeEditRender {
-  constructor() {
-    super();
-    this.state = { treeNode: { nodeid: '', children: [], title: '', type: '' }};
-  }
+  state = { treeNode: { nodeid: '', children: [], title: '', type: '' }};
 
   clickHandler = (buttonid) => {
     let node = this.state.treeNode;

@@ -38,7 +38,6 @@ let okSty = {
 };
 
 export default class Shortcuts extends React.Component {
-  constructor(props) { super(); }
   closeHandler = () => { this.props.closeHandler(); };
   render() {
     if (this.props.hide) return null;

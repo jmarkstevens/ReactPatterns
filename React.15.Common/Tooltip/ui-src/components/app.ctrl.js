@@ -32,10 +32,7 @@ class AppCtrlRender extends React.Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = {hoverValues: {}, filterList: {}};
-  }
+  state = getState();
 
   componentDidMount = () => {
     this.unsubscribe = AppStore.listen(this.storeDidChange);

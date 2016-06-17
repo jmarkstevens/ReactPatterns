@@ -33,10 +33,7 @@ class TreeNewRender extends React.Component {
 }
 
 export default class TreeNew extends TreeNewRender {
-  constructor() {
-    super();
-    this.state = { treeNode: { nodeid: '', title: '', type: 'dev', selected: false, children: [] }};
-  }
+  state = { treeNode: { nodeid: '', title: '', type: 'dev', selected: false, children: [] }};
   clickHandler = (buttonid) => {
     switch (buttonid) {
       case 'before':

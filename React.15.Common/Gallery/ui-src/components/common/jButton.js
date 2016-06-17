@@ -88,17 +88,10 @@ function getStyle(btnProp) {
     }
     if (btnProp.btn.reStyle) buttonSty = btnProp.btn.reStyle;
     if (btnProp.btn.assignStyle) buttonSty = Object.assign(buttonSty, btnProp.btn.assignStyle);
-    // if (lodash.has(btnProp, 'selectedId')) {
-    //   var btnID = btnProp.btn.buttonid;
-    //   var selectedId = btnProp.selectedId;
-    //   if (btnID == selectedId) buttonSty.color = "#643970";
-    //   else buttonSty.color = standardBtnSty.color;
-    // } else buttonSty.color = standardBtnSty.color;
     return buttonSty;
 }
 
 export default class JButton extends React.Component {
-  constructor(props) { super(); }
   clickHandler = () => { if (this.props.parentClickHandler) this.props.parentClickHandler(this.props.btn.buttonid); };
   render() {
     let buttonSty = getStyle(this.props);

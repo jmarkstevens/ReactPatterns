@@ -13,38 +13,34 @@
   },
   "scripts": {
     "start": "node js/server.js",
-    "test": "jest",
+    "test": "mocha __tests__/.setup.js __tests__/**/*.test.js",
+    "testw": "npm test -- --watch",
     "ww": "webpack --progress --profile --colors --no-minimize --watch",
     "nw": "webpack --progress --profile --colors --no-minimize"
   },
   "dependencies": {
     "express": "latest",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
     "serve-favicon": "latest"
   },
   "devDependencies": {
     "babel-core": "latest",
-    "babel-jest": "latest",
     "babel-loader": "^6.1.0",
     "babel-preset-es2015": "latest",
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
+    "babel-register": "latest",
+    "chai": "latest",
+    "chai-http": "latest",
     "css-loader": "latest",
     "enzyme": "latest",
     "extract-text-webpack-plugin": "latest",
     "file-loader": "latest",
-    "jest-cli": "latest",
+    "jsdom": "latest",
+    "mocha": "latest",
     "react-addons-test-utils": "^15.0.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "sinon": "latest",
     "webpack": "latest"
-  },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "unmockedModulePathPatterns": [
-      "enzyme",
-      "react",
-      "react-addons-test-utils"
-    ],
-    "verbose": true
   }
 }

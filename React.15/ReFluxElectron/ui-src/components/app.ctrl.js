@@ -22,10 +22,7 @@ class AppCtrlRender extends React.Component {
 function getState() { return {treeData: BasicStore.getData()}; };
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = getState();
-  }
+  state = getState();
 
   componentDidMount = () => { this.unsubscribe = BasicStore.listen(this.storeDidChange); };
   componentWillUnmount = () => { this.unsubscribe(); };

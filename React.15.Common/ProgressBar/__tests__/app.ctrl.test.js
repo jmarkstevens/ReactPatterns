@@ -1,29 +1,29 @@
 "use strict";
 
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { expect } from 'chai';
 
-jest.unmock('../ui-src/components/app.ctrl');
 import AppCtrl from '../ui-src/components/app.ctrl';
 
-describe('<AppCtrl />', () => {
+describe('shallow(<AppCtrl />)', () => {
   const wrapper = shallow(<AppCtrl />);
   it('checks div count', () => {
-    expect(wrapper.find('div').length).toEqual(2);
+    expect(wrapper.find('div').length).to.equal(2);
   });
   it('checks br count', () => {
-    expect(wrapper.find('br').length).toEqual(31);
+    expect(wrapper.find('br').length).to.equal(31);
   });
   it('checks JProgressBar count', () => {
-    expect(wrapper.find('JProgressBar').length).toEqual(9);
+    expect(wrapper.find('JProgressBar').length).to.equal(9);
   });
   it('checks JButton count', () => {
-    expect(wrapper.find('JButton').length).toEqual(4);
+    expect(wrapper.find('JButton').length).to.equal(4);
   });
   it('checks shallow state progressIndex', () => {
-    expect(wrapper.state('progressIndex')).toEqual(10);
+    expect(wrapper.state('progressIndex')).to.equal(10);
   });
   it('checks shallow text', () => {
-    expect(wrapper.text()).toContain('React 15 ProgressBar');
+    expect(wrapper.text()).to.contain('React 15 ProgressBar');
   });
 });

@@ -24,7 +24,6 @@ let options = [
 ];
 
 export default class TreeMenu extends React.Component {
-  constructor(props) { super(); }
   onSelect = (option) => { Actions.treeActions(option.value); };
   render() {
     return (

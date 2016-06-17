@@ -1,9 +1,9 @@
 "use strict";
 
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { expect } from 'chai';
 
-jest.unmock('../ui-src/components/app.ctrl');
 import AppCtrl from '../ui-src/components/app.ctrl';
 
 let newState = {
@@ -16,21 +16,21 @@ let newState = {
   "folder": ""
 };
 
-describe('<AppCtrl />', () => {
+describe('shallow(<AppCtrl />)', () => {
   const wrapper = shallow(<AppCtrl />);
   it('checks div count', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+    expect(wrapper.find('div').length).to.equal(1);
   });
   it('checks br count', () => {
-    expect(wrapper.find('br').length).toEqual(14);
+    expect(wrapper.find('br').length).to.equal(14);
   });
   it('checks JInput count', () => {
-    expect(wrapper.find('JInput').length).toEqual(9);
+    expect(wrapper.find('JInput').length).to.equal(9);
   });
   it('checks shallow state', () => {
-    expect(wrapper.state('data')).toEqual(newState);
+    expect(wrapper.state('data')).to.deep.equal(newState);
   });
   it('checks shallow text', () => {
-    expect(wrapper.text()).toContain('React 15 Form input');
+    expect(wrapper.text()).to.contain('React 15 Form input');
   });
 });

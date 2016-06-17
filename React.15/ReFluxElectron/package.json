@@ -1,40 +1,40 @@
 {
-	"name": "ReactPatterns.15-ReFluxElectron",
-	"version": "1.0.0",
+  "name": "ReactPatterns.15-ReFluxElectron",
+  "version": "1.0.0",
   "main": "main.js",
-	"description": "A collection of simple react projects providing reusable components, startup and test examples.",
+  "description": "A collection of simple react projects providing reusable components, startup and test examples.",
   "license": "MIT",
   "author": {
     "name": "Janaka Stevens",
     "email": "jmstevens@calitek.com"
   },
-	"repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/calitek/ReactPatterns.git"
   },
-	"scripts": {
-		"start": "node js/server.js",
-		"ww": "webpack --progress --profile --colors --watch",
-		"nw": "webpack --progress --profile --colors",
+  "scripts": {
+    "start": "node js/server.js",
+    "ww": "webpack --progress --profile --colors --watch",
+    "nw": "webpack --progress --profile --colors",
     "dist": "NODE_ENV=production webpack --progress --profile --colors"
-	},
-	"dependencies": {
-		"react": "^15.0.0",
-		"react-dom": "^15.0.0",
+  },
+  "dependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "reflux": "latest"
-	},
-	"devDependencies": {
-    "electron-prebuilt": "*",
-		"babel-core": "latest",
+  },
+  "devDependencies": {
+    "babel-core": "latest",
     "babel-loader": "^6.1.0",
-		"babel-preset-es2015": "latest",
-		"babel-preset-react": "latest",
-		"babel-preset-stage-0": "latest",
-		"css-loader": "latest",
-		"extract-text-webpack-plugin": "latest",
-		"file-loader": "latest",
-		"gulp": "latest",
-		"gulp-shell": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "css-loader": "latest",
+    "electron-prebuilt": "*",
+    "extract-text-webpack-plugin": "latest",
+    "file-loader": "latest",
+    "gulp": "latest",
+    "gulp-shell": "latest",
     "webpack": "latest"
-	}
+  }
 }

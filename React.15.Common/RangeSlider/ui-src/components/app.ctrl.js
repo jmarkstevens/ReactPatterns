@@ -89,7 +89,7 @@ class AppCtrlRender extends React.Component {
 
 let getInitialAppState = function() {
   return {
-    appData: {isMobile: false, messages: []},
+    appData: AppStore.getAppData(),
     sliderObj1: sliderObj1,
     sliderObj2: sliderObj2,
     sliderObj3: sliderObj3,
@@ -100,10 +100,7 @@ let getInitialAppState = function() {
 function getAppState() { return { appData: AppStore.getAppData() }; };
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = getInitialAppState();
-  }
+  state = getInitialAppState();
 
   componentDidMount() {
     let navPlatform = window.navigator.platform;

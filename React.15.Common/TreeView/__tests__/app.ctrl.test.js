@@ -1,41 +1,41 @@
 "use strict";
 
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { expect } from 'chai';
 
-jest.unmock('../ui-src/components/app.ctrl');
 import AppCtrl from '../ui-src/components/app.ctrl';
 
-describe('<AppCtrl />', () => {
+describe('shallow(<AppCtrl />)', () => {
   const wrapper = shallow(<AppCtrl />);
   it('checks div count', () => {
-    expect(wrapper.find('div').length).toEqual(5);
+    expect(wrapper.find('div').length).to.equal(5);
   });
   it('checks br count', () => {
-    expect(wrapper.find('br').length).toEqual(5);
+    expect(wrapper.find('br').length).to.equal(5);
   });
   it('checks TreeCtrl count', () => {
-    expect(wrapper.find('TreeCtrl').length).toEqual(1);
+    expect(wrapper.find('TreeCtrl').length).to.equal(1);
   });
   it('checks GenusCtrl count', () => {
-    expect(wrapper.find('GenusCtrl').length).toEqual(1);
+    expect(wrapper.find('GenusCtrl').length).to.equal(1);
   });
   it('checks JumpCtrl count', () => {
-    expect(wrapper.find('JumpCtrl').length).toEqual(1);
+    expect(wrapper.find('JumpCtrl').length).to.equal(1);
   });
   it('checks shallow state genusList', () => {
-    expect(wrapper.state('genusList')).toEqual([]);
+    expect(wrapper.state('genusList')).to.deep.equal([]);
   });
   it('checks shallow state currentGenusNode', () => {
-    expect(wrapper.state('currentGenusNode')).toEqual({});
+    expect(wrapper.state('currentGenusNode')).to.deep.equal({});
   });
   it('checks shallow state currentImageItem', () => {
-    expect(wrapper.state('currentImageItem')).toEqual('empty');
+    expect(wrapper.state('currentImageItem')).to.equal('empty');
   });
   it('checks shallow state showTreeEdit', () => {
-    expect(wrapper.state('showTreeEdit')).toEqual(false);
+    expect(wrapper.state('showTreeEdit')).to.equal(false);
   });
   it('checks shallow text', () => {
-    expect(wrapper.text()).toContain('React 15 TreeView');
+    expect(wrapper.text()).to.contain('React 15 TreeView');
   });
 });

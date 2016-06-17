@@ -73,10 +73,7 @@ class AppCtrlRender extends React.Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = {progressIndex: 10};
-  }
+  state = {progressIndex: 10};
   clickHandler = (buttonid) => {
     let oldIndex = this.state.progressIndex;
     let newIndex = oldIndex;

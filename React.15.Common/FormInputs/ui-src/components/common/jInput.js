@@ -86,10 +86,7 @@ class JInputRender extends React.Component {
 }
 
 export default class JInput extends JInputRender {
-  constructor(props) {
-    super();
-    this.state = {textValue: ''};
-  }
+  state = {textValue: ''};
 
   componentDidMount = () => {
     if (this.props.input.textValue) this.setState({textValue: this.props.input.textValue});

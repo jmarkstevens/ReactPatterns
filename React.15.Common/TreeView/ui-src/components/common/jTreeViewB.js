@@ -66,10 +66,7 @@ class JTreeViewBNodeRender extends React.Component {
 }
 
 class JTreeViewBNode extends JTreeViewBNodeRender {
-  constructor() {
-    super();
-    this.state = {visible: false};
-  }
+  state = {visible: false};
   iconHandler = () => {
     if (this.props.node.children && this.props.node.children.length > 0) {
       this.setState({visible: !this.state.visible});

@@ -86,10 +86,7 @@ class JTooltipRender extends React.Component {
 }
 
 export default class JTooltip extends JTooltipRender {
-  constructor() {
-    super();
-    this.state = {tooltipActive: false, position: {}};
-  }
+  state = {tooltipActive: false, position: {}};
   onMouseEnter = () => {
     let rect = ReactDom.findDOMNode(this).getBoundingClientRect();
     let position = {};

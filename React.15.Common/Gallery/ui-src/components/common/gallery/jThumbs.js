@@ -51,7 +51,6 @@ let thumbImageSty = {
 };
 
 class ListItem extends React.Component {
-  constructor(props) { super(); }
   clickHandler = () => { this.props.clickHandler(this.props.index); };
   componentDidUpdate = () => {
     if ((this.props.index == this.props.selected)) {

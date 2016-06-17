@@ -36,16 +36,6 @@ let radioInput1 = {name: 'radioGroup', type: 'radio', radioValue: 'set'};
 let radioInput2 = {name: 'radioGroup', type: 'radio', radioValue: 'setkey'};
 let radioInput3 = {name: 'radioGroup', type: 'radio', radioValue: 'key'};
 
-let newState = {
-  "text": "",
-  "checkbox": false,
-  "radioGroup": "",
-  "color": "",
-  "number": "",
-  "range": "",
-  "folder": ""
-};
-
 class AppCtrlRender extends React.Component {
    render() {
      let inputData = this.state.data;
@@ -88,10 +78,7 @@ class AppCtrlRender extends React.Component {
 function getState() { return {data: BasicStore.getData()}; };
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = {data: newState};
-  }
+  state = getState();
 
   componentDidMount() { this.unsubscribe = BasicStore.listen(this.storeDidChange); };
   componentWillUnmount() { this.unsubscribe(); };

@@ -23,14 +23,14 @@ let TreeCtrlSty = {
 }
 let getNewState = function() {
   return {
-    genusList: [],
-    currentGenusNode: {},
-    imageList: [],
+    genusList: GenusStore.getGenusList(),
+    currentGenusNode: GenusStore.getCurrentGenusNode(),
+    imageList: ImageStore.getImageList(),
     currentImageItem: 'empty',
-    treeData: [],
-    currentTreeNode: {},
-    showTreeEdit: false,
-    showTreeNew: false
+    treeData: TreeViewStore.getTreeData(),
+    currentTreeNode: TreeViewStore.getCurrentTreeNode(),
+    showTreeEdit: TreeViewStore.getShowTreeEdit(),
+    showTreeNew: TreeViewStore.getShowTreeNew()
   }
 }
 
@@ -91,10 +91,7 @@ class AppCtrlRender extends React.Component {
 }
 
 export default class AppCtrl extends AppCtrlRender {
-  constructor() {
-    super();
-    this.state = getNewState();
-  }
+  state = getNewState();
   componentDidMount = () => {
     this.unsubscribeIM = ImageStore.listen(this.imStoreDidChange);
     this.unsubscribeGS = GenusStore.listen(this.gsStoreDidChange);
