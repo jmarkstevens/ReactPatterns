@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Actions from '../flux/Actions';
+import AppNotes from './app.notes';
 import AppStore from '../flux/App.Store';
 import FilterCtrl from './filter.ctrl';
 
@@ -26,6 +27,7 @@ class AppCtrlRender extends React.Component {
         <div id='columnSty' style={columnSty}>
           <FilterCtrl filterList={this.state.filterList} hoverValues={this.state.hoverValues} />
         </div>
+        <AppNotes/>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AppNotes from './app.notes';
 import JButton from './common/jButton';
 import JProgressBar from './common/jProgressBar';
 
@@ -67,6 +68,7 @@ class AppCtrlRender extends React.Component {
           &nbsp;
           <JButton btn={lastItemBtn} parentClickHandler={this.clickHandler} />
         </div>
+        <AppNotes/>
       </div>
     );
   }

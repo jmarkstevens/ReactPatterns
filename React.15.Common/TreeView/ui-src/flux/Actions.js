@@ -1,32 +1,25 @@
 import Reflux from 'reflux';
 
 let apiActions = [
-	'apiInit',
-	'apiInitDone',
-	'apiSetAppStoreData',
-	'apiSetGenusList',
-	'apiTreeView'
+  'apiInit',
+  'apiInitDone',
+  'apiSetAppStoreData',
+  'apiTreeView'
 ]
 
 let wsActions = [
-	'gotAppStore',
-	'gotGenusList',
-	'gotImageList',
-	'gotTreeView'
+  'gotAppStore',
+  'gotImageList',
+  'gotTreeView'
 ]
 
 let treeActions = [
-	'selectTreeNode',
-	'setTreeNodeClosed',
-	'treeActions',
-	'saveTreeEdit',
-	'saveTreeNew'
+  'selectTreeNode',
+  'setTreeNodeClosed',
+  'treeActions',
+  'saveTreeEdit',
+  'saveTreeNew'
 ]
 
-let genusActions = [
-	'selectGenusNode',
-	'setGenusNodeClosed'
-]
-
-let actionArray = [...wsActions, ...apiActions, ...treeActions, ...genusActions];
+let actionArray = [...wsActions, ...apiActions, ...treeActions];
 module.exports = Reflux.createActions(actionArray);

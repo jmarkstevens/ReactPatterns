@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AppNotes from './app.notes';
 import JButton from './common/jButton';
 
 let AppCtrlSty = {
@@ -70,6 +71,7 @@ export default class AppCtrl extends React.Component {
         <br/><br/>
         <br/><br/>
         {clickResponse}
+        <AppNotes/>
       </div>
     );
   }

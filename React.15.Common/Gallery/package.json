@@ -21,6 +21,7 @@
   "dependencies": {
     "body-parser": "latest",
     "express": "latest",
+    "lodash": "latest",
     "serve-favicon": "latest"
   },
   "devDependencies": {

@@ -7,14 +7,15 @@ let rootPath = config.macProjectRoot;
 if (process.platform == 'win32') { rootPath = config.winProjectRoot; }
 
 let patternsPath13 = rootPath + 'React.13/';
-let patternsPath14 = rootPath + 'React.15/';
-let patternsPath14c = rootPath + 'React.15.Common/';
+let patternsPath15 = rootPath + 'React.15/';
+let patternsPath15c = rootPath + 'React.15.Common/';
 let commonPath = '/ui-src/components/common/';
 
 let destPath12 = rootPath + 'React.12/';
 let destPath13 = rootPath + 'React.13/';
-let destPath14 = rootPath + 'React.15/';
-let destPath14c = rootPath + 'React.15.Common/';
+let destPath14 = rootPath + 'React.14/';
+let destPath15 = rootPath + 'React.15/';
+let destPath15c = rootPath + 'React.15.Common/';
 let destPathDist = '/ui-dist';
 let destPathCss = '/ui-src/css';
 let destPathImg = '/ui-src/img';
@@ -24,61 +25,65 @@ let source = {
   transshim: rootPath + 'Common/img/1x1TransShim.gif',
 };
 
-let source14 = {
-  jbutton: patternsPath14c + 'Buttons' + commonPath + 'jButton.js',
-  jdropmenu: patternsPath14c + 'DropDown' + commonPath + 'jDropMenu.js',
-  jdropselect: patternsPath14c + 'DropDown' + commonPath + 'jDropSelect.js',
-  jinput: patternsPath14c + 'FormInputs' + commonPath + 'jInput.js',
-  jlist: patternsPath14c + 'List' + commonPath + 'jList.js',
-  jprogressbar: patternsPath14c + 'ProgressBar' + commonPath + 'jProgressBar.js',
-  jrangeslider: patternsPath14c + 'RangeSlider' + commonPath + 'jRangeSlider.js',
-  jtooltip: patternsPath14c + 'Tooltip' + commonPath + 'jTooltip.js',
-  jtreeview: patternsPath14c + 'TreeView' + commonPath + 'jTreeView.js',
-  jtreeviewb: patternsPath14c + 'TreeView' + commonPath + 'jTreeViewB.js',
-  indexcss: patternsPath14 + 'Basic/ui-src/css/index.css'
+let source15 = {
+  jbutton: patternsPath15c + 'Buttons' + commonPath + 'jButton.js',
+  jdropmenu: patternsPath15c + 'DropDown' + commonPath + 'jDropMenu.js',
+  jdropselect: patternsPath15c + 'DropDown' + commonPath + 'jDropSelect.js',
+  jinput: patternsPath15c + 'FormInputs' + commonPath + 'jInput.js',
+  jlist: patternsPath15c + 'List' + commonPath + 'jList.js',
+  jprogressbar: patternsPath15c + 'ProgressBar' + commonPath + 'jProgressBar.js',
+  jrangeslider: patternsPath15c + 'RangeSlider' + commonPath + 'jRangeSlider.js',
+  jtooltip: patternsPath15c + 'Tooltip' + commonPath + 'jTooltip.js',
+  jtreeview: patternsPath15c + 'TreeView' + commonPath + 'jTreeView.js',
+  jtreeviewb: patternsPath15c + 'TreeView' + commonPath + 'jTreeViewB.js',
+  indexcss: patternsPath15 + 'Basic/ui-src/css/index.css'
 };
 
 let dest14 = {
-  chromecast: destPath14 + 'ChromeCast' + commonPath,
-  draganddrop: destPath14 + 'DragAndDrop' + commonPath,
-  gallery: destPath14c + 'Gallery' + commonPath,
-  refluxpages: destPath14 + 'ReFluxPages' + commonPath,
-  rangeslider: destPath14c + 'RangeSlider' + commonPath,
-  tooltip: destPath14c + 'Tooltip' + commonPath,
-  treeview: destPath14c + 'TreeView' + commonPath
+  draganddrop: destPath15 + 'DragAndDrop' + commonPath,
+  gallery: destPath15c + 'Gallery' + commonPath,
+  progressbar: destPath15c + 'ProgressBar' + commonPath,
+  refluxpages: destPath15 + 'ReFluxPages' + commonPath,
+  rangeslider: destPath15c + 'RangeSlider' + commonPath,
+  tooltip: destPath15c + 'Tooltip' + commonPath,
+  treeview: destPath15c + 'TreeView' + commonPath
 };
 
 gulp.task('chromecast', function() {
-  gulp.src(source14.jbutton).pipe(gulp.dest(dest14.chromecast));
-  gulp.src(source14.jprogressbar).pipe(gulp.dest(dest14.chromecast));
+  gulp.src(source15.jbutton).pipe(gulp.dest(dest14.chromecast));
+  gulp.src(source15.jprogressbar).pipe(gulp.dest(dest14.chromecast));
 });
 
 gulp.task('draganddrop', function() {
-  gulp.src(source14.jlist).pipe(gulp.dest(dest14.draganddrop));
+  gulp.src(source15.jlist).pipe(gulp.dest(dest14.draganddrop));
 });
 
 gulp.task('gallery', function() {
-  gulp.src(source14.jbutton).pipe(gulp.dest(dest14.gallery));
+  gulp.src(source15.jbutton).pipe(gulp.dest(dest14.gallery));
+});
+
+gulp.task('progressbar', function() {
+  gulp.src(source15.jbutton).pipe(gulp.dest(dest14.progressbar));
 });
 
 gulp.task('rangeslider', function() {
-  gulp.src(source14.jlist).pipe(gulp.dest(dest14.rangeslider));
+  gulp.src(source15.jlist).pipe(gulp.dest(dest14.rangeslider));
 });
 
 gulp.task('refluxpages', function() {
-  gulp.src(source14.jdropmenu).pipe(gulp.dest(dest14.refluxpages));
+  gulp.src(source15.jdropmenu).pipe(gulp.dest(dest14.refluxpages));
 });
 
 gulp.task('tooltip', function() {
-  gulp.src(source14.jdropselect).pipe(gulp.dest(dest14.tooltip));
-  gulp.src(source14.jinput).pipe(gulp.dest(dest14.tooltip));
-  gulp.src(source14.jrangeslider).pipe(gulp.dest(dest14.tooltip));
+  gulp.src(source15.jdropselect).pipe(gulp.dest(dest14.tooltip));
+  gulp.src(source15.jinput).pipe(gulp.dest(dest14.tooltip));
+  gulp.src(source15.jrangeslider).pipe(gulp.dest(dest14.tooltip));
 });
 
 gulp.task('treeview', function() {
-  gulp.src(source14.jbutton).pipe(gulp.dest(dest14.treeview));
-  gulp.src(source14.jdropmenu).pipe(gulp.dest(dest14.treeview));
-  gulp.src(source14.jinput).pipe(gulp.dest(dest14.treeview));
+  gulp.src(source15.jbutton).pipe(gulp.dest(dest14.treeview));
+  gulp.src(source15.jdropmenu).pipe(gulp.dest(dest14.treeview));
+  gulp.src(source15.jinput).pipe(gulp.dest(dest14.treeview));
 });
 
 gulp.task('favicon', function() {
@@ -111,35 +116,48 @@ gulp.task('favicon', function() {
 });
 
 gulp.task('indexcss', function() {
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath12 + 'Basic' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath12 + 'ReFluxWebSocket' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath13 + 'BasicWebpack' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath13 + 'ReFluxWebSocket' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath12 + 'Basic' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath12 + 'ReFluxWebSocket' + destPathCss));
 
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'ChromeCast' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'DragAndDrop' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'ReFluxElectron' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'ReFluxPages' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'ReFluxSuperAgent' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'ReFluxWebSocket' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'ThirdParty/GoogleMaps' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'ThirdParty/Radium' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'WindowEvents' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14 + 'WindowObject' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath13 + 'Basic' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath13 + 'ReFluxWebSocket' + destPathCss));
 
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14c + 'Buttons' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14c + 'DropDown' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14c + 'FormInputs' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14c + 'List' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14c + 'ProgressBar' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14c + 'RangeSlider' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14c + 'Tooltip' + destPathCss));
-  gulp.src(source14.indexcss).pipe(gulp.dest(destPath14c + 'TreeView' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath14 + 'Basic' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath14 + 'ReFluxSuperAgent' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath14 + 'ThirdParty/GoogleMaps' + destPathCss));
+
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'BasicHot' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'BasicIsometric' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'BasicJestTest' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'BasicUnitTest' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'DragAndDrop' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'MySql' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReFluxElectron' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReFluxPages' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReFluxSuperAgent' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReFluxWebSocket' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'SQLite' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'SqlServer' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ThirdParty/GoogleMaps' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ThirdParty/Radium' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'WindowEvents' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'WindowObject' + destPathCss));
+
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'Buttons' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'DropDown' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'FormInputs' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'Gallery' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'List' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'ProgressBar' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'RangeSlider' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'Tooltip' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15c + 'TreeView' + destPathCss));
 });
 
 let defaultList = [
   'draganddrop',
   'gallery',
+  'progressbar',
   'rangeslider',
   'refluxpages',
   'tooltip',

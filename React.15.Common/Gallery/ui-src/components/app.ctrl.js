@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AppNotes from './app.notes';
 import AppStore from '../stores/App.Store';
 
 import JButton from './common/jButton';
@@ -24,6 +25,7 @@ class AppCtrlRender extends React.Component {
         <Gallery data={data} hide={hideGallery} />
         React 15 Gallery<br/><br/>
         <JButton btn={basicBtn} parentClickHandler={this.galleryHideHandler} />
+        <AppNotes/>
       </div>
     );
   }

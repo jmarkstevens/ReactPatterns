@@ -5,7 +5,7 @@ let express = require('express');
 let favicon = require('serve-favicon');
 
 let path = require('path');
-let port = Number(3500);
+let port = Number(process.env.GALLERYPORT || 3500);
 
 let routes = require('./routes');
 

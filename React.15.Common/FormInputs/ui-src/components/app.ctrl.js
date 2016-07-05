@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Actions from './../flux/Actions';
+import AppNotes from './app.notes';
 import JInput from './common/jInput';
 
 import BasicStore from './../flux/Basic.Store';
@@ -70,6 +71,7 @@ class AppCtrlRender extends React.Component {
         <JInput input={radioInput2} handleChange={this.handleValueChange} />&nbsp;Set/Key &nbsp;
         <JInput input={radioInput3} handleChange={this.handleValueChange} />&nbsp;Key &nbsp;
         Value: {radioValue}
+        <AppNotes/>
       </div>
     );
   }

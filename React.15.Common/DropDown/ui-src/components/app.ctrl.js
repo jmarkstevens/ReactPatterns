@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AppNotes from './app.notes';
 import DropDownMenu from './dropdown.menu';
 import DropDownSelect from './dropdown.select';
 
@@ -29,6 +30,7 @@ export default class AppCtrl extends React.Component {
             <DropDownSelect />
           </div>
         </div>
+        <AppNotes/>
       </div>
     );
   }

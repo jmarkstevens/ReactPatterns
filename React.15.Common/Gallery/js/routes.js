@@ -3,7 +3,7 @@
 let express = require('express');
 let router = express.Router();
 
-var getPicList = require('./routes/getPicList');
+var getPicList = require('./routes/GetPicList');
 
 router.get('/getPicList', function(req, res) {
 	var gotPicList = function(data){ res.send(data); };

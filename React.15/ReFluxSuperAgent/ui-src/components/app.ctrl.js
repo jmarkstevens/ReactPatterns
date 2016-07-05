@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AppNotes from './app.notes';
 import BasicStore from '../stores/Basic.Store';
 
 let AppCtrlSty = {
@@ -26,6 +27,7 @@ class AppCtrlRender extends React.Component {
         Data1: {data1}<br/><br/>
         Data2: {data2}<br/><br/>
         Data3: {data3}<br/><br/>
+        <AppNotes/>
       </div>
     );
   }

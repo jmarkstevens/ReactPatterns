@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AppNotes from './app.notes';
 import JList from './common/jList';
 
 let AppCtrlSty = {
@@ -37,6 +38,7 @@ export default class AppCtrl extends React.Component {
         <br />
         <JList data={list} spanLine='1' />
         <JList data={list} spanLine='1' lineStyle={lineSty} listStyle={listSty} />
+        <AppNotes/>
       </div>
     );
   }

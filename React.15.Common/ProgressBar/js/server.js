@@ -3,7 +3,7 @@
 var express = require('express');
 var favicon = require('serve-favicon');
 var path = require('path');
-var port = Number(3500);
+var port = Number(process.env.PROGRESSBARPORT || 3500);
 
 var app = express();
 var server = app.listen(port);

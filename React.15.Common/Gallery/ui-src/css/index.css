@@ -1,10 +1,10 @@
 .bodyStyle {
-  background-color: #1A3212;
-  color: #afac87;
+  background-color: #d1bb83;
+  color: #283424;
   display: block;
   height: 100vh;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 .header {
@@ -17,7 +17,10 @@
 .Title {font-size: 1.3em;}
 
 .content {
-  height: 100%;
+  height: calc(100% - 52px);
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0px 5px;
 }
 
@@ -30,14 +33,6 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.FlexBoxC {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
 }
 
 .FlexBoxJustAround {
