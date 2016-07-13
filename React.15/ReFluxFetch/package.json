@@ -1,5 +1,5 @@
 {
-  "name": "ReactPatterns.15-Basic",
+  "name": "ReactPatterns.15-ReFluxFetch",
   "version": "1.0.0",
   "description": "A collection of simple react projects providing reusable components, startup and test examples.",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "nw": "webpack --progress --profile --colors --no-minimize"
   },
   "dependencies": {
+    "body-parser": "latest",
     "express": "latest",
     "serve-favicon": "latest"
   },
@@ -35,13 +36,14 @@
     "enzyme": "latest",
     "extract-text-webpack-plugin": "latest",
     "file-loader": "latest",
-    "iframe-resizer": "latest",
     "jsdom": "latest",
     "mocha": "latest",
     "react-addons-test-utils": "^15.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
+    "reflux": "latest",
     "sinon": "latest",
-    "webpack": "latest"
+    "webpack": "latest",
+    "whatwg-fetch": "latest"
   }
 }

@@ -54,7 +54,7 @@ class AppCtrlRender extends React.Component {
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
         React 15 TreeView<br/><br/>
-        <div id='treeColumns' className='FlexBox' style={{height: 'calc(100% - 34px)'}}>
+        <div id='treeColumns' ref='treeColumns' className='FlexBox' style={{height: 'calc(100% - 34px)'}}>
           <div id='TreeCtrlSty' style={TreeCtrlSty}>
             current node: {currentTreeNode}
             <br/>
