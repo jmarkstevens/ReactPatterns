@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import AppNotes from './app.notes';
-import { apiSetData } from '../actions/api.Actions';
+import { apiSetData } from '../store/Actions';
 
 let AppCtrlSty = {
   height: '100%',
@@ -19,7 +19,7 @@ class AppCtrl extends React.Component {
   componentWillMount = () => {
     let newData = {
       "React version": "15",
-      "Project": "Redux with fetch polyfill",
+      "Project": "Redux with Electron",
       "currentDateTime": new Date().toLocaleString()
     }
     this.props.dispatch(apiSetData(newData));

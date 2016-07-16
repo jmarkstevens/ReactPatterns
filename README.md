@@ -4,8 +4,6 @@ A collection of simple react projects providing reusable components, startup and
 I am now using webpack and babel for the build tool chain. Previous to the React.15 projects, I had used gulp, browserify and babelify.
 Since React.14 I am using babel stage 0 with arrow functions and let instead of var. With React.15 the build is now all webpack.
 
-There are no React-Router examples yet because I have been building applications instead of static websites so far.
-
 **React.14**
 *  Basic
 *  ReFlux SuperAgent ajax
@@ -19,7 +17,9 @@ There are no React-Router examples yet because I have been building applications
 *  Basic Jest test with Enzyme
 *  Basic unit test with Mocha, Chai and Enzyme
 *  Drag and Drop
+*  Redux Electron
 *  Redux Fetch ajax
+*  Redux WebSocket
 *  ReFlux Electron
 *  ReFlux Fetch ajax
 *  ReFlux Pages

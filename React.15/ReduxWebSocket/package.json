@@ -1,5 +1,5 @@
 {
-  "name": "ReactPatterns.15-ReduxFetch",
+  "name": "ReactPatterns.15-ReduxWebSocket",
   "version": "1.0.0",
   "description": "A collection of simple react projects providing reusable components, startup and test examples.",
   "license": "MIT",
@@ -12,16 +12,17 @@
     "url": "git+https://github.com/calitek/ReactPatterns.git"
   },
   "scripts": {
-    "start": "node js/server.js",
-    "test": "mocha __tests__/.setup.js __tests__/**/*.test.js",
-    "testw": "npm test -- --watch",
+    "start": "nodemon --watch js js/server.js",
     "ww": "webpack --progress --profile --colors --no-minimize --watch",
     "nw": "webpack --progress --profile --colors --no-minimize"
   },
   "dependencies": {
-    "body-parser": "latest",
     "express": "latest",
-    "serve-favicon": "latest"
+    "nodemon": "latest",
+    "primus": "latest",
+    "primus-emitter": "latest",
+    "serve-favicon": "latest",
+    "ws": "latest"
   },
   "devDependencies": {
     "babel-core": "latest",
@@ -29,23 +30,14 @@
     "babel-preset-es2015": "latest",
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
-    "babel-register": "latest",
-    "chai": "latest",
-    "chai-http": "latest",
     "css-loader": "latest",
-    "enzyme": "latest",
     "extract-text-webpack-plugin": "latest",
     "file-loader": "latest",
-    "jsdom": "latest",
-    "mocha": "latest",
     "react": "^15.0.0",
-    "react-addons-test-utils": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-redux": "latest",
     "redux": "latest",
-    "redux-thunk": "latest",
-    "sinon": "latest",
-    "webpack": "latest",
-    "whatwg-fetch": "latest"
+    "script-loader": "latest",
+    "webpack": "latest"
   }
 }
