@@ -1,6 +1,6 @@
-# ReactPatterns ReFluxFetch
+# ReactPatterns ReduxFetch
 
-A basic demonstration of flux (reflux) with fetch polyfill. This would be the starting point for a simple data handling app.
+A basic demonstration of Redux with fetch polyfill. This would be the starting point for a simple data handling app.
 The 15 version uses more es6 and refines the reflux usage a bit.
 
 # Getting started
