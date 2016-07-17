@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux'
-import startWs, {wsMiddleware} from './ws.api';
+import startWs, {wsMiddleware} from './ipc.api';
 
 function handleData(state = {data1: {}}, action) {
   switch (action.type) {

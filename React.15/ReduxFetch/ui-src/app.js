@@ -9,7 +9,7 @@ import ReactDom  from 'react-dom';
 import { Provider } from 'react-redux';
 
 import AppCtrl from './components/app.ctrl';
-import AppStore from './stores/App.Store';
+import AppStore from './store/App.Store';
 
 window.ReactDom = ReactDom;
 

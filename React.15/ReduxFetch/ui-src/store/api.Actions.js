@@ -9,6 +9,6 @@ export function apiSetData(data) {
         fetch('/routes/getData')
           .then(response => response.json())
           .then(json => dispatch({type: 'GOT_DATA', payload: json}));
-    })
+      })
   }
 }

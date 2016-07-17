@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 
 import AppNotes from './app.notes';
 import { apiSetData } from '../store/Actions';
@@ -9,12 +10,6 @@ let AppCtrlSty = {
   padding: '0 10px 0 0'
 }
 
-function mapStateToProps(store) {
-  return {
-    Data1: store.data1
-  };
-}
-
 class AppCtrl extends React.Component {
   componentWillMount = () => {
     let newData = {
@@ -22,7 +17,7 @@ class AppCtrl extends React.Component {
       "Project": "Redux with Electron",
       "currentDateTime": new Date().toLocaleString()
     }
-    this.props.dispatch(apiSetData(newData));
+    this.props.apiSetData(newData);
   };
   render() {
     let data1 = this.props.Data1;
@@ -37,4 +32,12 @@ class AppCtrl extends React.Component {
   }
 }
 
-export default connect(mapStateToProps)(AppCtrl);
+function mapStateToProps(store) {
+  return {Data1: store.data1};
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ apiSetData }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppCtrl);
