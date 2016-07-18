@@ -3,7 +3,7 @@
 require("./index.html");
 require("./css/index.css");
 require("./img/favicon.ico");
-require("./img/1x1TransShim.gif");
+// require("./img/1x1TransShim.gif");
 
 import React  from 'react';
 import ReactDom  from 'react-dom';

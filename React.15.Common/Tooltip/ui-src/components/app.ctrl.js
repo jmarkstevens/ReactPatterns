@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Actions from '../flux/Actions';
 import AppNotes from './app.notes';
-import AppStore from '../flux/App.Store';
-import FilterCtrl from './filter.ctrl';
+import JTooltip from './common/jTooltip';
 
 let AppCtrlSty = {
-  height: '100%',
-  padding: '0 10px 0 0'
+  borderBottom: '3px solid #636b46',
+  padding: '0 10px'
 }
 
 let columnSty = {
@@ -17,29 +15,66 @@ let columnSty = {
   width: '330px'
 }
 
-let getState = function() { return {hoverValues: AppStore.getHoverValues(), filterList: AppStore.getFilterList()}; };
+let titleSty = {
+  background: 'transparent',
+  boxSizing: 'border-box',
+  cursor: 'default',
+  height: '18px',
+  lineHeight: '18px',
+  overflow: 'hidden',
+  outline: 'none',
+  position: 'relative',
+  textAlign: 'left',
+  transition: 'all 200ms ease',
+  width: '100%'
+};
 
-class AppCtrlRender extends React.Component {
-   render() {
+let toolTipSty = {display: 'inline-block', zIndex: '100'};
+let titleDivSty = { display: 'inline-block', lineHeight: '18px', position: 'relative' };
+
+let fillText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. `;
+
+let hoverValues = [
+  {title: 'LowTemp', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'bottom'},
+  {title: 'LeafType', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'bottom'},
+  {title: 'Height', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'bottom'},
+  {title: 'Width', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'bottom'},
+  {title: 'TrunkType', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'right'},
+  {title: 'SunExposure', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'right'},
+  {title: 'WaterTolerance', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'right'},
+  {title: 'BogTolerant', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'top'},
+  {title: 'DraughtTolerant', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'top'},
+  {title: 'GrowthSpeed', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'top'},
+  {title: 'DryAirTolerance', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'top'}
+]
+
+function hoverMap(item, index) {
+  let adjust = { left: 0, top: 0 };
+
+  let tooltip = <div id='toolTipSty' style={toolTipSty}><JTooltip data={item.text} adjust={adjust} place={item.place} /></div>;
+  return (
+    <div id='titleLineSty' key={item.title} className='FlexBox' style={{lineHeight: '1.5em'}}>
+      {tooltip}
+      <div id='titleDivSty' style={titleDivSty}>
+        <div id="titleSty" style={titleSty}>
+          {item.title}:
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default class AppCtrl extends React.Component {
+  render() {
+    let hoverList = hoverValues.map(hoverMap);
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
-        React 15 Range slider and Tooltip<br/><br/>
+        <br/><br/><br/>
         <div id='columnSty' style={columnSty}>
-          <FilterCtrl filterList={this.state.filterList} hoverValues={this.state.hoverValues} />
+          {hoverList}
         </div>
         <AppNotes/>
       </div>
     );
   }
-}
-
-export default class AppCtrl extends AppCtrlRender {
-  state = getState();
-
-  componentDidMount = () => {
-    this.unsubscribe = AppStore.listen(this.storeDidChange);
-    Actions.setFilterOptions();
-  };
-  componentWillUnmount = () => { this.unsubscribe(); };
-  storeDidChange = () => { this.setState(getState()); };
 }

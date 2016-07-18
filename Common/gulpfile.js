@@ -74,12 +74,6 @@ gulp.task('refluxpages', function() {
   gulp.src(source15.jdropmenu).pipe(gulp.dest(dest14.refluxpages));
 });
 
-gulp.task('tooltip', function() {
-  gulp.src(source15.jdropselect).pipe(gulp.dest(dest14.tooltip));
-  gulp.src(source15.jinput).pipe(gulp.dest(dest14.tooltip));
-  gulp.src(source15.jrangeslider).pipe(gulp.dest(dest14.tooltip));
-});
-
 gulp.task('treeview', function() {
   gulp.src(source15.jbutton).pipe(gulp.dest(dest14.treeview));
   gulp.src(source15.jdropmenu).pipe(gulp.dest(dest14.treeview));
@@ -160,7 +154,6 @@ let defaultList = [
   'progressbar',
   'rangeslider',
   'refluxpages',
-  'tooltip',
   'treeview'
 ];
 

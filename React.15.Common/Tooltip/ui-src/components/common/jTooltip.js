@@ -41,17 +41,22 @@ let contentSty = {
 
 let contentOuterSty = {height: '100%', width: '100%'}
 
-class ContentsRender extends React.Component {
+class Contents extends React.Component {
   render() {
-    let contentHtml = this.props.data ? this.props.data : '';
+    if (!this.props.data) return null;
+    let contentHtml = this.props.data;
+    let contentLength = contentHtml.length;
+    let topNeg = (Math.ceil(contentLength/40) + 1) * 18;
+    let rightNeg = contentLength * .25;
+
     let active = this.props.tooltipActive;
     let position = this.props.position || null;
     let contentInnerSty = { position: 'absolute' };
     if (active) {
       switch (this.props.place) {
         case 'bottom': contentInnerSty.left = position.right + 5; contentInnerSty.top = position.top + 20; break;
-        case 'right': contentInnerSty.left = position.right + 5; contentInnerSty.top = position.top - 10; break;
-        case 'top': contentInnerSty.left = position.right + 5; contentInnerSty.top = position.top - 30; break;
+        case 'right': contentInnerSty.left = position.right + 5; contentInnerSty.top = position.top - rightNeg; break;
+        case 'top': contentInnerSty.left = position.right + 5; contentInnerSty.top = position.top - topNeg; break;
       }
     }
     else contentInnerSty.display = 'none';
@@ -68,24 +73,7 @@ class ContentsRender extends React.Component {
   }
 }
 
-class Contents extends ContentsRender {}
-
-class JTooltipRender extends React.Component {
-   render() {
-    let help = '?';
-    return(
-      <div id='TooltipSty' style={TooltipSty} >
-        <div id='events' onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
-          <div id='helpTip' style={helpTip}>{help}</div>
-        </div>
-        <Contents tooltipActive={this.state.tooltipActive} place={this.props.place}
-          position={this.state.position} data={this.props.data} />
-      </div>
-    );
-  }
-}
-
-export default class JTooltip extends JTooltipRender {
+export default class JTooltip extends React.Component {
   state = {tooltipActive: false, position: {}};
   onMouseEnter = () => {
     let rect = ReactDom.findDOMNode(this).getBoundingClientRect();
@@ -97,4 +85,16 @@ export default class JTooltip extends JTooltipRender {
     this.setState({ tooltipActive: true, position: position });
   };
   onMouseLeave = () => { this.setState({ tooltipActive: false }); };
+  render() {
+    let help = '?';
+    return(
+      <div id='TooltipSty' style={TooltipSty} >
+        <div id='events' onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+          <div id='helpTip' style={helpTip}>{help}</div>
+        </div>
+        <Contents tooltipActive={this.state.tooltipActive} place={this.props.place}
+          position={this.state.position} data={this.props.data} />
+      </div>
+    );
+  }
 }
