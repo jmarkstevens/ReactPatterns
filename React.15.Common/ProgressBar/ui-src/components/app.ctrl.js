@@ -5,7 +5,7 @@ import JButton from './common/jButton';
 import JProgressBar from './common/jProgressBar';
 
 let AppCtrlSty = {
-  height: '100%',
+  borderBottom: '3px solid #636b46',
   padding: '0 10px 0 0'
 }
 
@@ -18,12 +18,13 @@ let customCountSty = {
 }
 
 let customIndexSty = {backgroundColor: '#874C08', height: '5px', width: '1%'}
+let assignSty = {color: '#4d2c3d'};
 
-let firstItemBtn = {buttonid: "first", icon: 'fa fa-fast-backward fa-lg', style: "BtnImg"};
-let previousItemBtn = {buttonid: "previous", icon: 'fa fa-backward fa-lg', style: "BtnImg"};
+let firstItemBtn = {buttonid: "first", icon: 'fa fa-fast-backward fa-lg', style: "BtnImg", assignStyle: assignSty};
+let previousItemBtn = {buttonid: "previous", icon: 'fa fa-backward fa-lg', style: "BtnImg", assignStyle: assignSty};
 
-let nextItemBtn = {buttonid: "next", icon: 'fa fa-forward fa-lg', style: "BtnImg"};
-let lastItemBtn = {buttonid: "last", icon: 'fa fa-fast-forward fa-lg', style: "BtnImg"};
+let nextItemBtn = {buttonid: "next", icon: 'fa fa-forward fa-lg', style: "BtnImg", assignStyle: assignSty};
+let lastItemBtn = {buttonid: "last", icon: 'fa fa-fast-forward fa-lg', style: "BtnImg", assignStyle: assignSty};
 
 let ButtonAreaSty = {
   fontSize: '.9em',
@@ -40,7 +41,7 @@ class AppCtrlRender extends React.Component {
     progressData.index = this.state.progressIndex;
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
-        React 15 ProgressBar<br/><br/>
+        <br/><br/>
         <br/>default<br/><br/>
         <JProgressBar data={progressData} />
         <br/>center<br/><br/>
@@ -54,9 +55,9 @@ class AppCtrlRender extends React.Component {
         <br/>none<br/><br/>
         <JProgressBar data={progressData} position='none' />
         <br/>indexColor<br/><br/>
-        <JProgressBar data={progressData} indexColor='#304030' />
+        <JProgressBar data={progressData} indexColor='#155765' />
         <br/>countColor<br/><br/>
-        <JProgressBar data={progressData} countColor='#000' />
+        <JProgressBar data={progressData} countColor='#155765' />
         <br/>customStyle<br/><br/>
         <JProgressBar data={progressData} countSty={customCountSty} indexSty={customIndexSty} />
         <br/><br/>

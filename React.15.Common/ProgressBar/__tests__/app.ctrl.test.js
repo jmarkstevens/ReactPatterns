@@ -23,7 +23,4 @@ describe('shallow(<AppCtrl />)', () => {
   it('checks shallow state progressIndex', () => {
     expect(wrapper.state('progressIndex')).to.equal(10);
   });
-  it('checks shallow text', () => {
-    expect(wrapper.text()).to.contain('React 15 ProgressBar');
-  });
 });
