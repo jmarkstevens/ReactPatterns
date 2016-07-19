@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Actions from '../flux/Actions';
 import AppNotes from './app.notes';
-import AppStore from '../flux/App.Store';
 
 import JRangeSlider from './common/jRangeSlider';
-import JList from './common/jList';
 
 let AppCtrlSty = {
   borderBottom: '3px solid #636b46',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  maxWidth: '900px',
   padding: '0 10px 0 0'
 }
 
@@ -58,10 +58,9 @@ let innerSty = {
 
 class AppCtrlRender extends React.Component {
   render() {
-    let messages = this.state.appData.messages;
+    let messages = this.state.message;
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
-        React 15 RangeSlider
         <br/><br/>
         <div className='FlexBox JustAround'>
           <div style={innerSty}>
@@ -81,9 +80,7 @@ class AppCtrlRender extends React.Component {
           </div>
         </div>
         <br/><br/>
-        <div className='FlexBox JustBetween'>
-          <JList data={messages}/>
-        </div>
+        {messages}
         <AppNotes/>
       </div>
     );
@@ -92,7 +89,7 @@ class AppCtrlRender extends React.Component {
 
 let getInitialAppState = function() {
   return {
-    appData: AppStore.getAppData(),
+    message: 'no message',
     sliderObj1: sliderObj1,
     sliderObj2: sliderObj2,
     sliderObj3: sliderObj3,
@@ -100,41 +97,36 @@ let getInitialAppState = function() {
   };
 };
 
-function getAppState() { return { appData: AppStore.getAppData() }; };
-
 export default class AppCtrl extends AppCtrlRender {
   state = getInitialAppState();
 
-  componentDidMount() {
-    let navPlatform = window.navigator.platform;
-    Actions.setWindowDefaults(navPlatform);
-    this.unsubscribe = AppStore.listen(this.appStoreDidChange);
-  }
-  componentWillUnmount() { this.unsubscribe(); }
-  appStoreDidChange = () => { this.setState(getAppState()); };
   handleSliderChange1 = (name, field, value) => {
     let newSliderObj = this.state.sliderObj1;
     if (field == 'low') newSliderObj.low = value;
     else if (field == 'high') newSliderObj.high = value;
-    this.setState({sliderObj1: newSliderObj});
+    let newMessage = 'new value = ' + value;
+    this.setState({sliderObj1: newSliderObj, message: newMessage});
   };
   handleSliderChange2 = (name, field, value) => {
     let newSliderObj = this.state.sliderObj2;
     if (field == 'low') newSliderObj.low = value;
     else if (field == 'high') newSliderObj.high = value;
-    this.setState({sliderObj2: newSliderObj});
+    let newMessage = 'new value = ' + value;
+    this.setState({sliderObj2: newSliderObj, message: newMessage});
   };
   handleSliderChange3 = (name, field, value) => {
     let newSliderObj = this.state.sliderObj3;
     if (field == 'low') newSliderObj.low = value;
     else if (field == 'high') newSliderObj.high = value;
-    this.setState({sliderObj3: newSliderObj});
+    let newMessage = 'new value = ' + value;
+    this.setState({sliderObj3: newSliderObj, message: newMessage});
   };
   handleSliderChange4 = (name, field, value) => {
     let newSliderObj = this.state.sliderObj4;
     if (field == 'low') newSliderObj.low = value;
     else if (field == 'high') newSliderObj.high = value;
-    this.setState({sliderObj4: newSliderObj});
+    let newMessage = 'new value = ' + value;
+    this.setState({sliderObj4: newSliderObj, message: newMessage});
   };
-  handleMessage = (message) => { Actions.newMessage(message); };
+  handleMessage = (message) => { this.setState({message: message}); };
 }

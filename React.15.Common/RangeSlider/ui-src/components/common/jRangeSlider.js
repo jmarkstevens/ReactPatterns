@@ -10,7 +10,8 @@ let listStyle = {
 let lineSty = {}
 let lineStyle = {
   color: '#FBF7C3',
-  height: '100%'
+  height: '100%',
+  zIndex: '3'
 }
 
 let imageStyle = {borderImageWidth: '0px', height: '100%', width: '100%'}
@@ -156,59 +157,69 @@ let sliderValueSty = {
   width: '100%'
 }
 
-let lowButtonSty = {
-  backgroundColor: '#4C1F00',
+let LowButtonSty = {
+  backgroundColor: '#4d2c3d',
   border: 'none',
   borderRadius: '50%',
-  color: 'gold',
+  color: '#e9e7da',
   height: '24px',
   lineHeight: 'normal',
   marginTop: '0px',
   padding: '0px',
-  width: '24px'
+  width: '24px',
+  zIndex: '2'
 }
 
-let highButtonSty = {
-  backgroundColor: '#4C1F00',
+let HighButtonSty = {
+  backgroundColor: '#4d2c3d',
   border: 'none',
   borderRadius: '50%',
-  color: 'gold',
+  color: '#e9e7da',
   height: '24px',
   lineHeight: 'normal',
   marginTop: '0px',
   padding: '0px',
-  width: '24px'
+  width: '24px',
+  zIndex: '2'
 }
 
 let defaultCountSty = {
-  backgroundColor: '#33045B',
-  borderRadius: '50%',
+  backgroundColor: '#4d2c3d',
   height: '12px',
-  margin: '-18px 0 0 0px',
+  margin: '-18px 0 0',
   width: '100%'
 }
 
-let defaultIndexSty = {backgroundColor: '#874C08', height: '6px', borderTop: '3px solid #33045B', width: '1%'}
+let defaultIndexSty = {
+  backgroundColor: '#ab9353',
+  position: 'relative',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  width: '100%'
+}
 
 export default class JRangeSliderValue extends React.Component {
   render() {
+    let highButtonSty = Object.assign({}, HighButtonSty);
+    let lowButtonSty = Object.assign({}, LowButtonSty);
+
     let sizeFactor = this.props.sliderObj.size ? this.props.sliderObj.size : 1;
     let size24 = Math.round(24 * sizeFactor);
     let size18 = Math.round(size24 * .75);
     let size12 = Math.round(size24 * .5);
     let size6 = Math.round(size12 * .5);
     let size3 = Math.round(size6 * .5);
-    lowButtonSty.borderRadius = size24 + 'px';
+    // lowButtonSty.borderRadius = size24 + 'px';
     lowButtonSty.height = size24 + 'px';
     lowButtonSty.width = size24 + 'px';
-    highButtonSty.borderRadius = size24 + 'px';
+    // highButtonSty.borderRadius = size24 + 'px';
     highButtonSty.height = size24 + 'px';
     highButtonSty.width = size24 + 'px';
     defaultCountSty.borderRadius = size6 + 'px';
     defaultCountSty.height = size12 + 'px';
     defaultCountSty.margin = '-' + size18 + 'px 0 0 0px';
-    defaultIndexSty.height = size6 + 'px';
-    defaultIndexSty.borderTop = size3 + 'px solid #33045B';
+    defaultIndexSty.height = size3 + 'px';
+    defaultIndexSty.borderRadius = size3 + 'px';
     let font1 = Math.round(1 * sizeFactor);
     let font7 = Math.round(.7 * sizeFactor);
     let count = this.props.sliderObj.max - this.props.sliderObj.min;
@@ -243,63 +254,23 @@ export default class JRangeSliderValue extends React.Component {
 
     let percentage = Math.floor(highLowDiff * factor);
 
-    let countSty = this.props.countSty ? this.props.countSty : defaultCountSty;
-    countSty.backgroundColor = this.props.countColor ? this.props.countColor : '#33045B';
+    let countSty = this.props.countSty ? this.props.countSty : Object.assign({}, defaultCountSty);
+    countSty.backgroundColor = this.props.countColor ? this.props.countColor : '#4d2c3d';
 
-    let indexSty = this.props.indexSty ? this.props.indexSty : defaultIndexSty;
+    let indexSty = this.props.indexSty ? this.props.indexSty : Object.assign({}, defaultIndexSty);
     indexSty.width = percentage + '%';
     indexSty.marginLeft = lowButtonSty.marginLeft;
-    indexSty.backgroundColor = this.props.indexColor ? this.props.indexColor : '#874C08';
+    indexSty.backgroundColor = this.props.indexColor ? this.props.indexColor : '#ab9353';
     indexSty.borderTopColor = countSty.backgroundColor;
 
     return (
       <div id='sliderValueSty' style={sliderValueSty}>
         <div id='buttonDiv' className='FlexBox' style={buttonDivSty}>
-          <button
-            id='lowButtonSty'
-            style={{
-              backgroundColor: lowButtonSty.backgroundColor,
-              border: lowButtonSty.border,
-              borderRadius: lowButtonSty.borderRadius,
-              color: lowButtonSty.color,
-              display: lowButtonSty.display,
-              fontSize: lowButtonSty.fontSize,
-              height: lowButtonSty.height,
-              lineHeight: lowButtonSty.lineHeight,
-              marginLeft: lowButtonSty.marginLeft,
-              marginTop: lowButtonSty.marginTop,
-              padding: lowButtonSty.padding,
-              width: lowButtonSty.width
-            }}
-          >{lowValue}</button>
-          <button
-            id='highButtonSty'
-            style={{
-              backgroundColor: highButtonSty.backgroundColor,
-              border: highButtonSty.border,
-              borderRadius: highButtonSty.borderRadius,
-              color: highButtonSty.color,
-              fontSize: highButtonSty.fontSize,
-              height: highButtonSty.height,
-              lineHeight: highButtonSty.lineHeight,
-              marginLeft: highButtonSty.marginLeft,
-              marginTop: highButtonSty.marginTop,
-              padding: highButtonSty.padding,
-              width: highButtonSty.width
-            }}
-          >{highValue}</button>
+          <button id='lowButtonSty' style={lowButtonSty}>{lowValue}</button>
+          <button id='highButtonSty' style={highButtonSty}>{highValue}</button>
         </div>
         <div id='countSty' style={countSty}>
-          <div
-            id='indexSty'
-            style={{
-              backgroundColor: indexSty.backgroundColor,
-              borderTop: indexSty.borderTop,
-              height: indexSty.height,
-              marginLeft: indexSty.marginLeft,
-              width: indexSty.width
-            }}
-          ></div>
+          <div id='indexSty' style={indexSty}></div>
         </div>
       </div>
     );

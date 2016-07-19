@@ -66,10 +66,6 @@ gulp.task('progressbar', function() {
   gulp.src(source15.jbutton).pipe(gulp.dest(dest14.progressbar));
 });
 
-gulp.task('rangeslider', function() {
-  gulp.src(source15.jlist).pipe(gulp.dest(dest14.rangeslider));
-});
-
 gulp.task('refluxpages', function() {
   gulp.src(source15.jdropmenu).pipe(gulp.dest(dest14.refluxpages));
 });
@@ -152,7 +148,6 @@ let defaultList = [
   'draganddrop',
   'gallery',
   'progressbar',
-  'rangeslider',
   'refluxpages',
   'treeview'
 ];
