@@ -26,7 +26,4 @@ describe('shallow(<AppCtrl />)', () => {
   it('checks shallow state hideGallery', () => {
     expect(wrapper.state('hideGallery')).to.equal(true);
   });
-  it('checks shallow text', () => {
-    expect(wrapper.text()).to.contain('React 15 Gallery');
-  });
 });

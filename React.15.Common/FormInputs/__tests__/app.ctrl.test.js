@@ -30,7 +30,4 @@ describe('shallow(<AppCtrl />)', () => {
   it('checks shallow state', () => {
     expect(wrapper.state('data')).to.deep.equal(newState);
   });
-  it('checks shallow text', () => {
-    expect(wrapper.text()).to.contain('React 15 Form input');
-  });
 });

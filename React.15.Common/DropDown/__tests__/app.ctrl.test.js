@@ -20,7 +20,4 @@ describe('shallow(<AppCtrl />)', () => {
   it('checks DropDownSelect count', () => {
     expect(wrapper.find('DropDownSelect').length).to.equal(1);
   });
-  it('checks shallow text', () => {
-    expect(wrapper.text()).to.contain('React 15 DropDown');
-  });
 });

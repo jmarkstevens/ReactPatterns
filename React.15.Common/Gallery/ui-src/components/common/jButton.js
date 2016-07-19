@@ -20,7 +20,7 @@ let standardBtnImg = {
   backgroundImg: 'none',
   backgroundSize: 'contain',
   border: '0px',
-  color: '#afac87',
+  color: '#4d2c3d',
   cursor: 'pointer',
   height: 'inherit',
   margin: '0 3px',

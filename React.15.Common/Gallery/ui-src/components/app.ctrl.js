@@ -7,7 +7,7 @@ import JButton from './common/jButton';
 import Gallery from './common/gallery/jGallery';
 
 let AppCtrlSty = {
-  height: '100%',
+  borderBottom: '3px solid #636b46',
   padding: '0 10px 0 0'
 }
 
@@ -23,7 +23,7 @@ class AppCtrlRender extends React.Component {
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
         <Gallery data={data} hide={hideGallery} />
-        React 15 Gallery<br/><br/>
+        <br/><br/>
         <JButton btn={basicBtn} parentClickHandler={this.galleryHideHandler} />
         <AppNotes/>
       </div>

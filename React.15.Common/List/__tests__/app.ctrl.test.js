@@ -17,7 +17,4 @@ describe('shallow(<AppCtrl />)', () => {
   it('checks JList count', () => {
     expect(wrapper.find('JList').length).to.equal(5);
   });
-  it('checks shallow text', () => {
-    expect(wrapper.text()).to.contain('React 15 List');
-  });
 });

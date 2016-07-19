@@ -51,7 +51,7 @@ export default class Shortcuts extends React.Component {
             &larr;<br/>
             T<br/>
             B<br/>
-            W<br/>
+            S<br/>
             X<br/>
           </div>
           <div style={descSty}>

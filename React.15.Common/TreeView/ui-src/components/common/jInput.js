@@ -2,7 +2,7 @@ import React from 'react';
 
 class JInputRender extends React.Component {
    render() {
-    let inputSty = this.props.input.style ? this.props.input.style : {color: 'red'};
+    let inputSty = this.props.input.style ? this.props.input.style : {color: '#4d2c3d'};
     let textValue = this.state.textValue;
     let colorValue = this.props.input.colorValue ? this.props.input.colorValue : '#1A3212';
     let checkedValue = (this.props.input.checkedValue != null) ? this.props.input.checkedValue : false;

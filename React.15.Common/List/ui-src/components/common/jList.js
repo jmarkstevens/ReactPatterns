@@ -5,7 +5,7 @@ let listStyle = {}
 
 let lineSty = {}
 let lineStyle = {
-  color: '#FBF7C3',
+  color: '#00303f',
   marginLeft: '7px'
 }
 

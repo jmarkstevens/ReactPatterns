@@ -58,19 +58,19 @@ class AppCtrlRender extends React.Component {
     let radioValue = inputData.radioGroup;
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
-        React 15 Form input<br/><br/>
+        <br/><br/>
         Text: <JInput input={textInput1} handleChange={this.handleValueChange} /><br/><br/>
-        Checkbox: <JInput input={checkInput1} handleChange={this.handleValueChange} /> Value: {selected}<br/><br/>
-        Color: <JInput input={colorInput} handleChange={this.handleValueChange} /> Value: {colorInput.colorValue}<br/><br/>
-        File: <JInput input={fileInput} handleChange={this.handleValueChange} /> Value: {fileInput.folderValue}<br/><br/>
-        Number: <JInput input={numberInput} handleChange={this.handleValueChange} /> Value: {numberInput.numberValue}<br/><br/>
-        Range: <JInput input={rangeInput} handleChange={this.handleValueChange} /> Value: {rangeInput.numberValue}<br/><br/>
+        Checkbox: <JInput input={checkInput1} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {selected}<br/><br/>
+        Color: <JInput input={colorInput} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {colorInput.colorValue}<br/><br/>
+        File: <JInput input={fileInput} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {fileInput.folderValue}<br/><br/>
+        Number: <JInput input={numberInput} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {numberInput.numberValue}<br/><br/>
+        Range: <JInput input={rangeInput} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {rangeInput.numberValue}<br/><br/>
 
         Radio Input: &nbsp;
         <JInput input={radioInput1} handleChange={this.handleValueChange} />&nbsp;Set &nbsp;
         <JInput input={radioInput2} handleChange={this.handleValueChange} />&nbsp;Set/Key &nbsp;
         <JInput input={radioInput3} handleChange={this.handleValueChange} />&nbsp;Key &nbsp;
-        Value: {radioValue}
+        &nbsp;&nbsp;Value: {radioValue}
         <AppNotes/>
       </div>
     );

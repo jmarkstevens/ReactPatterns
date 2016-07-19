@@ -17,21 +17,21 @@ let list = [
   'sixth line of list'
 ]
 
-let lineSty = {
-  color: 'brown',
-  marginLeft: '5px'
+let listSty = {
+  border: '1px solid #155765',
+  margin: '10px 10px'
 }
 
-let listSty = {
-  border: '1px solid orange',
-  margin: '10px 10px'
+let lineSty = {
+  color: '#373f27',
+  marginLeft: '5px'
 }
 
 export default class AppCtrl extends React.Component {
   render() {
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
-        React 15 List<br/><br/>
+        <br/><br/>
         <JList data={list} />
         <JList data={list} listStyle={listSty} />
         <JList data={list} lineStyle={lineSty} />
