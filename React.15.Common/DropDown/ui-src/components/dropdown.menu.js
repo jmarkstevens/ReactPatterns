@@ -29,12 +29,13 @@ export default class DropDownMenu extends React.Component {
     let optionLabel = this.state.option.label;
     let optionValue = this.state.option.value;
     return (
-      <div>
+      <div style={{minHeight: '300px'}}>
         <div id='DropDownMenuSty' style={DropDownMenuSty}>
           <JDropMenu options={options} onChange={this.onSelect} />
         </div>
         Label: {optionLabel}<br />
         Value: {optionValue}
+        <br /><br /><br />
       </div>
     )
   }

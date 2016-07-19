@@ -30,13 +30,14 @@ export default class DropDownSelect extends React.Component {
     let selectedLabel = this.state.option.label;
     let selectedValue = this.state.option.value;
     return (
-      <div>
+      <div style={{minHeight: '300px'}}>
         <div id='DropDownSelectSty' style={DropDownSelectSty}>
             <JDropSelect options={options} itemName={name} onChange={this.onDropSelect} defaultSelected={defaultOption} />
         </div>
         Item name: {selectedName}<br/>
         Selected label: {selectedLabel}<br/>
         Selected value: {selectedValue}
+        <br /><br />
       </div>
     )
   }
