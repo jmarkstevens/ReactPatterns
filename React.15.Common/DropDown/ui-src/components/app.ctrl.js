@@ -5,7 +5,7 @@ import DropDownMenu from './dropdown.menu';
 import DropDownSelect from './dropdown.select';
 
 let AppCtrlSty = {
-  height: '100%',
+  borderBottom: '3px solid #636b46',
   padding: '0 10px 0 0'
 }
 

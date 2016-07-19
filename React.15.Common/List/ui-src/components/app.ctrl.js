@@ -4,7 +4,7 @@ import AppNotes from './app.notes';
 import JList from './common/jList';
 
 let AppCtrlSty = {
-  height: '100%',
+  borderBottom: '3px solid #636b46',
   padding: '0 10px 0 0'
 }
 

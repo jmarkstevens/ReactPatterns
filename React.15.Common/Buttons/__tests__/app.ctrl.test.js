@@ -20,7 +20,4 @@ describe('shallow(<AppCtrl />)', () => {
   it('checks shallow state', () => {
     expect(wrapper.state('clicked')).to.equal('');
   });
-  it('checks shallow text', () => {
-    expect(wrapper.text()).to.contain('React 15 Buttons');
-  });
 });

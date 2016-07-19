@@ -4,12 +4,12 @@ import AppNotes from './app.notes';
 import JButton from './common/jButton';
 
 let AppCtrlSty = {
-  height: '100%',
+  borderBottom: '3px solid #636b46',
   padding: '0 10px 0 0'
 }
 
 let customSty = {
-  backgroundColor: '#000',
+  backgroundColor: '#4d2c3d',
   borderBottomColor: '#cea',
   borderLeftColor: '#93a363',
   borderRightColor: '#cea',
@@ -24,7 +24,7 @@ let customSty = {
   whiteSpace: 'nowrap'
 }
 
-let assignSty = {minWidth: '1px', color: 'red'}
+let assignSty = {minWidth: '1px', color: '#4d2c3d'}
 
 let basicBtn = { buttonid: "basic", text: "Basic" };
 let basicBtn18 = { buttonid: "basic18", text: "Basic18", style: "Btn18" };
@@ -50,7 +50,7 @@ export default class AppCtrl extends React.Component {
     let clickResponse = this.state.clicked;
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
-        React 15 Buttons<br/><br/>
+        <br/><br/>
         <div id='btnDivSty' style={btnDivSty}>
           <JButton id='basicBtn' btn={basicBtn} parentClickHandler={this.clickHandler} />
           <JButton btn={basicBtn18} parentClickHandler={this.clickHandler} />
@@ -76,8 +76,3 @@ export default class AppCtrl extends React.Component {
     );
   }
 }
-
-  // constructor() {
-  //   super();
-  //   this.state = {clicked: ''};
-  // }

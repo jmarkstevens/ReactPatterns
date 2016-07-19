@@ -8,6 +8,7 @@ import JRangeSlider from './common/jRangeSlider';
 import JList from './common/jList';
 
 let AppCtrlSty = {
+  borderBottom: '3px solid #636b46',
   padding: '0 10px 0 0'
 }
 

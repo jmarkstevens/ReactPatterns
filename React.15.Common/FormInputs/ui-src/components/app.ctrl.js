@@ -7,7 +7,7 @@ import JInput from './common/jInput';
 import BasicStore from './../flux/Basic.Store';
 
 let AppCtrlSty = {
-  height: '100%',
+  borderBottom: '3px solid #636b46',
   padding: '0 10px 0 0'
 }
 
