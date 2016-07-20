@@ -20,8 +20,6 @@ Since React.14 I am using babel stage 0 with arrow functions and let instead of 
 *  Redux Electron
 *  Redux Fetch ajax
 *  Redux WebSocket
-*  ReFlux Electron
-*  ReFlux Fetch ajax
 *  ReFlux Pages
 *  ReFlux SuperAgent ajax
 *  ThirdParty
