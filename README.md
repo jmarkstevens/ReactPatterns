@@ -24,7 +24,6 @@ Since React.14 I am using babel stage 0 with arrow functions and let instead of 
 *  ReFlux Fetch ajax
 *  ReFlux Pages
 *  ReFlux SuperAgent ajax
-*  ReFlux WebSocket
 *  ThirdParty
   *  Radium
 *  Window Events
