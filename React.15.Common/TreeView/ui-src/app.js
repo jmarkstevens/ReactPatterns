@@ -7,15 +7,17 @@ require("./img/sun.ico");
 require("./img/leaf.ico");
 require("./img/snow.ico");
 
+import 'babel-polyfill';
 import React  from 'react';
 import ReactDom  from 'react-dom';
+import { Provider } from 'react-redux';
 
 import AppCtrl from './components/app.ctrl.js';
-import Actions from './flux/Actions';
-import ApiStore from './flux/Api.Store';
+import AppStore from './store/App.Store';
 
 window.ReactDom = ReactDom;
 
-Actions.apiInit();
-
-ReactDom.render( <AppCtrl />, document.getElementById('react') );
+ReactDom.render(
+  <Provider store={AppStore}><AppCtrl /></Provider>,
+  document.getElementById('react')
+);

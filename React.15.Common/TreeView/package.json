@@ -26,6 +26,7 @@
   "devDependencies": {
     "babel-core": "latest",
     "babel-loader": "^6.1.0",
+    "babel-polyfill": "latest",
     "babel-preset-es2015": "latest",
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
@@ -42,10 +43,12 @@
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
     "react-dom": "^15.0.0",
-    "reflux": "latest",
+    "react-redux": "latest",
+    "redux": "latest",
+    "redux-thunk": "latest",
     "sinon": "latest",
-    "superagent": "latest",
     "traverse": "latest",
-    "webpack": "latest"
+    "webpack": "latest",
+    "whatwg-fetch": "latest"
   }
 }

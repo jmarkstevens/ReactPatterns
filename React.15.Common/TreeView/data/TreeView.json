@@ -173,7 +173,7 @@
       {
         "children": [],
         "nodeid": "27.28",
-        "selected": true,
+        "selected": false,
         "title": "Clippets",
         "type": "dev"
       },
@@ -382,7 +382,7 @@
         ],
         "closed": false,
         "nodeid": "53.59",
-        "selected": false,
+        "selected": true,
         "title": "Online projects",
         "type": "dev"
       }
@@ -449,11 +449,11 @@
   {
     "children": [
       {
-        "children": [],
-        "nodeid": "26.38",
-        "selected": false,
+        "nodeid": "26.[object Object]1",
         "title": "Geeta reinstall",
-        "type": "sys"
+        "type": "sys",
+        "selected": false,
+        "children": []
       },
       {
         "children": [],

@@ -5,9 +5,9 @@ let router = express.Router();
 
 let getSetData = require('./routes/getsetdata');
 
-router.get('/getAppStore', function(req, res) {
+router.get('/getAppData', function(req, res) {
   let getDataDone = function(data){ res.send(data); };
-  getSetData.getAppStore(getDataDone);
+  getSetData.getAppData(getDataDone);
 });
 
 router.get('/getImageList', function(req, res) {
@@ -20,7 +20,7 @@ router.get('/getTreeView', function(req, res) {
   getSetData.getTreeView(getDataDone);
 });
 
-router.post('/setAppStoreData', function(req, res) { getSetData.setAppStore(req.body); });
+router.post('/setAppData', function(req, res) { getSetData.setAppData(req.body); });
 router.post('/setTreeView', function(req, res) { getSetData.setTreeView(req.body); });
 
 module.exports = router;

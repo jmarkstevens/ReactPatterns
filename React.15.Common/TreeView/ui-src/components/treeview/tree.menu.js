@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 
-import Actions from '../../flux/Actions';
+import { treeActions } from '../../store/tree.Actions';
 import JDropMenu from './../common/jDropMenu';
 
 let TreeMenuSty = {
@@ -23,8 +25,8 @@ let options = [
   { value: 'remove', label: 'Remove' }
 ];
 
-export default class TreeMenu extends React.Component {
-  onSelect = (option) => { Actions.treeActions(option.value); };
+class TreeMenu extends React.Component {
+  onSelect = (option) => { this.props.treeActions(option.value); };
   render() {
     return (
       <div id='TreeMenuSty' style={TreeMenuSty}>
@@ -33,3 +35,9 @@ export default class TreeMenu extends React.Component {
     )
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ treeActions }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(TreeMenu);

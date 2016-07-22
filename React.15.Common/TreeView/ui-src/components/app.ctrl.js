@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 
 import AppNotes from './app.notes';
 import JumpCtrl from './jumplist/jump.ctrl';
 import TreeCtrl from './treeview/tree.ctrl';
 
-import ImageStore from '../flux/Image.Store';
-import TreeViewStore from '../flux/TreeView.Store';
+import { apiGetAppData, apiGetImageList, apiGetTreeView } from '../store/api.Actions';
 
 
 let AppCtrlSty = {
@@ -21,35 +22,10 @@ let TreeCtrlSty = {
   paddingLeft: '0px',
   width: '50%'
 }
-let getNewState = function() {
-  return {
-    imageList: ImageStore.getImageList(),
-    currentImageItem: 'empty',
-    treeData: TreeViewStore.getTreeData(),
-    currentTreeNode: TreeViewStore.getCurrentTreeNode(),
-    showTreeEdit: TreeViewStore.getShowTreeEdit(),
-    showTreeNew: TreeViewStore.getShowTreeNew()
-  }
-}
-
-let getImageState = function() {
-  return {
-    imageList: ImageStore.getImageList(),
-  };
-};
-
-let getTreeState = function() {
-  return {
-    treeData: TreeViewStore.getTreeData(),
-    currentTreeNode: TreeViewStore.getCurrentTreeNode(),
-    showTreeEdit: TreeViewStore.getShowTreeEdit(),
-    showTreeNew: TreeViewStore.getShowTreeNew()
-  };
-};
 
 class AppCtrlRender extends React.Component {
   render() {
-    let currentTreeNode = this.state.currentTreeNode.title;
+    let currentTreeNode = this.props.currentTreeNode.title;
     let currentImageItem = this.state.currentImageItem.title;
     return (
       <div id='AppCtrlSty' style={AppCtrlSty}>
@@ -58,16 +34,12 @@ class AppCtrlRender extends React.Component {
           <div id='TreeCtrlSty' style={TreeCtrlSty}>
             current node: {currentTreeNode}
             <br/>
-            <TreeCtrl
-              treeData={this.state.treeData}
-              currentTreeNode={this.state.currentTreeNode}
-              showTreeEdit={this.state.showTreeEdit}
-              showTreeNew={this.state.showTreeNew} />
+            <TreeCtrl />
           </div>
           <div id='JumpListSty' style={TreeCtrlSty}>
             current node: {currentImageItem}
             <br/>
-            <JumpCtrl imageList={this.state.imageList} clickHandler={this.jumpclick}  />
+            <JumpCtrl imageList={this.props.imageList} clickHandler={this.jumpclick}  />
           </div>
         </div>
         <AppNotes/>
@@ -76,14 +48,28 @@ class AppCtrlRender extends React.Component {
   }
 }
 
-export default class AppCtrl extends AppCtrlRender {
-  state = getNewState();
-  componentDidMount = () => {
-    this.unsubscribeIM = ImageStore.listen(this.imStoreDidChange);
-    this.unsubscribeTV = TreeViewStore.listen(this.tvStoreDidChange);
+class AppCtrl extends AppCtrlRender {
+  state = {currentImageItem: {title: 'not selected'}};
+  componentWillMount = () => {
+    this.props.apiGetAppData();
+    this.props.apiGetImageList();
+    this.props.apiGetTreeView();
   };
-  componentWillUnmount = () => { this.unsubscribeIM(); this.unsubscribeTV(); };
   jumpclick = (node) => { this.setState({currentImageItem: node});};
-  imStoreDidChange = () => { this.setState(getImageState()); };
-  tvStoreDidChange = () => { this.setState(getTreeState()); };
 }
+
+function mapStateToProps(store) {
+  return {
+    imageList: store.jumpList,
+    treeData: store.treeData,
+    currentTreeNode: store.currentTreeNode,
+    showTreeEdit: store.showTreeEdit,
+    showTreeNew: store.showTreeNew
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({apiGetAppData, apiGetImageList, apiGetTreeView}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppCtrl);

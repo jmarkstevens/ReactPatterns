@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 
 import TreeDetail from './tree.detail';
-import Actions from '../../flux/Actions';
+import { treeActions, saveTreeEdit } from '../../store/tree.Actions';
 import JButton from '../common/jButton';
 
 let saveEditBtn = { buttonid: "save", text: "Save" };
@@ -22,14 +24,14 @@ class TreeEditRender extends React.Component {
   }
 }
 
-export default class TreeEdit extends TreeEditRender {
+class TreeEdit extends TreeEditRender {
   state = { treeNode: { nodeid: '', children: [], title: '', type: '' }};
 
   clickHandler = (buttonid) => {
     let node = this.state.treeNode;
     switch (buttonid) {
-      case 'save': Actions.saveTreeEdit(node); break;
-      case 'cancel': Actions.treeActions('cancelEdit'); break;
+      case 'save': this.props.saveTreeEdit(node); break;
+      case 'cancel': this.props.treeActions('cancelEdit'); break;
     }
   };
   componentWillReceiveProps = (nextProps) => { this.setState({treeNode: nextProps.treeNode}); };
@@ -40,3 +42,9 @@ export default class TreeEdit extends TreeEditRender {
     this.setState({ treeNode: node });
   };
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({treeActions, saveTreeEdit}, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(TreeEdit);

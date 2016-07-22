@@ -1,11 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 
-import Actions from '../../flux/Actions';
+import { selectTreeNode, setTreeNodeClosed } from '../../store/tree.Actions';
 import TreeView from './../common/jTreeView';
 
-export default class TreeList extends React.Component {
-  iconHandler = (node) => { Actions.setTreeNodeClosed(node); };
-  clickHandler = (node) => { Actions.selectTreeNode(node); };
+class TreeList extends React.Component {
+  iconHandler = (node) => { this.props.setTreeNodeClosed(node); };
+  clickHandler = (node) => { this.props.selectTreeNode(node); };
   render() {
     let options = {
       icon: {sun: 'dev', leaf: 'home', snow: 'sys'},
@@ -14,7 +16,7 @@ export default class TreeList extends React.Component {
     return (
       <div>
         <TreeView
-          data={this.props.data}
+          data={this.props.treeData}
           options={options}
           iconClick={this.iconHandler}
           titleClick={this.clickHandler}
@@ -23,3 +25,9 @@ export default class TreeList extends React.Component {
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({selectTreeNode, setTreeNodeClosed}, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(TreeList);

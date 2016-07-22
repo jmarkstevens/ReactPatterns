@@ -6,7 +6,6 @@ let liSty = {listStyleType: 'none'};
 let ulSty = {WebkitPaddingStart: '16px'};
 let ulStyle = {WebkitPaddingStart: '16px'};
 let iconSty = {height: '21px', marginRight: '10px', width: '16px'};
-let titleSty = {color: '#afac87', height: '21px', marginTop: '2px'};
 
 let nottogglable = {
   color: '#FFF',
@@ -28,11 +27,15 @@ let getTreeNode = function(child, index) {
 
 class JTreeViewBNodeRender extends React.Component {
   render() {
+    let titleSty = {color: '#afac87', marginTop: '2px'};
     let childNodes;
     let pSty = nottogglable;
     if (this.props.node.children && this.props.node.children.length > 0) {
       childNodes = this.props.node.children.map(getTreeNode, this);
       pSty = togglable;
+      titleSty.color = this.props.node.selected ? '#b58900' : '#afac87';
+    } else {
+      titleSty.color = this.props.node.selected ? '#7BB53B' : '#AF90A5';
     }
 
     let branch = null;

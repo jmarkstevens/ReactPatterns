@@ -1,12 +1,17 @@
 import React from 'react';
 
-import JumpList from './jump.list';
+import JTreeViewB from './../common/jTreeViewB';
+
+const options = {
+  icon: {sun: 1, leaf: 2, snow: 3},
+  typeName: ['node', 'nodeLevel']
+};
 
 export default class JumpCtrl extends React.Component {
    render() {
     return (
       <div id='JumpCtrl'>
-        <JumpList data={this.props.imageList} clickHandler={this.props.clickHandler} />
+        <JTreeViewB data={this.props.imageList} options={options} titleClick={this.props.clickHandler} />
       </div>
     );
   }

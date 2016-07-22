@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 
 import TreeDetail from './tree.detail';
-import Actions from '../../flux/Actions';
+import { saveTreeNew, treeActions } from '../../store/tree.Actions';
 import JButton from '../common/jButton';
 
 let newBeforeBtn = { buttonid: "before", text: "New Before", assignStyle: {width: '92px'} };
@@ -32,14 +34,14 @@ class TreeNewRender extends React.Component {
   }
 }
 
-export default class TreeNew extends TreeNewRender {
+class TreeNew extends TreeNewRender {
   state = { treeNode: { nodeid: '', title: '', type: 'dev', selected: false, children: [] }};
   clickHandler = (buttonid) => {
     switch (buttonid) {
       case 'before':
       case 'after':
-      case 'child': Actions.saveTreeNew(this.state.treeNode, buttonid); break;
-      case 'cancel': Actions.treeActions('cancelNew'); break;
+      case 'child': this.props.saveTreeNew(this.state.treeNode, buttonid); break;
+      case 'cancel': this.props.treeActions('cancelNew'); break;
     }
   };
   handleChange = (field, value) => {
@@ -49,3 +51,9 @@ export default class TreeNew extends TreeNewRender {
     this.setState({ treeNode: node });
   };
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({saveTreeNew, treeActions}, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(TreeNew);

@@ -17,7 +17,7 @@ module.exports = {
 
   entry: {
     app: SRC_PATH,
-    lib: ["react", "react-dom", "lodash", "reflux", "traverse", "superagent"]
+    lib: ["react", "react-dom", "lodash", "redux", "traverse", "whatwg-fetch", "react-redux"]
   },
 
   output: {

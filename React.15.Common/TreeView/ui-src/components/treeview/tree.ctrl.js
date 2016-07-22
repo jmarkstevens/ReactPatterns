@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import TreeList from './tree.list';
 import TreeMenu from './tree.menu';
@@ -7,17 +8,28 @@ import TreeNew from './tree.new';
 
 let TreeCtrlRenderSty = { height: 'calc(100% - 19px)'};
 
-export default class TreeCtrl extends React.Component {
-   render() {
-    let hideTreeEdit = !this.props.showTreeEdit;
-    let hideTreeNew = !this.props.showTreeNew;
-    return (
-      <div id='TreeCtrlRenderSty' style={TreeCtrlRenderSty}>
-        <TreeMenu />
-        <TreeList data={this.props.treeData} />
-        <TreeEdit treeNode={this.props.currentTreeNode} hide={hideTreeEdit} />
-        <TreeNew hide={hideTreeNew} />
-      </div>
-    );
+class TreeCtrl extends React.Component {
+  render() {
+  let hideTreeEdit = !this.props.showTreeEdit;
+  let hideTreeNew = !this.props.showTreeNew;
+  return (
+    <div id='TreeCtrlRenderSty' style={TreeCtrlRenderSty}>
+      <TreeMenu />
+      <TreeList treeData={this.props.treeData} />
+      <TreeEdit treeNode={this.props.currentTreeNode} hide={hideTreeEdit} />
+      <TreeNew hide={hideTreeNew} />
+    </div>
+  );
   }
 }
+
+function mapStateToProps(store) {
+  return {
+    treeData: store.treeData,
+    currentTreeNode: store.currentTreeNode,
+    showTreeEdit: store.showTreeEdit,
+    showTreeNew: store.showTreeNew
+  };
+}
+
+export default connect(mapStateToProps)(TreeCtrl);

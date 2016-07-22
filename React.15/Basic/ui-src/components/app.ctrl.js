@@ -9,7 +9,7 @@ let AppCtrlSty = {
 
 export default class AppCtrl extends React.Component {
   state = {world: ''};
-  componentDidMount = () => { this.sayHello(); };
+  componentWillMount = () => { this.sayHello(); };
   sayHello = () => { this.setState({world: 'Hello World'}); };
   render() {
     return (
