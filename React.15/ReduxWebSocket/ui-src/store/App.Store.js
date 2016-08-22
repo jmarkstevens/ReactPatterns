@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux'
+import {createStore, applyMiddleware} from 'redux';
 import startWs, {wsMiddleware} from './ws.api';
 
 function handleData(state = {data1: {}}, action) {

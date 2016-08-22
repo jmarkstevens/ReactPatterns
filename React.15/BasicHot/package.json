@@ -33,6 +33,7 @@
     "extract-text-webpack-plugin": "latest",
     "file-loader": "latest",
     "webpack": "latest",
-    "webpack-dev-server": "latest"
+    "webpack-dev-server": "latest",
+    "webpack-hot-middleware": "latest"
   }
 }

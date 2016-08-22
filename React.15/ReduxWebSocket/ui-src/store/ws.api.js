@@ -2,8 +2,8 @@ import * as Actions from './Actions';
 
 var socket = null;
 
-export function wsMiddleware(store) {
-  return next => action => {
+export function wsMiddleware() {
+  return (next) => (action) => {
     if (socket && action.type === 'ApiGetData') {
       socket.send('client:GetData', {});
     } else if (socket && action.type === 'ApiSetData') {
@@ -17,7 +17,7 @@ export function wsMiddleware(store) {
 export default function (store) {
   socket = new Primus();
 
-  socket.on('server:GotData', data => {
+  socket.on('server:GotData', (data) => {
     store.dispatch(Actions.apiGotData(data));
   });
 

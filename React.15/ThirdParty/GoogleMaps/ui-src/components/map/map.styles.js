@@ -1,7 +1,6 @@
 const K_WIDTH = 80;
-const K_HEIGHT = 40;
 
-const mapStyle = {
+export const mapStyle = {
   border: '2px solid #f44336',
   backgroundColor: 'transparent',
   textAlign: 'center',
@@ -11,5 +10,3 @@ const mapStyle = {
   padding: 4,
 	width: K_WIDTH
 };
-
-export {mapStyle};

@@ -6,7 +6,7 @@ let config = require('./config.json');
 let rootPath = config.macProjectRoot;
 if (process.platform == 'win32') { rootPath = config.winProjectRoot; }
 
-let patternsPath13 = rootPath + 'React.13/';
+// let patternsPath13 = rootPath + 'React.13/';
 let patternsPath15 = rootPath + 'React.15/';
 let patternsPath15c = rootPath + 'React.15.Common/';
 let commonPath = '/ui-src/components/common/';
@@ -16,7 +16,7 @@ let destPath13 = rootPath + 'React.13/';
 let destPath14 = rootPath + 'React.14/';
 let destPath15 = rootPath + 'React.15/';
 let destPath15c = rootPath + 'React.15.Common/';
-let destPathDist = '/ui-dist';
+// let destPathDist = '/ui-dist';
 let destPathCss = '/ui-src/css';
 let destPathImg = '/ui-src/img';
 
@@ -26,16 +26,16 @@ let source = {
 };
 
 let source15 = {
-  jbutton: patternsPath15c + 'Buttons' + commonPath + 'jButton.js',
-  jdropmenu: patternsPath15c + 'DropDown' + commonPath + 'jDropMenu.js',
-  jdropselect: patternsPath15c + 'DropDown' + commonPath + 'jDropSelect.js',
-  jinput: patternsPath15c + 'FormInputs' + commonPath + 'jInput.js',
-  jlist: patternsPath15c + 'List' + commonPath + 'jList.js',
-  jprogressbar: patternsPath15c + 'ProgressBar' + commonPath + 'jProgressBar.js',
-  jrangeslider: patternsPath15c + 'RangeSlider' + commonPath + 'jRangeSlider.js',
-  jtooltip: patternsPath15c + 'Tooltip' + commonPath + 'jTooltip.js',
-  jtreeview: patternsPath15c + 'TreeView' + commonPath + 'jTreeView.js',
-  jtreeviewb: patternsPath15c + 'TreeView' + commonPath + 'jTreeViewB.js',
+  jbutton: patternsPath15c + 'Buttons' + commonPath + 'jButton.jsx',
+  jdropmenu: patternsPath15c + 'DropDown' + commonPath + 'jDropMenu.jsx',
+  jdropselect: patternsPath15c + 'DropDown' + commonPath + 'jDropSelect.jsx',
+  jinput: patternsPath15c + 'FormInputs' + commonPath + 'jInput.jsx',
+  jlist: patternsPath15c + 'List' + commonPath + 'jList.jsx',
+  jprogressbar: patternsPath15c + 'ProgressBar' + commonPath + 'jProgressBar.jsx',
+  jrangeslider: patternsPath15c + 'RangeSlider' + commonPath + 'jRangeSlider.jsx',
+  jtooltip: patternsPath15c + 'Tooltip' + commonPath + 'jTooltip.jsx',
+  jtreeview: patternsPath15c + 'TreeView' + commonPath + 'jTreeView.jsx',
+  jtreeviewb: patternsPath15c + 'TreeView' + commonPath + 'jTreeViewB.jsx',
   indexcss: patternsPath15 + 'Basic/ui-src/css/index.css'
 };
 
@@ -94,15 +94,15 @@ gulp.task('favicon', function() {
   gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'WindowEvents' + destPathImg));
   gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'WindowObject' + destPathImg));
 
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14c + 'Buttons' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14c + 'DropDown' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14c + 'FormInputs' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14c + 'List' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14c + 'ProgressBar' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14c + 'RangeSlider' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14c + 'Tooltip' + destPathImg));
-  gulp.src(source.transshim).pipe(gulp.dest(destPath14c + 'Tooltip' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14c + 'TreeView' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'Buttons' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'DropDown' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'FormInputs' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'List' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'ProgressBar' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'RangeSlider' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'Tooltip' + destPathImg));
+  gulp.src(source.transshim).pipe(gulp.dest(destPath15c + 'Tooltip' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'TreeView' + destPathImg));
 });
 
 gulp.task('indexcss', function() {

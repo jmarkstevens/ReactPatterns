@@ -382,7 +382,7 @@
         ],
         "closed": false,
         "nodeid": "53.59",
-        "selected": true,
+        "selected": false,
         "title": "Online projects",
         "type": "dev"
       }
@@ -428,7 +428,7 @@
       {
         "children": [],
         "nodeid": "10.11",
-        "selected": false,
+        "selected": true,
         "title": "Pending returns",
         "type": "home"
       },

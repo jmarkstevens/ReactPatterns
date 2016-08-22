@@ -1,12 +1,12 @@
 'use strict';
 
-var express = require('express');
-var favicon = require('serve-favicon');
-var path = require('path');
-var port = Number(3500);
+const express = require('express');
+const favicon = require('serve-favicon');
+const path = require('path');
+const port = Number(3500);
 
-var app = express();
-var server = app.listen(port);
+const app = express();
+app.listen(port);
 
 app.use('/', express.static('ui-dist'));
 app.use(favicon(path.join(__dirname, '..', 'ui-dist', 'img', 'favicon.ico')));

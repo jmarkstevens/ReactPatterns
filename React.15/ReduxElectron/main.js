@@ -5,8 +5,10 @@ const {app} = electron;
 const {BrowserWindow} = electron;
 var fs = require('fs');
 
+const useDevTools = 0;
+
 const {ipcMain} = electron;
-require('./js/mainipc.js')(ipcMain);
+require('./js/mainipc')(ipcMain);
 
 var mainWindow = null;
 
@@ -17,7 +19,7 @@ app.on('ready', function() {
 
   var windowStatePath = './windowstate.json';
   var windowState = {};
-  if (false) mainWindow.openDevTools();
+  if (useDevTools) mainWindow.openDevTools();
   var jsonReadCallBack = function(err, data){
     if (err) console.log('error opening windowstate');
     else {

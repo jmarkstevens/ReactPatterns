@@ -1,19 +1,19 @@
 'use strict';
 
-let bodyParser = require('body-parser');
-let express = require('express');
-let favicon = require('serve-favicon');
+const bodyParser = require('body-parser');
+const express = require('express');
+const favicon = require('serve-favicon');
 
-let path = require('path');
-let port = Number(3500);
+const path = require('path');
+const port = Number(3500);
 
-let routes = require('./routes');
+const routes = require('./routes');
 
-let app = express();
-let server = app.listen(port);
+const app = express();
+app.listen(port);
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', express.static('ui-dist'));
 app.use('/routes', routes);

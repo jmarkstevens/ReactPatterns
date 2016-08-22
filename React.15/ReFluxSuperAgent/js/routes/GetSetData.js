@@ -1,28 +1,28 @@
 'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
-var rootDataPath = './data';
+const rootDataPath = './data';
 
-var getData = function(doneCallBack) {
-	var filePath = rootDataPath + '/basic.json';
-	var jsonReadCallBack = function(err, data){
-		if (err) doneCallBack('Data readFile error ' + filePath);
-		else {
-			var jsonData = JSON.parse(data.toString());
-			doneCallBack(jsonData);
-		}
-	};
-	fs.readFile(filePath, jsonReadCallBack);
+const getData = function(doneCallBack) {
+  const filePath = rootDataPath + '/basic.json';
+  const jsonReadCallBack = function(err, data){
+    if (err) doneCallBack('Data readFile error ' + filePath);
+    else {
+      var jsonData = JSON.parse(data.toString());
+      doneCallBack(jsonData);
+    }
+  };
+  fs.readFile(filePath, jsonReadCallBack);
 };
 
-var setData = function(data, doneCallBack) {
-	var filePath = rootDataPath + '/basic.json';
-	var writeFileCallBack = function (err) {
-		if (err) console.log('error saving Data.json file ');
-		doneCallBack('ok');
-	};
-	fs.writeFile(filePath, JSON.stringify(data, null, 2), writeFileCallBack);
+const setData = function(data, doneCallBack) {
+  const filePath = rootDataPath + '/basic.json';
+  const writeFileCallBack = function (err) {
+    if (err) console.log('error saving Data.json file ');
+    doneCallBack('ok');
+  };
+  fs.writeFile(filePath, JSON.stringify(data, null, 2), writeFileCallBack);
 };
 
 module.exports.getData = getData;

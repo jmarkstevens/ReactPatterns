@@ -1,9 +1,9 @@
-var path = require('path');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var webpack = require('webpack');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
 const ROOT_PATH = path.resolve(__dirname);
-const SRC_PATH = path.resolve(ROOT_PATH, 'ui-src', 'app.js');
+const SRC_PATH = path.resolve(ROOT_PATH, 'ui-src', 'app.jsx');
 const DIST_PATH = path.resolve(ROOT_PATH, 'ui-dist');
 
 module.exports = {
@@ -15,18 +15,18 @@ module.exports = {
 
   output: {
     path: DIST_PATH,
-    filename: "app.js"
+    filename: 'app.js'
   },
 
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules)/,
         loader: 'babel',
-        query: {presets:[ 'es2015', 'react', 'stage-0' ]}
+        query: {presets:['es2015', 'react', 'stage-0']}
       },
-      {test: /\.css$/, loader: ExtractTextPlugin.extract("css-loader")},
+      {test: /\.css$/, loader: ExtractTextPlugin.extract('css-loader')},
       {test: /\.(png|jpg|ico)$/, loader: 'file-loader?name=img/[name].[ext]'},
       {test: /\.(html)$/, loader: 'file-loader?name=[name].[ext]'}
     ]
@@ -37,5 +37,5 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('app.css', {allChunks: true})
   ],
-  resolve: {extensions: [ '', '.js' ]}
+  resolve: {extensions: ['', '.js', '.jsx']}
 };

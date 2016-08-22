@@ -13,7 +13,7 @@
     "url": "git+https://github.com/calitek/ReactPatterns.git"
   },
   "scripts": {
-    "start": "nodemon --watch js js/server.js",
+    "start": "electron .",
     "ww": "webpack --progress --profile --colors --no-minimize --watch",
     "nw": "webpack --progress --profile --colors --no-minimize"
   },

@@ -16,6 +16,6 @@ let BasicStoreObject = {
   getData1() { return this.data1; },
   getData2() { return AddonStore.data2; },
   getData3() { return this.data3; }
-}
+};
 const BasicStore = Reflux.createStore(BasicStoreObject);
 export default BasicStore;

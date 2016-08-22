@@ -1,22 +1,22 @@
 'use strict';
 
-var Emitter = require('primus-emitter');
-var express = require('express');
-var favicon = require('serve-favicon');
+const Emitter = require('primus-emitter');
+const express = require('express');
+const favicon = require('serve-favicon');
 
-var path = require('path');
-var port = Number(3500);
+const path = require('path');
+const port = Number(3500);
 
-var Primus = require('primus');
-var socketCallBack = function(socket){ require('./mainsocket.js')(socket); };
+const Primus = require('primus');
+const socketCallBack = function(socket){ require('./mainsocket')(socket); };
 
-var app = express();
-var server = app.listen(port);
+const app = express();
+const server = app.listen(port);
 
-var sio = new Primus(server, { transformer: 'websockets', parser: 'JSON' });
+const sio = new Primus(server, {transformer: 'websockets', parser: 'JSON'});
 sio.use('emitter', Emitter);
 
-var newPrimusOptions = false;
+const newPrimusOptions = false;
 if (newPrimusOptions) {
 	sio.library();
 	sio.save('./ui-src/lib/primus/primus.js');

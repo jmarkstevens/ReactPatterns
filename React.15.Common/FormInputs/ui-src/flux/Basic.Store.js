@@ -5,13 +5,13 @@ import Actions from './Actions';
 let BasicStoreObject = {
   listenables: Actions,
   data: {
-    "text": "",
-    "checkbox": false,
-    "radioGroup": "",
-    "color": "",
-    "number": "",
-    "range": "",
-    "folder": ""
+    'text': '',
+    'checkbox': false,
+    'radioGroup': '',
+    'color': '',
+    'number': '',
+    'range': '',
+    'folder': ''
   },
   onGotData(data) { this.data = data; BasicStore.trigger(); },
   onEditRecord(field, value) {
@@ -32,6 +32,6 @@ let BasicStoreObject = {
 
   getData() { return this.data; },
   setData() { Actions.apiSetData(this.data); }
-}
+};
 const BasicStore = Reflux.createStore(BasicStoreObject);
 export default BasicStore;

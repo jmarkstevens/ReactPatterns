@@ -1,5 +1,5 @@
-import { createStore, applyMiddleware } from 'redux'
-import thunkMiddleware from 'redux-thunk'
+import {createStore, applyMiddleware} from 'redux';
+import thunkMiddleware from 'redux-thunk';
 
 function handleData(state = {data1: {}}, action) {
   switch (action.type) {

@@ -1,15 +1,15 @@
 'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
-var rootDataPath = './data';
+const rootDataPath = './data';
 
 module.exports.getAppData = function(doneCallBack) {
-  var filePath = rootDataPath + '/AppData.json';
-  var jsonReadCallBack = function(err, data){
+  const filePath = rootDataPath + '/AppData.json';
+  const jsonReadCallBack = function(err, data){
     if (err) console.log('AppData readFile error ' + filePath);
     else {
-      var jsonData = JSON.parse(data.toString());
+      const jsonData = JSON.parse(data.toString());
       doneCallBack(jsonData);
     }
   };
@@ -17,19 +17,19 @@ module.exports.getAppData = function(doneCallBack) {
 };
 
 module.exports.setAppData = function(data) {
-  var filePath = rootDataPath + '/AppData.json';
-  var writeFileCallBack = function (err) {
+  const filePath = rootDataPath + '/AppData.json';
+  const writeFileCallBack = function (err) {
     if (err) console.log('error saving AppData.json file ');
   };
   fs.writeFile(filePath, JSON.stringify(data, null, 2), writeFileCallBack);
 };
 
 module.exports.getImageList = function(doneCallBack) {
-  var filePath = rootDataPath + '/Imagelist.json';
-  var jsonReadCallBack = function(err, data){
+  const filePath = rootDataPath + '/Imagelist.json';
+  const jsonReadCallBack = function(err, data){
     if (err) console.log('ImageList readFile error ' + filePath);
     else {
-      var jsonData = JSON.parse(data.toString());
+      const jsonData = JSON.parse(data.toString());
       doneCallBack(jsonData);
     }
   };
@@ -37,11 +37,11 @@ module.exports.getImageList = function(doneCallBack) {
 };
 
 module.exports.getTreeView = function(doneCallBack) {
-  var filePath = rootDataPath + '/TreeView.json';
-  var jsonReadCallBack = function(err, data){
+  const filePath = rootDataPath + '/TreeView.json';
+  const jsonReadCallBack = function(err, data){
     if (err) console.log('TreeView readFile error ' + filePath);
     else {
-      var jsonData = JSON.parse(data.toString());
+      const jsonData = JSON.parse(data.toString());
       doneCallBack(jsonData);
     }
   };
@@ -49,8 +49,8 @@ module.exports.getTreeView = function(doneCallBack) {
 };
 
 module.exports.setTreeView = function(data) {
-  var filePath = rootDataPath + '/TreeView.json';
-  var writeFileCallBack = function (err) {
+  const filePath = rootDataPath + '/TreeView.json';
+  const writeFileCallBack = function (err) {
     if (err) console.log('error saving TreeView.json file ');
   };
   fs.writeFile(filePath, JSON.stringify(data.data, null, 2), writeFileCallBack);

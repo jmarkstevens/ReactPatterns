@@ -15,7 +15,7 @@ module.exports = {
   imageDivSty: {
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
-      backgroundSize: backgroundSize,
+      backgroundSize,
       height: '100%',
       MozBackgroundSize: backgroundSize,
       OBackgroundSize: backgroundSize,

@@ -1,30 +1,28 @@
 'use strict';
 
-var fs = require('fs');
-var _ld = require('lodash');
+const fs = require('fs');
+const _ld = require('lodash');
 
-var getPicList = function(doneCallBack) {
-  var picFolder = './ui-dist/data/_sm';
+module.exports.getPicList = function(doneCallBack) {
+  const picFolder = './ui-dist/data/_sm';
 
-  var start = function() { fs.readdir(picFolder, getFileListCallBack); };
+  const start = function() { fs.readdir(picFolder, getFileListCallBack); };
 
-  var getFileListCallBack = function(err, fileList) {
-    let lgPicFolder = '../data/_lg/';
-    let smPicFolder = '../data/_sm/';
+  const getFileListCallBack = function(err, fileList) {
+    const lgPicFolder = '../data/_lg/';
+    const smPicFolder = '../data/_sm/';
     if (err) console.log('getFileListCallBack error');
     else {
       var fileListReturned = _ld.filter(fileList, function(data) {
-        var lowerName = data.toLowerCase();
+        const lowerName = data.toLowerCase();
         return (lowerName.endsWith('jpg'));
       });
       let returnList = [];
-      let copyRight = 'Image © 2006 Chris Stevens';
-      let addObject = {copyright: copyRight, lgFolder: lgPicFolder, smFolder: smPicFolder};
+      const copyRight = 'Image © 2006 Chris Stevens';
+      const addObject = {copyright: copyRight, lgFolder: lgPicFolder, smFolder: smPicFolder};
       fileListReturned.forEach(function(value){ returnList.push(Object.assign({file: value}, addObject)); });
       doneCallBack(returnList);
     }
   };
   start();
 };
-
-module.exports.getPicList = getPicList;

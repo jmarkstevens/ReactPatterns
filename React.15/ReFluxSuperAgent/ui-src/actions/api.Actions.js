@@ -4,6 +4,6 @@ let apiActions = [
   'apiInit',
   'apiInitDone',
   'apiSetData'
-]
+];
 
 module.exports = Reflux.createActions(apiActions);

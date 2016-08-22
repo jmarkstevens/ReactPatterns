@@ -2,28 +2,28 @@ import 'whatwg-fetch';
 
 let jsonHeader = {'Accept': 'application/json', 'Content-Type': 'application/json'};
 
-export function apiGetAppData(data) {
-  return dispatch => {
+export function apiGetAppData() {
+  return (dispatch) => {
     fetch('/routes/getAppData')
-      .then(response => response.json())
-      .then(json => dispatch({type: 'GotAppData', payload: json}));
-  }
+      .then((response) => response.json())
+      .then((json) => dispatch({type: 'GotAppData', payload: json}));
+  };
 }
 
-export function apiGetImageList(data) {
-  return dispatch => {
+export function apiGetImageList() {
+  return (dispatch) => {
     fetch('/routes/getImageList')
-      .then(response => response.json())
-      .then(json => dispatch({type: 'GotImageList', payload: json}));
-  }
+      .then((response) => response.json())
+      .then((json) => dispatch({type: 'GotImageList', payload: json}));
+  };
 }
 
-export function apiGetTreeView(data) {
-  return dispatch => {
+export function apiGetTreeView() {
+  return (dispatch) => {
     fetch('/routes/getTreeView')
-      .then(response => response.json())
-      .then(json => dispatch({type: 'GotTreeView', payload: json}));
-  }
+      .then((response) => response.json())
+      .then((json) => dispatch({type: 'GotTreeView', payload: json}));
+  };
 }
 
 export function apiSetAppData(data) {
@@ -31,5 +31,5 @@ export function apiSetAppData(data) {
 }
 
 export function apiSetTreeView(data) {
-  fetch('/routes/setTreeView', {method: 'POST', headers: jsonHeader, body: JSON.stringify(data)})
+  fetch('/routes/setTreeView', {method: 'POST', headers: jsonHeader, body: JSON.stringify(data)});
 }

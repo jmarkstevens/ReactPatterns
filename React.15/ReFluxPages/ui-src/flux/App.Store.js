@@ -19,7 +19,7 @@ let AppStoreObject = {
   },
 
   getAppState() { return this.appState; }
-}
+};
 
 const AppStore = Reflux.createStore(AppStoreObject);
 export default AppStore;

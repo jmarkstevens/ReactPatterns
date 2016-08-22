@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux'
+import {createStore, applyMiddleware} from 'redux';
 import startWs, {wsMiddleware} from './ipc.api';
 
 function handleData(state = {data1: {}}, action) {

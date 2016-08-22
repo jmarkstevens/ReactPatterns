@@ -19,7 +19,7 @@
   "dependencies": {
     "express": "latest",
     "nodemon": "latest",
-    "primus": "latest",
+    "primus": "^5.2.2",
     "primus-emitter": "latest",
     "serve-favicon": "latest",
     "ws": "latest"

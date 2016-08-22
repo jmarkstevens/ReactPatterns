@@ -1,7 +1,7 @@
 import * as Actions from './Actions';
 
-export function wsMiddleware(store) {
-  return next => action => {
+export function wsMiddleware() {
+  return (next) => (action) => {
     if (ipc && action.type === 'ApiGetData') {
       ipc.send('client:GetData', {});
     } else if (ipc && action.type === 'ApiSetData') {

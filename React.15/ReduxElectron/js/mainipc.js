@@ -1,24 +1,24 @@
 'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
-var rootDataPath = './data';
+const rootDataPath = './data';
 
-var getData = function(event, doneCallBack) {
-  var filePath = rootDataPath + '/basic.json';
-  var jsonReadCallBack = function(err, data){
+const getData = function(event, doneCallBack) {
+  const filePath = rootDataPath + '/basic.json';
+  const jsonReadCallBack = function(err, data){
     if (err) doneCallBack('Data readFile error ' + filePath);
     else {
-      var jsonData = JSON.parse(data.toString());
+      const jsonData = JSON.parse(data.toString());
       doneCallBack(event, jsonData);
     }
   };
   fs.readFile(filePath, jsonReadCallBack);
 };
 
-var setData = function(data, event, doneCallBack) {
-  var filePath = rootDataPath + '/basic.json';
-  var writeFileCallBack = function (err) {
+const setData = function(data, event, doneCallBack) {
+  const filePath = rootDataPath + '/basic.json';
+  const writeFileCallBack = function (err) {
     if (err) console.log('error saving Data.json file ');
     else doneCallBack(event);
   };
@@ -28,11 +28,11 @@ var setData = function(data, event, doneCallBack) {
 module.exports = function(socket) {
   console.log('mainipc called.');
 
-  var getDataDone = function(event, data){ event.sender.send('server:GotData', data); };
-  var onGetData = function(event){ getData(event, getDataDone); };
+  const getDataDone = function(event, data){ event.sender.send('server:GotData', data); };
+  const onGetData = function(event){ getData(event, getDataDone); };
   socket.on('client:GetData', onGetData);
 
-  var setDataDone = function(event){ event.sender.send('server:SetDataDone'); };
-  var onSetData = function(event, data){ setData(data, event, setDataDone); };
+  const setDataDone = function(event){ event.sender.send('server:SetDataDone'); };
+  const onSetData = function(event, data){ setData(data, event, setDataDone); };
   socket.on('client:SetData', onSetData);
 };

@@ -1,17 +1,17 @@
 'use strict';
 
-let express = require('express');
-let router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-let getSetData = require('./routes/GetSetData');
+const getSetData = require('./routes/GetSetData');
 
 router.get('/getData', function(req, res) {
-	let getDataDone = function(data){ res.send(data); };
-	getSetData.getData(getDataDone);
+  const getDataDone = function(data){ res.send(data); };
+  getSetData.getData(getDataDone);
 });
 
-router.post('/setData', function(req, res) {
-	getSetData.setData(req.body);
+router.post('/setData', function(req) {
+  getSetData.setData(req.body);
 });
 
 module.exports = router;
