@@ -44,7 +44,7 @@
         "type": "dev"
       }
     ],
-    "closed": false,
+    "closed": true,
     "nodeid": "1",
     "selected": false,
     "title": "Dev",
@@ -312,7 +312,7 @@
           {
             "children": [],
             "nodeid": "53.59.65",
-            "selected": false,
+            "selected": true,
             "title": "ReactPatterns ReFluxSuperAgent",
             "type": "dev"
           },
@@ -428,7 +428,7 @@
       {
         "children": [],
         "nodeid": "10.11",
-        "selected": true,
+        "selected": false,
         "title": "Pending returns",
         "type": "home"
       },

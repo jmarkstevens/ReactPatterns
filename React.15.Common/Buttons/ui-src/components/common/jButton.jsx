@@ -95,6 +95,7 @@ export default class JButton extends React.Component {
   clickHandler = () => { if (this.props.parentClickHandler) this.props.parentClickHandler(this.props.btn.buttonid); };
   render() {
     let buttonSty = getStyle(this.props);
+    let isDisabled = this.props.isDisabled ? this.props.isDisabled : false;
     let renderIt;
     if (this.props.btn.img) {
       renderIt = (
@@ -110,7 +111,7 @@ export default class JButton extends React.Component {
       );
     } else {
       renderIt = (
-        <button className="HighZ" style={buttonSty} onClick={this.clickHandler}>
+        <button style={buttonSty} disabled={isDisabled} onClick={this.clickHandler}>
           {this.props.btn.text}
         </button>
       );

@@ -20,10 +20,19 @@ let togglable = {
 };
 
 let inOptions = {};
+let inCustomColors = {};
+
+const defaultColors = {
+  parent: '#AF90A5',
+  parentSelected: '#7BB53B',
+  endnode: '#afac87',
+  endnodeSelected: '#b58900'
+};
 
 class JTreeViewBNodeRender extends React.Component {
   render() {
-    let titleSty = {color: '#afac87', marginTop: '2px'};
+    let titleColors = inCustomColors ? inCustomColors : defaultColors;
+    let titleSty = {marginTop: '2px'};
     let childNodes;
     let pSty = nottogglable;
     if (this.props.node.children && this.props.node.children.length > 0) {
@@ -35,9 +44,9 @@ class JTreeViewBNodeRender extends React.Component {
         );
       });
       pSty = togglable;
-      titleSty.color = this.props.node.selected ? '#b58900' : '#afac87';
+      titleSty.color = this.props.node.selected ? titleColors.parentSelected : titleColors.parent;
     } else {
-      titleSty.color = this.props.node.selected ? '#7BB53B' : '#AF90A5';
+      titleSty.color = this.props.node.selected ? titleColors.endnodeSelected : titleColors.endnode;
     }
 
     let branch = null;
@@ -80,8 +89,9 @@ class JTreeViewBNode extends JTreeViewBNodeRender {
   clickHandler = () => { this.props.titleClick(this.props.node); };
 }
 
-export default function JTreeViewB({data, options, titleClick}) {
+export default function JTreeViewB({data, options, titleClick, customColors}) {
   inOptions = options;
+  inCustomColors = customColors;
   let childNodes = data.map((child, index) => {
     return (
       <li key={index} style={liSty}>

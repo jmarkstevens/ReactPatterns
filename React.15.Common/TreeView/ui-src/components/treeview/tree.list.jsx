@@ -5,14 +5,15 @@ import {bindActionCreators} from 'redux';
 import {selectTreeNode, setTreeNodeClosed} from '../../store/tree.Actions';
 import TreeView from './../common/jTreeView';
 
+const options = {
+  icon: {sun: 'dev', leaf: 'home', snow: 'sys'},
+  typeName: ['node', 'type']
+};
+
 class TreeList extends React.Component {
   iconHandler = (node) => { this.props.setTreeNodeClosed(node); };
   clickHandler = (node) => { this.props.selectTreeNode(node); };
   render() {
-    let options = {
-      icon: {sun: 'dev', leaf: 'home', snow: 'sys'},
-      typeName: ['node', 'type']
-    };
     return (
       <div>
         <TreeView
