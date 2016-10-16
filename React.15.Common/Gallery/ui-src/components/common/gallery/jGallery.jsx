@@ -12,8 +12,9 @@ class GalleryRender extends React.Component {
     let btnX;
     if (window.screen.width > 2560 || window.screen.height > 2560) btnX = 'fa-3x';
     else btnX = 'fa-2x';
+    let fullBtnIcon = this.state.isNotExpanded ? 'fa fa-expand fa-2x' : 'fa fa-compress fa-2x';
     let closeBtn = {buttonid: 'close', icon: 'fa fa-close ' + btnX, style: 'BtnImg'};
-    let fullBtn = {buttonid: 'full', icon: 'fa fa-expand fa-2x', style: 'BtnImg'};
+    let fullBtn = {buttonid: 'full', icon: fullBtnIcon, style: 'BtnImg'};
     let nextBtn = {buttonid: 'next', icon: 'fa fa-chevron-right ' + btnX, style: 'BtnImg'};
     let prevBtn = {buttonid: 'prev', icon: 'fa fa-chevron-left ' + btnX, style: 'BtnImg'};
     let shortcutsBtn = {buttonid: 'shortcuts', icon: 'fa fa-keyboard-o ' + btnX, style: 'BtnImg'};
@@ -97,7 +98,7 @@ class GalleryRender extends React.Component {
 }
 
 export default class Gallery extends GalleryRender {
-  state = {index: 0, hover: false, hideThumbs: true, thumbColumn: false, hideShortcuts: true};
+  state = {index: 0, hover: false, hideThumbs: true, thumbColumn: false, hideShortcuts: true, isNotExpanded: true};
 
   componentDidMount = () => { window.addEventListener('keydown', this.keyDownListener); };
   componentWillUnmount = () => { window.removeEventListener('keydown', this.keyDownListener); };
@@ -116,7 +117,7 @@ export default class Gallery extends GalleryRender {
   actionHandler = (action) => {
     switch (action) {
       case 'close': this.props.data.close(); break;
-      case 'full': if (screenfull.enabled) screenfull.toggle(); break;
+      case 'full': if (screenfull.enabled) { screenfull.toggle(); this.setState({isNotExpanded: !this.state.isNotExpanded}); } break;
     }
   };
   nextIndex = () => {

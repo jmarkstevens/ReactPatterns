@@ -18,7 +18,7 @@
     "nw": "webpack --progress --profile --colors --no-minimize"
   },
   "dependencies": {
-    "electron-prebuilt": "*"
+    "electron": "*"
   },
   "devDependencies": {
     "babel-core": "latest",
@@ -31,8 +31,8 @@
     "file-loader": "latest",
     "gulp": "latest",
     "gulp-shell": "latest",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^15.4.0-rc",
+    "react-dom": "^15.4.0-rc",
     "react-redux": "latest",
     "redux": "latest",
     "script-loader": "latest",

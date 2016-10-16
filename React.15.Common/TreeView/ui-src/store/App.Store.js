@@ -1,6 +1,8 @@
 import {createStore, applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
+import {apiGetAppData, apiGetImageList, apiGetTreeView} from './api.Actions';
+
 import handleActions from './tree.Reducer';
 
 const initialState = {
@@ -12,4 +14,10 @@ const initialState = {
   jumpList: [{}]
 };
 
-export default createStore(handleActions, initialState, applyMiddleware(thunkMiddleware));
+const store = createStore(handleActions, initialState, applyMiddleware(thunkMiddleware));
+
+store.dispatch(apiGetAppData());
+store.dispatch(apiGetImageList());
+store.dispatch(apiGetTreeView());
+
+export default store;

@@ -2,6 +2,12 @@ import * as Actions from './Actions';
 
 var socket = null;
 
+const newData = {
+  'React version': '15',
+  'Project': 'Redux with fetch polyfill',
+  'currentDateTime': new Date().toLocaleString()
+};
+
 export function wsMiddleware() {
   return (next) => (action) => {
     if (socket && action.type === 'ApiGetData') {
@@ -24,4 +30,6 @@ export default function (store) {
   socket.on('server:SetDataDone', () => {
     store.dispatch(Actions.apiGetData());
   });
+  
+  store.dispatch(Actions.apiSetData(newData));
 }
