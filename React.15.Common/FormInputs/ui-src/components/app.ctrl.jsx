@@ -38,7 +38,7 @@ class AppCtrlRender extends React.Component {
     textInput1.textValue = inputData.text;
     checkInput1.checkedValue = inputData.checkbox;
     colorInput.colorValue = inputData.color;
-    numberInput.numberValue = inputData.number;
+    numberInput.numberValue = inputData.number ? inputData.number : '#ffffff';
     rangeInput.numberValue = inputData.range;
     fileInput.folderValue = inputData.folder;
 

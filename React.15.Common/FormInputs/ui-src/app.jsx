@@ -7,7 +7,7 @@ require('./img/favicon.ico');
 import React  from 'react';
 import ReactDom  from 'react-dom';
 
-import AppCtrl from './components/app.ctrl.js';
+import AppCtrl from './components/app.ctrl';
 import Actions from './flux/Actions';
 require('./flux/Api.Store');
 

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "node js/server.js",
-    "test": "mocha __tests__/.setup.js __tests__/**/*.test.js",
+    "test": "mocha __tests__/.setup.js __tests__/**/*.test.js?",
     "testw": "npm test -- --watch",
     "ww": "webpack --progress --profile --colors --no-minimize --watch",
     "nw": "webpack --progress --profile --colors --no-minimize"
@@ -38,9 +38,9 @@
     "file-loader": "latest",
     "jsdom": "latest",
     "mocha": "latest",
-    "react": "^15.0.0",
-    "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^15.4.0-rc",
+    "react-addons-test-utils": "^15.4.0-rc",
+    "react-dom": "^15.4.0-rc",
     "reflux": "latest",
     "sinon": "latest",
     "superagent": "latest",

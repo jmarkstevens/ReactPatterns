@@ -1,9 +1,9 @@
 {
   "text": "this is a text input",
   "checkbox": true,
-  "radioGroup": "key",
+  "radioGroup": "setkey",
   "color": "#8db48a",
-  "number": "21",
-  "range": "47",
+  "number": "20",
+  "range": "50",
   "folder": "C:\\fakepath\\_1020715.JPG"
 }

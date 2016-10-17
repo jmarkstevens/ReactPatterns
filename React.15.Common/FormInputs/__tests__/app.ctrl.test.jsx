@@ -1,19 +1,19 @@
-"use strict";
+'use strict';
 
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { expect } from 'chai';
+import {shallow} from 'enzyme';
+import {expect} from 'chai';
 
 import AppCtrl from '../ui-src/components/app.ctrl';
 
 let newState = {
-  "text": "",
-  "checkbox": false,
-  "radioGroup": "",
-  "color": "",
-  "number": "",
-  "range": "",
-  "folder": ""
+  'text': '',
+  'checkbox': false,
+  'radioGroup': '',
+  'color': '',
+  'number': '',
+  'range': '',
+  'folder': ''
 };
 
 describe('shallow(<AppCtrl />)', () => {

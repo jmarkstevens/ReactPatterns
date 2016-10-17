@@ -8,7 +8,7 @@ let BasicStoreObject = {
     'text': '',
     'checkbox': false,
     'radioGroup': '',
-    'color': '',
+    'color': '#ffffff',
     'number': '',
     'range': '',
     'folder': ''
