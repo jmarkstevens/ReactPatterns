@@ -94,28 +94,7 @@ function divMap(item) {
   );
 }
 
-class DndListRender extends React.Component {
-  render() {
-    listSty = listStyle;
-    if (this.props.isMobile) {
-      lineStyle = mobileLineStyle;
-      startLineStyle = startMobileLineStyle;
-      overLineStyle = overMobileLineStyle;
-      endLineStyle = endMobileLineStyle;
-    }
-    let vm = this;
-    let list;
-    if (this.props.dndDone) list = this.props.data.map(divMap, vm);
-    else list = this.props.data.map(divColorMap, vm);
-    return (
-      <div id="DndListSty" style={listSty}>
-        {list}
-      </div>
-    );
-  }
-}
-
-export default class DndList extends DndListRender {
+export default class DndList extends React.Component {
   state = {
     startID: '',
     overID: '',
@@ -168,6 +147,24 @@ export default class DndList extends DndListRender {
     if (itemID) { this.setState({endID: itemID, overID: ''}); }
     if (this.props.dndDone) this.props.dndDone(this.state.startID, itemID);
   };
+  render() {
+    listSty = listStyle;
+    if (this.props.isMobile) {
+      lineStyle = mobileLineStyle;
+      startLineStyle = startMobileLineStyle;
+      overLineStyle = overMobileLineStyle;
+      endLineStyle = endMobileLineStyle;
+    }
+    let vm = this;
+    let list;
+    if (this.props.dndDone) list = this.props.data.map(divMap, vm);
+    else list = this.props.data.map(divColorMap, vm);
+    return (
+      <div id="DndListSty" style={listSty}>
+        {list}
+      </div>
+    );
+  }
 }
 
 // onTouchStart={this.onThisTouchStart} onTouchMove={this.onThisTouchMove}

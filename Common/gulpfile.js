@@ -6,14 +6,10 @@ let config = require('./config.json');
 let rootPath = config.macProjectRoot;
 if (process.platform == 'win32') { rootPath = config.winProjectRoot; }
 
-// let patternsPath13 = rootPath + 'React.13/';
 let patternsPath15 = rootPath + 'React.15/';
 let patternsPath15c = rootPath + 'React.15.Common/';
 let commonPath = '/ui-src/components/common/';
 
-let destPath12 = rootPath + 'React.12/';
-let destPath13 = rootPath + 'React.13/';
-let destPath14 = rootPath + 'React.14/';
 let destPath15 = rootPath + 'React.15/';
 let destPath15c = rootPath + 'React.15.Common/';
 // let destPathDist = '/ui-dist';
@@ -39,7 +35,7 @@ let source15 = {
   indexcss: patternsPath15 + 'Basic/ui-src/css/index.css'
 };
 
-let dest14 = {
+let dest15 = {
   draganddrop: destPath15 + 'DragAndDrop' + commonPath,
   gallery: destPath15c + 'Gallery' + commonPath,
   progressbar: destPath15c + 'ProgressBar' + commonPath,
@@ -50,49 +46,44 @@ let dest14 = {
 };
 
 gulp.task('chromecast', function() {
-  gulp.src(source15.jbutton).pipe(gulp.dest(dest14.chromecast));
-  gulp.src(source15.jprogressbar).pipe(gulp.dest(dest14.chromecast));
+  gulp.src(source15.jbutton).pipe(gulp.dest(dest15.chromecast));
+  gulp.src(source15.jprogressbar).pipe(gulp.dest(dest15.chromecast));
 });
 
 gulp.task('draganddrop', function() {
-  gulp.src(source15.jlist).pipe(gulp.dest(dest14.draganddrop));
+  gulp.src(source15.jlist).pipe(gulp.dest(dest15.draganddrop));
 });
 
 gulp.task('gallery', function() {
-  gulp.src(source15.jbutton).pipe(gulp.dest(dest14.gallery));
+  gulp.src(source15.jbutton).pipe(gulp.dest(dest15.gallery));
 });
 
 gulp.task('progressbar', function() {
-  gulp.src(source15.jbutton).pipe(gulp.dest(dest14.progressbar));
+  gulp.src(source15.jbutton).pipe(gulp.dest(dest15.progressbar));
 });
 
 gulp.task('refluxpages', function() {
-  gulp.src(source15.jdropmenu).pipe(gulp.dest(dest14.refluxpages));
+  gulp.src(source15.jdropmenu).pipe(gulp.dest(dest15.refluxpages));
 });
 
 gulp.task('treeview', function() {
-  gulp.src(source15.jbutton).pipe(gulp.dest(dest14.treeview));
-  gulp.src(source15.jdropmenu).pipe(gulp.dest(dest14.treeview));
-  gulp.src(source15.jinput).pipe(gulp.dest(dest14.treeview));
+  gulp.src(source15.jbutton).pipe(gulp.dest(dest15.treeview));
+  gulp.src(source15.jdropmenu).pipe(gulp.dest(dest15.treeview));
+  gulp.src(source15.jinput).pipe(gulp.dest(dest15.treeview));
 });
 
 gulp.task('favicon', function() {
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath12 + 'Basic' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath12 + 'ReFluxWebSocket' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath13 + 'Basic' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath13 + 'BasicWebpack' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath13 + 'ReFluxWebSocket' + destPathImg));
 
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'Basic' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'ChromeCast' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'DragAndDrop' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'ReFluxPages' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'ReFluxSuperAgent' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'ReFluxWebSocket' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'ThirdParty/GoogleMaps' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'ThirdParty/Radium' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'WindowEvents' + destPathImg));
-  gulp.src(source.leaficon).pipe(gulp.dest(destPath14 + 'WindowObject' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'Basic' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'ChromeCast' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'DragAndDrop' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'ReFluxPages' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'ReFluxSuperAgent' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'ReFluxWebSocket' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'ThirdParty/GoogleMaps' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'ThirdParty/Radium' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'WindowEvents' + destPathImg));
+  gulp.src(source.leaficon).pipe(gulp.dest(destPath15 + 'WindowObject' + destPathImg));
 
   gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'Buttons' + destPathImg));
   gulp.src(source.leaficon).pipe(gulp.dest(destPath15c + 'DropDown' + destPathImg));
@@ -106,28 +97,15 @@ gulp.task('favicon', function() {
 });
 
 gulp.task('indexcss', function() {
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath12 + 'Basic' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath12 + 'ReFluxWebSocket' + destPathCss));
-
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath13 + 'Basic' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath13 + 'ReFluxWebSocket' + destPathCss));
-
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath14 + 'Basic' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath14 + 'ReFluxSuperAgent' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath14 + 'ThirdParty/GoogleMaps' + destPathCss));
-
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'BasicHot' + destPathCss));
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'BasicIsometric' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'BasicJestTest' + destPathCss));
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'BasicUnitTest' + destPathCss));
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'DragAndDrop' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'MySql' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReFluxElectron' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReduxElectron' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReduxFetch' + destPathCss));
+  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReduxWebSocket' + destPathCss));
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReFluxPages' + destPathCss));
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReFluxSuperAgent' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ReFluxWebSocket' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'SQLite' + destPathCss));
-  gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'SqlServer' + destPathCss));
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ThirdParty/GoogleMaps' + destPathCss));
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'ThirdParty/Radium' + destPathCss));
   gulp.src(source15.indexcss).pipe(gulp.dest(destPath15 + 'WindowEvents' + destPathCss));

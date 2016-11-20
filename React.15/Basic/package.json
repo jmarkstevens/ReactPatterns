@@ -38,9 +38,9 @@
     "iframe-resizer": "latest",
     "jsdom": "latest",
     "mocha": "latest",
-    "react-addons-test-utils": "^15.4.0-rc",
-    "react": "^15.4.0-rc",
-    "react-dom": "^15.4.0-rc",
+    "react-addons-test-utils": "^15.4.0",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
     "sinon": "latest",
     "webpack": "latest"
   }

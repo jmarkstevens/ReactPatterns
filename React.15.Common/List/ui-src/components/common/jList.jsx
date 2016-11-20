@@ -5,7 +5,7 @@ let listStyleDefault = {};
 
 let lineSty = {};
 let lineStyleDefault = {
-  color: '#00303f',
+  color: '#a7b3a5',
   marginLeft: '7px'
 };
 

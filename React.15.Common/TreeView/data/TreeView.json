@@ -305,7 +305,7 @@
           {
             "children": [],
             "nodeid": "53.59.64",
-            "selected": true,
+            "selected": false,
             "title": "ReactPatterns Basic",
             "type": "dev"
           },
@@ -319,7 +319,7 @@
           {
             "children": [],
             "nodeid": "53.59.66",
-            "selected": false,
+            "selected": true,
             "title": "ReactPatterns Buttons",
             "type": "dev"
           },

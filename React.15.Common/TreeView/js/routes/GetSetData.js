@@ -25,7 +25,7 @@ module.exports.setAppData = function(data) {
 };
 
 module.exports.getImageList = function(doneCallBack) {
-  const filePath = rootDataPath + '/Imagelist.json';
+  const filePath = rootDataPath + '/ImageList.json';
   const jsonReadCallBack = function(err, data){
     if (err) console.log('ImageList readFile error ' + filePath);
     else {

@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 
-const getSetData = require('./routes/getsetdata');
+const getSetData = require('./routes/GetSetData');
 
 router.get('/getAppData', function(req, res) {
   const getDataDone = function(data){ res.send(data); };

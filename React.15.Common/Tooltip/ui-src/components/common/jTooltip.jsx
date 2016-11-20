@@ -29,7 +29,7 @@ let contentSty = {
   border: '1px solid rgba(0, 0, 0, 0.08)',
   borderRadius: '3px',
   boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)',
-  color: '#fff',
+  color: '#e9e7da',
   fontSize: '0.9375em',
   lineHeight: '1.2em',
   maxWidth: '280px',

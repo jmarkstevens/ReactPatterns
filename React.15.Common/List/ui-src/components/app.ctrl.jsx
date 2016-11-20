@@ -4,7 +4,7 @@ import AppNotes from './app.notes';
 import JList from './common/jList';
 
 let AppCtrlSty = {
-  borderBottom: '3px solid #636b46',
+  borderBottom: '3px solid #cae4db',
   padding: '0 10px 0 0'
 };
 
@@ -18,12 +18,12 @@ let list = [
 ];
 
 let listSty = {
-  border: '1px solid #155765',
+  border: '1px solid #e9e7da',
   margin: '10px 10px'
 };
 
 let lineSty = {
-  color: '#373f27',
+  color: '#b4dbc0',
   marginLeft: '5px'
 };
 

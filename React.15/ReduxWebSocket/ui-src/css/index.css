@@ -1,8 +1,7 @@
 .bodyStyle {
-  background-color: #d1bb83;
-  color: #283424;
+  background-color: #00303f;
+  color: #eae3ea;
   display: block;
-  height: 100vh;
   overflow: hidden;
   width: 100%;
 }
@@ -21,7 +20,7 @@
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0px 5px;
+  padding: 0 5px;
 }
 
 * { outline: none; }

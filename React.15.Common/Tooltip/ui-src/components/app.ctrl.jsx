@@ -37,17 +37,17 @@ let fillText = `
 `;
 
 let hoverValues = [
-  {title: 'LowTemp', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'bottom'},
-  {title: 'LeafType', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'bottom'},
-  {title: 'Height', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'bottom'},
-  {title: 'Width', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'bottom'},
-  {title: 'TrunkType', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'right'},
-  {title: 'SunExposure', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'right'},
-  {title: 'WaterTolerance', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'right'},
-  {title: 'BogTolerant', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'top'},
-  {title: 'DraughtTolerant', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'top'},
-  {title: 'GrowthSpeed', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'top'},
-  {title: 'DryAirTolerance', text: fillText.repeat(Math.ceil(Math.random() * 8)), place: 'top'}
+  {title: 'LowTemp', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'bottom'},
+  {title: 'LeafType', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'bottom'},
+  {title: 'Height', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'bottom'},
+  {title: 'Width', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'bottom'},
+  {title: 'TrunkType', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'right'},
+  {title: 'SunExposure', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'right'},
+  {title: 'WaterTolerance', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'right'},
+  {title: 'BogTolerant', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'top'},
+  {title: 'DraughtTolerant', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'top'},
+  {title: 'GrowthSpeed', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'top'},
+  {title: 'DryAirTolerance', text: fillText.repeat(Math.ceil(Math.random() * 2)), place: 'top'}
 ];
 
 function hoverMap(item) {
