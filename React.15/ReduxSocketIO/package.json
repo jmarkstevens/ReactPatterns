@@ -1,5 +1,5 @@
 {
-  "name": "ReactPatterns.15-ReduxWebSocket",
+  "name": "ReactPatterns.15-ReduxSocketIO",
   "version": "1.0.0",
   "description": "A collection of simple react projects providing reusable components, startup and test examples.",
   "license": "MIT",
@@ -19,10 +19,8 @@
   "dependencies": {
     "express": "latest",
     "nodemon": "latest",
-    "primus": "^5.2.2",
-    "primus-emitter": "latest",
     "serve-favicon": "latest",
-    "ws": "latest"
+    "socket.io": "latest"
   },
   "devDependencies": {
     "babel-core": "latest",

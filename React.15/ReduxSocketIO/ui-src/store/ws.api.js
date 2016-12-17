@@ -4,16 +4,18 @@ var socket = null;
 
 const newData = {
   'React version': '15',
-  'Project': 'Redux with fetch polyfill',
+  'Project': 'Redux with socket.io',
   'currentDateTime': new Date().toLocaleString()
 };
 
 export function wsMiddleware() {
   return (next) => (action) => {
     if (socket && action.type === 'ApiGetData') {
-      socket.send('client:GetData', {});
+      console.log('ApiGetData');
+      socket.emit('client:GetData', {});
     } else if (socket && action.type === 'ApiSetData') {
-      socket.send('client:SetData', action.data);
+      console.log('ApiSetData');
+      socket.emit('client:SetData', action.data);
     }
 
     return next(action);
@@ -21,13 +23,15 @@ export function wsMiddleware() {
 }
 
 export default function (store) {
-  socket = new Primus();
+  socket = new io();
 
-  socket.on('server:GotData', (data) => {
+  socket.on('server:GetDataDone', (data) => {
+    console.log('GetDataDone');
     store.dispatch(Actions.apiGotData(data));
   });
 
   socket.on('server:SetDataDone', () => {
+    console.log('SetDataDone');
     store.dispatch(Actions.apiGetData());
   });
   
