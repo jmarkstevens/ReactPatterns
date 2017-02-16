@@ -51,32 +51,8 @@ function divColorMap(item, index) {
   );
 }
 
-class JRangeSliderDndRender extends React.Component {
-  render() {
-    let sizeFactor = this.props.sliderObj.size ? this.props.sliderObj.size : 1;
-    let size24 = Math.round(24 * sizeFactor);
-    listStyle.margin = '-' + size24 + 'px 0 0 4px';
-    imageDivStyle.height = size24 + 'px';
-    listSty = listStyle;
-    indexAdjust = this.props.sliderObj.min;
+class JRangeSliderDnd extends React.Component {
 
-    let imgCnt = (this.props.sliderObj.max - this.props.sliderObj.min) / this.props.sliderObj.step;
-    let imgArray = new Array(imgCnt + 1);
-    imgArray.fill('0');
-    let vm = this;
-    let list = imgArray.map(divColorMap, vm);
-    return (
-      <div id="SliderDndSty" className="FlexBox Stretch" style={listSty}>
-        {list}
-      </div>
-    );
-  }
-}
-
-class JRangeSliderDnd extends JRangeSliderDndRender {
-  isHigh = false;
-  overID = '';
-  isLow = false;
   onThisDragStart = (event) => {
     event.dataTransfer.effectAllowed = 'all';
     let img = document.createElement('img');
@@ -96,9 +72,11 @@ class JRangeSliderDnd extends JRangeSliderDndRender {
       event.preventDefault();
     }
   };
+  
   onThisDragEnter = (event) => {
     event.preventDefault();
   };
+  
   onThisDragOver = (event) => {
     event.preventDefault();
     let itemID = event.target.id;
@@ -106,12 +84,14 @@ class JRangeSliderDnd extends JRangeSliderDndRender {
     this.overID = itemID;
     this.props.sliderChange(itemID);
   };
+  
   onThisDragEnd = (event) => {
     event.preventDefault();
     let itemID = event.target.id;
     if (isNaN(itemID) || itemID.length == 0 || this.overID == itemID) return;
     else this.props.sliderChange(itemID);
   };
+  
   onThisTouchStart = (event) => {
     event.preventDefault();
     let itemID = event.target.id;
@@ -125,6 +105,7 @@ class JRangeSliderDnd extends JRangeSliderDndRender {
       event.preventDefault();
     }
   };
+  
   onThisTouchMove = (event) => {
     event.preventDefault();
     let lastTouch = event.touches.length - 1;
@@ -138,6 +119,7 @@ class JRangeSliderDnd extends JRangeSliderDndRender {
       this.props.sliderChange(itemID);
     }
   };
+  
   onThisTouchEnd = (event) => {
     event.preventDefault();
     let lastTouch = event.changedTouches.length - 1;
@@ -150,6 +132,30 @@ class JRangeSliderDnd extends JRangeSliderDndRender {
       this.props.sliderChange(itemID);
     }
   };
+
+  isHigh = false;
+  overID = '';
+  isLow = false;
+  
+  render() {
+    let sizeFactor = this.props.sliderObj.size ? this.props.sliderObj.size : 1;
+    let size24 = Math.round(24 * sizeFactor);
+    listStyle.margin = '-' + size24 + 'px 0 0 4px';
+    imageDivStyle.height = size24 + 'px';
+    listSty = listStyle;
+    indexAdjust = this.props.sliderObj.min;
+
+    let imgCnt = (this.props.sliderObj.max - this.props.sliderObj.min) / this.props.sliderObj.step;
+    let imgArray = new Array(imgCnt + 1);
+    imgArray.fill('0');
+    let vm = this;
+    let list = imgArray.map(divColorMap, vm);
+    return (
+      <div id="SliderDndSty" className="FlexBox Stretch" style={listSty}>
+        {list}
+      </div>
+    );
+  }
 }
 
 let sliderValueSty = {

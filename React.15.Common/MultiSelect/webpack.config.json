@@ -1,0 +1,7 @@
+{
+  "lib": [
+    "radium",
+    "react",
+    "react-dom"
+  ]
+}

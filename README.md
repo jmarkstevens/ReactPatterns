@@ -1,19 +1,16 @@
 # ReactPatterns
 
 A collection of simple react projects providing reusable components, startup and test examples. Its my react playground.
-I am now using webpack and babel for the build tool chain.
-
-August 2016 - I have added linting with eslint. The linting rules are in .eslintrc.js.
+I am using webpack and babel for the build tool chain.
+I have added linting with eslint. The linting rules are in .eslintrc.js.
 
 **React.15**
 *  Basic
 *  Basic Isometric/Universal
-*  Basic unit test with Mocha, Chai and Enzyme
-*  Drag and Drop
 *  Redux Electron
 *  Redux Fetch ajax
-*  Redux WebSocket
-*  ReFlux Pages
+*  Redux Pages
+*  Redux SocketIO
 *  ReFlux SuperAgent ajax
 *  ThirdParty
   *  GoogleMaps
@@ -27,8 +24,9 @@ August 2016 - I have added linting with eslint. The linting rules are in .eslint
 *  Form Inputs
 *  Gallery
 *  List
+*  MultiSelect
 *  ProgressBar
-*  Range slider
+*  RangeSlider
 *  Tooltip
 *  TreeView
 

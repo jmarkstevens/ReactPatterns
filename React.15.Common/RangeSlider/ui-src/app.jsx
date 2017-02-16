@@ -1,9 +1,9 @@
 'use strict';
 
-require('./index.html');
-require('./css/index.css');
-require('./img/favicon.ico');
-require('./img/1x1TransShim.gif');
+import './index.html';
+import './css/index.css';
+import './img/favicon.ico';
+import './img/1x1TransShim.gif';
 
 import React  from 'react';
 import ReactDom  from 'react-dom';

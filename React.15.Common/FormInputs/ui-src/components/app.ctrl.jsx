@@ -57,7 +57,11 @@ class AppCtrlRender extends React.Component {
         Color: <JInput input={colorInput} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {colorInput.colorValue}<br /><br />
         File: <JInput input={fileInput} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {fileInput.folderValue}<br /><br />
         Number: <JInput input={numberInput} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {numberInput.numberValue}<br /><br />
-        Range: <JInput input={rangeInput} handleChange={this.handleValueChange} /> &nbsp;&nbsp;Value: {rangeInput.numberValue}<br /><br />
+        Range:
+        <div style={{width: '200px'}}>
+          <JInput input={rangeInput} handleChange={this.handleValueChange} />
+        </div>
+         &nbsp;&nbsp;Value: {rangeInput.numberValue}<br /><br />
 
         Radio Input: &nbsp;
         <JInput input={radioInput1} handleChange={this.handleValueChange} />&nbsp;Set &nbsp;

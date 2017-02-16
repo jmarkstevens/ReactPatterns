@@ -1,0 +1,9 @@
+{
+  "lib": [
+    "react",
+    "react-dom",
+    "react-redux",
+    "redux",
+    "redux-logger"
+  ]
+}

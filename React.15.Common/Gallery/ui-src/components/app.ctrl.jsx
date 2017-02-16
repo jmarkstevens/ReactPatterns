@@ -15,14 +15,11 @@ let basicBtn = {buttonid: 'galleryHide', text: 'Open Gallery'};
 
 class AppCtrlRender extends React.Component {
    render() {
-    let data = {
-      PicList: this.state.PicList,
-      close: this.galleryHideHandler
-    };
+    let data = this.state.PicList;
     let hideGallery = this.state.hideGallery;
     return (
       <div id="AppCtrlSty" style={AppCtrlSty}>
-        <Gallery data={data} hide={hideGallery} />
+        <Gallery close={this.galleryHideHandler} data={data} hide={hideGallery} />
         <br /><br />
         <JButton btn={basicBtn} parentClickHandler={this.galleryHideHandler} />
         <AppNotes />

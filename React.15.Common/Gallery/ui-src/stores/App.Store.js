@@ -12,6 +12,6 @@ const AppStore = Reflux.createStore(AppStoreObject);
 export default AppStore;
 
 function _GotPicList(data) {
-  this.data1 = data;
+  this.data1 = data.returnList;
   AppStore.trigger('gotData');
 }

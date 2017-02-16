@@ -1,0 +1,11 @@
+{
+  "lib": [
+    "eventemitter3",
+    "google-map-react",
+    "point-geometry",
+    "react",
+    "react-dom",
+    "react-pure-render",
+    "scriptjs"
+  ]
+}

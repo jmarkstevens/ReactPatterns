@@ -6,9 +6,30 @@ import JThumbs from './jThumbs';
 import GalleryStyle from './gallery.style';
 import Shortcuts from './shortcuts';
 
+const infoPicCommentSty = {
+  background: 'rgba(0, 0, 0, .7)',
+  borderRadius: '20px',
+  bottom: '0px',
+  color: '#ffffff',
+  display: 'inline-block',
+  maxWidth: '600px',
+  padding: '20px',
+  position: 'relative',
+  textShadow: '0 1px 0px #000, 1px 0 0px #000, 1px 2px 1px #000, 2px 1px 1px #000, 2px 3px 2px #000',
+  width: 'auto',
+};
+
+const infoCommentOuterSty = {
+  bottom: '0',
+  position: 'absolute',
+  textAlign: 'center',
+  width: '100%',
+  zIndex: '201'
+};
+
 class GalleryRender extends React.Component {
-   render() {
-    if (this.props.hide) return null;
+  render() {
+    if (this.props.data.length === 0 || this.props.hide) return null;
     let btnX;
     if (window.screen.width > 2560 || window.screen.height > 2560) btnX = 'fa-3x';
     else btnX = 'fa-2x';
@@ -20,9 +41,11 @@ class GalleryRender extends React.Component {
     let shortcutsBtn = {buttonid: 'shortcuts', icon: 'fa fa-keyboard-o ' + btnX, style: 'BtnImg'};
     let thumbsOpenColumnBtn = {buttonid: 'openThumbs', icon: 'fa fa-film ' + btnX, style: 'BtnImg'};
     let thumbsOpenRowBtn = {buttonid: 'openThumbs', icon: 'fa fa-film fa-rotate-90 ' + btnX, style: 'BtnImg'};
+    let InfoCommentOuterSty = Object.assign({}, infoCommentOuterSty);
+    let InfoPicCommentSty = Object.assign({}, infoPicCommentSty);
 
-    let PicList = this.props.data.PicList;
-    let imageSrc = PicList[this.state.index].lgFolder + PicList[this.state.index].file;
+    let PicList = this.props.data;
+    let imageSrc = PicList[this.state.index].lgFolder + PicList[this.state.index].FileName;
     
     let GalleryImageSty = Object.assign({}, GalleryStyle.imageDivSty);
     GalleryImageSty.backgroundImage = 'url(' + imageSrc + ')';
@@ -45,8 +68,12 @@ class GalleryRender extends React.Component {
       ThumbsClosedSty.display = 'block';
     }
     
-    let copyRight = PicList[this.state.index].copyright;
+    let copyRight = PicList[this.state.index].Copyright;
     let banClass = 'fa fa-close fa-stack-1x';
+    
+    let comment = PicList[this.state.index].Description;
+    InfoCommentOuterSty.display = comment ? 'block' : 'none';
+    let showClose = {display: this.props.close ? 'inlineBlock' : 'none'};
     return (
       <div id="GallerySty" style={GalleryStyle.GallerySty}>
         <div id="imageThumbDiv" className={imageThumbClass} style={GalleryStyle.imageThumbSty}>
@@ -74,14 +101,21 @@ class GalleryRender extends React.Component {
                 </div>
                 <div id="fulldiv" style={GalleryStyle.fullCloseSty}>
                   <JButton btn={fullBtn} parentClickHandler={this.actionHandler} />
-                  &nbsp;
-                  <JButton btn={closeBtn} parentClickHandler={this.actionHandler} />
+                  <span style={showClose}>
+                    &nbsp;
+                    <JButton btn={closeBtn} parentClickHandler={this.actionHandler} />
+                  </span>
                   &nbsp;
                   <JButton btn={shortcutsBtn} parentClickHandler={this.hideShortcutsHandler} />
                 </div>
                 <div id="nextPanel" style={GalleryStyle.nextPanelSty} onClick={this.nextIndex} />
                 <div id="prevPanel" style={GalleryStyle.prevPanelSty} onClick={this.prevIndex} />
                 <Shortcuts closeHandler={this.hideShortcutsHandler} hide={this.state.hideShortcuts} />
+              </div>
+            </div>
+            <div id="InfoCommentOuterSty" style={InfoCommentOuterSty}>
+              <div id="InfoPicCommentSty" ref={(ref) => { this.infoComment = ref; }} style={InfoPicCommentSty}>
+                {comment}
               </div>
             </div>
           </div>
@@ -116,18 +150,18 @@ export default class Gallery extends GalleryRender {
   };
   actionHandler = (action) => {
     switch (action) {
-      case 'close': this.props.data.close(); break;
+      case 'close': this.props.close(); break;
       case 'full': if (screenfull.enabled) { screenfull.toggle(); this.setState({isNotExpanded: !this.state.isNotExpanded}); } break;
     }
   };
   nextIndex = () => {
     let newIndex = this.state.index + 1;
-    if (newIndex === this.props.data.PicList.length) newIndex = 0;
+    if (newIndex === this.props.data.length) newIndex = 0;
     this.setState({index: newIndex});
   };
   prevIndex = () => {
     let newIndex = this.state.index - 1;
-    if (newIndex === -1) newIndex = this.props.data.PicList.length - 1;
+    if (newIndex === -1) newIndex = this.props.data.length - 1;
     this.setState({index: newIndex});
   };
   onMouseEnter = () => { this.setState({hover: true}); };

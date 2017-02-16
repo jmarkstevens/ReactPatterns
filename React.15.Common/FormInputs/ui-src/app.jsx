@@ -1,15 +1,16 @@
 'use strict';
 
-require('./index.html');
-require('./css/index.css');
-require('./img/favicon.ico');
+import './index.html';
+import './css/index.css';
+import './css/rangeInput.css';
+import './img/favicon.ico';
 
 import React  from 'react';
 import ReactDom  from 'react-dom';
 
 import AppCtrl from './components/app.ctrl';
 import Actions from './flux/Actions';
-require('./flux/Api.Store');
+import './flux/Api.Store';
 
 window.ReactDom = ReactDom;
 

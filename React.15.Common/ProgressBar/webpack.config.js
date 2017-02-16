@@ -1,43 +1,68 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var webpack = require('webpack');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const configJson = require('./webpack.config.json');
 
-var minimize = process.argv.indexOf('--no-minimize') === -1 ? true : false;
-var plugins = [];
+module.exports = (env) => {
 
-plugins.push(new ExtractTextPlugin('app.css', {allChunks: true}));
-plugins.push(new webpack.optimize.CommonsChunkPlugin('lib', 'lib.js', Infinity));
-if (minimize) plugins.push(new webpack.optimize.UglifyJsPlugin({include: /lib\.js/, minimize: true}));
+  const noMinimize = env.noMinimize;
+  var plugins = [];
 
-const ROOT_PATH = path.resolve(__dirname);
-const SRC_PATH = path.resolve(ROOT_PATH, 'ui-src', 'app.jsx');
-const DIST_PATH = path.resolve(ROOT_PATH, 'ui-dist');
+  plugins.push(new ExtractTextPlugin({filename: 'app.css', allChunks: true}));
+  plugins.push(new webpack.optimize.CommonsChunkPlugin({name: 'lib'}));
+  if (noMinimize) {
+    plugins.push(new webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify('development')}}));
+  } else {
+    plugins.push(new webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify('production')}}));
+    plugins.push(new webpack.optimize.UglifyJsPlugin({include: /lib\.js/, minimize: true}));
+  }
 
-module.exports = {
+  const ROOT_PATH = path.resolve(__dirname);
+  const SRC_PATH = path.resolve(ROOT_PATH, './ui-src');
+  const DIST_PATH = path.resolve(ROOT_PATH, './ui-dist');
 
-  entry: {
-    app: SRC_PATH,
-    lib: ['react', 'react-dom']
-  },
 
-  output: {
-    path: DIST_PATH,
-    filename: 'app.js'
-  },
+  return {
+    context: SRC_PATH,
+    entry: {
+      app: './app.jsx',
+      lib: configJson.lib
+    },
 
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules)/,
-        loader: 'babel',
-        query: {presets:['es2015', 'react', 'stage-0']}
-      },
-      {test: /\.css$/, loader: ExtractTextPlugin.extract('css-loader')},
-      {test: /\.(png|jpg|ico)$/, loader: 'file-loader?name=img/[name].[ext]'},
-      {test: /\.(html)$/, loader: 'file-loader?name=[name].[ext]'}
-    ]
-  },
-  plugins,
-  resolve: {extensions: ['', '.js', '.jsx']}
+    output: {
+      path: DIST_PATH,
+      filename: '[name].js'
+    },
+
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          loader: 'babel-loader',
+          query: {presets:['es2015', 'react', 'stage-0']},
+          exclude: /(node_modules)/,
+        },
+        {
+          test: /\.css$/,
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: 'css-loader'
+          })
+        },
+        {
+          test: /\.(png|jpg|ico|gif)$/,
+          loader: 'file-loader?name=img/[name].[ext]'
+        },
+        {
+          test: /\.(html)$/,
+          loader: 'file-loader?name=[name].[ext]'
+        }
+      ]
+    },
+    plugins,
+    resolve: {
+      extensions: ['.js', '.jsx'],
+      modules: ['node_modules']
+    }
+  };
 };

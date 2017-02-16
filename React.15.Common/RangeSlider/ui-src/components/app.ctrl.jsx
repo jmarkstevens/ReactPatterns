@@ -2,85 +2,65 @@ import React from 'react';
 
 import AppNotes from './app.notes';
 
-import JRangeSlider from './common/jRangeSlider';
+import RangeSelector from './common/mxRange/jRangeSelector';
+import SimpleSlider from './common/mxSlider/jSlider';
 
 let AppCtrlSty = {
+  backgroundColor: '#e1ded5',
   borderBottom: '3px solid #636b46',
   marginLeft: 'auto',
   marginRight: 'auto',
   maxWidth: '900px',
-  padding: '0 10px 0 0'
-};
-
-let sliderObj1 = {
-  min: 10,
-  max: 90,
-  step: 1,
-  low: 10,
-  high: 90,
-  name: 'obj1'
-};
-
-let sliderObj2 = {
-  min: -5,
-  max: 35,
-  step: 1,
-  low: -5,
-  high: 35,
-  isSingle: true,
-  name: 'obj2'
-};
-
-let sliderObj3 = {
-  min: 10,
-  max: 90,
-  step: 1,
-  low: 10,
-  high: 90,
-  name: 'obj3',
-  size: 1.2
-};
-
-let sliderObj4 = {
-  min: -5,
-  max: 35,
-  step: 1,
-  low: -5,
-  high: 35,
-  isSingle: true,
-  name: 'obj4',
-  size: 1.3
+  padding: '10px'
 };
 
 let innerSty = {
   width: '100%'
 };
 
+const formatter = value => Math.ceil((value * 39) - 5);
+const unformatter = value => Math.ceil(((value + 4) / 39) * 100) / 100;
+
 class AppCtrlRender extends React.Component {
   render() {
-    let messages = this.state.message;
+    let formattedValue = this.state.formattedValue;
+    let percentValue = unformatter(formattedValue);
+    let lowerValue = this.state.lowerValue;
+    let upperValue = this.state.upperValue;
     return (
       <div id="AppCtrlSty" style={AppCtrlSty}>
-        <br /><br />
-        <div className="FlexBox JustAround">
+        <div className="FlexBox JustAround" style={{color: '#000'}}>
           <div style={innerSty}>
-            <JRangeSlider sliderObj={this.state.sliderObj1} handleChange={this.handleSliderChange1} message={this.handleMessage} />
+            <div>Lower Value: {lowerValue}</div>
+            <div>Upper Value: {upperValue}</div>
+            <RangeSelector
+              lowerValue={lowerValue}
+              upperValue={upperValue}
+              defaultLowerValue={1}
+              defaultUpperValue={85}
+              interval={1}
+              itemName="RangeSelector"
+              lowerBound={1}
+              onLowerDragStop={this._handleLowerChange}
+              onUpperDragStop={this._handleUpperChange}
+              upperBound={85}
+            />
           </div>
           <div style={innerSty}>
-            <JRangeSlider sliderObj={this.state.sliderObj2} handleChange={this.handleSliderChange2} message={this.handleMessage} />
+            <div>Value -5 - 34: {formattedValue}</div>
+            <br />
+            <SimpleSlider
+              formatter={formatter}
+              itemName="SimpleSlider"
+              onPercentChange={this._handleSliderChange}
+              percent={percentValue}
+            />
           </div>
         </div>
         <br /><br />
-        <div className="FlexBox JustAround">
-          <div style={innerSty}>
-            <JRangeSlider sliderObj={this.state.sliderObj3} handleChange={this.handleSliderChange3} message={this.handleMessage} />
-          </div>
-          <div style={innerSty}>
-            <JRangeSlider sliderObj={this.state.sliderObj4} handleChange={this.handleSliderChange4} message={this.handleMessage} />
-          </div>
-        </div>
+        <button onClick={this._resetState} style={{color: 'black'}}> Reset state</button>
         <br /><br />
-        {messages}
+        <br /><br />
         <AppNotes />
       </div>
     );
@@ -89,44 +69,16 @@ class AppCtrlRender extends React.Component {
 
 let getInitialAppState = function() {
   return {
-    message: 'no message',
-    sliderObj1,
-    sliderObj2,
-    sliderObj3,
-    sliderObj4
+    formattedValue: 34,
+    lowerValue: 1,
+    upperValue: 85
   };
 };
 
 export default class AppCtrl extends AppCtrlRender {
   state = getInitialAppState();
-
-  handleSliderChange1 = (name, field, value) => {
-    let newSliderObj = this.state.sliderObj1;
-    if (field == 'low') newSliderObj.low = value;
-    else if (field == 'high') newSliderObj.high = value;
-    let newMessage = 'new value = ' + value;
-    this.setState({sliderObj1: newSliderObj, message: newMessage});
-  };
-  handleSliderChange2 = (name, field, value) => {
-    let newSliderObj = this.state.sliderObj2;
-    if (field == 'low') newSliderObj.low = value;
-    else if (field == 'high') newSliderObj.high = value;
-    let newMessage = 'new value = ' + value;
-    this.setState({sliderObj2: newSliderObj, message: newMessage});
-  };
-  handleSliderChange3 = (name, field, value) => {
-    let newSliderObj = this.state.sliderObj3;
-    if (field == 'low') newSliderObj.low = value;
-    else if (field == 'high') newSliderObj.high = value;
-    let newMessage = 'new value = ' + value;
-    this.setState({sliderObj3: newSliderObj, message: newMessage});
-  };
-  handleSliderChange4 = (name, field, value) => {
-    let newSliderObj = this.state.sliderObj4;
-    if (field == 'low') newSliderObj.low = value;
-    else if (field == 'high') newSliderObj.high = value;
-    let newMessage = 'new value = ' + value;
-    this.setState({sliderObj4: newSliderObj, message: newMessage});
-  };
-  handleMessage = (message) => { this.setState({message}); };
+  _handleSliderChange = (formattedValue) => { this.setState({formattedValue}); }
+  _handleLowerChange = (lowerValue) => { this.setState({lowerValue}); }
+  _handleUpperChange = (upperValue) => { this.setState({upperValue}); }
+  _resetState = () => { this.setState(getInitialAppState()); }
 }

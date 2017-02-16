@@ -13,8 +13,8 @@
   },
   "scripts": {
     "start": "nodemon --watch js js/server.js",
-    "ww": "webpack --progress --profile --colors --no-minimize --watch",
-    "nw": "webpack --progress --profile --colors --no-minimize"
+    "ww": "webpack --progress --profile --colors --env.noMinimize --watch",
+    "nw": "webpack --progress --profile --colors --env.noMinimize"
   },
   "dependencies": {
     "express": "latest",
@@ -23,19 +23,20 @@
     "socket.io": "latest"
   },
   "devDependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-redux": "latest",
+    "redux": "latest",
+
     "babel-core": "latest",
     "babel-loader": "^6.1.0",
     "babel-preset-es2015": "latest",
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
     "css-loader": "latest",
-    "extract-text-webpack-plugin": "latest",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "latest",
-    "react": "^15.4.0",
-    "react-dom": "^15.4.0",
-    "react-redux": "latest",
-    "redux": "latest",
-    "script-loader": "latest",
+    "style-loader": "^0.13.1",
     "webpack": "latest"
   }
 }

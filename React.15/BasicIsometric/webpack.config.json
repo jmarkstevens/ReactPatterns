@@ -1,0 +1,6 @@
+{
+  "lib": [
+    "react",
+    "react-dom"
+  ]
+}

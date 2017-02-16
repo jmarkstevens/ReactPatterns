@@ -1,11 +1,11 @@
 'use strict';
 
-require('./index.html');
-require('./css/index.css');
-require('./img/favicon.ico');
-require('./img/sun.ico');
-require('./img/leaf.ico');
-require('./img/snow.ico');
+import './index.html';
+import './css/index.css';
+import './img/favicon.ico';
+import './img/sun.ico';
+import './img/leaf.ico';
+import './img/snow.ico';
 
 import 'babel-polyfill';
 import React  from 'react';

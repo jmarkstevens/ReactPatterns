@@ -24,26 +24,29 @@
     "serve-favicon": "latest"
   },
   "devDependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "reflux": "latest",
+    "superagent": "latest",
+
     "babel-core": "latest",
     "babel-loader": "^6.1.0",
     "babel-preset-es2015": "latest",
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
+    "css-loader": "latest",
+    "enzyme": "latest",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "latest",
+    "style-loader": "^0.13.1",
+    "webpack": "latest",
+
     "babel-register": "latest",
     "chai": "latest",
     "chai-http": "latest",
-    "css-loader": "latest",
-    "enzyme": "latest",
-    "extract-text-webpack-plugin": "latest",
-    "file-loader": "latest",
     "jsdom": "latest",
     "mocha": "latest",
     "react-addons-test-utils": "^15.0.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "reflux": "latest",
-    "sinon": "latest",
-    "superagent": "latest",
-    "webpack": "latest"
+    "sinon": "latest"
   }
 }

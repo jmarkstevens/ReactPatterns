@@ -1,0 +1,42 @@
+{
+  "name": "ReactPatterns.15-ReduxPages",
+  "version": "1.0.0",
+  "description": "A collection of simple react projects providing reusable components, startup and test examples.",
+  "license": "MIT",
+  "author": {
+    "name": "Janaka Stevens",
+    "email": "jmstevens@calitek.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calitek/ReactPatterns.git"
+  },
+  "scripts": {
+    "start": "node js/server.js",
+    "ww": "webpack --progress --profile --colors --env.noMinimize --watch",
+    "nw": "webpack --progress --profile --colors --env.noMinimize"
+  },
+  "dependencies": {
+    "express": "latest",
+    "serve-favicon": "latest"
+  },
+  "devDependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-redux": "latest",
+    "redux": "latest",
+    "redux-logger": "latest",
+
+    "babel-core": "latest",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "css-loader": "latest",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "latest",
+    "loader-utils": "latest",
+    "style-loader": "^0.13.1",
+    "webpack": "latest"
+  }
+}

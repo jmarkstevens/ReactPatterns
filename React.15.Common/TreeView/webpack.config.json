@@ -1,0 +1,12 @@
+{
+  "lib": [
+    "lodash",
+    "react",
+    "react-dom",
+    "react-redux",
+    "redux",
+    "redux-thunk",
+    "traverse",
+    "whatwg-fetch"
+  ]
+}

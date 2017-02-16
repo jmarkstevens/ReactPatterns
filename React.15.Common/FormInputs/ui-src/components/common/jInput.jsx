@@ -2,17 +2,17 @@ import React from 'react';
 
 class JInputRender extends React.Component {
    render() {
-    let inputSty = this.props.input.style ? this.props.input.style : {color: '#4d2c3d'};
+    let inputSty = this.props.input.style || {color: '#4d2c3d'};
     let textValue = this.state.textValue;
-    let colorValue = this.props.input.colorValue ? this.props.input.colorValue : '#1A3212';
+    let colorValue = this.props.input.colorValue || '#1A3212';
     let checkedValue = (this.props.input.checkedValue != null) ? this.props.input.checkedValue : false;
-    let numberValue = this.props.input.numberValue ? this.props.input.numberValue : 0;
-    let radioValue = this.props.input.radioValue ? this.props.input.radioValue : '';
+    let numberValue = this.props.input.numberValue || 0;
+    let radioValue = this.props.input.radioValue || '';
     let radioChecked = (this.props.input.radioChecked != null) ? this.props.input.radioChecked : false;
-    let min = this.props.input.min ? this.props.input.min : 0;
-    let max = this.props.input.max ? this.props.input.max : 100;
-    let step = this.props.input.step ? this.props.input.step : 1;
-    let inputType = this.props.input.type ? this.props.input.type : 'text';
+    let min = this.props.input.min || 0;
+    let max = this.props.input.max || 100;
+    let step = this.props.input.step || 1;
+    let inputType = this.props.input.type || 'text';
 
     let returnRadio = (
       <input

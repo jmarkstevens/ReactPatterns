@@ -3,14 +3,22 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const favicon = require('serve-favicon');
+const https = require('https');
+const http = require('http');
+const fs = require('fs');
 
 const path = require('path');
 const port = Number(process.env.REDUXFETCHPORT || 3500);
 
+var options = {
+  key: fs.readFileSync('./private.key'),
+  cert: fs.readFileSync('./certificate.pem')
+};
 const routes = require('./routes');
 
 const app = express();
-app.listen(port);
+http.createServer(app).listen(port);
+https.createServer(options, app).listen(3600);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));

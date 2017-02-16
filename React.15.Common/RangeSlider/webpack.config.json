@@ -1,0 +1,9 @@
+{
+  "lib": [
+    "lodash",
+    "lodash/throttle",
+    "radium",
+    "react",
+    "react-dom"
+  ]
+}
