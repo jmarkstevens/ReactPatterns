@@ -92,7 +92,7 @@
           {
             "children": [],
             "nodeid": "22.32.48",
-            "selected": false,
+            "selected": true,
             "title": "Gallery",
             "type": "dev"
           },
@@ -319,7 +319,7 @@
           {
             "children": [],
             "nodeid": "53.59.66",
-            "selected": true,
+            "selected": false,
             "title": "ReactPatterns Buttons",
             "type": "dev"
           },

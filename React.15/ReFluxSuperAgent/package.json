@@ -15,8 +15,8 @@
     "start": "node js/server.js",
     "test": "mocha __tests__/.setup.js __tests__/**/*.test.js",
     "testw": "npm test -- --watch",
-    "ww": "webpack --progress --profile --colors --no-minimize --watch",
-    "nw": "webpack --progress --profile --colors --no-minimize"
+    "ww": "webpack --progress --profile --colors --env.noMinimize --watch",
+    "nw": "webpack --progress --profile --colors --env.noMinimize"
   },
   "dependencies": {
     "body-parser": "latest",
