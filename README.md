@@ -1,7 +1,7 @@
 # ReactPatterns
 
 A collection of simple react projects providing reusable components, startup and test examples. Its my react playground.
-I am using webpack and babel for the build tool chain.
+I am using webpack 2 and babel for the build tool chain.
 I have added linting with eslint. The linting rules are in .eslintrc.js.
 
 **React.15**
@@ -39,4 +39,4 @@ In your browser localhost:3500. All projects use the same port.
 If you want to do it with one terminal session you can run "npm run nw" for no watch.
 
 
-CodeViewer is running at http://calitek.com/.
+There is a code viewer running on page 2 of examples at http://jmarkstevens.com/.
