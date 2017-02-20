@@ -28,39 +28,36 @@ let spanSty = {
 
 let spanSpacerSty = {padding: '0 2em'};
 
-class NavBar extends React.Component {
-  state = {targetID: 'none'};
-  onMouseEnter = (event) => { if (this.props.navEnter) this.props.navEnter(event.target.id); };
-  onMouseLeave = (event) => { if (this.props.navLeave) this.props.navLeave(event.target.id); };
-  navClick = (event) => {
-    this.props.appNavMenuAction(event.target.id);
-    if (this.props.navEnter) this.props.navEnter('');
+const NavBar = (props) => {
+  const onMouseEnter = (event) => { if (props.navEnter) props.navEnter(event.target.id); };
+  const onMouseLeave = (event) => { if (props.navLeave) props.navLeave(event.target.id); };
+  const navClick = (event) => {
+    props.appNavMenuAction(event.target.id);
+    if (props.navEnter) props.navEnter('');
   };
-  render() {
-    let SpanSty = Object.assign({}, spanSty);
-    let SelectedSty = Object.assign({}, SpanSty);
-    SelectedSty.color = AppColors.mint;
-    
-    let examplesSty = this.props.fromPage === 'examples' ? SelectedSty : SpanSty;
-    let homeSty = this.props.fromPage === 'home' ? SelectedSty : SpanSty;
-    let aboutSty = this.props.fromPage === 'about' ? SelectedSty : SpanSty;
-    
+  let SpanSty = Object.assign({}, spanSty);
+  let SelectedSty = Object.assign({}, SpanSty);
+  SelectedSty.color = AppColors.mint;
+  
+  let examplesSty = props.fromPage === 'examples' ? SelectedSty : SpanSty;
+  let homeSty = props.fromPage === 'home' ? SelectedSty : SpanSty;
+  let aboutSty = props.fromPage === 'about' ? SelectedSty : SpanSty;
+  
 
-    return (
-      <div id="NavBarSty" className="FlexBox FlexBoxJustBetween" style={NavBarSty}>
-        <div className="FlexBox">
-          <span style={spanSpacerSty}>&nbsp;</span>
-          <span id="home" style={homeSty} onClick={this.navClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>Home</span>
-          <span style={spanSpacerSty}>&nbsp;</span>
-          <span id="examples" style={examplesSty} onClick={this.navClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>Examples</span>
-          <span style={spanSpacerSty}>&nbsp;</span>
-          <span id="about" style={aboutSty} onClick={this.navClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>about</span>
-          <span style={spanSpacerSty}>&nbsp;</span>
-        </div>
+  return (
+    <div id="NavBarSty" className="FlexBox FlexBoxJustBetween" style={NavBarSty}>
+      <div className="FlexBox">
+        <span style={spanSpacerSty}>&nbsp;</span>
+        <span id="home" style={homeSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Home</span>
+        <span style={spanSpacerSty}>&nbsp;</span>
+        <span id="examples" style={examplesSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Examples</span>
+        <span style={spanSpacerSty}>&nbsp;</span>
+        <span id="about" style={aboutSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>about</span>
+        <span style={spanSpacerSty}>&nbsp;</span>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({appNavMenuAction}, dispatch);

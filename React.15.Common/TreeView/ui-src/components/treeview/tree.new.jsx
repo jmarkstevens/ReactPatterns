@@ -11,8 +11,23 @@ let newAfterBtn = {buttonid: 'after', text: 'New After', assignStyle: {width: '9
 let newChildBtn = {buttonid: 'child', text: 'New Child', assignStyle: {width: '92px'}};
 let cancelNewBtn = {buttonid: 'cancel', text: 'Cancel', assignStyle: {width: '92px'}};
 
-class TreeNewRender extends React.Component {
-   render() {
+class TreeNew extends React.Component {
+  state = {treeNode: {nodeid: '', title: '', type: 'dev', selected: false, children: []}};
+  clickHandler = (buttonid) => {
+    switch (buttonid) {
+      case 'before':
+      case 'after':
+      case 'child': this.props.saveTreeNew(this.state.treeNode, buttonid); break;
+      case 'cancel': this.props.treeActions('cancelNew'); break;
+    }
+  };
+  handleChange = (field, value) => {
+    let node = this.state.treeNode;
+    if (field == 'title') node.title = value;
+    if (field == 'type') node.type = value;
+    this.setState({treeNode: node});
+  };
+  render() {
     if (this.props.hide) return null;
     return (
       <div id="treeNewEdit">
@@ -32,24 +47,6 @@ class TreeNewRender extends React.Component {
       </div>
     );
   }
-}
-
-class TreeNew extends TreeNewRender {
-  state = {treeNode: {nodeid: '', title: '', type: 'dev', selected: false, children: []}};
-  clickHandler = (buttonid) => {
-    switch (buttonid) {
-      case 'before':
-      case 'after':
-      case 'child': this.props.saveTreeNew(this.state.treeNode, buttonid); break;
-      case 'cancel': this.props.treeActions('cancelNew'); break;
-    }
-  };
-  handleChange = (field, value) => {
-    let node = this.state.treeNode;
-    if (field == 'title') node.title = value;
-    if (field == 'type') node.type = value;
-    this.setState({treeNode: node});
-  };
 }
 
 function mapDispatchToProps(dispatch) {

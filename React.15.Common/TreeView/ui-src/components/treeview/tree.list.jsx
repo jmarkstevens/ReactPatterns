@@ -10,22 +10,20 @@ const options = {
   typeName: ['node', 'type']
 };
 
-class TreeList extends React.Component {
-  iconHandler = (node) => { this.props.setTreeNodeClosed(node); };
-  clickHandler = (node) => { this.props.selectTreeNode(node); };
-  render() {
-    return (
-      <div>
-        <TreeView
-          data={this.props.treeData}
-          options={options}
-          iconClick={this.iconHandler}
-          titleClick={this.clickHandler}
-        />
-      </div>
-    );
-  }
-}
+const TreeList = (props) => {
+  const iconHandler = (node) => { props.setTreeNodeClosed(node); };
+  const clickHandler = (node) => { props.selectTreeNode(node); };
+  return (
+    <div>
+      <TreeView
+        data={props.treeData}
+        options={options}
+        iconClick={iconHandler}
+        titleClick={clickHandler}
+      />
+    </div>
+  );
+};
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({selectTreeNode, setTreeNodeClosed}, dispatch);

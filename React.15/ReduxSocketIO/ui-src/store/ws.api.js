@@ -2,12 +2,6 @@ import * as Actions from './Actions';
 
 var socket = null;
 
-const newData = {
-  'React version': '15',
-  'Project': 'Redux with socket.io',
-  'currentDateTime': new Date().toLocaleString()
-};
-
 export function wsMiddleware() {
   return (next) => (action) => {
     if (socket && action.type === 'ApiGetData') {
@@ -23,7 +17,9 @@ export function wsMiddleware() {
 }
 
 export default function (store) {
+  /* eslint-disable */
   socket = new io();
+  /* eslint-enable */
 
   socket.on('server:GetDataDone', (data) => {
     console.log('GetDataDone');
@@ -34,6 +30,4 @@ export default function (store) {
     console.log('SetDataDone');
     store.dispatch(Actions.apiGetData());
   });
-  
-  store.dispatch(Actions.apiSetData(newData));
 }

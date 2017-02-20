@@ -9,8 +9,24 @@ import JButton from '../common/jButton';
 let saveEditBtn = {buttonid: 'save', text: 'Save'};
 let cancelEditBtn = {buttonid: 'cancel', text: 'Cancel'};
 
-class TreeEditRender extends React.Component {
-   render() {
+class TreeEdit extends React.Component {
+  state = {treeNode: {nodeid: '', children: [], title: '', type: ''}};
+
+  componentWillReceiveProps = (nextProps) => { this.setState({treeNode: nextProps.treeNode}); };
+  clickHandler = (buttonid) => {
+    let node = this.state.treeNode;
+    switch (buttonid) {
+      case 'save': this.props.saveTreeEdit(node); break;
+      case 'cancel': this.props.treeActions('cancelEdit'); break;
+    }
+  };
+  handleChange = (field, value) => {
+    let node = this.state.treeNode;
+    if (field == 'title') node.title = value;
+    if (field == 'type') node.type = value;
+    this.setState({treeNode: node});
+  };
+  render() {
     if (this.props.hide) return null;
     return (
       <div id="treeNewEdit">
@@ -22,25 +38,6 @@ class TreeEditRender extends React.Component {
       </div>
     );
   }
-}
-
-class TreeEdit extends TreeEditRender {
-  state = {treeNode: {nodeid: '', children: [], title: '', type: ''}};
-
-  clickHandler = (buttonid) => {
-    let node = this.state.treeNode;
-    switch (buttonid) {
-      case 'save': this.props.saveTreeEdit(node); break;
-      case 'cancel': this.props.treeActions('cancelEdit'); break;
-    }
-  };
-  componentWillReceiveProps = (nextProps) => { this.setState({treeNode: nextProps.treeNode}); };
-  handleChange = (field, value) => {
-    let node = this.state.treeNode;
-    if (field == 'title') node.title = value;
-    if (field == 'type') node.type = value;
-    this.setState({treeNode: node});
-  };
 }
 
 function mapDispatchToProps(dispatch) {

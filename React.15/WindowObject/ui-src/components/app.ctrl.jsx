@@ -22,15 +22,22 @@ function navigatorPropsMap(prop) {
   return (<div key={prop}>{prop}: {propValue}<br /></div>);
 }
 
-// function screenPropsMap(prop) {
-//   console.log(prop);
-//   let propValue = window.screen[prop];
-//   if (lodash.isObject(propValue)) return (<div key={prop} />);
-//   else if (lodash.isBoolean(propValue)) propValue = propValue ? 'true' : 'false';
-//   return (<div key={prop}>{prop}: {propValue}<br /></div>);
-// }
-
-class AppCtrlRender extends React.Component {
+export default class AppCtrl extends React.Component {
+  state = {location: ''};
+  componentDidMount = () => {
+    if (window.navigator.geolocation) {
+        window.navigator.geolocation.getCurrentPosition(this.showPosition);
+    } else {
+        let x = 'Geolocation is not supported by this browser.';
+        this.setState({location: x});
+    }
+  };
+  showPosition = (position) => {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let x = 'Latitude: ' + lat.toPrecision(6) + '   Longitude: ' + lon.toPrecision(7);
+    this.setState({location: x});
+  };
   render() {
     let winnavgeolocation = this.state.location;
     let winNav = window.navigator;
@@ -99,20 +106,10 @@ class AppCtrlRender extends React.Component {
   }
 }
 
-export default class AppCtrl extends AppCtrlRender {
-  state = {location: ''};
-  componentDidMount = () => {
-    if (window.navigator.geolocation) {
-        window.navigator.geolocation.getCurrentPosition(this.showPosition);
-    } else {
-        let x = 'Geolocation is not supported by this browser.';
-        this.setState({location: x});
-    }
-  };
-  showPosition = (position) => {
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-    let x = 'Latitude: ' + lat.toPrecision(6) + '   Longitude: ' + lon.toPrecision(7);
-    this.setState({location: x});
-  };
-}
+// function screenPropsMap(prop) {
+//   console.log(prop);
+//   let propValue = window.screen[prop];
+//   if (lodash.isObject(propValue)) return (<div key={prop} />);
+//   else if (lodash.isBoolean(propValue)) propValue = propValue ? 'true' : 'false';
+//   return (<div key={prop}>{prop}: {propValue}<br /></div>);
+// }

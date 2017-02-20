@@ -29,7 +29,14 @@ const defaultColors = {
   endnodeSelected: '#b58900'
 };
 
-class JTreeViewBNodeRender extends React.Component {
+class JTreeViewBNode extends React.Component {
+  state = {visible: false};
+  iconHandler = () => {
+    if (this.props.node.children && this.props.node.children.length > 0) {
+      this.setState({visible: !this.state.visible});
+    } else { this.props.titleClick(this.props.node); }
+  };
+  clickHandler = () => { this.props.titleClick(this.props.node); };
   render() {
     let titleColors = inCustomColors ? inCustomColors : defaultColors;
     let titleSty = {marginTop: '2px'};
@@ -77,16 +84,6 @@ class JTreeViewBNodeRender extends React.Component {
       </div>
     );
   }
-}
-
-class JTreeViewBNode extends JTreeViewBNodeRender {
-  state = {visible: false};
-  iconHandler = () => {
-    if (this.props.node.children && this.props.node.children.length > 0) {
-      this.setState({visible: !this.state.visible});
-    } else { this.props.titleClick(this.props.node); }
-  };
-  clickHandler = () => { this.props.titleClick(this.props.node); };
 }
 
 export default function JTreeViewB({data, options, titleClick, customColors}) {

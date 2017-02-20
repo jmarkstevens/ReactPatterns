@@ -45,7 +45,18 @@ let DropdownOptionSty = {
   display: 'block'
 };
 
-class JDropMenuRender extends React.Component {
+export default class JDropMenu extends React.Component {
+  state = {isOpen: false, selected: {}};
+  setValue = (option) => {
+    this.props.onChange(option);
+    this.setState({isOpen: false});
+  };
+  handleMouseDown = (event) => {
+    if (event.type == 'mousedown' && event.button !== 0) return;
+    event.stopPropagation();
+    event.preventDefault();
+    this.setState({isOpen: !this.state.isOpen});
+  };
   render() {
     let items = this.props.options.map((option) => {
       if (option.type == 'seperator') {
@@ -74,18 +85,4 @@ class JDropMenuRender extends React.Component {
       </div>
     );
   }
-}
-
-export default class JDropMenu extends JDropMenuRender {
-  state = {isOpen: false, selected: {}};
-  handleMouseDown = (event) => {
-    if (event.type == 'mousedown' && event.button !== 0) return;
-    event.stopPropagation();
-    event.preventDefault();
-    this.setState({isOpen: !this.state.isOpen});
-  };
-  setValue = (option) => {
-    this.props.onChange(option);
-    this.setState({isOpen: false});
-  };
 }

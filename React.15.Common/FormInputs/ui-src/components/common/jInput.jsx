@@ -1,97 +1,6 @@
 import React from 'react';
 
-class JInputRender extends React.Component {
-   render() {
-    let inputSty = this.props.input.style || {color: '#4d2c3d'};
-    let textValue = this.state.textValue;
-    let colorValue = this.props.input.colorValue || '#1A3212';
-    let checkedValue = (this.props.input.checkedValue != null) ? this.props.input.checkedValue : false;
-    let numberValue = this.props.input.numberValue || 0;
-    let radioValue = this.props.input.radioValue || '';
-    let radioChecked = (this.props.input.radioChecked != null) ? this.props.input.radioChecked : false;
-    let min = this.props.input.min || 0;
-    let max = this.props.input.max || 100;
-    let step = this.props.input.step || 1;
-    let inputType = this.props.input.type || 'text';
-
-    let returnRadio = (
-      <input
-        ref={(ref) => { this.inputRef = ref; }}
-        type={inputType}
-        style={inputSty}
-        checked={radioChecked}
-        value={radioValue}
-        onChange={this.handleValueChange}
-      />
-    );
-
-    let returnChecked = (
-      <input
-        ref={(ref) => { this.inputRef = ref; }}
-        type={inputType}
-        style={inputSty}
-        checked={checkedValue}
-        onChange={this.handleCheckedChange}
-      />
-    );
-
-    let returnColor = (
-      <input
-        type={inputType}
-        ref={(ref) => { this.inputRef = ref; }}
-        style={inputSty}
-        value={colorValue}
-        onChange={this.handleValueChange}
-      />
-    );
-
-    let returnNumber = (
-      <input
-        type={inputType}
-        ref={(ref) => { this.inputRef = ref; }}
-        style={inputSty}
-        value={numberValue}
-        min={min} max={max} step={step}
-        onChange={this.handleValueChange}
-      />
-    );
-
-    let returnText = (
-      <input
-        type={inputType}
-        ref={(ref) => { this.inputRef = ref; }}
-        style={inputSty}
-        value={textValue}
-        onChange={this.handleTextValueChange}
-      />
-    );
-
-    let returnFile = (
-      <input
-        type={inputType}
-        ref={(ref) => { this.inputRef = ref; }}
-        style={inputSty}
-        onChange={this.handleFolderChange}
-        multiple
-      />
-    );
-
-    let returnIt = {};
-    switch (inputType) {
-      case 'checkbox': returnIt = returnChecked; break;
-      case 'radio': returnIt = returnRadio; break;
-      case 'color': returnIt = returnColor; break;
-      case 'number':
-      case 'range': returnIt = returnNumber; break;
-      case 'file': returnIt = returnFile; break;
-      default: returnIt = returnText; break;
-    }
-
-    return (returnIt);
-  }
-}
-
-export default class JInput extends JInputRender {
+export default class JInput extends React.Component {
   state = {textValue: ''};
 
   componentDidMount = () => {
@@ -111,4 +20,99 @@ export default class JInput extends JInputRender {
   };
   handleValueChange = (event) => { this.props.handleChange(this.props.input.name, event.target.value); };
   handleFolderChange = (event) => { this.props.handleChange(this.props.input.name, event.target.value); };
+  render() {
+    let inputSty = this.props.input.style || {color: '#4d2c3d'};
+    let inputType = this.props.input.type || 'text';
+    let returnIt = '';
+
+
+    switch (inputType) {
+      case 'checkbox': {
+        let checkedValue = (this.props.input.checkedValue != null) ? this.props.input.checkedValue : false;
+        returnIt = (
+          <input
+            ref={(ref) => { this.inputRef = ref; }}
+            type={inputType}
+            style={inputSty}
+            checked={checkedValue}
+            onChange={this.handleCheckedChange}
+          />
+        );
+        break;
+      }
+      case 'radio': {
+        let radioValue = this.props.input.radioValue || '';
+        let radioChecked = (this.props.input.radioChecked != null) ? this.props.input.radioChecked : false;
+        returnIt = (
+          <input
+            ref={(ref) => { this.inputRef = ref; }}
+            type={inputType}
+            style={inputSty}
+            checked={radioChecked}
+            value={radioValue}
+            onChange={this.handleValueChange}
+          />
+        );
+        break;
+      }
+      case 'color': {
+        let colorValue = this.props.input.colorValue || '#1A3212';
+        returnIt = (
+          <input
+            type={inputType}
+            ref={(ref) => { this.inputRef = ref; }}
+            style={inputSty}
+            value={colorValue}
+            onChange={this.handleValueChange}
+          />
+        );
+        break;
+      }
+      case 'number':
+      case 'range': {
+        let numberValue = this.props.input.numberValue || 0;
+        let min = this.props.input.min || 0;
+        let max = this.props.input.max || 100;
+        let step = this.props.input.step || 1;
+        returnIt = (
+          <input
+            type={inputType}
+            ref={(ref) => { this.inputRef = ref; }}
+            style={inputSty}
+            value={numberValue}
+            min={min} max={max} step={step}
+            onChange={this.handleValueChange}
+          />
+        );
+        break;
+      }
+      case 'file': {
+        returnIt = (
+          <input
+            type={inputType}
+            ref={(ref) => { this.inputRef = ref; }}
+            style={inputSty}
+            onChange={this.handleFolderChange}
+            multiple
+          />
+        );
+        break;
+      }
+      default: {
+        let textValue = this.state.textValue;
+        returnIt = (
+          <input
+            type={inputType}
+            ref={(ref) => { this.inputRef = ref; }}
+            style={inputSty}
+            value={textValue}
+            onChange={this.handleTextValueChange}
+          />
+        );
+        break;
+      }
+    }
+
+    return (returnIt);
+  }
 }

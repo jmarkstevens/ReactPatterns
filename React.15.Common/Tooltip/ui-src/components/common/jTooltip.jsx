@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom  from 'react-dom';
 
 let TooltipSty = {
   display: 'inline-block',
@@ -75,7 +74,7 @@ function Contents({tooltipActive, place, position, data}) {
 export default class JTooltip extends React.Component {
   state = {tooltipActive: false, position: {}};
   onMouseEnter = () => {
-    let rect = ReactDom.findDOMNode(this).getBoundingClientRect();
+    let rect = this.TooltipRef.getBoundingClientRect();
     let position = {};
     position.left = rect.left - this.props.adjust.left;
     position.top = rect.top - this.props.adjust.top;
@@ -87,7 +86,7 @@ export default class JTooltip extends React.Component {
   render() {
     let help = '?';
     return(
-      <div id="TooltipSty" style={TooltipSty} >
+      <div id="TooltipSty" ref={(ref) => { this.TooltipRef = ref; }} style={TooltipSty} >
         <div id="events" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
           <div id="helpTip" style={helpTip}>{help}</div>
         </div>

@@ -21,7 +21,20 @@ let innerSty = {
 const formatter = value => Math.ceil((value * 39) - 5);
 const unformatter = value => Math.ceil(((value + 4) / 39) * 100) / 100;
 
-class AppCtrlRender extends React.Component {
+let getInitialAppState = function() {
+  return {
+    formattedValue: 34,
+    lowerValue: 1,
+    upperValue: 85
+  };
+};
+
+export default class AppCtrl extends React.Component {
+  state = getInitialAppState();
+  _handleSliderChange = (formattedValue) => { this.setState({formattedValue}); }
+  _handleLowerChange = (lowerValue) => { this.setState({lowerValue}); }
+  _handleUpperChange = (upperValue) => { this.setState({upperValue}); }
+  _resetState = () => { this.setState(getInitialAppState()); }
   render() {
     let formattedValue = this.state.formattedValue;
     let percentValue = unformatter(formattedValue);
@@ -65,20 +78,4 @@ class AppCtrlRender extends React.Component {
       </div>
     );
   }
-}
-
-let getInitialAppState = function() {
-  return {
-    formattedValue: 34,
-    lowerValue: 1,
-    upperValue: 85
-  };
-};
-
-export default class AppCtrl extends AppCtrlRender {
-  state = getInitialAppState();
-  _handleSliderChange = (formattedValue) => { this.setState({formattedValue}); }
-  _handleLowerChange = (lowerValue) => { this.setState({lowerValue}); }
-  _handleUpperChange = (upperValue) => { this.setState({upperValue}); }
-  _resetState = () => { this.setState(getInitialAppState()); }
 }

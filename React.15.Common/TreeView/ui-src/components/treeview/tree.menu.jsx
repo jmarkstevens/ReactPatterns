@@ -3,34 +3,36 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {treeActions} from '../../store/tree.Actions';
-import JDropMenu from './../common/jDropMenu';
+import JButton from '../common/jButton';
 
-let TreeMenuSty = {
-  fontSize: '1.2em',
-  padding: '2px 2px 0 0',
-  position: 'relative',
-  right: '0px',
-  top: '0px'
+const TreeMenuSty = {
+  fontSize: '.9em',
+  height: '40px',
+  marginBottom: '10px',
+  textAlign: 'center',
+  verticalAlign: 'middle'
 };
 
-let options = [
-  {value: 'new', label: 'New'},
-  {value: 'edit', label: 'Edit'},
-  {type: 'seperator', key: '100'},
-  {value: 'moveUp', label: 'Move up'},
-  {value: 'moveDown', label: 'Move down'},
-  {type: 'seperator', key: '101'},
-  {value: 'rename', label: 'Rename'},
-  {type: 'seperator', key: '102'},
-  {value: 'remove', label: 'Remove'}
-];
+const newBtn = {buttonid: 'new', icon: 'fa fa-file-text-o fa-2x', style: 'BtnImg', assignStyle: {color: '#419079'}};
+const editBtn = {buttonid: 'edit', icon: 'fa fa-pencil fa-2x', style: 'BtnImg'};
+const moveUpBtn = {buttonid: 'moveUp', icon: 'fa fa-arrow-up fa-2x', style: 'BtnImg'};
+const moveDownBtn = {buttonid: 'moveDown', icon: 'fa fa-arrow-down fa-2x', style: 'BtnImg'};
+const removeBtn = {buttonid: 'remove', icon: 'fa fa-trash-o fa-2x', style: 'BtnImg'};
 
 class TreeMenu extends React.Component {
-  onSelect = (option) => { this.props.treeActions(option.value); };
+  onSelect = (btn) => { this.props.treeActions(btn); };
   render() {
     return (
       <div id="TreeMenuSty" style={TreeMenuSty}>
-        <JDropMenu options={options} onChange={this.onSelect} />
+        <JButton btn={newBtn} parentClickHandler={this.onSelect} />
+        &nbsp;
+        <JButton btn={editBtn} parentClickHandler={this.onSelect} />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <JButton btn={moveUpBtn} parentClickHandler={this.onSelect} />
+        &nbsp;
+        <JButton btn={moveDownBtn} parentClickHandler={this.onSelect} />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <JButton btn={removeBtn} parentClickHandler={this.onSelect} />
       </div>
     );
   }

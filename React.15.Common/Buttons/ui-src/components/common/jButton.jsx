@@ -91,31 +91,31 @@ function getStyle(btnProp) {
     return buttonSty;
 }
 
-export default class JButton extends React.Component {
-  clickHandler = () => { if (this.props.parentClickHandler) this.props.parentClickHandler(this.props.btn.buttonid); };
-  render() {
-    let buttonSty = getStyle(this.props);
-    let isDisabled = this.props.isDisabled ? this.props.isDisabled : false;
-    let renderIt;
-    if (this.props.btn.img) {
-      renderIt = (
-        <button className="HighZ" style={buttonSty} onClick={this.clickHandler}>
-          <img src={this.props.btn.img} />
-        </button>
-      );
-    } else if (this.props.btn.icon) {
-      renderIt = (
-        <button className="HighZ" style={buttonSty} onClick={this.clickHandler}>
-          <i className={this.props.btn.icon} />
-        </button>
-      );
-    } else {
-      renderIt = (
-        <button style={buttonSty} disabled={isDisabled} onClick={this.clickHandler}>
-          {this.props.btn.text}
-        </button>
-      );
-    }
-    return (renderIt);
+const JButton = (props) => {
+  const clickHandler = () => { if (props.parentClickHandler) props.parentClickHandler(props.btn.buttonid); };
+  let buttonSty = getStyle(props);
+  let isDisabled = props.isDisabled ? props.isDisabled : false;
+  let renderIt;
+  if (props.btn.img) {
+    renderIt = (
+      <button className="HighZ" style={buttonSty} onClick={clickHandler}>
+        <img src={props.btn.img} />
+      </button>
+    );
+  } else if (props.btn.icon) {
+    renderIt = (
+      <button className="HighZ" style={buttonSty} onClick={clickHandler}>
+        <i className={props.btn.icon} />
+      </button>
+    );
+  } else {
+    renderIt = (
+      <button style={buttonSty} disabled={isDisabled} onClick={clickHandler}>
+        {props.btn.text}
+      </button>
+    );
   }
-}
+  return (renderIt);
+};
+
+export default JButton;

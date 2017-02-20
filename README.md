@@ -11,9 +11,7 @@ I have added linting with eslint. The linting rules are in .eslintrc.js.
 *  Redux Fetch ajax
 *  Redux Pages
 *  Redux SocketIO
-*  ReFlux SuperAgent ajax
 *  ThirdParty
-  *  GoogleMaps
   *  Radium
 *  Window Events
 *  Window Object

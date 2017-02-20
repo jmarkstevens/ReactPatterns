@@ -74,12 +74,8 @@ class RangeSelector extends React.Component {
     this.setState({lowerPixels, upperPixels, width});
   };
 
-  _handleLowerDragStart = () => {
-    this.setState({dragging: 'Lower'});
-  };
-  _handleUpperDragStart = () => {
-    this.setState({dragging: 'Upper'});
-  };
+  _handleLowerDragStart = () => { this.setState({dragging: 'Lower'}); };
+  _handleUpperDragStart = () => { this.setState({dragging: 'Upper'}); };
 
   _handleTrackMouseDown = e => {
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
@@ -170,10 +166,6 @@ class RangeSelector extends React.Component {
         this.setState({dragging: false, trackClicked: false});
       }
     }
-  };
-
-  _handleToggleViews = () => {
-    this.setState({selectedLabel: null});
   };
 
   styles = () => {
@@ -343,15 +335,11 @@ RangeSelector.defaultProps = {
   defaultLowerValue: 0,
   defaultUpperValue: 1,
   interval: 1,
-  formatter(value) {
-    return value;
-  },
+  formatter(value) { return value; },
   lowerBound: 0,
   itemName: '',
-  onLowerDragStop() {
-  },
-  onUpperDragStop() {
-  },
+  onLowerDragStop() {},
+  onUpperDragStop() {},
   updateOnDrag: false,
   upperBound: 100,
 };

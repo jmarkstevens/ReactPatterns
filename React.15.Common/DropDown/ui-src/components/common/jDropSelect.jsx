@@ -65,7 +65,26 @@ let placeSty = {
   paddingRight: '20px'
 };
 
-class JDropSelectRender extends React.Component {
+export default class JDropSelect extends React.Component {
+  state = {isOpen: false, selected: {label: 'Select...', value: ''}};
+  componentWillMount() {
+    this.setState({selected: this.props.defaultSelected || {label: 'Select...', value: ''}});
+  }
+  componentWillReceiveProps(newProps) {
+    if (newProps.defaultSelected && newProps.defaultSelected !== this.state.selected) {
+      this.setState({selected: newProps.defaultSelected});
+    }
+  }
+  setValue = (option) => {
+    if (option !== this.state.selected && this.props.onChange) this.props.onChange(this.props.itemName, option);
+    this.setState({selected: option, isOpen: false});
+  };
+  handleMouseDown = (event) => {
+    if (event.type == 'mousedown' && event.button !== 0) return;
+    event.stopPropagation();
+    event.preventDefault();
+    this.setState({isOpen: !this.state.isOpen});
+  };
   render() {
     let items = this.props.options.map((option) => {
       if (option.type == 'seperator') {
@@ -106,26 +125,4 @@ class JDropSelectRender extends React.Component {
       </div>
     );
   }
-}
-
-export default class JDropSelect extends JDropSelectRender {
-  state = {isOpen: false, selected: {label: 'Select...', value: ''}};
-  componentWillMount() {
-    this.setState({selected: this.props.defaultSelected || {label: 'Select...', value: ''}});
-  }
-  componentWillReceiveProps(newProps) {
-    if (newProps.defaultSelected && newProps.defaultSelected !== this.state.selected) {
-      this.setState({selected: newProps.defaultSelected});
-    }
-  }
-  handleMouseDown = (event) => {
-    if (event.type == 'mousedown' && event.button !== 0) return;
-    event.stopPropagation();
-    event.preventDefault();
-    this.setState({isOpen: !this.state.isOpen});
-  };
-  setValue = (option) => {
-    if (option !== this.state.selected && this.props.onChange) this.props.onChange(this.props.itemName, option);
-    this.setState({selected: option, isOpen: false});
-  };
 }

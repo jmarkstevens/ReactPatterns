@@ -11,8 +11,14 @@ let radioInput1 = {name: 'radioGroup', type: 'radio', radioValue: 'dev'};
 let radioInput2 = {name: 'radioGroup', type: 'radio', radioValue: 'home'};
 let radioInput3 = {name: 'radioGroup', type: 'radio', radioValue: 'sys'};
 
-class TreeDetailRender extends React.Component {
-   render() {
+export default class TreeDetail extends React.Component {
+  state = {title: 'Hello!'};
+  componentWillReceiveProps = (nextProps) => {
+    if (this.state.title != nextProps.treeNode.title) this.setState({title: nextProps.treeNode.title});
+  };
+  handleTitleChange = (name, value) => { this.props.handleChange(name, value); };
+  handleValueChange = (name, value) => { this.props.handleChange('type', value); };
+  render() {
     titleInput.textValue = this.props.treeNode.title;
 
     let currentRadioGroupValue = this.props.treeNode.type;
@@ -29,13 +35,4 @@ class TreeDetailRender extends React.Component {
       </div>
     );
   }
-}
-
-export default class TreeDetail extends TreeDetailRender {
-  state = {title: 'Hello!'};
-  componentWillReceiveProps = (nextProps) => {
-    if (this.state.title != nextProps.treeNode.title) this.setState({title: nextProps.treeNode.title});
-  };
-  handleTitleChange = (name, value) => { this.props.handleChange(name, value); };
-  handleValueChange = (name, value) => { this.props.handleChange('type', value); };
 }
