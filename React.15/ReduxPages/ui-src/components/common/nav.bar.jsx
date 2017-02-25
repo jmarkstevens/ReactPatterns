@@ -18,12 +18,6 @@ let spanSty = {
   fontFamily: '\'Trebuchet MS\', \'Lucida Grande\', \'Lucida Sans Unicode\', \'Lucida Sans\', \'sans-serif\'',
   fontSize: '1.5em',
   fontWeight: '500',
-  display: 'inline-block',
-  WebkitTransform: 'scale(1.5,1)',
-  MozTransform: 'scale(1.5,1)',
-  MsTransform: 'scale(1.5,1)',
-  OTransform: 'scale(1.5,1)',
-  transform: 'scale(1.5,1)'
 };
 
 let spanSpacerSty = {padding: '0 2em'};
@@ -39,22 +33,25 @@ const NavBar = (props) => {
   let SelectedSty = Object.assign({}, SpanSty);
   SelectedSty.color = AppColors.mint;
   
-  let examplesSty = props.fromPage === 'examples' ? SelectedSty : SpanSty;
+  let cacheSty = props.fromPage === 'cache' ? SelectedSty : SpanSty;
+  let eventSty = props.fromPage === 'event' ? SelectedSty : SpanSty;
   let homeSty = props.fromPage === 'home' ? SelectedSty : SpanSty;
-  let aboutSty = props.fromPage === 'about' ? SelectedSty : SpanSty;
-  
+  let objectSty = props.fromPage === 'object' ? SelectedSty : SpanSty;
+  let radiumSty = props.fromPage === 'radium' ? SelectedSty : SpanSty;
 
   return (
-    <div id="NavBarSty" className="FlexBox FlexBoxJustBetween" style={NavBarSty}>
-      <div className="FlexBox">
-        <span style={spanSpacerSty}>&nbsp;</span>
-        <span id="home" style={homeSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Home</span>
-        <span style={spanSpacerSty}>&nbsp;</span>
-        <span id="examples" style={examplesSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Examples</span>
-        <span style={spanSpacerSty}>&nbsp;</span>
-        <span id="about" style={aboutSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>about</span>
-        <span style={spanSpacerSty}>&nbsp;</span>
-      </div>
+    <div id="NavBarSty" className="FlexBoxCenter" style={NavBarSty}>
+      <span style={spanSpacerSty}>&nbsp;</span>
+      <span id="home" style={homeSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Home</span>
+      <span style={spanSpacerSty}>&nbsp;</span>
+      <span id="event" style={eventSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Window Event</span>
+      <span style={spanSpacerSty}>&nbsp;</span>
+      <span id="object" style={objectSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Window Object</span>
+      <span style={spanSpacerSty}>&nbsp;</span>
+      <span id="radium" style={radiumSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Radium</span>
+      <span style={spanSpacerSty}>&nbsp;</span>
+      <span id="cache" style={cacheSty} onClick={navClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Cache</span>
+      <span style={spanSpacerSty}>&nbsp;</span>
     </div>
   );
 };

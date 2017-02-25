@@ -1,7 +1,0 @@
-{
-  "lib": [
-    "lodash",
-    "react",
-    "react-dom"
-  ]
-}

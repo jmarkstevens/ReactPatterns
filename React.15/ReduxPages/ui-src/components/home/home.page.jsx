@@ -1,6 +1,5 @@
 import React from 'react';
 
-import NavBar from '../common/nav.bar';
 import Cache from '../../lib/cache';
 
 let HomePageSty = {
@@ -27,8 +26,7 @@ export default class HomePage extends React.Component {
     let navigatorproduct = window.navigator.product;
     let navigatoruserAgent = window.navigator.userAgent;
     return (
-      <div style={HomePageSty}>
-        <div id="navBarDiv" ref={(ref) => { this.navBarRef = ref; }}><NavBar fromPage="home" /></div>
+      <div id="HomePage" className="contentPage" style={HomePageSty}>
         Platform: {platform}<br />
         Inner Width: {innerWidth}<br />
         Inner Height: {innerHeight}<br />

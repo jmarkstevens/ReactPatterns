@@ -1,9 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import AboutPage from './about/about.page';
-import ExamplesPage from './examples/examples.page';
+import NavBar from './common/nav.bar';
+
+import CachePage from './cache/cache.page';
+import EventPage from './event/event.page';
 import HomePage from './home/home.page';
+import ObjectPage from './object/object.page';
+import RadiumPage from './radium/radium.page';
 
 let AppCtrlSty = {
   height: '100%',
@@ -12,26 +16,21 @@ let AppCtrlSty = {
   width: '100%'
 };
 
-let allPageSty = {
-  height: '100%',
-  margin: '0px',
-  overflow: 'hidden',
-  padding: '0px',
-  width: '100%'
-};
-
 function AppCtrl({appState}) {
   let page = appState.currentPage;
-  let hideExamples = (page != 'examples');
+  let hideCache = (page != 'cache');
+  let hideEvent = (page != 'event');
   let hideHome = (page != 'home');
-  let hideAbout = (page != 'about');
+  let hideObject = (page != 'object');
+  let hideRadium = (page != 'radium');
   return (
     <div id="AppCtrlSty" style={AppCtrlSty}>
-      <div id="allPageSty" style={allPageSty}>
-        <AboutPage hide={hideAbout} />
-        <ExamplesPage hide={hideExamples} />
-        <HomePage hide={hideHome} />
-      </div>
+      <NavBar fromPage={page} />
+      <CachePage hide={hideCache} />
+      <EventPage hide={hideEvent} />
+      <HomePage hide={hideHome} />
+      <ObjectPage hide={hideObject} />
+      <RadiumPage hide={hideRadium} />
     </div>
   );
 }

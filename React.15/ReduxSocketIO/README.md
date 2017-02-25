@@ -1,4 +1,4 @@
-# ReactPatterns ReduxWebSocket
+# ReactPatterns ReduxSocketIO
 
 A basic demonstration of redux with websocket. This would be the starting point for a simple data handling app.
 The 15 version uses more es6 and refines the reflux usage a bit.

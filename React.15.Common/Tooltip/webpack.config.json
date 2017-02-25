@@ -1,8 +1,0 @@
-{
-  "lib": [
-    "react",
-    "react-dom",
-    "react-mixin",
-    "reflux"
-  ]
-}

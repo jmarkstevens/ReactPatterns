@@ -10,23 +10,22 @@ I have added linting with eslint. The linting rules are in .eslintrc.js.
 *  Redux Electron
 *  Redux Fetch ajax
 *  Redux Pages
-*  Redux SocketIO
-*  ThirdParty
   *  Radium
-*  Window Events
-*  Window Object
+  *  Window Events
+  *  Window Object
+*  Redux SocketIO
 
-**React.15.Common**
-*  Buttons
-*  DropDown
-*  Form Inputs
+**React.Common**
+*  Button
+*  DropDowns
+*  Form Input
 *  Gallery
 *  List
-*  MultiSelect
+*  PageIndicator
 *  ProgressBar
-*  RangeSlider
+*  Sliders
 *  Tooltip
-*  TreeView
+*  TreeViews
 
 # The basics
 

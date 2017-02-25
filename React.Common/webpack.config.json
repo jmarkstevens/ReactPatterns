@@ -1,0 +1,17 @@
+{
+  "lib": [
+    "lodash",
+    "lodash/throttle",
+    "radium",
+    "react",
+    "react-dom",
+    "react-mixin",
+    "react-redux",
+    "redux",
+    "redux-logger",
+    "screenfull",
+    "redux-thunk",
+    "traverse",
+    "whatwg-fetch"
+  ]
+}

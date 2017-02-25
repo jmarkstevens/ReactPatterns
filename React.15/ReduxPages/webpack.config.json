@@ -1,5 +1,6 @@
 {
   "lib": [
+    "radium",
     "react",
     "react-dom",
     "react-redux",
