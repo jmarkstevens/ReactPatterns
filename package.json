@@ -1,18 +1,18 @@
 {
   "name": "ReactPatterns",
-  "version": "1.0.0",
+  "version": "4.0.1",
   "description": "A collection of simple react projects providing reusable components, startup and test examples.",
   "license": "MIT",
   "author": {
-    "name": "Janaka Stevens",
-    "email": "jmstevens@calitek.com"
+    "name": "J Mark Stevens",
+    "email": "jmstevens@jmarkstevens.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/calitek/ReactPatterns.git"
+    "url": "git+https://github.com/jmarkstevens/ReactPatterns.git"
   },
   "bugs": {
-    "url": "https://github.com/calitek/ReactPatterns/issues"
+    "url": "https://github.com/jmarkstevens/ReactPatterns/issues"
   },
   "keywords": [
     "react",
