@@ -72,4 +72,4 @@ const JProgressBar = (props) => {
   return progressRender;
 };
 
-export default JProgressBar;
+module.exports = JProgressBar;

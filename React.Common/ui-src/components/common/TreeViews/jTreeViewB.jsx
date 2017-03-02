@@ -86,7 +86,7 @@ class JTreeViewBNode extends React.Component {
   }
 }
 
-export default function JTreeViewB({data, options, titleClick, customColors}) {
+function JTreeViewB({data, options, titleClick, customColors}) {
   inOptions = options;
   inCustomColors = customColors;
   let childNodes = data.map((child, index) => {
@@ -104,3 +104,5 @@ export default function JTreeViewB({data, options, titleClick, customColors}) {
     </div>
   );
 }
+
+module.exports = JTreeViewB;

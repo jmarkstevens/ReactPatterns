@@ -20,7 +20,7 @@ let options = [
 ];
 
 export default class DropDownSelect extends React.Component {
-  state = {name: '', option: {}};
+  state = {name: 'growthspeed', option: {}};
   onDropSelect = (name, option) => { this.setState({name, option}); };
   render() {
     let name = 'growthspeed';

@@ -213,7 +213,7 @@ class MultiSelect extends React.Component {
         <div
           className="mx-MultiSelect-close"
           key="close"
-          onMouseDown={() => this._handleClose()}
+          onMouseDown={this._handleClose}
           onMouseOver={this._handleItemMouseOver}
           style={[styles.item, styles.close]}
         >

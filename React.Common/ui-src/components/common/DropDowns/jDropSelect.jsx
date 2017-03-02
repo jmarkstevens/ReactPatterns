@@ -65,7 +65,7 @@ let placeSty = {
   paddingRight: '20px'
 };
 
-export default class JDropSelect extends React.Component {
+class JDropSelect extends React.Component {
   state = {isOpen: false, selected: {label: 'Select...', value: ''}};
   componentWillMount() {
     this.setState({selected: this.props.defaultSelected || {label: 'Select...', value: ''}});
@@ -75,9 +75,10 @@ export default class JDropSelect extends React.Component {
       this.setState({selected: newProps.defaultSelected});
     }
   }
-  setValue = (option) => {
-    if (option !== this.state.selected && this.props.onChange) this.props.onChange(this.props.itemName, option);
-    this.setState({selected: option, isOpen: false});
+  setValue = (e) => {
+    let selectedOption = this.props.options[parseInt(e.target.id)];
+    if ((selectedOption !== this.state.selected) && this.props.onChange) this.props.onChange(this.props.itemName, selectedOption);
+    this.setState({selected: selectedOption, isOpen: false});
   };
   handleMouseDown = (event) => {
     if (event.type == 'mousedown' && event.button !== 0) return;
@@ -86,7 +87,7 @@ export default class JDropSelect extends React.Component {
     this.setState({isOpen: !this.state.isOpen});
   };
   render() {
-    let items = this.props.options.map((option) => {
+    let items = this.props.options.map((option, index) => {
       if (option.type == 'seperator') {
         return (<div style={DropdownSeperatorSty} key={option.key} />);
       } else {
@@ -95,13 +96,12 @@ export default class JDropSelect extends React.Component {
         labelSpanSty.color = selected ? 'green' : 'black';
         return (
           <div
-            id="DropdownOptionSty"
+            id={index}
             key={option.value}
             style={DropdownOptionSty}
-            onMouseDown={() => this.setValue(option)}
-            onClick={() => this.setValue(option)}
+            onClick={this.setValue}
           >
-            <span style={labelSpanSty}>{option.label}</span>
+            <span id={index} style={labelSpanSty}>{option.label}</span>
           </div>
         );
       }
@@ -126,3 +126,12 @@ export default class JDropSelect extends React.Component {
     );
   }
 }
+
+JDropSelect.propTypes = {
+  options: React.PropTypes.object.isRequired,
+  defaultSelected: React.PropTypes.object.isRequired,
+  itemName: React.PropTypes.string.isRequired,
+  onChange: React.PropTypes.func.isRequired
+};
+
+module.exports = JDropSelect;

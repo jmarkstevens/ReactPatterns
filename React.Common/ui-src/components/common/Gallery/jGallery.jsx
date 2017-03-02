@@ -131,7 +131,7 @@ class GalleryRender extends React.Component {
   }
 }
 
-export default class Gallery extends GalleryRender {
+class JGallery extends GalleryRender {
   state = {index: 0, hover: false, hideThumbs: true, thumbColumn: false, hideShortcuts: true, isNotExpanded: true};
 
   componentDidMount = () => { window.addEventListener('keydown', this.keyDownListener); };
@@ -173,6 +173,4 @@ export default class Gallery extends GalleryRender {
   hideThumbHandlerP = () => { this.setState({hideThumbs: !this.state.hideThumbs, thumbColumn: true}); };
 }
 
-    // let CopyRightSty = Object.assign({}, copyRightSty);
-    // if (PicList[this.state.index].copyright) CopyRightSty.display = 'block';
-    // else CopyRightSty.display = 'none';
+module.exports = JGallery;

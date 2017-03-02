@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class JInput extends React.Component {
+class JInput extends React.Component {
   state = {textValue: ''};
 
   componentDidMount = () => {
@@ -116,3 +116,22 @@ export default class JInput extends React.Component {
     return (returnIt);
   }
 }
+
+JInput.propTypes = {
+  input: React.PropTypes.object.isRequired,
+  handleChange: React.PropTypes.func.isRequired
+};
+
+// const input.object = {
+//   name: 'string - id returned to handleValueChange', Required
+//   type: 'string - text(default), checkbox, color, file, number, range and radio',
+//   focus: 'bool - focus on this ref',
+//   style: 'object - replace default style',
+//   min: 'int - number and range type min value',
+//   max: 'int - number and range type max value',
+//   step: 'int - number and range type step value',
+//   radioValue: 'string - radio type label/value',
+//   radioChecked: 'bool - radio type selected'
+// };
+
+module.exports = JInput;

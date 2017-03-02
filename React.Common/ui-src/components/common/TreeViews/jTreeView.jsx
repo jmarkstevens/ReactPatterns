@@ -79,7 +79,7 @@ const JTreeViewNode = (props) => {
   );
 };
 
-export default function JTreeView({data, options, iconClick, titleClick, customColors}) {
+function JTreeView({data, options, iconClick, titleClick, customColors}) {
   inOptions = options;
   inCustomColors = customColors;
   let childNodes = data.map((child, index) => {
@@ -97,3 +97,5 @@ export default function JTreeView({data, options, iconClick, titleClick, customC
     </div>
   );
 }
+
+module.exports = JTreeView;

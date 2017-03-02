@@ -15,10 +15,10 @@ let standardBtnSty = {
   whiteSpace: 'nowrap'
 };
 
-let standardBtnImg = {
+let standardBtnIcon = {
   backgroundColor: 'transparent',
   backgroundImg: 'none',
-  backgroundSize: 'contain',
+  backgroundSize: 'cover',
   border: '0px',
   color: '#4d2c3d',
   cursor: 'pointer',
@@ -35,6 +35,8 @@ function getStyle(btnProp) {
     let btnStyle = 'Btn30';
     let isDesktop = btnProp.isDesktop ? btnProp.isDesktop : true;
     if (btnProp.btn.style) btnStyle = btnProp.btn.style;
+    if (btnProp.btn.backimg && !btnProp.btn.style) btnStyle = 'BackImg';
+    if (btnProp.btn.icon && !btnProp.btn.style) btnStyle = 'BtnIcon';
     if (isDesktop) {
       switch (btnStyle) {
         case 'Btn18':
@@ -62,8 +64,12 @@ function getStyle(btnProp) {
           buttonSty.margin = '0 5px';
           buttonSty.padding = '0.45em .8em';
           break;
-        case 'BackImg': buttonSty = Object.assign({}, standardBtnImg); buttonSty.background = btnProp.btn.backimg; break;
-        case 'BtnImg': buttonSty = standardBtnImg; break;
+        case 'BackImg': {
+          buttonSty = Object.assign({}, standardBtnIcon);
+          buttonSty.background = btnProp.btn.backimg;
+          break;
+        }
+        case 'BtnIcon': buttonSty = standardBtnIcon; break;
       }
     } else {
       switch (btnStyle) {
@@ -83,7 +89,7 @@ function getStyle(btnProp) {
           buttonSty.margin = '0 5px';
           buttonSty.padding = '0.45em .8em';
           break;
-        case 'BtnImg': buttonSty = standardBtnImg; break;
+        case 'BtnIcon': buttonSty = standardBtnIcon; break;
       }
     }
     if (btnProp.btn.reStyle) buttonSty = btnProp.btn.reStyle;
@@ -96,21 +102,15 @@ const JButton = (props) => {
   let buttonSty = getStyle(props);
   let isDisabled = props.isDisabled ? props.isDisabled : false;
   let renderIt;
-  if (props.btn.img) {
+  if (props.btn.icon) {
     renderIt = (
-      <button className="HighZ" style={buttonSty} onClick={clickHandler}>
-        <img src={props.btn.img} />
-      </button>
-    );
-  } else if (props.btn.icon) {
-    renderIt = (
-      <button className="HighZ" style={buttonSty} onClick={clickHandler}>
+      <button id={props.btn.buttonid} className="HighZ" style={buttonSty} onClick={clickHandler}>
         <i className={props.btn.icon} />
       </button>
     );
   } else {
     renderIt = (
-      <button style={buttonSty} disabled={isDisabled} onClick={clickHandler}>
+      <button id={props.btn.buttonid} style={buttonSty} disabled={isDisabled} onClick={clickHandler}>
         {props.btn.text}
       </button>
     );
@@ -118,4 +118,22 @@ const JButton = (props) => {
   return (renderIt);
 };
 
-export default JButton;
+JButton.propTypes = {
+  btn: React.PropTypes.object.isRequired,
+  isDisabled: React.PropTypes.bool,
+  isDesktop: React.PropTypes.bool,
+  parentClickHandler: React.PropTypes.func
+};
+
+// btn.object = {
+//   buttonid: 'identifier for parentClickHandler', this and one of the next three are required
+//   text: 'standard button content',
+//   backimg: 'url for a back image',
+//   icon: 'used for an icon font',
+
+//   style: 'predefined sizing for default style',
+//   reStyle: 'replace the default style',
+//   assignStyle: 'use Object.assign with the default style'
+// }
+
+module.exports = JButton;

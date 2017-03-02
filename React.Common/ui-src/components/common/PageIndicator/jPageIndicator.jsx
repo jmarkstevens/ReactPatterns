@@ -50,4 +50,4 @@ PageIndicator.propTypes = {
   onClick: React.PropTypes.func
 };
 
-export default PageIndicator;
+module.exports = PageIndicator;

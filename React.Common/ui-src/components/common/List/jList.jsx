@@ -17,7 +17,7 @@ function spanMap(item, index) {
   return (<span style={lineSty} key={index}>{item}</span>);
 }
 
-export default function JList({data, lineStyle, listStyle, spanLine}) {
+function JList({data, lineStyle, listStyle, spanLine}) {
   listSty = listStyle ? listStyle : listStyleDefault;
   lineSty = lineStyle ? lineStyle : lineStyleDefault;
   var list;
@@ -29,3 +29,5 @@ export default function JList({data, lineStyle, listStyle, spanLine}) {
     </div>
   );
 }
+
+module.exports = JList;

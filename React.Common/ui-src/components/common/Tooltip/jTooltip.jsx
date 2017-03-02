@@ -71,7 +71,7 @@ function Contents({tooltipActive, place, position, data}) {
   );
 }
 
-export default class JTooltip extends React.Component {
+class JTooltip extends React.Component {
   state = {tooltipActive: false, position: {}};
   onMouseEnter = () => {
     let rect = this.TooltipRef.getBoundingClientRect();
@@ -100,3 +100,5 @@ export default class JTooltip extends React.Component {
     );
   }
 }
+
+module.exports = JTooltip;
