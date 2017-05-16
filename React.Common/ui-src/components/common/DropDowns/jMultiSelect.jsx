@@ -31,6 +31,13 @@ class MultiSelect extends React.Component {
   componentWillReceiveProps = nextProps => {
     if (nextProps.currentValue.length === 0 && this.props.currentValue.length > 0) {
       this.setState({selectedItems: []});
+    } else if (nextProps.currentValue.length > this.props.currentValue.length) {
+      let newValues = [];
+      nextProps.currentValue.forEach((value) => {
+        let index = nextProps.items.findIndex((option) => option.value === value);
+        if (index > -1) newValues.push(nextProps.items[index]);
+      });
+      this.setState({selectedItems: newValues});
     }
   };
 
@@ -189,11 +196,10 @@ class MultiSelect extends React.Component {
         Clear
       </div>
     );
+    let showSelectAll = (this.props.useSelectAll && (this.state.selectedItems.length !== this.props.items.length));
     return (
       <div className="mx-MultiSelect-option-list" ref={ref => this.optionList = ref} style={styles.itemList}>
-        {this.state.selectedItems.length !== this.props.items.length ? selectAll : null}
-
-        {this.state.selectedItems.length > 0 ? clear : null}
+        {showSelectAll ? selectAll : null}
 
         {this._getFilteredItems().map((item, index) => {
           return (
@@ -205,11 +211,14 @@ class MultiSelect extends React.Component {
               onMouseOver={this._handleItemMouseOver}
               style={[styles.item, item === this.state.highlightedValue && styles.activeItem]}
             >
-              <span>{item.label}</span>
-              <span>{item.count}</span>
+              <span id={index}>{item.label}</span>
+              <span id={index}>{item.count}</span>
             </div>
           );
         })}
+
+        {this.state.selectedItems.length > 0 ? clear : null}
+
         <div
           className="mx-MultiSelect-close"
           key="close"
@@ -252,6 +261,7 @@ MultiSelect.propTypes = {
   onItemSelect: React.PropTypes.func,
   placeholderText: React.PropTypes.string,
   preSelectedItems: React.PropTypes.array,
+  useSelectAll: React.PropTypes.bool,
 };
 
 MultiSelect.defaultProps = {
@@ -262,6 +272,7 @@ MultiSelect.defaultProps = {
   },
   placeholderText: 'Select Filters',
   preSelectedItems: [],
+  useSelectAll: false,
 };
 
 const StyleConstants = {

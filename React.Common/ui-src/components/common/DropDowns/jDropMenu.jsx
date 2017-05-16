@@ -89,7 +89,7 @@ class JDropMenu extends React.Component {
 }
 
 JDropMenu.propTypes = {
-  options: React.PropTypes.object.isRequired,
+  options: React.PropTypes.array.isRequired,
   onChange: React.PropTypes.func.isRequired
 };
 

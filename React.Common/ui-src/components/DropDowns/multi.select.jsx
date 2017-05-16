@@ -4,33 +4,38 @@ import JMultiSelect from '../common/DropDowns/jMultiSelect';
 
 const MultiSelectSty = {
   height: '100%',
-  maxWidth: '200px',
+  maxWidth: '300px',
   minHeight: '300px',
 };
 
-let sunExposure = {
+const leafcolor = {
   'value': [],
-  'key': 'SunFilter',
+  'key': 'leaf color',
   'options': [
     {
-      'count': 77,
-      'label': 'Full',
-      'value': 'full'
+      'count': 59,
+      'label': 'Green on both sides',
+      'value': 'allgrn'
     },
     {
-      'count': 24,
-      'label': 'Gradual',
-      'value': 'grad'
+      'count': 13,
+      'label': 'Whitish bottom side',
+      'value': 'whtbot'
     },
     {
-      'count': 49,
-      'label': 'Partial',
-      'value': 'part'
+      'count': 25,
+      'label': 'Moderately pale bottom side',
+      'value': 'mpbot'
     },
     {
-      'count': 14,
-      'label': 'Shade',
-      'value': 'shade'
+      'count': 19,
+      'label': 'Both sides blue-gray to silver',
+      'value': 'allbs'
+    },
+    {
+      'count': 3,
+      'label': 'Red, reddish to bronze when new',
+      'value': 'newred'
     }
   ]
 };
@@ -38,7 +43,7 @@ let sunExposure = {
 const isDesktop = 1;
 
 export default class MultiSelect extends React.Component {
-  state = {currentValue: sunExposure.value}
+  state = {currentValue: leafcolor.value}
   onJSelect = (itemName, selectedItems) => {
     let newValue = [];
     selectedItems.forEach(item => newValue.push(item.value));
@@ -55,10 +60,10 @@ export default class MultiSelect extends React.Component {
         <button onClick={this.clickHandler} style={{color: 'black'}}> Clear</button>
         <br /><br /><br />
         <JMultiSelect
-          items={sunExposure.options}
-          itemName="sunexposure"
+          items={leafcolor.options}
+          itemName="leafcolor"
           currentValue={this.state.currentValue}
-          placeholderText="Select Sun Exposure"
+          placeholderText="Select Leaf Color"
           onChange={this.onJSelect}
           isDesktop={isDesktop}
         />

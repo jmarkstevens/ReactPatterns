@@ -173,4 +173,10 @@ class JGallery extends GalleryRender {
   hideThumbHandlerP = () => { this.setState({hideThumbs: !this.state.hideThumbs, thumbColumn: true}); };
 }
 
+JGallery.propTypes = {
+  data: React.PropTypes.array.isRequired,
+  hide: React.PropTypes.bool,
+  close: React.PropTypes.func
+};
+
 module.exports = JGallery;

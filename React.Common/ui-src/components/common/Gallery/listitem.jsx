@@ -28,7 +28,7 @@ let thumbImageSty = {
   height: 'auto'
 };
 
-export default class ListItem extends React.Component {
+class ListItem extends React.Component {
   componentDidUpdate = () => {
     if ((this.props.index == this.props.selected)) {
       this.refName.scrollIntoView({behavior: 'smooth'});
@@ -49,9 +49,19 @@ export default class ListItem extends React.Component {
     ThumbImgSty.border = thumbColumnImgBorder;
     let src = this.props.item.smFolder + this.props.item.FileName;
     return (
-      <div id="ThumbColumnItemSty" ref={(ref) => { this.refName = ref; }} style={ThumbDivSty} >
+      <div id="ThumbColumnItemSty" ref={(ref) => this.refName = ref} style={ThumbDivSty} >
         <img id="ThumbColumnImgSty" src={src} onClick={this.clickHandler} style={ThumbImgSty} />
       </div>
     );
   }
 }
+
+ListItem.propTypes = {
+  item: React.PropTypes.object.isRequired,
+  thumbColumn: React.PropTypes.bool,
+  index: React.PropTypes.number,
+  selected: React.PropTypes.number,
+  afterScroll: React.PropTypes.func
+};
+
+module.exports = ListItem;

@@ -36,12 +36,13 @@ function listMap(item, index) {
   );
 }
 
-export default class ThumbColumn extends React.Component {
+class ThumbColumn extends React.Component {
   componentWillReceiveProps = () => {
-    if (!this.props.hide) ReactDom.findDOMNode(this).scrollTop = 0;
+    if (!this.props.hide) this.thumbDiv.scrollTop = 0;
   };
+  setThumbDivRef = (node) => this.thumbDiv = node;
   afterScroll = () => {
-    let thisElement = ReactDom.findDOMNode(this);
+    let thisElement = this.thumbDiv;
     let thisElementScrollTop = thisElement.scrollTop;
     if (thisElement.scrollHeight - thisElementScrollTop != thisElement.clientHeight) {
       thisElement.scrollTop = thisElementScrollTop - 300;
@@ -54,9 +55,17 @@ export default class ThumbColumn extends React.Component {
     if (this.props.thumbColumn) ThumbColumnSty = Object.assign({}, thumbColumnSty);
     else ThumbColumnSty = Object.assign({}, thumbRowSty);
     return (
-      <div id="ThumbColumnSty" style={ThumbColumnSty}>
+      <div id="ThumbColumnSty" ref={this.setThumbDivRef} style={ThumbColumnSty}>
         {children}
       </div>
     );
   }
 }
+
+ThumbColumn.propTypes = {
+  data: React.PropTypes.object.isRequired,
+  hide: React.PropTypes.bool,
+  close: React.PropTypes.func
+};
+
+module.exports = ThumbColumn;

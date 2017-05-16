@@ -15,7 +15,7 @@ let GallerySty = {
 let basicBtn = {buttonid: 'galleryHide', text: 'Open Gallery'};
 
 class Gallery extends React.Component {
-  state = {hideGallery: true};
+  state = {hideGallery: false};
   galleryHideHandler = () => { this.setState({hideGallery: !this.state.hideGallery}); };
   render() {
     if (this.props.hide) return null;

@@ -128,7 +128,7 @@ class JDropSelect extends React.Component {
 }
 
 JDropSelect.propTypes = {
-  options: React.PropTypes.object.isRequired,
+  options: React.PropTypes.array.isRequired,
   defaultSelected: React.PropTypes.object.isRequired,
   itemName: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func.isRequired
