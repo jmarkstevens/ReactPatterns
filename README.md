@@ -11,7 +11,7 @@ I have added linting with eslint. The linting rules are in .eslintrc.js.
 * Redux Electron
 * Redux Fetch ajax
 * Redux Pages
-* *  Radium
+  *  Radium
   *  Window Events
   *  Window Object
 * Redux SocketIO
