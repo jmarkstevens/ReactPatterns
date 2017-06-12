@@ -7,6 +7,7 @@ I have added linting with eslint. The linting rules are in .eslintrc.js.
 **React.15**
 * Basic
 * Basic Isometric/Universal
+* GoolgeMaps
 * Redux Electron
 * Redux Fetch ajax
 * Redux Pages
