@@ -5,27 +5,27 @@ I am using webpack 2 and babel for the build tool chain.
 I have added linting with eslint. The linting rules are in .eslintrc.js.
 
 **React.15**
-*  Basic
-*  Basic Isometric/Universal
-*  Redux Electron
-*  Redux Fetch ajax
-*  Redux Pages
-  *  Radium
+* Basic
+* Basic Isometric/Universal
+* Redux Electron
+* Redux Fetch ajax
+* Redux Pages
+* *  Radium
   *  Window Events
   *  Window Object
-*  Redux SocketIO
+* Redux SocketIO
 
 **React.Common**
-*  Button
-*  DropDowns
-*  Form Input
-*  Gallery
-*  List
-*  PageIndicator
-*  ProgressBar
-*  Sliders
-*  Tooltip
-*  TreeViews
+* Button
+* DropDowns
+* Form Input
+* Gallery
+* List
+* PageIndicator
+* ProgressBar
+* Sliders
+* Tooltip
+* TreeViews
 
 # The basics
 

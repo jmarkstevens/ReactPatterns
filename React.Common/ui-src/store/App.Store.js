@@ -1,5 +1,5 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
-import createLogger from 'redux-logger';
+import logger from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 
 import {apiGetAppData, apiGetImageList, apiGetTreeView, apiGetInputData, apiGetPicList} from './api/api.Actions';
@@ -13,8 +13,7 @@ const reducer = combineReducers({appState, galleryState, inputState, treeState})
 let middleware = [thunkMiddleware];
 
 const useLogger = 1;
-const loggerMiddleware = createLogger();
-if (useLogger) middleware.push(loggerMiddleware);
+if (useLogger) middleware.push(logger);
 
 const store = createStore(reducer, applyMiddleware(...middleware));
 

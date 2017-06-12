@@ -1,0 +1,13 @@
+{
+  "lib": [
+    "react",
+    "react-dom",
+    "react-modal",
+    "react-redux",
+    "react-rte",
+    "redux",
+    "redux-logger",
+    "redux-thunk",
+    "victory"
+  ]
+}

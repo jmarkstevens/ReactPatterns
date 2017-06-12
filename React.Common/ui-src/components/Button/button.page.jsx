@@ -27,6 +27,14 @@ let customSty = {
   whiteSpace: 'nowrap'
 };
 
+let customImgSty = {
+  backgroundColor: 'transparent',
+  cursor: 'pointer',
+  margin: '0px',
+  outline: 'none',
+  whiteSpace: 'nowrap'
+};
+
 let assignSty = {minWidth: '1px', color: '#4d2c3d'};
 
 let basicBtn = {buttonid: 'basic', text: 'Basic'};
@@ -37,16 +45,30 @@ let basicBtn40 = {buttonid: 'basic40', text: 'Basic40', style: 'Btn40'};
 
 let basicBtnAssign = {buttonid: 'basicAssign', text: 'Assign', assignStyle: assignSty};
 let basicBtnCst = {buttonid: 'basicCustom', text: 'Custom', reStyle: customSty};
+let imageBtnCst = {buttonid: 'imageBtnCst', reStyle: customImgSty};
 
 let basicBackImgBtn = {
   buttonid: 'basicBackImg',
-  backimg: 'url(\'./img/sun.ico\') 0/30px',
+  backimg: "url('./img/sun.ico') 0/30px",
   style: 'BackImg',
   assignStyle: {height: '30px', width: '30px'}
 };
 let basicBackImg2Btn = {
   buttonid: 'basicBackImg2',
-  backimg: 'url(\'./img/SLogoS5-48_C.png\') 0/40px',
+  backimg: "url('./img/SLogoS5-48_C.png') 0/40px",
+  style: 'BackImg',
+  assignStyle: {height: '40px', width: '40px'}
+};
+
+let basicBackImg3Btn = {
+  buttonid: 'basicBackImg',
+  backimg: "url('./img/flow.png') 0/30px",
+  style: 'BackImg',
+  assignStyle: {height: '30px', width: '30px'}
+};
+let basicBackImg4Btn = {
+  buttonid: 'basicBackImg2',
+  backimg: "url('./img/flow.png') 0/40px",
   style: 'BackImg',
   assignStyle: {height: '40px', width: '40px'}
 };
@@ -63,7 +85,9 @@ let spacerSpanSty = {margin: '0 10px'};
 
 export default class ButtonPage extends React.Component {
   state = {clicked: 'click a button'};
-  clickHandler = (buttonid) => { this.setState({clicked: 'clickHandler buttonid: ' + buttonid}); };
+  clickHandler = buttonid => {
+    this.setState({clicked: 'clickHandler buttonid: ' + buttonid});
+  };
   render() {
     if (this.props.hide) return null;
     let clickResponse = this.state.clicked;
@@ -93,6 +117,12 @@ export default class ButtonPage extends React.Component {
         <JButton btn={basicIcon2Btn} parentClickHandler={this.clickHandler} />
         <span style={spacerSpanSty}>&nbsp;</span>
         <JButton btn={basicIcon3Btn} parentClickHandler={this.clickHandler} />
+        <br /><br />
+        <span style={spacerSpanSty}>&nbsp;</span>
+        <JButton btn={basicBackImg3Btn} parentClickHandler={this.clickHandler} />
+        <span style={spacerSpanSty}>&nbsp;</span>
+        <JButton btn={basicBackImg4Btn} parentClickHandler={this.clickHandler} />
+        <span style={spacerSpanSty}>&nbsp;</span>
         <br /><br />
         <br /><br />
         {clickResponse}
