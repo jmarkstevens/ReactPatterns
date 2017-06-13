@@ -1,0 +1,37 @@
+{
+  "name": "ReactPatterns-GoogleMaps",
+  "version": "1.0.0",
+  "description": "A website.",
+  "license": "MIT",
+  "author": {
+    "name": "J Mark Stevens",
+    "email": "jmstevens@jmarkstevens.com"
+  },
+  "scripts": {
+    "start": "nodemon --watch js js/server.js",
+    "ww": "webpack --progress --profile --colors --env.noMinimize --watch",
+    "nw": "webpack --progress --profile --colors --env.noMinimize"
+  },
+  "dependencies": {
+    "express": "latest",
+    "serve-favicon": "latest"
+  },
+  "devDependencies": {
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "css-loader": "latest",
+    "extract-text-webpack-plugin": "latest",
+    "file-loader": "latest",
+    "loader-utils": "latest",
+    "react": "^15",
+    "react-dom": "^15",
+    "react-redux": "latest",
+    "redux": "latest",
+    "redux-logger": "latest",
+    "style-loader": "latest",
+    "webpack": "latest"
+  }
+}
